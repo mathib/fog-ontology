@@ -1,0 +1,673 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:omg="https://w3id.org/omg#"
+    xmlns:dbr="http://dbpedia.org/resource/"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:dbp="http://dbpedia.org/property/"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:wd="https://www.wikidata.org/entity/"
+    xmlns:geo="http://www.opengis.net/ont/geosparql#"
+    xmlns:fog="https://w3id.org/fog#"
+    xmlns:vann="http://purl.org/vocab/vann/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+  xml:base="https://w3id.org/fog" > 
+  <rdf:Description rdf:about="#asX3d_v3.3-xml">
+    <rdfs:subPropertyOf rdf:resource="#asX3d_v3.3"/>
+    <rdfs:seeAlso rdf:resource="https://www.iana.org/assignments/media-types/model/x3d+xml"/>
+    <rdfs:seeAlso rdf:resource="http://www.web3d.org/documents/specifications/19776-1/V3.3/index.html"/>
+    <rdfs:label xml:lang="en">as X3D v3.3 XML file (.x3d)</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a regular X3D file (.x3d) following the open X3D v3.3 format which was developed by the Web3D. The file is text encoded.</rdfs:comment>
+    <dbp:extension>.x3d</dbp:extension>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asGltf_v2.0-glb">
+    <rdfs:subPropertyOf rdf:resource="#asGltf_v2.0"/>
+    <rdfs:seeAlso rdf:resource="https://www.iana.org/assignments/media-types/model/gltf-binary"/>
+    <rdfs:label xml:lang="en">as glTF v2.0 binary file (.glb)</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a binary file (.glb) following the open glTF v2.0 format from the Khronos Group. This one file contains geometry and textures, and as a result can be used without other files.</rdfs:comment>
+    <dbp:extension>.glb</dbp:extension>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asSvg_v1.0">
+    <rdfs:subPropertyOf rdf:resource="#asSvg"/>
+    <rdfs:seeAlso rdf:resource="https://www.w3.org/TR/2001/REC-SVG-20010904/"/>
+    <rdfs:label xml:lang="en">as SVG format v1.0</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the open SVG v1.0 format which was developed by the W3C. The format consists of a single .svg file which is text encoded. Note that this version (v1.0) is considered depreciated in favor of v1.1.</rdfs:comment>
+    <dbp:extension>.svg</dbp:extension>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asGltf_v2.0-texture-png">
+    <rdfs:subPropertyOf rdf:resource="#asGltf_v2.0"/>
+    <rdfs:label xml:lang="en">as glTF v2.0 texture file (.png)</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a binary texture file (.png). This file always has to be used together with the central .gltf JSON file (fog:asGltf_v2.0-gltf) referencing it.</rdfs:comment>
+    <dcterms:requires>fog:asGltf_v2.0-gltf</dcterms:requires>
+    <dbp:extension>.png</dbp:extension>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asObj_v3.0-mtl">
+    <rdfs:subPropertyOf rdf:resource="#asObj_v3.0"/>
+    <rdfs:seeAlso rdf:resource="https://www.wikidata.org/entity/Q38343645"/>
+    <rdfs:seeAlso rdf:resource="https://www.wikidata.org/entity/Q20965861"/>
+    <rdfs:label xml:lang="en">as OBJ v3.0 material file (.mtl)</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a text encoded MTL file (.mtl) following the OBJ format developed by Wavefront Technologies. This file has to be used together with the main .obj file that references it.</rdfs:comment>
+    <dcterms:requires>fog:asObj_v3.0-obj</dcterms:requires>
+    <dbp:extension>.mtl</dbp:extension>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asGltf_v1.0-texture-gif">
+    <rdfs:subPropertyOf rdf:resource="#asGltf_v1.0"/>
+    <rdfs:label xml:lang="en">as glTF v1.0 texture file (.gif)</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a binary texture file (.gif). This file always has to be used together with the central .gltf JSON file (fog:asGltf_v1.0-gltf) referencing it.</rdfs:comment>
+    <dcterms:requires>fog:asGltf_v1.0-gltf</dcterms:requires>
+    <dbp:extension>.gif</dbp:extension>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asObj_v3.0">
+    <rdfs:subPropertyOf rdf:resource="#asObj"/>
+    <rdfs:label xml:lang="en">as OBJ v3.0 format</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a text encoded geometry description following the OBJ v3.0 format developed by Wavefront Technologies. The format consists of a single .obj file (text encoded) and an optional material file (.mtl). It is strongly adviced to use the more specific subproperties (e.g. fog:asObj_v3.0-obj).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asGltf_v1.0-texture-jpeg">
+    <rdfs:subPropertyOf rdf:resource="#asGltf_v1.0"/>
+    <rdfs:label xml:lang="en">as glTF v1.0 texture file (.jpg)</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a binary texture file (.jpg). This file always has to be used together with the central .gltf JSON file (fog:asGltf_v1.0-gltf) referencing it.</rdfs:comment>
+    <dcterms:requires>fog:asGltf_v1.0-gltf</dcterms:requires>
+    <dbp:extension>.jpg</dbp:extension>
+    <dbp:extension>.jpeg</dbp:extension>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asGml">
+    <owl:propertyDisjointWith rdf:resource="http://www.opengis.net/ont/geosparql#asGML"/>
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/omg#hasSimpleGeometryDescription"/>
+    <rdfs:seeAlso rdf:resource="https://www.wikidata.org/entity/Q926165"/>
+    <rdfs:seeAlso rdf:resource="https://www.opengeospatial.org/standards/gml"/>
+    <rdfs:seeAlso rdf:resource="http://schemas.opengis.net/gml/"/>
+    <rdfs:label xml:lang="en">as GML format</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a text encoded geometry description following one of the open GML formats developed by OGC and ISO. The format consists of a single .gml file (text-encoded). It is strongly adviced to use the more specific subproperties (e.g. fog:asGml_v3.3.0). Note that this property is disjoint with geo:asGML because of the more strict domain and range restrictions in Geosparql.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asGml_v3.2.1">
+    <rdfs:subPropertyOf rdf:resource="#asGml"/>
+    <rdfs:seeAlso rdf:resource="http://schemas.opengis.net/gml/3.2.1/"/>
+    <rdfs:seeAlso rdf:resource="http://portal.opengeospatial.org/files/?artifact_id=20509"/>
+    <rdfs:label xml:lang="en">as GML v3.2.1 format (.gml)</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a text encoded GML file (.gml) following the open GML v3.2.1 format developed by OGC and ISO. Note that this property is disjoint (via its superproperty fog:asGml) with geo:asGML because of the more strict domain and range restrictions in Geosparql.</rdfs:comment>
+    <dbp:extension>.gml</dbp:extension>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asSfa_v2-wkb">
+    <rdfs:subPropertyOf rdf:resource="#asSfa_v2"/>
+    <rdfs:label xml:lang="en">as Well Known Binary SFA v2 geometry</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a Well Know Binary (WKB) geometry following the open Simple Feature Access (SFA) v2 standard developed by the OGC and ISO.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asObj_v3.0-obj">
+    <rdfs:subPropertyOf rdf:resource="#asObj_v3.0"/>
+    <rdfs:label xml:lang="en">as OBJ v3.0 file (.obj)</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a text encoded OBJ file (.obj) following the OBJ format developed by Wavefront Technologies. This file can be used together with an optional material file (.mtl).</rdfs:comment>
+    <dbp:extension>.obj</dbp:extension>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <dcterms:creator rdf:nodeID="A0"/>
+    <dcterms:creator rdf:nodeID="A1"/>
+    <dcterms:title>FOG: File Ontology for Geometry formats</dcterms:title>
+    <owl:versionInfo>0.0.1</owl:versionInfo>
+    <dcterms:description>The File Ontology for Geometry formats (FOG) describes meaningful relations towards geometry snippets in RDF literals, geometry files on relative or absolute URLs and ontology-based geometry descriptions. The defined properties in this ontology are related towards each other and additional metadata is provided, such as file extension and related specifications/sources (incl. entries in dbpedia and Wikidata).</dcterms:description>
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-12-03</dcterms:issued>
+    <vann:preferredNamespacePrefix>fog</vann:preferredNamespacePrefix>
+    <vann:preferredNamespaceUri>&lt;https://w3id.org/fog#&gt;</vann:preferredNamespaceUri>
+    <dcterms:creator rdf:nodeID="A2"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asOntobrepOntology">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/omg#hasComplexGeometryDescription"/>
+    <rdfs:seeAlso rdf:resource="https://github.com/OntoBREP/ontobrep"/>
+    <rdfs:label xml:lang="en">as OntoBREP ontology</rdfs:label>
+    <rdfs:comment xml:lang="en">The object relation pointing to a ontology-based geometry description following the OntoBREP ontology.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asCollada_v1.4.1">
+    <rdfs:subPropertyOf rdf:resource="#asCollada"/>
+    <rdfs:seeAlso rdf:resource="https://www.wikidata.org/entity/Q28975679"/>
+    <rdfs:seeAlso rdf:resource="https://www.khronos.org/files/collada_spec_1_4.pdf"/>
+    <rdfs:label xml:lang="en">as COLLADA v1.4.1 format (.dae)</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the open COLLADA v1.4.1 format from the Khronos Group. It consists of a single .dae file (text-encoded).</rdfs:comment>
+    <dbp:extension>.dae</dbp:extension>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#as3dmoOntology">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/omg#hasComplexGeometryDescription"/>
+    <rdfs:seeAlso rdf:resource="http://3dontology.org/"/>
+    <rdfs:label xml:lang="en">as 3DMO ontology</rdfs:label>
+    <rdfs:comment xml:lang="en">The object relation pointing to a ontology-based geometry description following the 3DMO ontology. It is strongly adviced to use the more specific subproperties (e.g. fog:asC3dmoOntology_v1.1).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asPcd_v0.7">
+    <rdfs:subPropertyOf rdf:resource="#asPcd"/>
+    <rdfs:label>as PCD v0.7 point cloud format (.pcd)</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a binary or ASCII encoded point cloud following the open PCD v0.7 (sometimes referred to as PCD_v7) format which was developed as part of the open source project PCL (point cloud library).</rdfs:comment>
+    <dbp:extension>.pcd</dbp:extension>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asGeojson_v2008">
+    <rdfs:subPropertyOf rdf:resource="#asGeojson"/>
+    <rdfs:seeAlso rdf:resource="http://geojson.org/geojson-spec"/>
+    <rdfs:label xml:lang="en">as GeoJSON format v2008 (.json)</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the open GeoJSON v2008 format. The format consists of a single .json file (text-encoded). Note that the version proposed by the IETF (fog:asGeojson_v2016) is derived from the now obsolete 2008 version (fog:asGeojson_v2008).</rdfs:comment>
+    <dbp:extension>.json</dbp:extension>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asShapefile-shp">
+    <rdfs:subPropertyOf rdf:resource="#asShapefile"/>
+    <rdfs:seeAlso rdf:resource="https://www.wikidata.org/entity/Q27486884"/>
+    <rdfs:label>as Shapefile geometry (.shp)</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry file (.shp) following the open Shapefile format developed by ESRI. This file contains the geometry of the shape. The Shapefile format consists of multiple files, including as a minimum the geometry (.shp), the index of the feature geometry (.shx) and attribute information of features (.dbf). These three files are binary encoded, while others can be text encoded (e.g. the .prj file).</rdfs:comment>
+    <dcterms:requires>fog:asShapefile-shx</dcterms:requires>
+    <dcterms:requires>fog:asShapefile-dbf</dcterms:requires>
+    <dbp:extension>.shp</dbp:extension>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asSvg_v1.1">
+    <rdfs:subPropertyOf rdf:resource="#asSvg"/>
+    <rdfs:seeAlso rdf:resource="https://www.w3.org/TR/SVG11/"/>
+    <rdfs:label xml:lang="en">as SVG format v1.1</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the open SVG v1.1 format which was developed by the W3C. The format consists of a single .svg file which is text encoded.</rdfs:comment>
+    <dbp:extension>.svg</dbp:extension>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asGeojson_v2016">
+    <rdfs:subPropertyOf rdf:resource="#asGeojson"/>
+    <rdfs:seeAlso rdf:resource="https://www.iana.org/assignments/media-types/application/geo+json"/>
+    <rdfs:seeAlso rdf:resource="https://tools.ietf.org/html/rfc7946"/>
+    <rdfs:label xml:lang="en">as GeoJSON v2016 format (.json)</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the open GeoJSON v2016 format developed by the IETF GeoJSON Working Group. The format consists of a single .json file (text-encoded). Note that the version proposed by the IETF (fog:asGeojson_v2016) is derived from the now obsolete 2008 version (fog:asGeojson_v2008).</rdfs:comment>
+    <dbp:extension>.json</dbp:extension>
+    <dbp:extension>.geojson</dbp:extension>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asCollada">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/omg#hasSimpleGeometryDescription"/>
+    <rdfs:seeAlso rdf:resource="https://www.wikidata.org/entity/Q603967"/>
+    <rdfs:seeAlso rdf:resource="https://www.iana.org/assignments/media-types/model/vnd.collada+xml"/>
+    <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/COLLADA"/>
+    <rdfs:label xml:lang="en">as COLLADA format</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the open COLLADA format from the Khronos Group. The format consists of a single .dae file (text-encoded). It is strongly adviced to use the more specific subproperties (e.g. fog:asCollada_v1.4 and fog:asCollada_v1.5).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asGml_v3.1.1">
+    <rdfs:subPropertyOf rdf:resource="#asGml"/>
+    <rdfs:seeAlso rdf:resource="http://schemas.opengis.net/gml/3.1.1/"/>
+    <rdfs:seeAlso rdf:resource="http://portal.opengeospatial.org/files/?artifact_id=4700"/>
+    <rdfs:label xml:lang="en">as GML v3.1.1 format (.gml)</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a text encoded GML file (.gml) following the open GML v3.1.1 format developed by OGC and ISO. Note that this and older versions are considered depreciated. Note that this property is disjoint (via its superproperty fog:asGml) with geo:asGML because of the more strict domain and range restrictions in Geosparql.</rdfs:comment>
+    <dbp:extension>.gml</dbp:extension>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asShapefile-shx">
+    <rdfs:subPropertyOf rdf:resource="#asShapefile"/>
+    <rdfs:seeAlso rdf:resource="https://www.wikidata.org/entity/Q27487109"/>
+    <rdfs:label>as Shapefile geometry index (.shx)</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a shape index format file (.shx) following the open Shapefile format developed by ESRI. This file contains the positional index of the geometry. The Shapefile format consists of multiple files, including as a minimum the geometry (.shp), the index of the feature geometry (.shx) and attribute information of features (.dbf). These three files are binary encoded, while others can be text encoded (e.g. the .prj file).</rdfs:comment>
+    <dcterms:requires>fog:asShapefile-shp</dcterms:requires>
+    <dcterms:requires>fog:asShapefile-dbf</dcterms:requires>
+    <dbp:extension>.shx</dbp:extension>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asDwg_v2013">
+    <rdfs:subPropertyOf rdf:resource="#asDwg"/>
+    <rdfs:label xml:lang="en">as DWG 2013 format (.dwg)</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the proprietary DWG v2013 format from Autodesk. It consists of a single .dwg file (binary-encoded).</rdfs:comment>
+    <dbp:extension>.dwg</dbp:extension>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asGml_v3.2.2">
+    <rdfs:subPropertyOf rdf:resource="#asGml"/>
+    <rdfs:seeAlso rdf:resource="https://portal.opengeospatial.org/files/?artifact_id=74183&amp;version=2"/>
+    <rdfs:label xml:lang="en">as GML v3.2.2 format (.gml)</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a text encoded GML file (.gml) following the open GML v3.2.2 format developed by OGC and ISO. Note that this property is disjoint (via its superproperty fog:asGml) with geo:asGML because of the more strict domain and range restrictions in Geosparql.</rdfs:comment>
+    <dbp:extension>.gml</dbp:extension>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asSfa_v2">
+    <rdfs:subPropertyOf rdf:resource="#asSfa"/>
+    <rdfs:seeAlso rdf:resource="http://portal.opengeospatial.org/files/?artifact_id=25355"/>
+    <rdfs:label xml:lang="en">as Simple Feature Access v2 format</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the open Simple Feature Access (SFA) v2 standard developed by the OGC and ISO. The format is either text encoded (WKT) or binary encoded (WKB). It is strongly adviced to use the more specific subproperties (e.g. fog:asSfa_v2-wkt).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asSfa_v1-wkt">
+    <owl:propertyDisjointWith rdf:resource="http://www.opengis.net/ont/geosparql#asWKT"/>
+    <rdfs:subPropertyOf rdf:resource="#asSfa_v1"/>
+    <rdfs:label xml:lang="en">as Well Known Text SFA v1 geometry</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a Well Know Text (WKT) geometry following the open Simple Feature Access (SFA) v1 standard developed by the OGC. Note that the SFA v1 standard is now considered depreciated in favor of SFA v2. Note that this property is disjoint with geo:asWKT because of the more strict domain and range restrictions in Geosparql.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asGltf_v2.0-gltf">
+    <rdfs:subPropertyOf rdf:resource="#asGltf_v2.0"/>
+    <rdfs:label xml:lang="en">as glTF v2.0 JSON file (.gltf)</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a JSON file (.gltf) following the open glTF v2.0 format from the Khronos Group. This file can be used on its own if geometry and optional textures are embedded (text-encoded) inside the JSON. In most cases however, it references other files containing geometry (.bin) and optional textures (.jpeg/.png).</rdfs:comment>
+    <dbp:extension>.gltf</dbp:extension>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asGeojson">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/omg#hasSimpleGeometryDescription"/>
+    <rdfs:seeAlso rdf:resource="https://www.wikidata.org/entity/Q5533904"/>
+    <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/GeoJSON"/>
+    <rdfs:label xml:lang="en">as GeoJSON format</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the open GeoJSON format. The format consists of a single .json file (text-encoded). It is strongly adviced to use the more specific subproperties (e.g. fog:asGeojson_v2016). Note that the version proposed by the IETF GeoJSON Working Group (fog:asGeojson_v2016) is derived from the now obsolete 2008 version (fog:asGeojson_v2008).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asGltf_v1.0-texture-png">
+    <rdfs:subPropertyOf rdf:resource="#asGltf_v1.0"/>
+    <rdfs:label xml:lang="en">as glTF v1.0 texture file (.png)</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a binary texture file (.png). This file always has to be used together with the central .gltf JSON file (fog:asGltf_v1.0-gltf) referencing it.</rdfs:comment>
+    <dcterms:requires>fog:asGltf_v1.0-gltf</dcterms:requires>
+    <dbp:extension>.png</dbp:extension>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asGltf_v2.0-bin">
+    <rdfs:subPropertyOf rdf:resource="#asGltf_v2.0"/>
+    <rdfs:seeAlso rdf:resource="https://www.iana.org/assignments/media-types/application/gltf-buffer"/>
+    <rdfs:label xml:lang="en">as glTF v2.0 geometry file (.bin)</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a binary geometry file (.bin) following the open glTF v2.0 format from the Khronos Group. This file always has to be used together with the central .gltf JSON file (fog:asGltf_v2.0-gltf) referencing it.</rdfs:comment>
+    <dcterms:requires>fog:asGltf_v2.0-gltf</dcterms:requires>
+    <dbp:extension>.bin</dbp:extension>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asShapefile">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/omg#hasSimpleGeometryDescription"/>
+    <rdfs:seeAlso rdf:resource="https://www.wikidata.org/entity/Q278934"/>
+    <rdfs:seeAlso rdf:resource="https://www.esri.com/library/whitepapers/pdfs/shapefile.pdf"/>
+    <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Shapefile"/>
+    <rdfs:label xml:lang="en">as Shapefile format</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the open Shapefile format developed by ESRI. The format consists of multiple files, including as a minimum the geometry (.shp), the index of the feature geometry (.shx) and attribute information of features (.dbf). These three files are binary encoded, while others can be text encoded (e.g. the .prj file). It is strongly adviced to use the more specific subsubproperties (e.g. fog:asShapefile-shp). Note that no file format version is provided by ESRI and that the format is expected to be stable.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asObj">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/omg#hasSimpleGeometryDescription"/>
+    <rdfs:seeAlso rdf:resource="https://www.wikidata.org/entity/Q2119595"/>
+    <rdfs:seeAlso rdf:resource="http://paulbourke.net/dataformats/obj/"/>
+    <rdfs:label xml:lang="en">as OBJ format</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a text encoded geometry description following the OBJ format developed by Wavefront Technologies. The format consists of a single .obj file (text encoded) and an optional material file (.mtl). It is strongly adviced to use the more specific subsubproperties (e.g. fog:asObj_v3.0-obj).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asE57_v1.0">
+    <rdfs:subPropertyOf rdf:resource="#asE57"/>
+    <rdfs:seeAlso rdf:resource="https://www.ri.cmu.edu/publications/the-astm-e57-file-format-for-3d-imaging-data-exchange/"/>
+    <rdfs:seeAlso rdf:resource="https://www.astm.org/Standards/E2807.htm"/>
+    <rdfs:label xml:lang="en">as E57 v1.0 format (.e57)</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a point cloud geometry description following the open E57 format developed by the ASTM Committee E57. The format consists of a single .e57 file (partially binary-encoded, partially text-encoded).</rdfs:comment>
+    <dbp:extension>.e57</dbp:extension>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asPly_v1.0">
+    <rdfs:subPropertyOf rdf:resource="#asPly"/>
+    <rdfs:label xml:lang="en">as PLY v1.0 format</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the PLY v1.0 format which was developed by Greg Turk (Stanford University). The format consists of a single .ply file which is either text or binary encoded. It is strongly adviced to use the more specific subproperties (e.g. fog:asPly_v1.0-ascii).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asPly_v1.0-binaryBE">
+    <rdfs:subPropertyOf rdf:resource="#asPly_v1.0"/>
+    <rdfs:label xml:lang="en">as PLY binary (big endian) format (.ply)</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry file following the PLY v1.0 format which was developed by Greg Turk (Stanford University). The single .ply file is binary encoded with big endian. Note that there is also a sibling property for a binary PLY with little endian.</rdfs:comment>
+    <dbp:extension>.ply</dbp:extension>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <foaf:name>Mathias Bonduel</foaf:name>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asX3d_v3.3-binary">
+    <rdfs:subPropertyOf rdf:resource="#asX3d_v3.3"/>
+    <rdfs:seeAlso rdf:resource="http://www.web3d.org/documents/specifications/19776-3/V3.3/index.html"/>
+    <rdfs:label xml:lang="en">as X3D v3.3 binary file (.x3db)</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a binary X3D file (.x3db) following the open X3D v3.3 format which was developed by the Web3D.</rdfs:comment>
+    <dbp:extension>.x3db</dbp:extension>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asDwg_v2018">
+    <rdfs:subPropertyOf rdf:resource="#asDwg"/>
+    <rdfs:label xml:lang="en">as DWG 2018 format (.dwg)</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the proprietary DWG v2018 format from Autodesk. It consists of a single .dwg file (binary-encoded).</rdfs:comment>
+    <dbp:extension>.dwg</dbp:extension>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asX3d_v3.3">
+    <rdfs:subPropertyOf rdf:resource="#asX3d"/>
+    <rdfs:label xml:lang="en">as X3D format v3.3</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the open X3D v3.3 format which was developed by the Web3D. The format consists of a single file which is either binary or text encoded. It is strongly adviced to use the more specific subproperties (e.g. fog:asX3d_v3.3_xml).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asGml_v3.3.0">
+    <rdfs:subPropertyOf rdf:resource="#asGml"/>
+    <rdfs:seeAlso rdf:resource="https://portal.opengeospatial.org/files/?artifact_id=46568"/>
+    <rdfs:seeAlso rdf:resource="http://schemas.opengis.net/gml/3.3/"/>
+    <rdfs:label xml:lang="en">as GML v3.3.0 format (.gml)</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a text encoded GML file (.gml) following the open GML v3.3.0 format developed by OGC and ISO. This format is an extension of the GML v3.2 format. Note that this property is disjoint (via its superproperty fog:asGml) with geo:asGML because of the more strict domain and range restrictions in Geosparql.</rdfs:comment>
+    <dbp:extension>.gml</dbp:extension>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A0">
+    <foaf:name>Anna Wagner</foaf:name>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asSfa">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/omg#hasSimpleGeometryDescription"/>
+    <rdfs:seeAlso rdf:resource="https://www.wikidata.org/entity/Q4018860"/>
+    <rdfs:seeAlso rdf:resource="https://www.wikidata.org/entity/Q365034"/>
+    <rdfs:label xml:lang="en">as Simple Feature Access geometry format</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the open Simple Feature Access (SFA) standard developed by the OGC and ISO. The format consists of a single .wkt (text encoded) or .wkb (binary encoded) file. It is strongly adviced to use the more specific subsubproperties (e.g. fog:asSfa_v2-wkt).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asSfa_v1">
+    <rdfs:subPropertyOf rdf:resource="#asSfa"/>
+    <rdfs:seeAlso rdf:resource="http://www.geoapi.org/3.0/javadoc/org/opengis/referencing/doc-files/WKT.html"/>
+    <rdfs:seeAlso rdf:resource="http://portal.opengeospatial.org/files/?artifact_id=999"/>
+    <rdfs:label xml:lang="en">as Simple Feature Access v1 format</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the open Simple Feature Access (SFA) v1 standard developed by the OGC. The format is text encoded. It is strongly adviced to use the more specific subproperties (e.g. fog:asSfa_v1-wkt). Note that this standard is now considered depreciated in favor of SFA v2.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asGltf_v1.0">
+    <rdfs:subPropertyOf rdf:resource="#asGltf"/>
+    <rdfs:seeAlso rdf:resource="https://www.wikidata.org/entity/Q28135989"/>
+    <rdfs:seeAlso rdf:resource="https://github.com/KhronosGroup/glTF/tree/master/specification/1.0"/>
+    <rdfs:label xml:lang="en">as glTF v1.0 format</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the open glTF v1.0 format from the Khronos Group. The format consists of one (.gltf with embedded binary geometry/textures/shaders) or multiple files (combination of binary- and/or text-encoded). It is strongly adviced to use the more specific subproperties (e.g. fog:asGltf_v1.0-gltf).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asPcd">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/omg#hasSimpleGeometryDescription"/>
+    <rdfs:seeAlso rdf:resource="http://pointclouds.org/documentation/tutorials/pcd_file_format.php"/>
+    <rdfs:label xml:lang="en">as PCD point cloud format</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a binary encoded point cloud following the open PCD format which was developed as part of the open source project PCL (point cloud library). The format consists of a single .pcd file (binary or ASCII encoded). It is strongly adviced to use the more specific subproperties (e.g. fog:asPcd_v0.7).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asGltf_v2.0-texture-jpeg">
+    <rdfs:subPropertyOf rdf:resource="#asGltf_v2.0"/>
+    <rdfs:label xml:lang="en">as glTF v2.0 texture file (.jpg)</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a binary texture file (.jpg). This file always has to be used together with the central .gltf JSON file (fog:asGltf_v2.0-gltf) referencing it.</rdfs:comment>
+    <dcterms:requires>fog:asGltf_v2.0-gltf</dcterms:requires>
+    <dbp:extension>.jpg</dbp:extension>
+    <dbp:extension>.jpeg</dbp:extension>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asCollada_v1.5.0">
+    <rdfs:subPropertyOf rdf:resource="#asCollada"/>
+    <rdfs:seeAlso rdf:resource="https://www.khronos.org/files/collada_spec_1_5.pdf"/>
+    <rdfs:label xml:lang="en">as COLLADA v1.5.0 format (.dae)</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the open COLLADA v1.5.0 format from the Khronos Group. It consists of a single .dae file (text-encoded).</rdfs:comment>
+    <dbp:extension>.dae</dbp:extension>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asGltf_v1.0-texture-bmp">
+    <rdfs:subPropertyOf rdf:resource="#asGltf_v1.0"/>
+    <rdfs:label xml:lang="en">as glTF v1.0 texture file (.bmp)</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a binary texture file (.bmp). This file always has to be used together with the central .gltf JSON file (fog:asGltf_v1.0-gltf) referencing it.</rdfs:comment>
+    <dcterms:requires>fog:asGltf_v1.0-gltf</dcterms:requires>
+    <dbp:extension>.bmp</dbp:extension>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asDwg">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/omg#hasSimpleGeometryDescription"/>
+    <rdfs:seeAlso rdf:resource="https://www.wikidata.org/entity/Q1053358"/>
+    <rdfs:seeAlso rdf:resource="https://www.opendesign.com/files/guestdownloads/OpenDesign_Specification_for_.dwg_files.pdf"/>
+    <rdfs:seeAlso rdf:resource="https://www.iana.org/assignments/media-types/image/vnd.dwg"/>
+    <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/.dwg"/>
+    <rdfs:label xml:lang="en">as DWG format</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the proprietary DWG format from Autodesk. The Open Design Alliance created a 'specification for .dwg files' that is publicly available. The format consists of a single .dwg file (binary-encoded). It is strongly adviced to use the more specific subproperties (e.g. fog:asDwg_v2018).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asGltf">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/omg#hasSimpleGeometryDescription"/>
+    <rdfs:label xml:lang="en">as glTF format</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the open glTF format from the Khronos Group. The format consists of one (.gltf with embedded binary geometry/textures/shaders, or .glb) or multiple files (combination of binary- and/or text-encoded). It is strongly adviced to use the more specific subsubproperties (e.g. fog:asGltf_v2.0-gltf).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asPly">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/omg#hasSimpleGeometryDescription"/>
+    <rdfs:seeAlso rdf:resource="https://www.wikidata.org/entity/Q3077345"/>
+    <rdfs:seeAlso rdf:resource="http://paulbourke.net/dataformats/ply/"/>
+    <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/PLY_(file_format)"/>
+    <rdfs:label>as PLY format</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the PLY format which was developed by Greg Turk (Stanford University). The format consists of a single .ply file which is either text or binary encoded. It is strongly adviced to use the more specific subsubproperties (e.g. fog:asPly_v1.0-ascii).</rdfs:comment>
+    <dbp:extension>.ply</dbp:extension>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asShapefile-dbf">
+    <rdfs:subPropertyOf rdf:resource="#asShapefile"/>
+    <rdfs:seeAlso rdf:resource="https://www.wikidata.org/entity/Q27487130"/>
+    <rdfs:label xml:lang="en">as Shapefile dBASE table (.dbf)</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a dBASE table file (.dbf) following the open Shapefile format developed by ESRI. This file contains the attributes of each shape. The Shapefile format consists of multiple files, including as a minimum the geometry (.shp), the index of the feature geometry (.shx) and attribute information of features (.dbf). These three files are binary encoded, while others can be text encoded (e.g. the .prj file).</rdfs:comment>
+    <dcterms:requires>fog:asShapefile-shx</dcterms:requires>
+    <dcterms:requires>fog:asShapefile-shp</dcterms:requires>
+    <dbp:extension>.dbf</dbp:extension>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#as3dmoOntology_v1.1">
+    <rdfs:subPropertyOf rdf:resource="#as3dmoOntology"/>
+    <rdfs:label xml:lang="en">as 3DMO ontology v1.1 </rdfs:label>
+    <rdfs:comment xml:lang="en">The object relation pointing to a ontology-based geometry description following the 3DMO v1.1 ontology.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asE57">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/omg#hasSimpleGeometryDescription"/>
+    <rdfs:seeAlso rdf:resource="https://www.wikidata.org/entity/Q33517407"/>
+    <rdfs:seeAlso rdf:resource="https://www.ri.cmu.edu/publications/the-astm-e57-file-format-for-3d-imaging-data-exchange/"/>
+    <rdfs:seeAlso rdf:resource="https://www.astm.org/Standards/E2807.htm"/>
+    <rdfs:label xml:lang="en">as E57 format</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a point cloud geometry description following the open E57 format developed by the ASTM Committee E57. The format consists of a single .e57 file (partially binary-encoded, partially text-encoded). It is strongly adviced to use the more specific subproperties (e.g. fog:asE57_v1.0).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asGeomOntology">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/omg#hasComplexGeometryDescription"/>
+    <rdfs:seeAlso rdf:resource="http://rdf.bg/geometry.ttl"/>
+    <rdfs:label xml:lang="en">as GEOM ontology</rdfs:label>
+    <rdfs:comment xml:lang="en">The object relation pointing to a ontology-based geometry description following the GEOM ontology.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asX3d_v3.3-vrml">
+    <rdfs:subPropertyOf rdf:resource="#asX3d_v3.3"/>
+    <rdfs:seeAlso rdf:resource="https://www.iana.org/assignments/media-types/model/x3d-vrml"/>
+    <rdfs:seeAlso rdf:resource="http://www.web3d.org/documents/specifications/19776-2/V3.3/index.html"/>
+    <rdfs:label xml:lang="en">as X3D v3.3 classic VRML file (.x3dv)</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a classic VRML X3D file (.x3dv) following the open X3D v3.3 format which was developed by the Web3D. The file is text encoded.</rdfs:comment>
+    <dbp:extension>.x3dv</dbp:extension>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asPly_v1.0-ascii">
+    <rdfs:subPropertyOf rdf:resource="#asPly_v1.0"/>
+    <rdfs:label xml:lang="en">as PLY ASCII format (.ply)</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry file following the PLY v1.0 format which was developed by Greg Turk (Stanford University). The single .ply file is ASCII encoded.</rdfs:comment>
+    <dbp:extension>.ply</dbp:extension>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asSvg_v2.0">
+    <rdfs:subPropertyOf rdf:resource="#asSvg"/>
+    <rdfs:seeAlso rdf:resource="https://www.w3.org/TR/SVG2/"/>
+    <rdfs:label xml:lang="en">as SVG format v2.0</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the open SVG v2.0 format which was developed by the W3C. The format consists of a single .svg file which is text encoded. Note that this version (v2.0) is not yet finalized and at the moment has the status of 'W3C Candidate Recommendation'.</rdfs:comment>
+    <dbp:extension>.svg</dbp:extension>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asStep">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/omg#hasSimpleGeometryDescription"/>
+    <rdfs:seeAlso rdf:resource="https://www.wikidata.org/entity/Q3509055"/>
+    <rdfs:label xml:lang="en">as SPFF file (.step)</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the STEP Physical File Format (SPFF) format which was developed by ISO. The format consists of a single .step file which is either text encoded.</rdfs:comment>
+    <dbp:extension>.stp</dbp:extension>
+    <dbp:extension>.step</dbp:extension>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asSvg">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/omg#hasSimpleGeometryDescription"/>
+    <rdfs:seeAlso rdf:resource="https://www.wikidata.org/entity/Q2078"/>
+    <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/Scalable_Vector_Graphics"/>
+    <rdfs:label xml:lang="en">as SVG format</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the open SVG format which was developed by the W3C. The format consists of a single .svg file which is text encoded. It is strongly adviced to use the more specific subsubproperties (e.g. fog:asSvg_v1.1).</rdfs:comment>
+    <dbp:extension>.svg</dbp:extension>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asShapefile-prj">
+    <rdfs:subPropertyOf rdf:resource="#asShapefile"/>
+    <rdfs:label>as Shapefile projections file (.prj)</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a projection format file (.prj) following the open Shapefile format developed by ESRI. This file contains the the coordinate system and projection information of the shapes. The Shapefile format consists of multiple files, including as a minimum the geometry (.shp), the index of the feature geometry (.shx) and attribute information of features (.dbf). These three files are binary encoded, while others can be text encoded (e.g. the .prj file).</rdfs:comment>
+    <dcterms:requires>fog:asShapefile-shx</dcterms:requires>
+    <dcterms:requires>fog:asShapefile-shp</dcterms:requires>
+    <dcterms:requires>fog:asShapefile-dbf</dcterms:requires>
+    <dbp:extension>.prj</dbp:extension>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asSfa_v2-wkt">
+    <owl:propertyDisjointWith rdf:resource="http://www.opengis.net/ont/geosparql#asWKT"/>
+    <rdfs:subPropertyOf rdf:resource="#asSfa_v2"/>
+    <rdfs:seeAlso rdf:resource="http://docs.opengeospatial.org/is/12-063r5/12-063r5.html"/>
+    <rdfs:label xml:lang="en">as Well Known Text SFA v2 geometry</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a Well Know Text (WKT) geometry following the open Simple Feature Access (SFA) v2 standard developed by the OGC and ISO. Note that this property is disjoint with geo:asWKT because of the more strict domain and range restrictions in Geosparql.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asX3d">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/omg#hasSimpleGeometryDescription"/>
+    <rdfs:seeAlso rdf:resource="https://www.wikidata.org/entity/Q930428"/>
+    <rdfs:seeAlso rdf:resource="http://www.web3d.org/specifications/"/>
+    <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/X3D"/>
+    <rdfs:label xml:lang="en">as X3D format</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the open X3D format which was developed by the Web3D. The format consists of a single file which is either binary or text encoded. It is strongly adviced to use the more specific subsubproperties (e.g. fog:asX3d_v3.3_xml).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asStl">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/omg#hasSimpleGeometryDescription"/>
+    <rdfs:label xml:lang="en">as STL format</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the STL format which was developed by 3D Systems. The format consists of a single .stl file which is either text or binary encoded. It is strongly adviced to use the more specific subsubproperties (e.g. fog:asStl_v1.0).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asDwg_v2010">
+    <rdfs:subPropertyOf rdf:resource="#asDwg"/>
+    <rdfs:label xml:lang="en">as DWG 2010 format (.dwg)</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the proprietary DWG v2010 format from Autodesk. It consists of a single .dwg file (binary-encoded).</rdfs:comment>
+    <dbp:extension>.dwg</dbp:extension>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asGltf_v2.0">
+    <rdfs:subPropertyOf rdf:resource="#asGltf"/>
+    <rdfs:seeAlso rdf:resource="https://github.com/KhronosGroup/glTF/tree/master/specification/2.0"/>
+    <rdfs:label xml:lang="en">as glTF v2.0 format</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the open glTF v2.0 format from the Khronos Group. The format consists of one (.gltf with embedded binary geometry/textures/shaders, or .glb) or multiple files (combination of binary- and/or text-encoded). It is strongly adviced to use the more specific subproperties (e.g. fog:asGltf_v2.0-gltf).</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asGltf_v1.0-glsl">
+    <rdfs:subPropertyOf rdf:resource="#asGltf_v1.0"/>
+    <rdfs:label xml:lang="en">as glTF v1.0 shader file (.glsl)</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a text-encoded shader file (.bin) following the open glTF v1.0 format from the Khronos Group. This file always has to be used together with the central .gltf JSON file (fog:asGltf_v1.0-gltf) referencing it.</rdfs:comment>
+    <dcterms:requires>fog:asGltf_v1.0-gltf</dcterms:requires>
+    <dbp:extension>.glsl</dbp:extension>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asGltf_v1.0-bin">
+    <rdfs:subPropertyOf rdf:resource="#asGltf_v1.0"/>
+    <rdfs:label xml:lang="en">as glTF v1.0 geometry file (.bin)</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a binary geometry file (.bin) following the open glTF v1.0 format from the Khronos Group. This file always has to be used together with the central .gltf JSON file (fog:asGltf_v1.0-gltf) referencing it.</rdfs:comment>
+    <dcterms:requires>fog:asGltf_v1.0-gltf</dcterms:requires>
+    <dbp:extension>.bin</dbp:extension>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asOntostepOntology">
+    <rdfs:subPropertyOf rdf:resource="https://w3id.org/omg#hasComplexGeometryDescription"/>
+    <rdfs:seeAlso rdf:resource="https://www.nist.gov/publications/ontostep-owl-dl-ontology-step?pub_id=901544"/>
+    <rdfs:label xml:lang="en">as OntoSTEP ontology</rdfs:label>
+    <rdfs:comment xml:lang="en">The object relation pointing to a ontology-based geometry description following the OntoSTEP ontology.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <foaf:name>Pieter Pauwels</foaf:name>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asStl_v1.0">
+    <rdfs:subPropertyOf rdf:resource="#asStl"/>
+    <rdfs:seeAlso rdf:resource="https://www.wikidata.org/entity/Q1238229"/>
+    <rdfs:seeAlso rdf:resource="https://www.iana.org/assignments/media-types/model/stl"/>
+    <rdfs:seeAlso rdf:resource="http://paulbourke.net/dataformats/stl/"/>
+    <rdfs:label xml:lang="en">as STL format v1.0</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the STL v1.0 format which was developed by 3D Systems. The format consists of a single .stl file which is either text or binary encoded.</rdfs:comment>
+    <dbp:extension>.stl</dbp:extension>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asPly_v1.0-binaryLE">
+    <rdfs:subPropertyOf rdf:resource="#asPly_v1.0"/>
+    <rdfs:label xml:lang="en">as PLY binary (little endian) format (.ply)</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry file following the PLY v1.0 format which was developed by Greg Turk (Stanford University). The single .ply file is binary encoded with little endian. Note that there is also a sibling property for a binary PLY with big endian.</rdfs:comment>
+    <dbp:extension>.ply</dbp:extension>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="#asGltf_v1.0-gltf">
+    <rdfs:subPropertyOf rdf:resource="#asGltf_v1.0"/>
+    <rdfs:seeAlso rdf:resource="https://www.iana.org/assignments/media-types/model/gltf+json"/>
+    <rdfs:label xml:lang="en">as glTF v1.0 JSON file (.gltf)</rdfs:label>
+    <rdfs:comment xml:lang="en">The datatype relation pointing to a JSON file (.gltf) following the open glTF v1.0 format from the Khronos Group. This file can be used on its own if geometry, shaders and optional textures are embedded (text-encoded) inside the JSON. In most cases however, it references other files containing geometry (.bin), optional shaders (.glsl) and optional textures (.bmp/.gif/.jpeg/.png).</rdfs:comment>
+    <dbp:extension>.gltf</dbp:extension>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+</rdf:RDF>
