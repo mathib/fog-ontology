@@ -22,5 +22,7 @@ An [online sparql-visualizer demo](https://madsholten.github.io/sparql-visualize
 ## Contributors
 
 [Mathias Bonduel](https://github.com/mathib) - KU Leuven
+
 [Anna Wagner](https://github.com/AnnaWagner) - TU Darmstadt
+
 [Pieter Pauwels](https://github.com/pipauwel) - UGent
