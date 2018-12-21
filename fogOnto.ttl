@@ -1,3 +1,6 @@
+# baseURI: https://w3id.org/fog
+# prefix: fog
+
 @prefix : <https://w3id.org/fog#> .
 @prefix dbp: <http://dbpedia.org/property/> .
 @prefix dbr: <http://dbpedia.org/resource/> .
@@ -33,6 +36,11 @@
   vann:preferredNamespacePrefix "fog" ;
   vann:preferredNamespaceUri "<https://w3id.org/fog#>" ;
   owl:versionInfo "0.0.1" ;
+.
+fog:ReferencedContent
+  rdf:type owl:Class ;
+  rdfs:comment "Referenced content of the following geometry descriptions: glTF and OBJ. It contains exactly one link to a texture, separate binary glTF geometry or a OBJ material that is referenced by the main file (resp. .gltf and .obj). The name of the referenced file, as stored in the main file, is connected via a rdfs:label node"@en ;
+  rdfs:label "Referenced content"@en ;
 .
 fog:as3dmoOntology
   rdf:type owl:FunctionalProperty ;
@@ -211,37 +219,16 @@ fog:asGltf
   rdfs:seeAlso <https://www.iana.org/assignments/media-types/model/gltf+json> ;
   rdfs:subPropertyOf <https://w3id.org/fog#asGltf_v1.0> ;
 .
-<https://w3id.org/fog#asGltf_v1.0-texture-bmp>
+<https://w3id.org/fog#asGltf_v1.0-texture>
   rdf:type owl:DatatypeProperty ;
+  rdf:type owl:FunctionalProperty ;
   dbp:extension ".bmp" ;
-  dcterms:requires "fog:asGltf_v1.0-gltf" ;
-  rdfs:comment "The datatype relation pointing to a binary texture file (.bmp). This file always has to be used together with the central .gltf JSON file (fog:asGltf_v1.0-gltf) referencing it."@en ;
-  rdfs:label "as glTF v1.0 texture file (.bmp)"@en ;
-  rdfs:subPropertyOf <https://w3id.org/fog#asGltf_v1.0> ;
-.
-<https://w3id.org/fog#asGltf_v1.0-texture-gif>
-  rdf:type owl:DatatypeProperty ;
   dbp:extension ".gif" ;
-  dcterms:requires "fog:asGltf_v1.0-gltf" ;
-  rdfs:comment "The datatype relation pointing to a binary texture file (.gif). This file always has to be used together with the central .gltf JSON file (fog:asGltf_v1.0-gltf) referencing it."@en ;
-  rdfs:label "as glTF v1.0 texture file (.gif)"@en ;
-  rdfs:subPropertyOf <https://w3id.org/fog#asGltf_v1.0> ;
-.
-<https://w3id.org/fog#asGltf_v1.0-texture-jpeg>
-  rdf:type owl:DatatypeProperty ;
   dbp:extension ".jpeg" ;
-  dbp:extension ".jpg" ;
-  dcterms:requires "fog:asGltf_v1.0-gltf" ;
-  rdfs:comment "The datatype relation pointing to a binary texture file (.jpg). This file always has to be used together with the central .gltf JSON file (fog:asGltf_v1.0-gltf) referencing it."@en ;
-  rdfs:label "as glTF v1.0 texture file (.jpg)"@en ;
-  rdfs:subPropertyOf <https://w3id.org/fog#asGltf_v1.0> ;
-.
-<https://w3id.org/fog#asGltf_v1.0-texture-png>
-  rdf:type owl:DatatypeProperty ;
   dbp:extension ".png" ;
   dcterms:requires "fog:asGltf_v1.0-gltf" ;
-  rdfs:comment "The datatype relation pointing to a binary texture file (.png). This file always has to be used together with the central .gltf JSON file (fog:asGltf_v1.0-gltf) referencing it."@en ;
-  rdfs:label "as glTF v1.0 texture file (.png)"@en ;
+  rdfs:comment "The datatype relation pointing to a binary texture file (.bmp/..gif/.jpeg/.png). This file always has to be used together with the central .gltf JSON file (fog:asGltf_v1.0-gltf) referencing it."@en ;
+  rdfs:label "as glTF v1.0 texture file"@en ;
   rdfs:subPropertyOf <https://w3id.org/fog#asGltf_v1.0> ;
 .
 <https://w3id.org/fog#asGltf_v2.0>
@@ -278,21 +265,14 @@ fog:asGltf
   rdfs:label "as glTF v2.0 JSON file (.gltf)"@en ;
   rdfs:subPropertyOf <https://w3id.org/fog#asGltf_v2.0> ;
 .
-<https://w3id.org/fog#asGltf_v2.0-texture-jpeg>
+<https://w3id.org/fog#asGltf_v2.0-texture>
   rdf:type owl:DatatypeProperty ;
+  rdf:type owl:FunctionalProperty ;
   dbp:extension ".jpeg" ;
-  dbp:extension ".jpg" ;
-  dcterms:requires "fog:asGltf_v2.0-gltf" ;
-  rdfs:comment "The datatype relation pointing to a binary texture file (.jpg). This file always has to be used together with the central .gltf JSON file (fog:asGltf_v2.0-gltf) referencing it."@en ;
-  rdfs:label "as glTF v2.0 texture file (.jpg)"@en ;
-  rdfs:subPropertyOf <https://w3id.org/fog#asGltf_v2.0> ;
-.
-<https://w3id.org/fog#asGltf_v2.0-texture-png>
-  rdf:type owl:DatatypeProperty ;
   dbp:extension ".png" ;
   dcterms:requires "fog:asGltf_v2.0-gltf" ;
-  rdfs:comment "The datatype relation pointing to a binary texture file (.png). This file always has to be used together with the central .gltf JSON file (fog:asGltf_v2.0-gltf) referencing it."@en ;
-  rdfs:label "as glTF v2.0 texture file (.png)"@en ;
+  rdfs:comment "The datatype relation pointing to a binary texture file (.jpeg/.png). This file always has to be used together with the central .gltf JSON file (fog:asGltf_v2.0-gltf) referencing it."@en ;
+  rdfs:label "as glTF v2.0 texture file"@en ;
   rdfs:subPropertyOf <https://w3id.org/fog#asGltf_v2.0> ;
 .
 fog:asGml
@@ -376,6 +356,13 @@ fog:asObj
   dbp:extension ".obj" ;
   rdfs:comment "The datatype relation pointing to a text encoded OBJ file (.obj) following the OBJ format developed by Wavefront Technologies. This file can be used together with an optional material file (.mtl)."@en ;
   rdfs:label "as OBJ v3.0 file (.obj)"@en ;
+  rdfs:subPropertyOf <https://w3id.org/fog#asObj_v3.0> ;
+.
+<https://w3id.org/fog#asObj_v3.0-texture>
+  rdf:type owl:DatatypeProperty ;
+  rdf:type owl:FunctionalProperty ;
+  rdfs:comment "The datatype relation pointing to a binary encoded texture file that is referenced in the .mtl file of the OBJ format."@en ;
+  rdfs:label "as OBJ texture"@en ;
   rdfs:subPropertyOf <https://w3id.org/fog#asObj_v3.0> ;
 .
 fog:asOntobrepOntology
@@ -665,4 +652,10 @@ fog:asX3d
   rdfs:seeAlso <http://www.web3d.org/documents/specifications/19776-1/V3.3/index.html> ;
   rdfs:seeAlso <https://www.iana.org/assignments/media-types/model/x3d+xml> ;
   rdfs:subPropertyOf <https://w3id.org/fog#asX3d_v3.3> ;
+.
+fog:hasReferencedContent
+  rdf:type owl:FunctionalProperty ;
+  rdf:type owl:ObjectProperty ;
+  rdfs:label "has referenced content" ;
+  rdfs:range fog:ReferencedContent ;
 .

@@ -22,6 +22,17 @@
     "preferredNamespaceUri" : "<https://w3id.org/fog#>",
     "versionInfo" : "0.0.1"
   }, {
+    "@id" : "fog:ReferencedContent",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Referenced content of the following geometry descriptions: glTF and OBJ. It contains exactly one link to a texture, separate binary glTF geometry or a OBJ material that is referenced by the main file (resp. .gltf and .obj). The name of the referenced file, as stored in the main file, is connected via a rdfs:label node"
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Referenced content"
+    }
+  }, {
     "@id" : "fog:as3dmoOntology",
     "@type" : [ "owl:ObjectProperty", "owl:FunctionalProperty" ],
     "comment" : {
@@ -288,59 +299,17 @@
     "seeAlso" : "https://www.iana.org/assignments/media-types/model/gltf+json",
     "subPropertyOf" : "fog:asGltf_v1.0"
   }, {
-    "@id" : "fog:asGltf_v1.0-texture-bmp",
-    "@type" : "owl:DatatypeProperty",
-    "extension" : ".bmp",
+    "@id" : "fog:asGltf_v1.0-texture",
+    "@type" : [ "owl:FunctionalProperty", "owl:DatatypeProperty" ],
+    "extension" : [ ".bmp", ".jpeg", ".gif", ".png" ],
     "requires" : "fog:asGltf_v1.0-gltf",
     "comment" : {
       "@language" : "en",
-      "@value" : "The datatype relation pointing to a binary texture file (.bmp). This file always has to be used together with the central .gltf JSON file (fog:asGltf_v1.0-gltf) referencing it."
+      "@value" : "The datatype relation pointing to a binary texture file (.bmp/..gif/.jpeg/.png). This file always has to be used together with the central .gltf JSON file (fog:asGltf_v1.0-gltf) referencing it."
     },
     "label" : {
       "@language" : "en",
-      "@value" : "as glTF v1.0 texture file (.bmp)"
-    },
-    "subPropertyOf" : "fog:asGltf_v1.0"
-  }, {
-    "@id" : "fog:asGltf_v1.0-texture-gif",
-    "@type" : "owl:DatatypeProperty",
-    "extension" : ".gif",
-    "requires" : "fog:asGltf_v1.0-gltf",
-    "comment" : {
-      "@language" : "en",
-      "@value" : "The datatype relation pointing to a binary texture file (.gif). This file always has to be used together with the central .gltf JSON file (fog:asGltf_v1.0-gltf) referencing it."
-    },
-    "label" : {
-      "@language" : "en",
-      "@value" : "as glTF v1.0 texture file (.gif)"
-    },
-    "subPropertyOf" : "fog:asGltf_v1.0"
-  }, {
-    "@id" : "fog:asGltf_v1.0-texture-jpeg",
-    "@type" : "owl:DatatypeProperty",
-    "extension" : [ ".jpg", ".jpeg" ],
-    "requires" : "fog:asGltf_v1.0-gltf",
-    "comment" : {
-      "@language" : "en",
-      "@value" : "The datatype relation pointing to a binary texture file (.jpg). This file always has to be used together with the central .gltf JSON file (fog:asGltf_v1.0-gltf) referencing it."
-    },
-    "label" : {
-      "@language" : "en",
-      "@value" : "as glTF v1.0 texture file (.jpg)"
-    },
-    "subPropertyOf" : "fog:asGltf_v1.0"
-  }, {
-    "@id" : "fog:asGltf_v1.0-texture-png",
-    "@type" : "owl:DatatypeProperty",
-    "extension" : ".png",
-    "requires" : "fog:asGltf_v1.0-gltf",
-    "comment" : {
-      "@language" : "en",
-      "@value" : "The datatype relation pointing to a binary texture file (.png). This file always has to be used together with the central .gltf JSON file (fog:asGltf_v1.0-gltf) referencing it."
-    },
-    "label" : {
-      "@language" : "en",
-      "@value" : "as glTF v1.0 texture file (.png)"
+      "@value" : "as glTF v1.0 texture file"
     },
     "subPropertyOf" : "fog:asGltf_v1.0"
   }, {
@@ -399,31 +368,17 @@
     },
     "subPropertyOf" : "fog:asGltf_v2.0"
   }, {
-    "@id" : "fog:asGltf_v2.0-texture-jpeg",
-    "@type" : "owl:DatatypeProperty",
-    "extension" : [ ".jpg", ".jpeg" ],
+    "@id" : "fog:asGltf_v2.0-texture",
+    "@type" : [ "owl:FunctionalProperty", "owl:DatatypeProperty" ],
+    "extension" : [ ".jpeg", ".png" ],
     "requires" : "fog:asGltf_v2.0-gltf",
     "comment" : {
       "@language" : "en",
-      "@value" : "The datatype relation pointing to a binary texture file (.jpg). This file always has to be used together with the central .gltf JSON file (fog:asGltf_v2.0-gltf) referencing it."
+      "@value" : "The datatype relation pointing to a binary texture file (.jpeg/.png). This file always has to be used together with the central .gltf JSON file (fog:asGltf_v2.0-gltf) referencing it."
     },
     "label" : {
       "@language" : "en",
-      "@value" : "as glTF v2.0 texture file (.jpg)"
-    },
-    "subPropertyOf" : "fog:asGltf_v2.0"
-  }, {
-    "@id" : "fog:asGltf_v2.0-texture-png",
-    "@type" : "owl:DatatypeProperty",
-    "extension" : ".png",
-    "requires" : "fog:asGltf_v2.0-gltf",
-    "comment" : {
-      "@language" : "en",
-      "@value" : "The datatype relation pointing to a binary texture file (.png). This file always has to be used together with the central .gltf JSON file (fog:asGltf_v2.0-gltf) referencing it."
-    },
-    "label" : {
-      "@language" : "en",
-      "@value" : "as glTF v2.0 texture file (.png)"
+      "@value" : "as glTF v2.0 texture file"
     },
     "subPropertyOf" : "fog:asGltf_v2.0"
   }, {
@@ -547,6 +502,18 @@
     "label" : {
       "@language" : "en",
       "@value" : "as OBJ v3.0 file (.obj)"
+    },
+    "subPropertyOf" : "fog:asObj_v3.0"
+  }, {
+    "@id" : "fog:asObj_v3.0-texture",
+    "@type" : [ "owl:DatatypeProperty", "owl:FunctionalProperty" ],
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a binary encoded texture file that is referenced in the .mtl file of the OBJ format."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as OBJ texture"
     },
     "subPropertyOf" : "fog:asObj_v3.0"
   }, {
@@ -964,6 +931,11 @@
     },
     "seeAlso" : [ "https://www.iana.org/assignments/media-types/model/x3d+xml", "http://www.web3d.org/documents/specifications/19776-1/V3.3/index.html" ],
     "subPropertyOf" : "fog:asX3d_v3.3"
+  }, {
+    "@id" : "fog:hasReferencedContent",
+    "@type" : [ "owl:FunctionalProperty", "owl:ObjectProperty" ],
+    "label" : "has referenced content",
+    "range" : "fog:ReferencedContent"
   } ],
   "@context" : {
     "subPropertyOf" : {
@@ -982,6 +954,9 @@
     "seeAlso" : {
       "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
       "@type" : "@id"
+    },
+    "name" : {
+      "@id" : "http://xmlns.com/foaf/0.1/name"
     },
     "propertyDisjointWith" : {
       "@id" : "http://www.w3.org/2002/07/owl#propertyDisjointWith",
@@ -1013,8 +988,9 @@
     "preferredNamespaceUri" : {
       "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
     },
-    "name" : {
-      "@id" : "http://xmlns.com/foaf/0.1/name"
+    "range" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#range",
+      "@type" : "@id"
     },
     "@vocab" : "https://w3id.org/fog#",
     "owl" : "http://www.w3.org/2002/07/owl#",
