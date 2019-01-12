@@ -1,0 +1,1010 @@
+{
+  "@graph" : [ {
+    "@id" : "_:b0",
+    "@type" : "foaf:Person",
+    "name" : "Anna Wagner"
+  }, {
+    "@id" : "_:b1",
+    "@type" : "foaf:Person",
+    "name" : "Pieter Pauwels"
+  }, {
+    "@id" : "_:b2",
+    "@type" : "foaf:Person",
+    "name" : "Mathias Bonduel"
+  }, {
+    "@id" : "https://w3id.org/fog",
+    "@type" : "owl:Ontology",
+    "creator" : [ "_:b0", "_:b1", "_:b2" ],
+    "description" : "The File Ontology for Geometry formats (FOG) describes meaningful relations towards geometry snippets in RDF literals, geometry files on relative or absolute URLs and ontology-based geometry descriptions. The defined properties in this ontology are related towards each other and additional metadata is provided, such as file extension and related specifications/sources (incl. entries in dbpedia and Wikidata).",
+    "issued" : "2018-12-03",
+    "title" : "FOG: File Ontology for Geometry formats",
+    "preferredNamespacePrefix" : "fog",
+    "preferredNamespaceUri" : "<https://w3id.org/fog#>",
+    "versionInfo" : "0.0.1"
+  }, {
+    "@id" : "fog:ReferencedContent",
+    "@type" : "owl:Class",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "Referenced content of the following geometry descriptions: glTF and OBJ. It contains exactly one link to a texture, separate binary glTF geometry or a OBJ material that is referenced by the main file (resp. .gltf and .obj). The name of the referenced file, as stored in the main file, is connected via a rdfs:label node"
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "Referenced content"
+    }
+  }, {
+    "@id" : "fog:as3dmoOntology",
+    "@type" : [ "owl:ObjectProperty", "owl:FunctionalProperty" ],
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The object relation pointing to a ontology-based geometry description following the 3DMO ontology. It is strongly adviced to use the more specific subproperties (e.g. fog:asC3dmoOntology_v1.1)."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as 3DMO ontology"
+    },
+    "seeAlso" : "http://3dontology.org/",
+    "subPropertyOf" : "omg:hasComplexGeometryDescription"
+  }, {
+    "@id" : "fog:as3dmoOntology_v1.1",
+    "@type" : [ "owl:ObjectProperty", "owl:FunctionalProperty" ],
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The object relation pointing to a ontology-based geometry description following the 3DMO v1.1 ontology."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as 3DMO ontology v1.1 "
+    },
+    "subPropertyOf" : "fog:as3dmoOntology"
+  }, {
+    "@id" : "fog:asCollada",
+    "@type" : [ "owl:FunctionalProperty", "owl:DatatypeProperty" ],
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a geometry description following the open COLLADA format from the Khronos Group. The format consists of a single .dae file (text-encoded). It is strongly adviced to use the more specific subproperties (e.g. fog:asCollada_v1.4 and fog:asCollada_v1.5)."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as COLLADA format"
+    },
+    "seeAlso" : [ "wd:Q603967", "https://www.iana.org/assignments/media-types/model/vnd.collada+xml", "dbr:COLLADA" ],
+    "subPropertyOf" : "omg:hasSimpleGeometryDescription"
+  }, {
+    "@id" : "fog:asCollada_v1.4.1",
+    "@type" : [ "owl:FunctionalProperty", "owl:DatatypeProperty" ],
+    "extension" : ".dae",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a geometry description following the open COLLADA v1.4.1 format from the Khronos Group. It consists of a single .dae file (text-encoded)."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as COLLADA v1.4.1 format (.dae)"
+    },
+    "seeAlso" : [ "wd:Q28975679", "https://www.khronos.org/files/collada_spec_1_4.pdf" ],
+    "subPropertyOf" : "fog:asCollada"
+  }, {
+    "@id" : "fog:asCollada_v1.5.0",
+    "@type" : [ "owl:FunctionalProperty", "owl:DatatypeProperty" ],
+    "extension" : ".dae",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a geometry description following the open COLLADA v1.5.0 format from the Khronos Group. It consists of a single .dae file (text-encoded)."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as COLLADA v1.5.0 format (.dae)"
+    },
+    "seeAlso" : "https://www.khronos.org/files/collada_spec_1_5.pdf",
+    "subPropertyOf" : "fog:asCollada"
+  }, {
+    "@id" : "fog:asDwg",
+    "@type" : [ "owl:FunctionalProperty", "owl:DatatypeProperty" ],
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a geometry description following the proprietary DWG format from Autodesk. The Open Design Alliance created a 'specification for .dwg files' that is publicly available. The format consists of a single .dwg file (binary-encoded). It is strongly adviced to use the more specific subproperties (e.g. fog:asDwg_v2018)."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as DWG format"
+    },
+    "seeAlso" : [ "wd:Q1053358", "https://www.opendesign.com/files/guestdownloads/OpenDesign_Specification_for_.dwg_files.pdf", "https://www.iana.org/assignments/media-types/image/vnd.dwg", "dbr:.dwg" ],
+    "subPropertyOf" : "omg:hasSimpleGeometryDescription"
+  }, {
+    "@id" : "fog:asDwg_v2010",
+    "@type" : [ "owl:FunctionalProperty", "owl:DatatypeProperty" ],
+    "extension" : ".dwg",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a geometry description following the proprietary DWG v2010 format from Autodesk. It consists of a single .dwg file (binary-encoded)."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as DWG 2010 format (.dwg)"
+    },
+    "subPropertyOf" : "fog:asDwg"
+  }, {
+    "@id" : "fog:asDwg_v2013",
+    "@type" : [ "owl:FunctionalProperty", "owl:DatatypeProperty" ],
+    "extension" : ".dwg",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a geometry description following the proprietary DWG v2013 format from Autodesk. It consists of a single .dwg file (binary-encoded)."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as DWG 2013 format (.dwg)"
+    },
+    "subPropertyOf" : "fog:asDwg"
+  }, {
+    "@id" : "fog:asDwg_v2018",
+    "@type" : [ "owl:FunctionalProperty", "owl:DatatypeProperty" ],
+    "extension" : ".dwg",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a geometry description following the proprietary DWG v2018 format from Autodesk. It consists of a single .dwg file (binary-encoded)."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as DWG 2018 format (.dwg)"
+    },
+    "subPropertyOf" : "fog:asDwg"
+  }, {
+    "@id" : "fog:asE57",
+    "@type" : [ "owl:FunctionalProperty", "owl:DatatypeProperty" ],
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a point cloud geometry description following the open E57 format developed by the ASTM Committee E57. The format consists of a single .e57 file (partially binary-encoded, partially text-encoded). It is strongly adviced to use the more specific subproperties (e.g. fog:asE57_v1.0)."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as E57 format"
+    },
+    "seeAlso" : [ "wd:Q33517407", "https://www.ri.cmu.edu/publications/the-astm-e57-file-format-for-3d-imaging-data-exchange/", "https://www.astm.org/Standards/E2807.htm" ],
+    "subPropertyOf" : "omg:hasSimpleGeometryDescription"
+  }, {
+    "@id" : "fog:asE57_v1.0",
+    "@type" : [ "owl:FunctionalProperty", "owl:DatatypeProperty" ],
+    "extension" : ".e57",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a point cloud geometry description following the open E57 format developed by the ASTM Committee E57. The format consists of a single .e57 file (partially binary-encoded, partially text-encoded)."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as E57 v1.0 format (.e57)"
+    },
+    "seeAlso" : [ "https://www.ri.cmu.edu/publications/the-astm-e57-file-format-for-3d-imaging-data-exchange/", "https://www.astm.org/Standards/E2807.htm" ],
+    "subPropertyOf" : "fog:asE57"
+  }, {
+    "@id" : "fog:asGeojson",
+    "@type" : [ "owl:FunctionalProperty", "owl:DatatypeProperty" ],
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a geometry description following the open GeoJSON format. The format consists of a single .json file (text-encoded). It is strongly adviced to use the more specific subproperties (e.g. fog:asGeojson_v2016). Note that the version proposed by the IETF GeoJSON Working Group (fog:asGeojson_v2016) is derived from the now obsolete 2008 version (fog:asGeojson_v2008)."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as GeoJSON format"
+    },
+    "seeAlso" : [ "wd:Q5533904", "dbr:GeoJSON" ],
+    "subPropertyOf" : "omg:hasSimpleGeometryDescription"
+  }, {
+    "@id" : "fog:asGeojson_v2008",
+    "@type" : [ "owl:FunctionalProperty", "owl:DatatypeProperty" ],
+    "extension" : ".json",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a geometry description following the open GeoJSON v2008 format. The format consists of a single .json file (text-encoded). Note that the version proposed by the IETF (fog:asGeojson_v2016) is derived from the now obsolete 2008 version (fog:asGeojson_v2008)."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as GeoJSON format v2008 (.json)"
+    },
+    "seeAlso" : "http://geojson.org/geojson-spec",
+    "subPropertyOf" : "fog:asGeojson"
+  }, {
+    "@id" : "fog:asGeojson_v2016",
+    "@type" : [ "owl:FunctionalProperty", "owl:DatatypeProperty" ],
+    "extension" : [ ".json", ".geojson" ],
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a geometry description following the open GeoJSON v2016 format developed by the IETF GeoJSON Working Group. The format consists of a single .json file (text-encoded). Note that the version proposed by the IETF (fog:asGeojson_v2016) is derived from the now obsolete 2008 version (fog:asGeojson_v2008)."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as GeoJSON v2016 format (.json)"
+    },
+    "seeAlso" : [ "https://www.iana.org/assignments/media-types/application/geo+json", "https://tools.ietf.org/html/rfc7946" ],
+    "subPropertyOf" : "fog:asGeojson"
+  }, {
+    "@id" : "fog:asGeomOntology",
+    "@type" : [ "owl:ObjectProperty", "owl:FunctionalProperty" ],
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The object relation pointing to a ontology-based geometry description following the GEOM ontology."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as GEOM ontology"
+    },
+    "seeAlso" : "http://rdf.bg/geometry.ttl",
+    "subPropertyOf" : "omg:hasComplexGeometryDescription"
+  }, {
+    "@id" : "fog:asGltf",
+    "@type" : "owl:DatatypeProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a geometry description following the open glTF format from the Khronos Group. The format consists of one (.gltf with embedded binary geometry/textures/shaders, or .glb) or multiple files (combination of binary- and/or text-encoded). It is strongly adviced to use the more specific subsubproperties (e.g. fog:asGltf_v2.0-gltf)."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as glTF format"
+    },
+    "subPropertyOf" : "omg:hasSimpleGeometryDescription"
+  }, {
+    "@id" : "fog:asGltf_v1.0",
+    "@type" : "owl:DatatypeProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a geometry description following the open glTF v1.0 format from the Khronos Group. The format consists of one (.gltf with embedded binary geometry/textures/shaders) or multiple files (combination of binary- and/or text-encoded). It is strongly adviced to use the more specific subproperties (e.g. fog:asGltf_v1.0-gltf)."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as glTF v1.0 format"
+    },
+    "seeAlso" : [ "wd:Q28135989", "https://github.com/KhronosGroup/glTF/tree/master/specification/1.0" ],
+    "subPropertyOf" : "fog:asGltf"
+  }, {
+    "@id" : "fog:asGltf_v1.0-bin",
+    "@type" : [ "owl:FunctionalProperty", "owl:DatatypeProperty" ],
+    "extension" : ".bin",
+    "requires" : "fog:asGltf_v1.0-gltf",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a binary geometry file (.bin) following the open glTF v1.0 format from the Khronos Group. This file always has to be used together with the central .gltf JSON file (fog:asGltf_v1.0-gltf) referencing it."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as glTF v1.0 geometry file (.bin)"
+    },
+    "subPropertyOf" : "fog:asGltf_v1.0"
+  }, {
+    "@id" : "fog:asGltf_v1.0-glsl",
+    "@type" : [ "owl:FunctionalProperty", "owl:DatatypeProperty" ],
+    "extension" : ".glsl",
+    "requires" : "fog:asGltf_v1.0-gltf",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a text-encoded shader file (.bin) following the open glTF v1.0 format from the Khronos Group. This file always has to be used together with the central .gltf JSON file (fog:asGltf_v1.0-gltf) referencing it."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as glTF v1.0 shader file (.glsl)"
+    },
+    "subPropertyOf" : "fog:asGltf_v1.0"
+  }, {
+    "@id" : "fog:asGltf_v1.0-gltf",
+    "@type" : [ "owl:FunctionalProperty", "owl:DatatypeProperty" ],
+    "extension" : ".gltf",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a JSON file (.gltf) following the open glTF v1.0 format from the Khronos Group. This file can be used on its own if geometry, shaders and optional textures are embedded (text-encoded) inside the JSON. In most cases however, it references other files containing geometry (.bin), optional shaders (.glsl) and optional textures (.bmp/.gif/.jpeg/.png)."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as glTF v1.0 JSON file (.gltf)"
+    },
+    "seeAlso" : "https://www.iana.org/assignments/media-types/model/gltf+json",
+    "subPropertyOf" : "fog:asGltf_v1.0"
+  }, {
+    "@id" : "fog:asGltf_v1.0-texture",
+    "@type" : [ "owl:FunctionalProperty", "owl:DatatypeProperty" ],
+    "extension" : [ ".bmp", ".jpeg", ".gif", ".png" ],
+    "requires" : "fog:asGltf_v1.0-gltf",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a binary texture file (.bmp/..gif/.jpeg/.png). This file always has to be used together with the central .gltf JSON file (fog:asGltf_v1.0-gltf) referencing it."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as glTF v1.0 texture file"
+    },
+    "subPropertyOf" : "fog:asGltf_v1.0"
+  }, {
+    "@id" : "fog:asGltf_v2.0",
+    "@type" : "owl:DatatypeProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a geometry description following the open glTF v2.0 format from the Khronos Group. The format consists of one (.gltf with embedded binary geometry/textures/shaders, or .glb) or multiple files (combination of binary- and/or text-encoded). It is strongly adviced to use the more specific subproperties (e.g. fog:asGltf_v2.0-gltf)."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as glTF v2.0 format"
+    },
+    "seeAlso" : "https://github.com/KhronosGroup/glTF/tree/master/specification/2.0",
+    "subPropertyOf" : "fog:asGltf"
+  }, {
+    "@id" : "fog:asGltf_v2.0-bin",
+    "@type" : [ "owl:FunctionalProperty", "owl:DatatypeProperty" ],
+    "extension" : ".bin",
+    "requires" : "fog:asGltf_v2.0-gltf",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a binary geometry file (.bin) following the open glTF v2.0 format from the Khronos Group. This file always has to be used together with the central .gltf JSON file (fog:asGltf_v2.0-gltf) referencing it."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as glTF v2.0 geometry file (.bin)"
+    },
+    "seeAlso" : "https://www.iana.org/assignments/media-types/application/gltf-buffer",
+    "subPropertyOf" : "fog:asGltf_v2.0"
+  }, {
+    "@id" : "fog:asGltf_v2.0-glb",
+    "@type" : [ "owl:FunctionalProperty", "owl:DatatypeProperty" ],
+    "extension" : ".glb",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a binary file (.glb) following the open glTF v2.0 format from the Khronos Group. This one file contains geometry and textures, and as a result can be used without other files."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as glTF v2.0 binary file (.glb)"
+    },
+    "seeAlso" : "https://www.iana.org/assignments/media-types/model/gltf-binary",
+    "subPropertyOf" : "fog:asGltf_v2.0"
+  }, {
+    "@id" : "fog:asGltf_v2.0-gltf",
+    "@type" : [ "owl:FunctionalProperty", "owl:DatatypeProperty" ],
+    "extension" : ".gltf",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a JSON file (.gltf) following the open glTF v2.0 format from the Khronos Group. This file can be used on its own if geometry and optional textures are embedded (text-encoded) inside the JSON. In most cases however, it references other files containing geometry (.bin) and optional textures (.jpeg/.png)."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as glTF v2.0 JSON file (.gltf)"
+    },
+    "subPropertyOf" : "fog:asGltf_v2.0"
+  }, {
+    "@id" : "fog:asGltf_v2.0-texture",
+    "@type" : [ "owl:FunctionalProperty", "owl:DatatypeProperty" ],
+    "extension" : [ ".jpeg", ".png" ],
+    "requires" : "fog:asGltf_v2.0-gltf",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a binary texture file (.jpeg/.png). This file always has to be used together with the central .gltf JSON file (fog:asGltf_v2.0-gltf) referencing it."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as glTF v2.0 texture file"
+    },
+    "subPropertyOf" : "fog:asGltf_v2.0"
+  }, {
+    "@id" : "fog:asGml",
+    "@type" : [ "owl:FunctionalProperty", "owl:DatatypeProperty" ],
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a text encoded geometry description following one of the open GML formats developed by OGC and ISO. The format consists of a single .gml file (text-encoded). It is strongly adviced to use the more specific subproperties (e.g. fog:asGml_v3.3.0). Note that this property is disjoint with geo:asGML because of the more strict domain and range restrictions in Geosparql."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as GML format"
+    },
+    "seeAlso" : [ "wd:Q926165", "https://www.opengeospatial.org/standards/gml", "http://schemas.opengis.net/gml/" ],
+    "subPropertyOf" : "omg:hasSimpleGeometryDescription",
+    "propertyDisjointWith" : "geo:asGML"
+  }, {
+    "@id" : "fog:asGml_v3.1.1",
+    "@type" : [ "owl:FunctionalProperty", "owl:DatatypeProperty" ],
+    "extension" : ".gml",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a text encoded GML file (.gml) following the open GML v3.1.1 format developed by OGC and ISO. Note that this and older versions are considered depreciated. Note that this property is disjoint (via its superproperty fog:asGml) with geo:asGML because of the more strict domain and range restrictions in Geosparql."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as GML v3.1.1 format (.gml)"
+    },
+    "seeAlso" : [ "http://schemas.opengis.net/gml/3.1.1/", "http://portal.opengeospatial.org/files/?artifact_id=4700" ],
+    "subPropertyOf" : "fog:asGml"
+  }, {
+    "@id" : "fog:asGml_v3.2.1",
+    "@type" : [ "owl:FunctionalProperty", "owl:DatatypeProperty" ],
+    "extension" : ".gml",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a text encoded GML file (.gml) following the open GML v3.2.1 format developed by OGC and ISO. Note that this property is disjoint (via its superproperty fog:asGml) with geo:asGML because of the more strict domain and range restrictions in Geosparql."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as GML v3.2.1 format (.gml)"
+    },
+    "seeAlso" : [ "http://schemas.opengis.net/gml/3.2.1/", "http://portal.opengeospatial.org/files/?artifact_id=20509" ],
+    "subPropertyOf" : "fog:asGml"
+  }, {
+    "@id" : "fog:asGml_v3.2.2",
+    "@type" : [ "owl:FunctionalProperty", "owl:DatatypeProperty" ],
+    "extension" : ".gml",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a text encoded GML file (.gml) following the open GML v3.2.2 format developed by OGC and ISO. Note that this property is disjoint (via its superproperty fog:asGml) with geo:asGML because of the more strict domain and range restrictions in Geosparql."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as GML v3.2.2 format (.gml)"
+    },
+    "seeAlso" : "https://portal.opengeospatial.org/files/?artifact_id=74183&version=2",
+    "subPropertyOf" : "fog:asGml"
+  }, {
+    "@id" : "fog:asGml_v3.3.0",
+    "@type" : [ "owl:FunctionalProperty", "owl:DatatypeProperty" ],
+    "extension" : ".gml",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a text encoded GML file (.gml) following the open GML v3.3.0 format developed by OGC and ISO. This format is an extension of the GML v3.2 format. Note that this property is disjoint (via its superproperty fog:asGml) with geo:asGML because of the more strict domain and range restrictions in Geosparql."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as GML v3.3.0 format (.gml)"
+    },
+    "seeAlso" : [ "https://portal.opengeospatial.org/files/?artifact_id=46568", "http://schemas.opengis.net/gml/3.3/" ],
+    "subPropertyOf" : "fog:asGml"
+  }, {
+    "@id" : "fog:asObj",
+    "@type" : "owl:DatatypeProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a text encoded geometry description following the OBJ format developed by Wavefront Technologies. The format consists of a single .obj file (text encoded) and an optional material file (.mtl). It is strongly adviced to use the more specific subsubproperties (e.g. fog:asObj_v3.0-obj)."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as OBJ format"
+    },
+    "seeAlso" : [ "wd:Q2119595", "http://paulbourke.net/dataformats/obj/" ],
+    "subPropertyOf" : "omg:hasSimpleGeometryDescription"
+  }, {
+    "@id" : "fog:asObj_v3.0",
+    "@type" : "owl:DatatypeProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a text encoded geometry description following the OBJ v3.0 format developed by Wavefront Technologies. The format consists of a single .obj file (text encoded) and an optional material file (.mtl). It is strongly adviced to use the more specific subproperties (e.g. fog:asObj_v3.0-obj)."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as OBJ v3.0 format"
+    },
+    "subPropertyOf" : "fog:asObj"
+  }, {
+    "@id" : "fog:asObj_v3.0-mtl",
+    "@type" : [ "owl:FunctionalProperty", "owl:DatatypeProperty" ],
+    "extension" : ".mtl",
+    "requires" : "fog:asObj_v3.0-obj",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a text encoded MTL file (.mtl) following the OBJ format developed by Wavefront Technologies. This file has to be used together with the main .obj file that references it."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as OBJ v3.0 material file (.mtl)"
+    },
+    "seeAlso" : [ "wd:Q38343645", "wd:Q20965861" ],
+    "subPropertyOf" : "fog:asObj_v3.0"
+  }, {
+    "@id" : "fog:asObj_v3.0-obj",
+    "@type" : [ "owl:FunctionalProperty", "owl:DatatypeProperty" ],
+    "extension" : ".obj",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a text encoded OBJ file (.obj) following the OBJ format developed by Wavefront Technologies. This file can be used together with an optional material file (.mtl)."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as OBJ v3.0 file (.obj)"
+    },
+    "subPropertyOf" : "fog:asObj_v3.0"
+  }, {
+    "@id" : "fog:asObj_v3.0-texture",
+    "@type" : [ "owl:DatatypeProperty", "owl:FunctionalProperty" ],
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a binary encoded texture file that is referenced in the .mtl file of the OBJ format."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as OBJ texture"
+    },
+    "subPropertyOf" : "fog:asObj_v3.0"
+  }, {
+    "@id" : "fog:asOntobrepOntology",
+    "@type" : [ "owl:ObjectProperty", "owl:FunctionalProperty" ],
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The object relation pointing to a ontology-based geometry description following the OntoBREP ontology."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as OntoBREP ontology"
+    },
+    "seeAlso" : "https://github.com/OntoBREP/ontobrep",
+    "subPropertyOf" : "omg:hasComplexGeometryDescription"
+  }, {
+    "@id" : "fog:asOntostepOntology",
+    "@type" : [ "owl:ObjectProperty", "owl:FunctionalProperty" ],
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The object relation pointing to a ontology-based geometry description following the OntoSTEP ontology."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as OntoSTEP ontology"
+    },
+    "seeAlso" : "https://www.nist.gov/publications/ontostep-owl-dl-ontology-step?pub_id=901544",
+    "subPropertyOf" : "omg:hasComplexGeometryDescription"
+  }, {
+    "@id" : "fog:asPcd",
+    "@type" : [ "owl:FunctionalProperty", "owl:DatatypeProperty" ],
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a binary encoded point cloud following the open PCD format which was developed as part of the open source project PCL (point cloud library). The format consists of a single .pcd file (binary or ASCII encoded). It is strongly adviced to use the more specific subproperties (e.g. fog:asPcd_v0.7)."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as PCD point cloud format"
+    },
+    "seeAlso" : "http://pointclouds.org/documentation/tutorials/pcd_file_format.php",
+    "subPropertyOf" : "omg:hasSimpleGeometryDescription"
+  }, {
+    "@id" : "fog:asPcd_v0.7",
+    "@type" : [ "owl:FunctionalProperty", "owl:DatatypeProperty" ],
+    "extension" : ".pcd",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a binary or ASCII encoded point cloud following the open PCD v0.7 (sometimes referred to as PCD_v7) format which was developed as part of the open source project PCL (point cloud library)."
+    },
+    "label" : "as PCD v0.7 point cloud format (.pcd)",
+    "subPropertyOf" : "fog:asPcd"
+  }, {
+    "@id" : "fog:asPly",
+    "@type" : [ "owl:FunctionalProperty", "owl:DatatypeProperty" ],
+    "extension" : ".ply",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a geometry description following the PLY format which was developed by Greg Turk (Stanford University). The format consists of a single .ply file which is either text or binary encoded. It is strongly adviced to use the more specific subsubproperties (e.g. fog:asPly_v1.0-ascii)."
+    },
+    "label" : "as PLY format",
+    "seeAlso" : [ "wd:Q3077345", "http://paulbourke.net/dataformats/ply/", "dbr:PLY_(file_format)" ],
+    "subPropertyOf" : "omg:hasSimpleGeometryDescription"
+  }, {
+    "@id" : "fog:asPly_v1.0",
+    "@type" : [ "owl:FunctionalProperty", "owl:DatatypeProperty" ],
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a geometry description following the PLY v1.0 format which was developed by Greg Turk (Stanford University). The format consists of a single .ply file which is either text or binary encoded. It is strongly adviced to use the more specific subproperties (e.g. fog:asPly_v1.0-ascii)."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as PLY v1.0 format"
+    },
+    "subPropertyOf" : "fog:asPly"
+  }, {
+    "@id" : "fog:asPly_v1.0-ascii",
+    "@type" : [ "owl:FunctionalProperty", "owl:DatatypeProperty" ],
+    "extension" : ".ply",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a geometry file following the PLY v1.0 format which was developed by Greg Turk (Stanford University). The single .ply file is ASCII encoded."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as PLY ASCII format (.ply)"
+    },
+    "subPropertyOf" : "fog:asPly_v1.0"
+  }, {
+    "@id" : "fog:asPly_v1.0-binaryBE",
+    "@type" : [ "owl:FunctionalProperty", "owl:DatatypeProperty" ],
+    "extension" : ".ply",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a geometry file following the PLY v1.0 format which was developed by Greg Turk (Stanford University). The single .ply file is binary encoded with big endian. Note that there is also a sibling property for a binary PLY with little endian."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as PLY binary (big endian) format (.ply)"
+    },
+    "subPropertyOf" : "fog:asPly_v1.0"
+  }, {
+    "@id" : "fog:asPly_v1.0-binaryLE",
+    "@type" : [ "owl:FunctionalProperty", "owl:DatatypeProperty" ],
+    "extension" : ".ply",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a geometry file following the PLY v1.0 format which was developed by Greg Turk (Stanford University). The single .ply file is binary encoded with little endian. Note that there is also a sibling property for a binary PLY with big endian."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as PLY binary (little endian) format (.ply)"
+    },
+    "subPropertyOf" : "fog:asPly_v1.0"
+  }, {
+    "@id" : "fog:asSfa",
+    "@type" : [ "owl:FunctionalProperty", "owl:DatatypeProperty" ],
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a geometry description following the open Simple Feature Access (SFA) standard developed by the OGC and ISO. The format consists of a single .wkt (text encoded) or .wkb (binary encoded) file. It is strongly adviced to use the more specific subsubproperties (e.g. fog:asSfa_v2-wkt)."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as Simple Feature Access geometry format"
+    },
+    "seeAlso" : [ "wd:Q4018860", "wd:Q365034" ],
+    "subPropertyOf" : "omg:hasSimpleGeometryDescription"
+  }, {
+    "@id" : "fog:asSfa_v1",
+    "@type" : [ "owl:FunctionalProperty", "owl:DatatypeProperty" ],
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a geometry description following the open Simple Feature Access (SFA) v1 standard developed by the OGC. The format is text encoded. It is strongly adviced to use the more specific subproperties (e.g. fog:asSfa_v1-wkt). Note that this standard is now considered depreciated in favor of SFA v2."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as Simple Feature Access v1 format"
+    },
+    "seeAlso" : [ "http://www.geoapi.org/3.0/javadoc/org/opengis/referencing/doc-files/WKT.html", "http://portal.opengeospatial.org/files/?artifact_id=999" ],
+    "subPropertyOf" : "fog:asSfa"
+  }, {
+    "@id" : "fog:asSfa_v1-wkt",
+    "@type" : [ "owl:FunctionalProperty", "owl:DatatypeProperty" ],
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a Well Know Text (WKT) geometry following the open Simple Feature Access (SFA) v1 standard developed by the OGC. Note that the SFA v1 standard is now considered depreciated in favor of SFA v2. Note that this property is disjoint with geo:asWKT because of the more strict domain and range restrictions in Geosparql."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as Well Known Text SFA v1 geometry"
+    },
+    "subPropertyOf" : "fog:asSfa_v1",
+    "propertyDisjointWith" : "geo:asWKT"
+  }, {
+    "@id" : "fog:asSfa_v2",
+    "@type" : [ "owl:FunctionalProperty", "owl:DatatypeProperty" ],
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a geometry description following the open Simple Feature Access (SFA) v2 standard developed by the OGC and ISO. The format is either text encoded (WKT) or binary encoded (WKB). It is strongly adviced to use the more specific subproperties (e.g. fog:asSfa_v2-wkt)."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as Simple Feature Access v2 format"
+    },
+    "seeAlso" : "http://portal.opengeospatial.org/files/?artifact_id=25355",
+    "subPropertyOf" : "fog:asSfa"
+  }, {
+    "@id" : "fog:asSfa_v2-wkb",
+    "@type" : [ "owl:FunctionalProperty", "owl:DatatypeProperty" ],
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a Well Know Binary (WKB) geometry following the open Simple Feature Access (SFA) v2 standard developed by the OGC and ISO."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as Well Known Binary SFA v2 geometry"
+    },
+    "subPropertyOf" : "fog:asSfa_v2"
+  }, {
+    "@id" : "fog:asSfa_v2-wkt",
+    "@type" : [ "owl:FunctionalProperty", "owl:DatatypeProperty" ],
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a Well Know Text (WKT) geometry following the open Simple Feature Access (SFA) v2 standard developed by the OGC and ISO. Note that this property is disjoint with geo:asWKT because of the more strict domain and range restrictions in Geosparql."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as Well Known Text SFA v2 geometry"
+    },
+    "seeAlso" : "http://docs.opengeospatial.org/is/12-063r5/12-063r5.html",
+    "subPropertyOf" : "fog:asSfa_v2",
+    "propertyDisjointWith" : "geo:asWKT"
+  }, {
+    "@id" : "fog:asShapefile",
+    "@type" : "owl:DatatypeProperty",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a geometry description following the open Shapefile format developed by ESRI. The format consists of multiple files, including as a minimum the geometry (.shp), the index of the feature geometry (.shx) and attribute information of features (.dbf). These three files are binary encoded, while others can be text encoded (e.g. the .prj file). It is strongly adviced to use the more specific subsubproperties (e.g. fog:asShapefile-shp). Note that no file format version is provided by ESRI and that the format is expected to be stable."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as Shapefile format"
+    },
+    "seeAlso" : [ "wd:Q278934", "https://www.esri.com/library/whitepapers/pdfs/shapefile.pdf", "dbr:Shapefile" ],
+    "subPropertyOf" : "omg:hasSimpleGeometryDescription"
+  }, {
+    "@id" : "fog:asShapefile-dbf",
+    "@type" : [ "owl:FunctionalProperty", "owl:DatatypeProperty" ],
+    "extension" : ".dbf",
+    "requires" : [ "fog:asShapefile-shx", "fog:asShapefile-shp" ],
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a dBASE table file (.dbf) following the open Shapefile format developed by ESRI. This file contains the attributes of each shape. The Shapefile format consists of multiple files, including as a minimum the geometry (.shp), the index of the feature geometry (.shx) and attribute information of features (.dbf). These three files are binary encoded, while others can be text encoded (e.g. the .prj file)."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as Shapefile dBASE table (.dbf)"
+    },
+    "seeAlso" : "wd:Q27487130",
+    "subPropertyOf" : "fog:asShapefile"
+  }, {
+    "@id" : "fog:asShapefile-prj",
+    "@type" : [ "owl:FunctionalProperty", "owl:DatatypeProperty" ],
+    "extension" : ".prj",
+    "requires" : [ "fog:asShapefile-shx", "fog:asShapefile-shp", "fog:asShapefile-dbf" ],
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a projection format file (.prj) following the open Shapefile format developed by ESRI. This file contains the the coordinate system and projection information of the shapes. The Shapefile format consists of multiple files, including as a minimum the geometry (.shp), the index of the feature geometry (.shx) and attribute information of features (.dbf). These three files are binary encoded, while others can be text encoded (e.g. the .prj file)."
+    },
+    "label" : "as Shapefile projections file (.prj)",
+    "subPropertyOf" : "fog:asShapefile"
+  }, {
+    "@id" : "fog:asShapefile-shp",
+    "@type" : [ "owl:FunctionalProperty", "owl:DatatypeProperty" ],
+    "extension" : ".shp",
+    "requires" : [ "fog:asShapefile-shx", "fog:asShapefile-dbf" ],
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a geometry file (.shp) following the open Shapefile format developed by ESRI. This file contains the geometry of the shape. The Shapefile format consists of multiple files, including as a minimum the geometry (.shp), the index of the feature geometry (.shx) and attribute information of features (.dbf). These three files are binary encoded, while others can be text encoded (e.g. the .prj file)."
+    },
+    "label" : "as Shapefile geometry (.shp)",
+    "seeAlso" : "wd:Q27486884",
+    "subPropertyOf" : "fog:asShapefile"
+  }, {
+    "@id" : "fog:asShapefile-shx",
+    "@type" : [ "owl:FunctionalProperty", "owl:DatatypeProperty" ],
+    "extension" : ".shx",
+    "requires" : [ "fog:asShapefile-shp", "fog:asShapefile-dbf" ],
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a shape index format file (.shx) following the open Shapefile format developed by ESRI. This file contains the positional index of the geometry. The Shapefile format consists of multiple files, including as a minimum the geometry (.shp), the index of the feature geometry (.shx) and attribute information of features (.dbf). These three files are binary encoded, while others can be text encoded (e.g. the .prj file)."
+    },
+    "label" : "as Shapefile geometry index (.shx)",
+    "seeAlso" : "wd:Q27487109",
+    "subPropertyOf" : "fog:asShapefile"
+  }, {
+    "@id" : "fog:asStep",
+    "@type" : [ "owl:FunctionalProperty", "owl:DatatypeProperty" ],
+    "extension" : [ ".stp", ".step" ],
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a geometry description following the STEP Physical File Format (SPFF) format which was developed by ISO. The format consists of a single .step file which is either text encoded."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as SPFF file (.step)"
+    },
+    "seeAlso" : "wd:Q3509055",
+    "subPropertyOf" : "omg:hasSimpleGeometryDescription"
+  }, {
+    "@id" : "fog:asStl",
+    "@type" : [ "owl:FunctionalProperty", "owl:DatatypeProperty" ],
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a geometry description following the STL format which was developed by 3D Systems. The format consists of a single .stl file which is either text or binary encoded. It is strongly adviced to use the more specific subsubproperties (e.g. fog:asStl_v1.0)."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as STL format"
+    },
+    "subPropertyOf" : "omg:hasSimpleGeometryDescription"
+  }, {
+    "@id" : "fog:asStl_v1.0",
+    "@type" : [ "owl:FunctionalProperty", "owl:DatatypeProperty" ],
+    "extension" : ".stl",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a geometry description following the STL v1.0 format which was developed by 3D Systems. The format consists of a single .stl file which is either text or binary encoded."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as STL format v1.0"
+    },
+    "seeAlso" : [ "wd:Q1238229", "https://www.iana.org/assignments/media-types/model/stl", "http://paulbourke.net/dataformats/stl/" ],
+    "subPropertyOf" : "fog:asStl"
+  }, {
+    "@id" : "fog:asSvg",
+    "@type" : [ "owl:FunctionalProperty", "owl:DatatypeProperty" ],
+    "extension" : ".svg",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a geometry description following the open SVG format which was developed by the W3C. The format consists of a single .svg file which is text encoded. It is strongly adviced to use the more specific subsubproperties (e.g. fog:asSvg_v1.1)."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as SVG format"
+    },
+    "seeAlso" : [ "wd:Q2078", "dbr:Scalable_Vector_Graphics" ],
+    "subPropertyOf" : "omg:hasSimpleGeometryDescription"
+  }, {
+    "@id" : "fog:asSvg_v1.0",
+    "@type" : [ "owl:FunctionalProperty", "owl:DatatypeProperty" ],
+    "extension" : ".svg",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a geometry description following the open SVG v1.0 format which was developed by the W3C. The format consists of a single .svg file which is text encoded. Note that this version (v1.0) is considered depreciated in favor of v1.1."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as SVG format v1.0"
+    },
+    "seeAlso" : "https://www.w3.org/TR/2001/REC-SVG-20010904/",
+    "subPropertyOf" : "fog:asSvg"
+  }, {
+    "@id" : "fog:asSvg_v1.1",
+    "@type" : [ "owl:FunctionalProperty", "owl:DatatypeProperty" ],
+    "extension" : ".svg",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a geometry description following the open SVG v1.1 format which was developed by the W3C. The format consists of a single .svg file which is text encoded."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as SVG format v1.1"
+    },
+    "seeAlso" : "https://www.w3.org/TR/SVG11/",
+    "subPropertyOf" : "fog:asSvg"
+  }, {
+    "@id" : "fog:asSvg_v2.0",
+    "@type" : [ "owl:FunctionalProperty", "owl:DatatypeProperty" ],
+    "extension" : ".svg",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a geometry description following the open SVG v2.0 format which was developed by the W3C. The format consists of a single .svg file which is text encoded. Note that this version (v2.0) is not yet finalized and at the moment has the status of 'W3C Candidate Recommendation'."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as SVG format v2.0"
+    },
+    "seeAlso" : "https://www.w3.org/TR/SVG2/",
+    "subPropertyOf" : "fog:asSvg"
+  }, {
+    "@id" : "fog:asX3d",
+    "@type" : [ "owl:FunctionalProperty", "owl:DatatypeProperty" ],
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a geometry description following the open X3D format which was developed by the Web3D. The format consists of a single file which is either binary or text encoded. It is strongly adviced to use the more specific subsubproperties (e.g. fog:asX3d_v3.3_xml)."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as X3D format"
+    },
+    "seeAlso" : [ "wd:Q930428", "http://www.web3d.org/specifications/", "dbr:X3D" ],
+    "subPropertyOf" : "omg:hasSimpleGeometryDescription"
+  }, {
+    "@id" : "fog:asX3d_v3.3",
+    "@type" : [ "owl:FunctionalProperty", "owl:DatatypeProperty" ],
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a geometry description following the open X3D v3.3 format which was developed by the Web3D. The format consists of a single file which is either binary or text encoded. It is strongly adviced to use the more specific subproperties (e.g. fog:asX3d_v3.3_xml)."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as X3D format v3.3"
+    },
+    "subPropertyOf" : "fog:asX3d"
+  }, {
+    "@id" : "fog:asX3d_v3.3-binary",
+    "@type" : [ "owl:FunctionalProperty", "owl:DatatypeProperty" ],
+    "extension" : ".x3db",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a binary X3D file (.x3db) following the open X3D v3.3 format which was developed by the Web3D."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as X3D v3.3 binary file (.x3db)"
+    },
+    "seeAlso" : "http://www.web3d.org/documents/specifications/19776-3/V3.3/index.html",
+    "subPropertyOf" : "fog:asX3d_v3.3"
+  }, {
+    "@id" : "fog:asX3d_v3.3-vrml",
+    "@type" : [ "owl:FunctionalProperty", "owl:DatatypeProperty" ],
+    "extension" : ".x3dv",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a classic VRML X3D file (.x3dv) following the open X3D v3.3 format which was developed by the Web3D. The file is text encoded."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as X3D v3.3 classic VRML file (.x3dv)"
+    },
+    "seeAlso" : [ "https://www.iana.org/assignments/media-types/model/x3d-vrml", "http://www.web3d.org/documents/specifications/19776-2/V3.3/index.html" ],
+    "subPropertyOf" : "fog:asX3d_v3.3"
+  }, {
+    "@id" : "fog:asX3d_v3.3-xml",
+    "@type" : [ "owl:FunctionalProperty", "owl:DatatypeProperty" ],
+    "extension" : ".x3d",
+    "comment" : {
+      "@language" : "en",
+      "@value" : "The datatype relation pointing to a regular X3D file (.x3d) following the open X3D v3.3 format which was developed by the Web3D. The file is text encoded."
+    },
+    "label" : {
+      "@language" : "en",
+      "@value" : "as X3D v3.3 XML file (.x3d)"
+    },
+    "seeAlso" : [ "https://www.iana.org/assignments/media-types/model/x3d+xml", "http://www.web3d.org/documents/specifications/19776-1/V3.3/index.html" ],
+    "subPropertyOf" : "fog:asX3d_v3.3"
+  }, {
+    "@id" : "fog:hasReferencedContent",
+    "@type" : [ "owl:FunctionalProperty", "owl:ObjectProperty" ],
+    "label" : "has referenced content",
+    "range" : "fog:ReferencedContent"
+  } ],
+  "@context" : {
+    "subPropertyOf" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#subPropertyOf",
+      "@type" : "@id"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "extension" : {
+      "@id" : "http://dbpedia.org/property/extension"
+    },
+    "seeAlso" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+      "@type" : "@id"
+    },
+    "name" : {
+      "@id" : "http://xmlns.com/foaf/0.1/name"
+    },
+    "propertyDisjointWith" : {
+      "@id" : "http://www.w3.org/2002/07/owl#propertyDisjointWith",
+      "@type" : "@id"
+    },
+    "requires" : {
+      "@id" : "http://purl.org/dc/terms/requires"
+    },
+    "versionInfo" : {
+      "@id" : "http://www.w3.org/2002/07/owl#versionInfo"
+    },
+    "creator" : {
+      "@id" : "http://purl.org/dc/terms/creator",
+      "@type" : "@id"
+    },
+    "title" : {
+      "@id" : "http://purl.org/dc/terms/title"
+    },
+    "description" : {
+      "@id" : "http://purl.org/dc/terms/description"
+    },
+    "issued" : {
+      "@id" : "http://purl.org/dc/terms/issued",
+      "@type" : "http://www.w3.org/2001/XMLSchema#date"
+    },
+    "preferredNamespacePrefix" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix"
+    },
+    "preferredNamespaceUri" : {
+      "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri"
+    },
+    "range" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#range",
+      "@type" : "@id"
+    },
+    "@vocab" : "https://w3id.org/fog#",
+    "owl" : "http://www.w3.org/2002/07/owl#",
+    "xsd" : "http://www.w3.org/2001/XMLSchema#",
+    "omg" : "https://w3id.org/omg#",
+    "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+    "wd" : "https://www.wikidata.org/entity/",
+    "geo" : "http://www.opengis.net/ont/geosparql#",
+    "dbp" : "http://dbpedia.org/property/",
+    "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "dbr" : "http://dbpedia.org/resource/",
+    "dcterms" : "http://purl.org/dc/terms/",
+    "vann" : "http://purl.org/vocab/vann/",
+    "foaf" : "http://xmlns.com/foaf/0.1/",
+    "fog" : "https://w3id.org/fog#"
+  }
+}

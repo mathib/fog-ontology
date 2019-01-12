@@ -1,6 +1,31 @@
-<html><h2 id="crossreference" class="list">Cross reference for File Ontology for Geometry formats classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
-This section provides details for each class and property defined by File Ontology for Geometry formats.
-<div id="objectproperties">
+<html><h2 id="crossreference" class="list">Cross reference for FOG: File Ontology for Geometry formats classes, properties and dataproperties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+This section provides details for each class and property defined by FOG: File Ontology for Geometry formats.
+<div id="classes">
+   <h3 id="classes-headline" class="list">Classes</h3>
+   <ul class="hlist">
+      <li>
+         <a href="#ReferencedContent" title="https://w3id.org/fog#ReferencedContent">Referenced content</a>
+      </li>
+   </ul>
+   <div class="entity" id="ReferencedContent">
+      <h3>Referenced content<sup class="type-c" title="class">c</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fog#ReferencedContent</p>
+      <div class="comment">
+         <span class="markdown">Referenced content of the following geometry descriptions: glTF and OBJ. It contains exactly one link to a texture, separate binary glTF geometry or a OBJ material that is referenced by the main file (resp. .gltf and .obj). The name of the referenced file, as stored in the main file, is connected via a rdfs:label node</span>
+      </div>
+      <dl class="description">
+         <dt>is in range of</dt>
+         <dd>
+            <a href="#hasReferencedContent" title="https://w3id.org/fog#hasReferencedContent">has referenced content</a>
+            <sup class="type-op" title="object property">op</sup>
+         </dd>
+      </dl>
+   </div>
+</div><div id="objectproperties">
    <h3 id="properties" class="list">Object Properties</h3>
    <ul class="hlist">
       <li>
@@ -17,6 +42,9 @@ This section provides details for each class and property defined by File Ontolo
       </li>
       <li>
          <a href="#asOntostepOntology" title="https://w3id.org/fog#asOntostepOntology">as OntoSTEP ontology</a>
+      </li>
+      <li>
+         <a href="#hasReferencedContent" title="https://w3id.org/fog#hasReferencedContent">has referenced content</a>
       </li>
    </ul>
    <div class="entity" id="as3dmoOntology">
@@ -138,6 +166,25 @@ This section provides details for each class and property defined by File Ontolo
          </dl>
       </div>
    </div>
+   <div class="entity" id="hasReferencedContent">
+      <h3>has referenced content<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fog#hasReferencedContent</p>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has range</dt>
+            <dd>
+               <a href="#ReferencedContent" title="https://w3id.org/fog#ReferencedContent">Referenced content</a>
+               <sup class="type-c" title="class">c</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
 </div><div id="dataproperties">
    <h3 id="dataproperties-headline" class="list">Data Properties</h3>
    <ul class="hlist">
@@ -193,16 +240,7 @@ This section provides details for each class and property defined by File Ontolo
          <a href="#asGltf_v1.0-glsl" title="https://w3id.org/fog#asGltf_v1.0-glsl">as glTF v1.0 shader file (.glsl)</a>
       </li>
       <li>
-         <a href="#asGltf_v1.0-texture-bmp" title="https://w3id.org/fog#asGltf_v1.0-texture-bmp">as glTF v1.0 texture file (.bmp)</a>
-      </li>
-      <li>
-         <a href="#asGltf_v1.0-texture-gif" title="https://w3id.org/fog#asGltf_v1.0-texture-gif">as glTF v1.0 texture file (.gif)</a>
-      </li>
-      <li>
-         <a href="#asGltf_v1.0-texture-jpeg" title="https://w3id.org/fog#asGltf_v1.0-texture-jpeg">as glTF v1.0 texture file (.jpg)</a>
-      </li>
-      <li>
-         <a href="#asGltf_v1.0-texture-png" title="https://w3id.org/fog#asGltf_v1.0-texture-png">as glTF v1.0 texture file (.png)</a>
+         <a href="#asGltf_v1.0-texture" title="https://w3id.org/fog#asGltf_v1.0-texture">as glTF v1.0 texture file</a>
       </li>
       <li>
          <a href="#asGltf_v2.0-glb" title="https://w3id.org/fog#asGltf_v2.0-glb">as glTF v2.0 binary file (.glb)</a>
@@ -217,10 +255,7 @@ This section provides details for each class and property defined by File Ontolo
          <a href="#asGltf_v2.0-gltf" title="https://w3id.org/fog#asGltf_v2.0-gltf">as glTF v2.0 JSON file (.gltf)</a>
       </li>
       <li>
-         <a href="#asGltf_v2.0-texture-jpeg" title="https://w3id.org/fog#asGltf_v2.0-texture-jpeg">as glTF v2.0 texture file (.jpg)</a>
-      </li>
-      <li>
-         <a href="#asGltf_v2.0-texture-png" title="https://w3id.org/fog#asGltf_v2.0-texture-png">as glTF v2.0 texture file (.png)</a>
+         <a href="#asGltf_v2.0-texture" title="https://w3id.org/fog#asGltf_v2.0-texture">as glTF v2.0 texture file</a>
       </li>
       <li>
          <a href="#asGml" title="https://w3id.org/fog#asGml">as GML format</a>
@@ -239,6 +274,9 @@ This section provides details for each class and property defined by File Ontolo
       </li>
       <li>
          <a href="#asObj" title="https://w3id.org/fog#asObj">as OBJ format</a>
+      </li>
+      <li>
+         <a href="#asObj_v3.0-texture" title="https://w3id.org/fog#asObj_v3.0-texture">as OBJ texture</a>
       </li>
       <li>
          <a href="#asObj_v3.0-obj" title="https://w3id.org/fog#asObj_v3.0-obj">as OBJ v3.0 file (.obj)</a>
@@ -681,10 +719,7 @@ This section provides details for each class and property defined by File Ontolo
                <a href="#asGltf_v1.0-gltf" title="https://w3id.org/fog#asGltf_v1.0-gltf">as glTF v1.0 JSON file (.gltf)</a>
                <sup class="type-dp" title="data property">dp</sup>, <a href="#asGltf_v1.0-bin" title="https://w3id.org/fog#asGltf_v1.0-bin">as glTF v1.0 geometry file (.bin)</a>
                <sup class="type-dp" title="data property">dp</sup>, <a href="#asGltf_v1.0-glsl" title="https://w3id.org/fog#asGltf_v1.0-glsl">as glTF v1.0 shader file (.glsl)</a>
-               <sup class="type-dp" title="data property">dp</sup>, <a href="#asGltf_v1.0-texture-bmp" title="https://w3id.org/fog#asGltf_v1.0-texture-bmp">as glTF v1.0 texture file (.bmp)</a>
-               <sup class="type-dp" title="data property">dp</sup>, <a href="#asGltf_v1.0-texture-gif" title="https://w3id.org/fog#asGltf_v1.0-texture-gif">as glTF v1.0 texture file (.gif)</a>
-               <sup class="type-dp" title="data property">dp</sup>, <a href="#asGltf_v1.0-texture-jpeg" title="https://w3id.org/fog#asGltf_v1.0-texture-jpeg">as glTF v1.0 texture file (.jpg)</a>
-               <sup class="type-dp" title="data property">dp</sup>, <a href="#asGltf_v1.0-texture-png" title="https://w3id.org/fog#asGltf_v1.0-texture-png">as glTF v1.0 texture file (.png)</a>
+               <sup class="type-dp" title="data property">dp</sup>, <a href="#asGltf_v1.0-texture" title="https://w3id.org/fog#asGltf_v1.0-texture">as glTF v1.0 texture file</a>
                <sup class="type-dp" title="data property">dp</sup>
             </dd>
          </dl>
@@ -756,77 +791,19 @@ This section provides details for each class and property defined by File Ontolo
          </dl>
       </div>
    </div>
-   <div class="entity" id="asGltf_v1.0-texture-bmp">
-      <h3>as glTF v1.0 texture file (.bmp)<sup class="type-dp" title="data property">dp</sup>
+   <div class="entity" id="asGltf_v1.0-texture">
+      <h3>as glTF v1.0 texture file<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/fog#asGltf_v1.0-texture-bmp</p>
+         <strong>IRI:</strong> https://w3id.org/fog#asGltf_v1.0-texture</p>
       <div class="comment">
-         <span class="markdown">The datatype relation pointing to a binary texture file (.bmp). This file always has to be used together with the central .gltf JSON file (fog:asGltf_v1.0-gltf) referencing it.</span>
+         <span class="markdown">The datatype relation pointing to a binary texture file (.bmp/..gif/.jpeg/.png). This file always has to be used together with the central .gltf JSON file (fog:asGltf_v1.0-gltf) referencing it.</span>
       </div>
       <div class="description">
-         <dl>
-            <dt>has super-properties</dt>
-            <dd>
-               <a href="#asGltf_v1.0" title="https://w3id.org/fog#asGltf_v1.0">as glTF v1.0 format</a>
-               <sup class="type-dp" title="data property">dp</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="asGltf_v1.0-texture-gif">
-      <h3>as glTF v1.0 texture file (.gif)<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/fog#asGltf_v1.0-texture-gif</p>
-      <div class="comment">
-         <span class="markdown">The datatype relation pointing to a binary texture file (.gif). This file always has to be used together with the central .gltf JSON file (fog:asGltf_v1.0-gltf) referencing it.</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has super-properties</dt>
-            <dd>
-               <a href="#asGltf_v1.0" title="https://w3id.org/fog#asGltf_v1.0">as glTF v1.0 format</a>
-               <sup class="type-dp" title="data property">dp</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="asGltf_v1.0-texture-jpeg">
-      <h3>as glTF v1.0 texture file (.jpg)<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/fog#asGltf_v1.0-texture-jpeg</p>
-      <div class="comment">
-         <span class="markdown">The datatype relation pointing to a binary texture file (.jpg). This file always has to be used together with the central .gltf JSON file (fog:asGltf_v1.0-gltf) referencing it.</span>
-      </div>
-      <div class="description">
-         <dl>
-            <dt>has super-properties</dt>
-            <dd>
-               <a href="#asGltf_v1.0" title="https://w3id.org/fog#asGltf_v1.0">as glTF v1.0 format</a>
-               <sup class="type-dp" title="data property">dp</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="asGltf_v1.0-texture-png">
-      <h3>as glTF v1.0 texture file (.png)<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/fog#asGltf_v1.0-texture-png</p>
-      <div class="comment">
-         <span class="markdown">The datatype relation pointing to a binary texture file (.png). This file always has to be used together with the central .gltf JSON file (fog:asGltf_v1.0-gltf) referencing it.</span>
-      </div>
-      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
          <dl>
             <dt>has super-properties</dt>
             <dd>
@@ -880,8 +857,7 @@ This section provides details for each class and property defined by File Ontolo
                <a href="#asGltf_v2.0-gltf" title="https://w3id.org/fog#asGltf_v2.0-gltf">as glTF v2.0 JSON file (.gltf)</a>
                <sup class="type-dp" title="data property">dp</sup>, <a href="#asGltf_v2.0-glb" title="https://w3id.org/fog#asGltf_v2.0-glb">as glTF v2.0 binary file (.glb)</a>
                <sup class="type-dp" title="data property">dp</sup>, <a href="#asGltf_v2.0-bin" title="https://w3id.org/fog#asGltf_v2.0-bin">as glTF v2.0 geometry file (.bin)</a>
-               <sup class="type-dp" title="data property">dp</sup>, <a href="#asGltf_v2.0-texture-jpeg" title="https://w3id.org/fog#asGltf_v2.0-texture-jpeg">as glTF v2.0 texture file (.jpg)</a>
-               <sup class="type-dp" title="data property">dp</sup>, <a href="#asGltf_v2.0-texture-png" title="https://w3id.org/fog#asGltf_v2.0-texture-png">as glTF v2.0 texture file (.png)</a>
+               <sup class="type-dp" title="data property">dp</sup>, <a href="#asGltf_v2.0-texture" title="https://w3id.org/fog#asGltf_v2.0-texture">as glTF v2.0 texture file</a>
                <sup class="type-dp" title="data property">dp</sup>
             </dd>
          </dl>
@@ -931,37 +907,19 @@ This section provides details for each class and property defined by File Ontolo
          </dl>
       </div>
    </div>
-   <div class="entity" id="asGltf_v2.0-texture-jpeg">
-      <h3>as glTF v2.0 texture file (.jpg)<sup class="type-dp" title="data property">dp</sup>
+   <div class="entity" id="asGltf_v2.0-texture">
+      <h3>as glTF v2.0 texture file<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/fog#asGltf_v2.0-texture-jpeg</p>
+         <strong>IRI:</strong> https://w3id.org/fog#asGltf_v2.0-texture</p>
       <div class="comment">
-         <span class="markdown">The datatype relation pointing to a binary texture file (.jpg). This file always has to be used together with the central .gltf JSON file (fog:asGltf_v2.0-gltf) referencing it.</span>
+         <span class="markdown">The datatype relation pointing to a binary texture file (.jpeg/.png). This file always has to be used together with the central .gltf JSON file (fog:asGltf_v2.0-gltf) referencing it.</span>
       </div>
       <div class="description">
-         <dl>
-            <dt>has super-properties</dt>
-            <dd>
-               <a href="#asGltf_v2.0" title="https://w3id.org/fog#asGltf_v2.0">as glTF v2.0 format</a>
-               <sup class="type-dp" title="data property">dp</sup>
-            </dd>
-         </dl>
-      </div>
-   </div>
-   <div class="entity" id="asGltf_v2.0-texture-png">
-      <h3>as glTF v2.0 texture file (.png)<sup class="type-dp" title="data property">dp</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> https://w3id.org/fog#asGltf_v2.0-texture-png</p>
-      <div class="comment">
-         <span class="markdown">The datatype relation pointing to a binary texture file (.png). This file always has to be used together with the central .gltf JSON file (fog:asGltf_v2.0-gltf) referencing it.</span>
-      </div>
-      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
          <dl>
             <dt>has super-properties</dt>
             <dd>
@@ -1116,6 +1074,28 @@ This section provides details for each class and property defined by File Ontolo
          </dl>
       </div>
    </div>
+   <div class="entity" id="asObj_v3.0-texture">
+      <h3>as OBJ texture<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fog#asObj_v3.0-texture</p>
+      <div class="comment">
+         <span class="markdown">The datatype relation pointing to a binary encoded texture file that is referenced in the .mtl file of the OBJ format.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#asObj_v3.0" title="https://w3id.org/fog#asObj_v3.0">as OBJ v3.0 format</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="asObj_v3.0-obj">
       <h3>as OBJ v3.0 file (.obj)<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -1157,7 +1137,8 @@ This section provides details for each class and property defined by File Ontolo
             </dd>
             <dt>has sub-properties</dt>
             <dd>
-               <a href="#asObj_v3.0-obj" title="https://w3id.org/fog#asObj_v3.0-obj">as OBJ v3.0 file (.obj)</a>
+               <a href="#asObj_v3.0-texture" title="https://w3id.org/fog#asObj_v3.0-texture">as OBJ texture</a>
+               <sup class="type-dp" title="data property">dp</sup>, <a href="#asObj_v3.0-obj" title="https://w3id.org/fog#asObj_v3.0-obj">as OBJ v3.0 file (.obj)</a>
                <sup class="type-dp" title="data property">dp</sup>, <a href="#asObj_v3.0-mtl" title="https://w3id.org/fog#asObj_v3.0-mtl">as OBJ v3.0 material file (.mtl)</a>
                <sup class="type-dp" title="data property">dp</sup>
             </dd>
@@ -1917,49 +1898,6 @@ This section provides details for each class and property defined by File Ontolo
             </dd>
          </dl>
       </div>
-   </div>
-</div><div id="annotationproperties">
-   <h3 id="annotationproperties" class="list">Annotation Properties</h3>
-   <ul class="hlist">
-      <li>
-         <a href="#http://dbpedia.org/property/extension" title="http://dbpedia.org/property/extension">
-            <span>extension</span>
-         </a>
-      </li>
-      <li>
-         <a href="#http://xmlns.com/foaf/0.1/name" title="http://xmlns.com/foaf/0.1/name">
-            <span>name</span>
-         </a>
-      </li>
-      <li>
-         <a href="#http://purl.org/dc/terms/requires" title="http://purl.org/dc/terms/requires">
-            <span>requires</span>
-         </a>
-      </li>
-   </ul>
-   <div class="entity" id="http://dbpedia.org/property/extension">
-      <h3>extension<sup class="type-ap" title="annotation property">ap</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://dbpedia.org/property/extension</p>
-   </div>
-   <div class="entity" id="http://xmlns.com/foaf/0.1/name">
-      <h3>name<sup class="type-ap" title="annotation property">ap</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://xmlns.com/foaf/0.1/name</p>
-   </div>
-   <div class="entity" id="http://purl.org/dc/terms/requires">
-      <h3>requires<sup class="type-ap" title="annotation property">ap</sup>
-         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#annotationproperties">Annotation Property ToC</a>
-         </span>
-      </h3>
-      <p>
-         <strong>IRI:</strong> http://purl.org/dc/terms/requires</p>
    </div>
 </div><div id="legend">
 <h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
