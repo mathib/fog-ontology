@@ -2,12 +2,12 @@
 
 ## HTML documentation and raw ontology per serialisation
 
-* base URI: [https://w3id.org/fog#]()
-* Canonical URI for the HTML representation: [https://w3id.org/fog/fog.html]()
-* Canonical URI for the Turtle representation: [https://w3id.org/fog/fog.ttl]()
-* Canonical URI for the n-triples representation: [https://w3id.org/fog/fog.nt]()
-* Canonical URI for the json-ld representation: [https://w3id.org/fog/fog.jsonld]()
-* Canonical URI for the RDF/XML representation: [https://w3id.org/fog/fog.rdf]()
+* base URI: [https://w3id.org/fog#](https://mathib.github.io/fog-ontology/#)
+* Canonical URI for the HTML representation: [https://w3id.org/fog/fog.html](https://mathib.github.io/fog-ontology/#)
+* Canonical URI for the Turtle representation: [https://w3id.org/fog/fog.ttl](https://mathib.github.io/fog-ontology/ontology.ttl)
+* Canonical URI for the n-triples representation: [https://w3id.org/fog/fog.nt](https://mathib.github.io/fog-ontology/ontology.nt)
+* Canonical URI for the json-ld representation: [https://w3id.org/fog/fog.jsonld](https://mathib.github.io/fog-ontology/ontology.json)
+* Canonical URI for the RDF/XML representation: [https://w3id.org/fog/fog.rdf](https://mathib.github.io/fog-ontology/ontology.xml)
 
 The most recent version of FOG is always available in this Github repository
 
@@ -17,7 +17,7 @@ The FOG ontology is incomplete by nature, as it's impossible to contain all exis
 
 ## sparql-visualizer demo
 
-An [online sparql-visualizer demo](https://madsholten.github.io/sparql-visualizer/?file=https:%2F%2Fwww.dropbox.com%2Fs%2Fbch9flrxoskw29v%2Ffog-demo.json) is available, containing sample Abox triples and example queries. The RDF literals in the Abox triples are shortend so it is more easily to visualize it as a graph. The same Abox triples with the full RDF literals are available in this repository in `examples/sample_abox_full.ttl`
+An [online sparql-visualizer demo](https://madsholten.github.io/sparql-visualizer/?file=https://raw.githubusercontent.com/mathib/fog-ontology/master/examples/fog-demo.json) is available, containing sample Abox triples and example queries. The RDF literals in the Abox triples are dummies to make it more easily to visualize them as a graph. The same Abox triples with the full RDF literals are also available in this repository in [`examples/sample_abox_full.ttl`](https://github.com/mathib/fog-ontology/blob/master/examples/sample_abox_full.ttl).
 
 ## Contributors
 
