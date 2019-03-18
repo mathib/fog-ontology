@@ -7,12 +7,6 @@
 <https://w3id.org/fog#asDwg_v2010> <http://dbpedia.org/property/extension> ".dwg" .
 <https://w3id.org/fog#asDwg_v2010> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asDwg_v2010> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/fog#as3dmoOntology> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/omg#hasComplexGeometryDescription> .
-<https://w3id.org/fog#as3dmoOntology> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://3dontology.org/> .
-<https://w3id.org/fog#as3dmoOntology> <http://www.w3.org/2000/01/rdf-schema#label> "as 3DMO ontology"@en .
-<https://w3id.org/fog#as3dmoOntology> <http://www.w3.org/2000/01/rdf-schema#comment> "The object relation pointing to a ontology-based geometry description following the 3DMO ontology. It is strongly adviced to use the more specific subproperties (e.g. fog:asC3dmoOntology_v1.1)."@en .
-<https://w3id.org/fog#as3dmoOntology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/fog#as3dmoOntology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asObj_v3.0> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fog#asObj> .
 <https://w3id.org/fog#asObj_v3.0> <http://www.w3.org/2000/01/rdf-schema#label> "as OBJ v3.0 format"@en .
 <https://w3id.org/fog#asObj_v3.0> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a text encoded geometry description following the OBJ v3.0 format developed by Wavefront Technologies. The format consists of a single .obj file (text encoded) and an optional material file (.mtl). It is strongly adviced to use the more specific subproperties (e.g. fog:asObj_v3.0-obj)."@en .
@@ -477,11 +471,6 @@ _:B23c16e885df5432594ee29006d0855fa <http://www.w3.org/1999/02/22-rdf-syntax-ns#
 <https://w3id.org/fog#asShapefile-dbf> <http://dbpedia.org/property/extension> ".dbf" .
 <https://w3id.org/fog#asShapefile-dbf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asShapefile-dbf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://w3id.org/fog#as3dmoOntology_v1.1> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fog#as3dmoOntology> .
-<https://w3id.org/fog#as3dmoOntology_v1.1> <http://www.w3.org/2000/01/rdf-schema#label> "as 3DMO ontology v1.1 "@en .
-<https://w3id.org/fog#as3dmoOntology_v1.1> <http://www.w3.org/2000/01/rdf-schema#comment> "The object relation pointing to a ontology-based geometry description following the 3DMO v1.1 ontology."@en .
-<https://w3id.org/fog#as3dmoOntology_v1.1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/fog#as3dmoOntology_v1.1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#hasReferencedContent> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/fog#ReferencedContent> .
 <https://w3id.org/fog#hasReferencedContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#hasReferencedContent> <http://www.w3.org/2000/01/rdf-schema#label> "has referenced content" .

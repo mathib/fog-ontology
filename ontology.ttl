@@ -1,6 +1,3 @@
-# baseURI: https://w3id.org/fog
-# prefix: fog
-
 @prefix : <https://w3id.org/fog#> .
 @prefix dbp: <http://dbpedia.org/property/> .
 @prefix dbr: <http://dbpedia.org/resource/> .
@@ -41,21 +38,6 @@ fog:ReferencedContent
   rdf:type owl:Class ;
   rdfs:comment "Referenced content of the following geometry descriptions: glTF and OBJ. It contains exactly one link to a texture, separate binary glTF geometry or a OBJ material that is referenced by the main file (resp. .gltf and .obj). The name of the referenced file, as stored in the main file, is connected via a rdfs:label node"@en ;
   rdfs:label "Referenced content"@en ;
-.
-fog:as3dmoOntology
-  rdf:type owl:FunctionalProperty ;
-  rdf:type owl:ObjectProperty ;
-  rdfs:comment "The object relation pointing to a ontology-based geometry description following the 3DMO ontology. It is strongly adviced to use the more specific subproperties (e.g. fog:asC3dmoOntology_v1.1)."@en ;
-  rdfs:label "as 3DMO ontology"@en ;
-  rdfs:seeAlso <http://3dontology.org/> ;
-  rdfs:subPropertyOf omg:hasComplexGeometryDescription ;
-.
-<https://w3id.org/fog#as3dmoOntology_v1.1>
-  rdf:type owl:FunctionalProperty ;
-  rdf:type owl:ObjectProperty ;
-  rdfs:comment "The object relation pointing to a ontology-based geometry description following the 3DMO v1.1 ontology."@en ;
-  rdfs:label "as 3DMO ontology v1.1 "@en ;
-  rdfs:subPropertyOf fog:as3dmoOntology ;
 .
 fog:asCollada
   rdf:type owl:DatatypeProperty ;

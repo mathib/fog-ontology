@@ -125,14 +125,6 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="#as3dmoOntology">
-    <rdfs:subPropertyOf rdf:resource="https://w3id.org/omg#hasComplexGeometryDescription"/>
-    <rdfs:seeAlso rdf:resource="http://3dontology.org/"/>
-    <rdfs:label xml:lang="en">as 3DMO ontology</rdfs:label>
-    <rdfs:comment xml:lang="en">The object relation pointing to a ontology-based geometry description following the 3DMO ontology. It is strongly adviced to use the more specific subproperties (e.g. fog:asC3dmoOntology_v1.1).</rdfs:comment>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-  </rdf:Description>
   <rdf:Description rdf:about="#asPcd_v0.7">
     <rdfs:subPropertyOf rdf:resource="#asPcd"/>
     <rdfs:label>as PCD v0.7 point cloud format (.pcd)</rdfs:label>
@@ -457,13 +449,6 @@
     <dbp:extension>.dbf</dbp:extension>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="#as3dmoOntology_v1.1">
-    <rdfs:subPropertyOf rdf:resource="#as3dmoOntology"/>
-    <rdfs:label xml:lang="en">as 3DMO ontology v1.1 </rdfs:label>
-    <rdfs:comment xml:lang="en">The object relation pointing to a ontology-based geometry description following the 3DMO v1.1 ontology.</rdfs:comment>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="#asE57">
     <rdfs:subPropertyOf rdf:resource="https://w3id.org/omg#hasSimpleGeometryDescription"/>

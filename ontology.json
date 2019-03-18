@@ -33,31 +33,6 @@
       "@value" : "Referenced content"
     }
   }, {
-    "@id" : "fog:as3dmoOntology",
-    "@type" : [ "owl:ObjectProperty", "owl:FunctionalProperty" ],
-    "comment" : {
-      "@language" : "en",
-      "@value" : "The object relation pointing to a ontology-based geometry description following the 3DMO ontology. It is strongly adviced to use the more specific subproperties (e.g. fog:asC3dmoOntology_v1.1)."
-    },
-    "label" : {
-      "@language" : "en",
-      "@value" : "as 3DMO ontology"
-    },
-    "seeAlso" : "http://3dontology.org/",
-    "subPropertyOf" : "omg:hasComplexGeometryDescription"
-  }, {
-    "@id" : "fog:as3dmoOntology_v1.1",
-    "@type" : [ "owl:ObjectProperty", "owl:FunctionalProperty" ],
-    "comment" : {
-      "@language" : "en",
-      "@value" : "The object relation pointing to a ontology-based geometry description following the 3DMO v1.1 ontology."
-    },
-    "label" : {
-      "@language" : "en",
-      "@value" : "as 3DMO ontology v1.1 "
-    },
-    "subPropertyOf" : "fog:as3dmoOntology"
-  }, {
     "@id" : "fog:asCollada",
     "@type" : [ "owl:FunctionalProperty", "owl:DatatypeProperty" ],
     "comment" : {
