@@ -338,9 +338,6 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/omg#hasComplexGeometryDescription">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-  </rdf:Description>
   <rdf:Description rdf:about="#asX3d_v3.3">
     <rdfs:subPropertyOf rdf:resource="#asX3d"/>
     <rdfs:label xml:lang="en">as X3D format v3.3</rdfs:label>
@@ -496,9 +493,6 @@
     <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry file following the PLY v1.0 format which was developed by Greg Turk (Stanford University). The single .ply file is ASCII encoded.</rdfs:comment>
     <dbp:extension>.ply</dbp:extension>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="https://w3id.org/omg#hasSimpleGeometryDescription">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="#asSvg_v2.0">
