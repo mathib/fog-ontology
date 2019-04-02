@@ -11,9 +11,13 @@
 
 The most recent version of FOG is always available in this Github repository
 
+## Introduction to FOG
+
+The File Ontology for Geometry formats (FOG) provides geometry schema specific relations between things (e.g. building objects) and their geometry descriptions. These geometry descriptions can be (1) RDF-based (e.g. using specific ontologies such as GEOM, OntoBREP, etc.), (2) RDF literals containing embedded geometry of existing geometry formats and (3) RDF literals containing a reference to an external geometry file. The FOG ontology extends the [Ontology for Managing Geometry (OMG)](https://w3id.org/omg#) and consists of two taxonomies of (sub)properties, one for RDF-based geometry schemas with as root object property the [omg:hasComplexGeometryDescription](https://w3id.org/omg#hasComplexGeometryDescription) and one for existing geometry schemas that can be represented using RDF literals with as root datatype property [omg:hasSimpleGeometryDescription](https://w3id.org/omg#hasSimpleGeometryDescription). This first series of properties (e.g. [fog:asGltf](https://w3id.org/fog#asGltf)) is then splitted per version of the geometry schema (e.g. [fog:asGltf_v2.0](https://mathib.github.io/fog-ontology/#asGltf_v2.0)), which are again splitted further if the geometry format consists of different kind of files (e.g. [fog:asGltf_v2.0-glb](https://mathib.github.io/fog-ontology/#asGltf_v2.0-glb)).
+
 ## Contributing to FOG
 
-The FOG ontology is incomplete by nature, as it's impossible to contain all existing geometry formats. If you notice that some geometry formats are missing and you need them for your project, you can either create an issue in this repository, or you can submit a pull request.
+The FOG ontology is incomplete by nature, as it's impossible to contain all existing geometry schemas. If you notice that some geometry schemas are missing and you need them for your project, you can either create an issue in the [Github repository](https://github.com/mathib/fog-ontology), or you can fork it and submit a pull request.
 
 ## sparql-visualizer demo
 
