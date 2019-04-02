@@ -330,7 +330,6 @@ _:Bc756883b948e7e5686a91e0543a39a89 <http://www.w3.org/1999/02/22-rdf-syntax-ns#
 <https://w3id.org/fog#asGltf_v2.0-texture> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fog#asGltf_v2.0> .
 <https://w3id.org/fog#asGltf_v2.0-texture> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a binary texture file (.jpeg/.png). This file always has to be used together with the central .gltf JSON file (fog:asGltf_v2.0-gltf) referencing it."@en .
 <https://w3id.org/fog#asGltf_v2.0-texture> <http://www.w3.org/2000/01/rdf-schema#label> "as glTF v2.0 texture file"@en .
-<https://w3id.org/omg#hasComplexGeometryDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/fog#asGeomOntology> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/omg#hasComplexGeometryDescription> .
 <https://w3id.org/fog#asGeomOntology> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://rdf.bg/geometry.ttl> .
 <https://w3id.org/fog#asGeomOntology> <http://www.w3.org/2000/01/rdf-schema#label> "as GEOM ontology"@en .
