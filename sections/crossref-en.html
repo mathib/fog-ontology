@@ -29,7 +29,34 @@ This section provides details for each class and property defined by FOG: File O
    <h3 id="properties" class="list">Object Properties</h3>
    <ul class="hlist">
       <li>
+         <a href="#as3dmo" title="https://w3id.org/fog#as3dmo">as 3DMO ontology</a>
+      </li>
+      <li>
+         <a href="#as3dmo_v1.1" title="https://w3id.org/fog#as3dmo_v1.1">as 3DMO v1.1 ontology</a>
+      </li>
+      <li>
+         <a href="#asGeojson-ld" title="https://w3id.org/fog#asGeojson-ld">as GeoJSON-LD</a>
+      </li>
+      <li>
          <a href="#asGeomOntology" title="https://w3id.org/fog#asGeomOntology">as GEOM ontology</a>
+      </li>
+      <li>
+         <a href="#asIfcowl" title="https://w3id.org/fog#asIfcowl">as ifcOWL ontology</a>
+      </li>
+      <li>
+         <a href="#asIfcowl_v2x3final" title="https://w3id.org/fog#asIfcowl_v2x3final">as ifcOWL v2x3 Final ontology</a>
+      </li>
+      <li>
+         <a href="#asIfcowl_v2x3tc1" title="https://w3id.org/fog#asIfcowl_v2x3tc1">as ifcOWL v2x3 TC1 ontology</a>
+      </li>
+      <li>
+         <a href="#asIfcowl_v2x4add1" title="https://w3id.org/fog#asIfcowl_v2x4add1">as ifcOWL v2x4 Add1 ontology</a>
+      </li>
+      <li>
+         <a href="#asIfcowl_v2x4add2" title="https://w3id.org/fog#asIfcowl_v2x4add2">as ifcOWL v2x4 Add2 ontology</a>
+      </li>
+      <li>
+         <a href="#asIfcowl_v2x4final" title="https://w3id.org/fog#asIfcowl_v2x4final">as ifcOWL v2x4 Final ontology</a>
       </li>
       <li>
          <a href="#asOntobrepOntology" title="https://w3id.org/fog#asOntobrepOntology">as OntoBREP ontology</a>
@@ -41,16 +68,65 @@ This section provides details for each class and property defined by FOG: File O
          <a href="#hasReferencedContent" title="https://w3id.org/fog#hasReferencedContent">has referenced content</a>
       </li>
    </ul>
-   </div>
-   <div class="entity" id="asGeomOntology">
-      <h3>as GEOM ontology<sup class="type-op" title="object property">op</sup>
+   <div class="entity" id="as3dmo">
+      <h3>as 3DMO ontology<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
          </span>
       </h3>
       <p>
-         <strong>IRI:</strong> https://w3id.org/fog#asGeomOntology</p>
+         <strong>IRI:</strong> https://w3id.org/fog#as3dmo</p>
       <div class="comment">
-         <span class="markdown">The object relation pointing to a ontology-based geometry description following the GEOM ontology.</span>
+         <span class="markdown">The object relation pointing to a RDF-based geometry description following the 3DMO ontology. It is strongly adviced to use the more specific subproperty (fog:as3dmo_v1.1)</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/omg#hasComplexGeometryDescription">has complex geometry description</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#as3dmo_v1.1" title="https://w3id.org/fog#as3dmo_v1.1">as 3DMO v1.1 ontology</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="as3dmo_v1.1">
+      <h3>as 3DMO v1.1 ontology<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fog#as3dmo_v1.1</p>
+      <div class="comment">
+         <span class="markdown">The object relation pointing to a RDF-based geometry description following the 3DMO ontology version 1.1. It should be connected to the topnode of the geometry description</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#as3dmo" title="https://w3id.org/fog#as3dmo">as 3DMO ontology</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="asGeojson-ld">
+      <h3>as GeoJSON-LD<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fog#asGeojson-ld</p>
+      <div class="comment">
+         <span class="markdown">The object relation pointing to a GeoJSON-LD geometry description: a GeoJSON geometry description complemented with the corresponding JSON-LD context to make it RDF. It should be connected to the topnode of the geometry description. Note that this geometry description can only be used to depict single points, as the current JSON-LD specification v1.0 does not implement the deserialisation of nested lists to RDF</span>
       </div>
       <div class="description">
          <p>
@@ -65,6 +141,171 @@ This section provides details for each class and property defined by FOG: File O
          </dl>
       </div>
    </div>
+   <div class="entity" id="asGeomOntology">
+      <h3>as GEOM ontology<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fog#asGeomOntology</p>
+      <div class="comment">
+         <span class="markdown">The object relation pointing to a RDF-based geometry description following the GEOM ontology. It should be connected to the topnode of the geometry description.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/omg#hasComplexGeometryDescription">has complex geometry description</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="asIfcowl">
+      <h3>as ifcOWL ontology<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fog#asIfcowl</p>
+      <div class="comment">
+         <span class="markdown">The object relation pointing to a RDF-based geometry description following the IfcOWL ontology.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/omg#hasComplexGeometryDescription">has complex geometry description</span>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#asIfcowl_v2x3final" title="https://w3id.org/fog#asIfcowl_v2x3final">as ifcOWL v2x3 Final ontology</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#asIfcowl_v2x3tc1" title="https://w3id.org/fog#asIfcowl_v2x3tc1">as ifcOWL v2x3 TC1 ontology</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#asIfcowl_v2x4add1" title="https://w3id.org/fog#asIfcowl_v2x4add1">as ifcOWL v2x4 Add1 ontology</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#asIfcowl_v2x4add2" title="https://w3id.org/fog#asIfcowl_v2x4add2">as ifcOWL v2x4 Add2 ontology</a>
+               <sup class="type-op" title="object property">op</sup>, <a href="#asIfcowl_v2x4final" title="https://w3id.org/fog#asIfcowl_v2x4final">as ifcOWL v2x4 Final ontology</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="asIfcowl_v2x3final">
+      <h3>as ifcOWL v2x3 Final ontology<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fog#asIfcowl_v2x3final</p>
+      <div class="comment">
+         <span class="markdown">The object relation pointing to a RDF-based geometry description following the IfcOWL v2x3 Final ontology.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#asIfcowl" title="https://w3id.org/fog#asIfcowl">as ifcOWL ontology</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="asIfcowl_v2x3tc1">
+      <h3>as ifcOWL v2x3 TC1 ontology<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fog#asIfcowl_v2x3tc1</p>
+      <div class="comment">
+         <span class="markdown">The object relation pointing to a RDF-based geometry description following the IfcOWL v2x3 TC1 ontology.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#asIfcowl" title="https://w3id.org/fog#asIfcowl">as ifcOWL ontology</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="asIfcowl_v2x4add1">
+      <h3>as ifcOWL v2x4 Add1 ontology<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fog#asIfcowl_v2x4add1</p>
+      <div class="comment">
+         <span class="markdown">The object relation pointing to a RDF-based geometry description following the IfcOWL v2x4 Add1 ontology.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#asIfcowl" title="https://w3id.org/fog#asIfcowl">as ifcOWL ontology</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="asIfcowl_v2x4add2">
+      <h3>as ifcOWL v2x4 Add2 ontology<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fog#asIfcowl_v2x4add2</p>
+      <div class="comment">
+         <span class="markdown">The object relation pointing to a RDF-based geometry description following the IfcOWL v2x4 Add2 ontology.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#asIfcowl" title="https://w3id.org/fog#asIfcowl">as ifcOWL ontology</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="asIfcowl_v2x4final">
+      <h3>as ifcOWL v2x4 Final ontology<sup class="type-op" title="object property">op</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fog#asIfcowl_v2x4final</p>
+      <div class="comment">
+         <span class="markdown">The object relation pointing to a RDF-based geometry description following the IfcOWL v2x4 Final ontology.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#asIfcowl" title="https://w3id.org/fog#asIfcowl">as ifcOWL ontology</a>
+               <sup class="type-op" title="object property">op</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="asOntobrepOntology">
       <h3>as OntoBREP ontology<sup class="type-op" title="object property">op</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a>
@@ -73,7 +314,7 @@ This section provides details for each class and property defined by FOG: File O
       <p>
          <strong>IRI:</strong> https://w3id.org/fog#asOntobrepOntology</p>
       <div class="comment">
-         <span class="markdown">The object relation pointing to a ontology-based geometry description following the OntoBREP ontology.</span>
+         <span class="markdown">The object relation pointing to a RDF-based geometry description following the OntoBREP ontology. It should be connected to the topnode of the geometry description.</span>
       </div>
       <div class="description">
          <p>
@@ -96,7 +337,7 @@ This section provides details for each class and property defined by FOG: File O
       <p>
          <strong>IRI:</strong> https://w3id.org/fog#asOntostepOntology</p>
       <div class="comment">
-         <span class="markdown">The object relation pointing to a ontology-based geometry description following the OntoSTEP ontology.</span>
+         <span class="markdown">The object relation pointing to a RDF-based geometry description following the OntoSTEP ontology. It should be connected to the topnode of the geometry description.</span>
       </div>
       <div class="description">
          <p>
@@ -218,6 +459,60 @@ This section provides details for each class and property defined by FOG: File O
          <a href="#asGml_v3.3.0" title="https://w3id.org/fog#asGml_v3.3.0">as GML v3.3.0 format (.gml)</a>
       </li>
       <li>
+         <a href="#asIfc" title="https://w3id.org/fog#asIfc">as IFC format</a>
+      </li>
+      <li>
+         <a href="#asIfc_v2x3" title="https://w3id.org/fog#asIfc_v2x3">as IFC v2x3</a>
+      </li>
+      <li>
+         <a href="#asIfc_v2x3-ifc" title="https://w3id.org/fog#asIfc_v2x3-ifc">as IFC v2x3 file (.ifc)</a>
+      </li>
+      <li>
+         <a href="#asIfc_v2x3-ifcxml" title="https://w3id.org/fog#asIfc_v2x3-ifcxml">as IFC v2x3 file (.ifcxml)</a>
+      </li>
+      <li>
+         <a href="#asIfc_v2x3tc1" title="https://w3id.org/fog#asIfc_v2x3tc1">as IFC v2x3 TC1</a>
+      </li>
+      <li>
+         <a href="#asIfc_v2x3tc1-ifc" title="https://w3id.org/fog#asIfc_v2x3tc1-ifc">as IFC v2x3 TC1 file (.ifc)</a>
+      </li>
+      <li>
+         <a href="#asIfc_v2x3tc1-ifcxml" title="https://w3id.org/fog#asIfc_v2x3tc1-ifcxml">as IFC v2x3 TC1 file (.ifcxml)</a>
+      </li>
+      <li>
+         <a href="#asIfc_v2x4" title="https://w3id.org/fog#asIfc_v2x4">as IFC v2x4</a>
+      </li>
+      <li>
+         <a href="#asIfc_v2x4add2-ifcxml" title="https://w3id.org/fog#asIfc_v2x4add2-ifcxml">as IFC v2x4 Add 2 file (.ifcxml)</a>
+      </li>
+      <li>
+         <a href="#asIfc_v2x4add1" title="https://w3id.org/fog#asIfc_v2x4add1">as IFC v2x4 Add1</a>
+      </li>
+      <li>
+         <a href="#asIfc_v2x4add1-ifc" title="https://w3id.org/fog#asIfc_v2x4add1-ifc">as IFC v2x4 Add1 file (.ifc)</a>
+      </li>
+      <li>
+         <a href="#asIfc_v2x4add1-ifcxml" title="https://w3id.org/fog#asIfc_v2x4add1-ifcxml">as IFC v2x4 Add1 file (.ifcxml)</a>
+      </li>
+      <li>
+         <a href="#asIfc_v2x4add2" title="https://w3id.org/fog#asIfc_v2x4add2">as IFC v2x4 Add2</a>
+      </li>
+      <li>
+         <a href="#asIfc_v2x4add2-ifc" title="https://w3id.org/fog#asIfc_v2x4add2-ifc">as IFC v2x4 Add2 file (.ifc)</a>
+      </li>
+      <li>
+         <a href="#asIfc_v2x4-ifc" title="https://w3id.org/fog#asIfc_v2x4-ifc">as IFC v2x4 file (.ifc)</a>
+      </li>
+      <li>
+         <a href="#asIfc_v2x4-ifcxml" title="https://w3id.org/fog#asIfc_v2x4-ifcxml">as IFC v2x4 file (.ifcxml)</a>
+      </li>
+      <li>
+         <a href="#asIges" title="https://w3id.org/fog#asIges">as IGES format</a>
+      </li>
+      <li>
+         <a href="#asIges_v5.3" title="https://w3id.org/fog#asIges_v5.3">as IGES v5.3 (.igs)</a>
+      </li>
+      <li>
          <a href="#asObj" title="https://w3id.org/fog#asObj">as OBJ format</a>
       </li>
       <li>
@@ -254,6 +549,30 @@ This section provides details for each class and property defined by FOG: File O
          <a href="#asPly_v1.0" title="https://w3id.org/fog#asPly_v1.0">as PLY v1.0 format</a>
       </li>
       <li>
+         <a href="#asRevit" title="https://w3id.org/fog#asRevit">as Revit format</a>
+      </li>
+      <li>
+         <a href="#asRevit_v2017" title="https://w3id.org/fog#asRevit_v2017">as Revit format v2017 (.rvt)</a>
+      </li>
+      <li>
+         <a href="#asRevit_v2018" title="https://w3id.org/fog#asRevit_v2018">as Revit format v2018 (.rvt)</a>
+      </li>
+      <li>
+         <a href="#asRevit_v2019" title="https://w3id.org/fog#asRevit_v2019">as Revit format v2019 (.rvt)</a>
+      </li>
+      <li>
+         <a href="#asRevit_v2020" title="https://w3id.org/fog#asRevit_v2020">as Revit format v2020 (.rvt)</a>
+      </li>
+      <li>
+         <a href="#asRhino" title="https://w3id.org/fog#asRhino">as Rhino format</a>
+      </li>
+      <li>
+         <a href="#asRhino_v5" title="https://w3id.org/fog#asRhino_v5">as Rhino format v5 (.3dm)</a>
+      </li>
+      <li>
+         <a href="#asRhino_v6" title="https://w3id.org/fog#asRhino_v6">as Rhino format v6 (.3dm)</a>
+      </li>
+      <li>
          <a href="#asShapefile-dbf" title="https://w3id.org/fog#asShapefile-dbf">as Shapefile dBASE table (.dbf)</a>
       </li>
       <li>
@@ -279,6 +598,12 @@ This section provides details for each class and property defined by FOG: File O
       </li>
       <li>
          <a href="#asStep" title="https://w3id.org/fog#asStep">as SPFF file (.step)</a>
+      </li>
+      <li>
+         <a href="#asStep_ap214" title="https://w3id.org/fog#asStep_ap214">as STEP SPFF file (AP214)</a>
+      </li>
+      <li>
+         <a href="#asStep_ap242" title="https://w3id.org/fog#asStep_ap242">as STEP SPFF file (AP242)</a>
       </li>
       <li>
          <a href="#asStl" title="https://w3id.org/fog#asStl">as STL format</a>
@@ -331,7 +656,7 @@ This section provides details for each class and property defined by FOG: File O
       <p>
          <strong>IRI:</strong> https://w3id.org/fog#asCollada</p>
       <div class="comment">
-         <span class="markdown">The datatype relation pointing to a geometry description following the open COLLADA format from the Khronos Group. The format consists of a single .dae file (text-encoded). It is strongly adviced to use the more specific subproperties (e.g. fog:asCollada_v1.4 and fog:asCollada_v1.5).</span>
+         <span class="markdown">The datatype relation pointing to a geometry description following the open COLLADA format from the Khronos Group. The format consists of a single .dae file (text-based). It is strongly adviced to use the more specific subproperties (e.g. fog:asCollada_v1.4.1).</span>
       </div>
       <div class="description">
          <p>
@@ -360,7 +685,7 @@ This section provides details for each class and property defined by FOG: File O
       <p>
          <strong>IRI:</strong> https://w3id.org/fog#asCollada_v1.4.1</p>
       <div class="comment">
-         <span class="markdown">The datatype relation pointing to a geometry description following the open COLLADA v1.4.1 format from the Khronos Group. It consists of a single .dae file (text-encoded).</span>
+         <span class="markdown">The datatype relation pointing to a geometry description following the open COLLADA v1.4.1 format from the Khronos Group. It consists of a single .dae file (text-based).</span>
       </div>
       <div class="description">
          <p>
@@ -382,7 +707,7 @@ This section provides details for each class and property defined by FOG: File O
       <p>
          <strong>IRI:</strong> https://w3id.org/fog#asCollada_v1.5.0</p>
       <div class="comment">
-         <span class="markdown">The datatype relation pointing to a geometry description following the open COLLADA v1.5.0 format from the Khronos Group. It consists of a single .dae file (text-encoded).</span>
+         <span class="markdown">The datatype relation pointing to a geometry description following the open COLLADA v1.5.0 format from the Khronos Group. It consists of a single .dae file (text-based).</span>
       </div>
       <div class="description">
          <p>
@@ -404,7 +729,7 @@ This section provides details for each class and property defined by FOG: File O
       <p>
          <strong>IRI:</strong> https://w3id.org/fog#asDwg_v2010</p>
       <div class="comment">
-         <span class="markdown">The datatype relation pointing to a geometry description following the proprietary DWG v2010 format from Autodesk. It consists of a single .dwg file (binary-encoded).</span>
+         <span class="markdown">The datatype relation pointing to a geometry description following the proprietary DWG v2010 format from Autodesk. It consists of a single .dwg file (binary).</span>
       </div>
       <div class="description">
          <p>
@@ -426,7 +751,7 @@ This section provides details for each class and property defined by FOG: File O
       <p>
          <strong>IRI:</strong> https://w3id.org/fog#asDwg_v2013</p>
       <div class="comment">
-         <span class="markdown">The datatype relation pointing to a geometry description following the proprietary DWG v2013 format from Autodesk. It consists of a single .dwg file (binary-encoded).</span>
+         <span class="markdown">The datatype relation pointing to a geometry description following the proprietary DWG v2013 format from Autodesk. It consists of a single .dwg file (binary).</span>
       </div>
       <div class="description">
          <p>
@@ -448,7 +773,7 @@ This section provides details for each class and property defined by FOG: File O
       <p>
          <strong>IRI:</strong> https://w3id.org/fog#asDwg_v2018</p>
       <div class="comment">
-         <span class="markdown">The datatype relation pointing to a geometry description following the proprietary DWG v2018 format from Autodesk. It consists of a single .dwg file (binary-encoded).</span>
+         <span class="markdown">The datatype relation pointing to a geometry description following the proprietary DWG v2018 format from Autodesk. It consists of a single .dwg file (binary).</span>
       </div>
       <div class="description">
          <p>
@@ -470,7 +795,7 @@ This section provides details for each class and property defined by FOG: File O
       <p>
          <strong>IRI:</strong> https://w3id.org/fog#asDwg</p>
       <div class="comment">
-         <span class="markdown">The datatype relation pointing to a geometry description following the proprietary DWG format from Autodesk. The Open Design Alliance created a 'specification for .dwg files' that is publicly available. The format consists of a single .dwg file (binary-encoded). It is strongly adviced to use the more specific subproperties (e.g. fog:asDwg_v2018).</span>
+         <span class="markdown">The datatype relation pointing to a geometry description following the proprietary DWG format from Autodesk. The Open Design Alliance created a 'specification for .dwg files' that is publicly available. The format consists of a single .dwg file (binary). It is strongly adviced to use the more specific subproperties (e.g. fog:asDwg_v2018).</span>
       </div>
       <div class="description">
          <p>
@@ -500,7 +825,7 @@ This section provides details for each class and property defined by FOG: File O
       <p>
          <strong>IRI:</strong> https://w3id.org/fog#asE57</p>
       <div class="comment">
-         <span class="markdown">The datatype relation pointing to a point cloud geometry description following the open E57 format developed by the ASTM Committee E57. The format consists of a single .e57 file (partially binary-encoded, partially text-encoded). It is strongly adviced to use the more specific subproperties (e.g. fog:asE57_v1.0).</span>
+         <span class="markdown">The datatype relation pointing to a point cloud geometry description following the open E57 format developed by the ASTM Committee E57. The format consists of a single .e57 file (partially binary, partially text-based). It is strongly adviced to use the more specific subproperties (e.g. fog:asE57_v1.0).</span>
       </div>
       <div class="description">
          <p>
@@ -528,7 +853,7 @@ This section provides details for each class and property defined by FOG: File O
       <p>
          <strong>IRI:</strong> https://w3id.org/fog#asE57_v1.0</p>
       <div class="comment">
-         <span class="markdown">The datatype relation pointing to a point cloud geometry description following the open E57 format developed by the ASTM Committee E57. The format consists of a single .e57 file (partially binary-encoded, partially text-encoded).</span>
+         <span class="markdown">The datatype relation pointing to a point cloud geometry description following the open E57 format developed by the ASTM Committee E57. The format consists of a single .e57 file (partially binary, partially text-based).</span>
       </div>
       <div class="description">
          <p>
@@ -550,7 +875,7 @@ This section provides details for each class and property defined by FOG: File O
       <p>
          <strong>IRI:</strong> https://w3id.org/fog#asGeojson</p>
       <div class="comment">
-         <span class="markdown">The datatype relation pointing to a geometry description following the open GeoJSON format. The format consists of a single .json file (text-encoded). It is strongly adviced to use the more specific subproperties (e.g. fog:asGeojson_v2016). Note that the version proposed by the IETF GeoJSON Working Group (fog:asGeojson_v2016) is derived from the now obsolete 2008 version (fog:asGeojson_v2008).</span>
+         <span class="markdown">The datatype relation pointing to a geometry description following the open GeoJSON format. The format consists of a single .json file (text-based). It is strongly adviced to use the more specific subproperties (e.g. fog:asGeojson_v2016). Note that the version proposed by the IETF GeoJSON Working Group (fog:asGeojson_v2016) is derived from the now obsolete 2008 version (fog:asGeojson_v2008).</span>
       </div>
       <div class="description">
          <p>
@@ -579,7 +904,7 @@ This section provides details for each class and property defined by FOG: File O
       <p>
          <strong>IRI:</strong> https://w3id.org/fog#asGeojson_v2008</p>
       <div class="comment">
-         <span class="markdown">The datatype relation pointing to a geometry description following the open GeoJSON v2008 format. The format consists of a single .json file (text-encoded). Note that the version proposed by the IETF (fog:asGeojson_v2016) is derived from the now obsolete 2008 version (fog:asGeojson_v2008).</span>
+         <span class="markdown">The datatype relation pointing to a geometry description following the open GeoJSON v2008 format. The format consists of a single .json file (text-based). Note that the version proposed by the IETF (fog:asGeojson_v2016) is derived from the now obsolete 2008 version (fog:asGeojson_v2008).</span>
       </div>
       <div class="description">
          <p>
@@ -601,7 +926,7 @@ This section provides details for each class and property defined by FOG: File O
       <p>
          <strong>IRI:</strong> https://w3id.org/fog#asGeojson_v2016</p>
       <div class="comment">
-         <span class="markdown">The datatype relation pointing to a geometry description following the open GeoJSON v2016 format developed by the IETF GeoJSON Working Group. The format consists of a single .json file (text-encoded). Note that the version proposed by the IETF (fog:asGeojson_v2016) is derived from the now obsolete 2008 version (fog:asGeojson_v2008).</span>
+         <span class="markdown">The datatype relation pointing to a geometry description following the open GeoJSON v2016 format developed by the IETF GeoJSON Working Group. The format consists of a single .json file (text-based). Note that the version proposed by the IETF (fog:asGeojson_v2016) is derived from the now obsolete 2008 version (fog:asGeojson_v2008).</span>
       </div>
       <div class="description">
          <p>
@@ -623,7 +948,7 @@ This section provides details for each class and property defined by FOG: File O
       <p>
          <strong>IRI:</strong> https://w3id.org/fog#asGltf</p>
       <div class="comment">
-         <span class="markdown">The datatype relation pointing to a geometry description following the open glTF format from the Khronos Group. The format consists of one (.gltf with embedded binary geometry/textures/shaders, or .glb) or multiple files (combination of binary- and/or text-encoded). It is strongly adviced to use the more specific subsubproperties (e.g. fog:asGltf_v2.0-gltf).</span>
+         <span class="markdown">The datatype relation pointing to a geometry description following the open glTF format from the Khronos Group. The format consists of one (.gltf with embedded binary geometry/textures/shaders, or .glb) or multiple files (combination of binary and/or text-based files). It is strongly adviced to use the more specific subsubproperties (e.g. fog:asGltf_v2.0-gltf).</span>
       </div>
       <div class="description">
          <dl>
@@ -650,7 +975,7 @@ This section provides details for each class and property defined by FOG: File O
       <p>
          <strong>IRI:</strong> https://w3id.org/fog#asGltf_v1.0</p>
       <div class="comment">
-         <span class="markdown">The datatype relation pointing to a geometry description following the open glTF v1.0 format from the Khronos Group. The format consists of one (.gltf with embedded binary geometry/textures/shaders) or multiple files (combination of binary- and/or text-encoded). It is strongly adviced to use the more specific subproperties (e.g. fog:asGltf_v1.0-gltf).</span>
+         <span class="markdown">The datatype relation pointing to a geometry description following the open glTF v1.0 format from the Khronos Group. The format consists of one (.gltf with embedded binary geometry/textures/shaders) or multiple files (combination of binary and/or text-based files). It is strongly adviced to use the more specific subproperties (e.g. fog:asGltf_v1.0-gltf).</span>
       </div>
       <div class="description">
          <dl>
@@ -700,7 +1025,7 @@ This section provides details for each class and property defined by FOG: File O
       <p>
          <strong>IRI:</strong> https://w3id.org/fog#asGltf_v1.0-gltf</p>
       <div class="comment">
-         <span class="markdown">The datatype relation pointing to a JSON file (.gltf) following the open glTF v1.0 format from the Khronos Group. This file can be used on its own if geometry, shaders and optional textures are embedded (text-encoded) inside the JSON. In most cases however, it references other files containing geometry (.bin), optional shaders (.glsl) and optional textures (.bmp/.gif/.jpeg/.png).</span>
+         <span class="markdown">The datatype relation pointing to a JSON file (.gltf) following the open glTF v1.0 format from the Khronos Group. This file can be used on its own if geometry, shaders and optional textures are embedded (text-based) inside the JSON. In most cases however, it references other files containing geometry (.bin), optional shaders (.glsl) and optional textures (.bmp/.gif/.jpeg/.png).</span>
       </div>
       <div class="description">
          <p>
@@ -722,7 +1047,7 @@ This section provides details for each class and property defined by FOG: File O
       <p>
          <strong>IRI:</strong> https://w3id.org/fog#asGltf_v1.0-glsl</p>
       <div class="comment">
-         <span class="markdown">The datatype relation pointing to a text-encoded shader file (.bin) following the open glTF v1.0 format from the Khronos Group. This file always has to be used together with the central .gltf JSON file (fog:asGltf_v1.0-gltf) referencing it.</span>
+         <span class="markdown">The datatype relation pointing to a text-based shader file (.glsl) following the open glTF v1.0 format from the Khronos Group. This file always has to be used together with the central .gltf JSON file (fog:asGltf_v1.0-gltf) referencing it.</span>
       </div>
       <div class="description">
          <p>
@@ -788,7 +1113,7 @@ This section provides details for each class and property defined by FOG: File O
       <p>
          <strong>IRI:</strong> https://w3id.org/fog#asGltf_v2.0</p>
       <div class="comment">
-         <span class="markdown">The datatype relation pointing to a geometry description following the open glTF v2.0 format from the Khronos Group. The format consists of one (.gltf with embedded binary geometry/textures/shaders, or .glb) or multiple files (combination of binary- and/or text-encoded). It is strongly adviced to use the more specific subproperties (e.g. fog:asGltf_v2.0-gltf).</span>
+         <span class="markdown">The datatype relation pointing to a geometry description following the open glTF v2.0 format from the Khronos Group. The format consists of one (.gltf with embedded binary geometry/textures/shaders, or .glb) or multiple files (combination of binary and/or text-based files). It is strongly adviced to use the more specific subproperties (e.g. fog:asGltf_v2.0-gltf).</span>
       </div>
       <div class="description">
          <dl>
@@ -838,7 +1163,7 @@ This section provides details for each class and property defined by FOG: File O
       <p>
          <strong>IRI:</strong> https://w3id.org/fog#asGltf_v2.0-gltf</p>
       <div class="comment">
-         <span class="markdown">The datatype relation pointing to a JSON file (.gltf) following the open glTF v2.0 format from the Khronos Group. This file can be used on its own if geometry and optional textures are embedded (text-encoded) inside the JSON. In most cases however, it references other files containing geometry (.bin) and optional textures (.jpeg/.png).</span>
+         <span class="markdown">The datatype relation pointing to a JSON file (.gltf) following the open glTF v2.0 format from the Khronos Group. This file can be used on its own if geometry and optional textures are embedded (text-based) inside the JSON. In most cases however, it references other files containing geometry (.bin) and optional textures (.jpeg/.png).</span>
       </div>
       <div class="description">
          <p>
@@ -882,7 +1207,7 @@ This section provides details for each class and property defined by FOG: File O
       <p>
          <strong>IRI:</strong> https://w3id.org/fog#asGml</p>
       <div class="comment">
-         <span class="markdown">The datatype relation pointing to a text encoded geometry description following one of the open GML formats developed by OGC and ISO. The format consists of a single .gml file (text-encoded). It is strongly adviced to use the more specific subproperties (e.g. fog:asGml_v3.3.0). Note that this property is disjoint with geo:asGML because of the more strict domain and range restrictions in Geosparql.</span>
+         <span class="markdown">The datatype relation pointing to a text-based geometry description following one of the open GML formats developed by OGC and ISO. The format consists of a single .gml file (text-based). It is strongly adviced to use the more specific subproperties (e.g. fog:asGml_v3.3.0). Note that this property is disjoint with geo:asGML because of the more strict domain and range restrictions in GeoSPARQL.</span>
       </div>
       <div class="description">
          <p>
@@ -913,7 +1238,7 @@ This section provides details for each class and property defined by FOG: File O
       <p>
          <strong>IRI:</strong> https://w3id.org/fog#asGml_v3.1.1</p>
       <div class="comment">
-         <span class="markdown">The datatype relation pointing to a text encoded GML file (.gml) following the open GML v3.1.1 format developed by OGC and ISO. Note that this and older versions are considered depreciated. Note that this property is disjoint (via its superproperty fog:asGml) with geo:asGML because of the more strict domain and range restrictions in Geosparql.</span>
+         <span class="markdown">The datatype relation pointing to a text-based GML file (.gml) following the open GML v3.1.1 format developed by OGC and ISO. Note that this and older versions are considered depreciated. Note that this property is disjoint (via its superproperty fog:asGml) with geo:asGML because of the more strict domain and range restrictions in GeoSPARQL.</span>
       </div>
       <div class="description">
          <p>
@@ -935,7 +1260,7 @@ This section provides details for each class and property defined by FOG: File O
       <p>
          <strong>IRI:</strong> https://w3id.org/fog#asGml_v3.2.1</p>
       <div class="comment">
-         <span class="markdown">The datatype relation pointing to a text encoded GML file (.gml) following the open GML v3.2.1 format developed by OGC and ISO. Note that this property is disjoint (via its superproperty fog:asGml) with geo:asGML because of the more strict domain and range restrictions in Geosparql.</span>
+         <span class="markdown">The datatype relation pointing to a text-based GML file (.gml) following the open GML v3.2.1 format developed by OGC and ISO. Note that this property is disjoint (via its superproperty fog:asGml) with geo:asGML because of the more strict domain and range restrictions in GeoSPARQL.</span>
       </div>
       <div class="description">
          <p>
@@ -957,7 +1282,7 @@ This section provides details for each class and property defined by FOG: File O
       <p>
          <strong>IRI:</strong> https://w3id.org/fog#asGml_v3.2.2</p>
       <div class="comment">
-         <span class="markdown">The datatype relation pointing to a text encoded GML file (.gml) following the open GML v3.2.2 format developed by OGC and ISO. Note that this property is disjoint (via its superproperty fog:asGml) with geo:asGML because of the more strict domain and range restrictions in Geosparql.</span>
+         <span class="markdown">The datatype relation pointing to a text-based GML file (.gml) following the open GML v3.2.2 format developed by OGC and ISO. Note that this property is disjoint (via its superproperty fog:asGml) with geo:asGML because of the more strict domain and range restrictions in GeoSPARQL.</span>
       </div>
       <div class="description">
          <p>
@@ -979,7 +1304,7 @@ This section provides details for each class and property defined by FOG: File O
       <p>
          <strong>IRI:</strong> https://w3id.org/fog#asGml_v3.3.0</p>
       <div class="comment">
-         <span class="markdown">The datatype relation pointing to a text encoded GML file (.gml) following the open GML v3.3.0 format developed by OGC and ISO. This format is an extension of the GML v3.2 format. Note that this property is disjoint (via its superproperty fog:asGml) with geo:asGML because of the more strict domain and range restrictions in Geosparql.</span>
+         <span class="markdown">The datatype relation pointing to a text-based GML file (.gml) following the open GML v3.3.0 format developed by OGC and ISO. This format is an extension of the GML v3.2 format. Note that this property is disjoint (via its superproperty fog:asGml) with geo:asGML because of the more strict domain and range restrictions in GeoSPARQL.</span>
       </div>
       <div class="description">
          <p>
@@ -993,6 +1318,448 @@ This section provides details for each class and property defined by FOG: File O
          </dl>
       </div>
    </div>
+   <div class="entity" id="asIfc">
+      <h3>as IFC format<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fog#asIfc</p>
+      <div class="comment">
+         <span class="markdown">The datatype relation pointing to a text-based geometry description following the open IFC format as documented by buildingSMART and in its ISO 16739 standard. The format consists of a single .ifc or .ifcxml file (text-based). It is strongly adviced to use the more specific subproperties (e.g. fog:asIfc_v2x4-icfxml).</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/omg#hasSimpleGeometryDescription">has simple geometry description</span>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#asIfc_v2x3" title="https://w3id.org/fog#asIfc_v2x3">as IFC v2x3</a>
+               <sup class="type-dp" title="data property">dp</sup>, <a href="#asIfc_v2x3tc1" title="https://w3id.org/fog#asIfc_v2x3tc1">as IFC v2x3 TC1</a>
+               <sup class="type-dp" title="data property">dp</sup>, <a href="#asIfc_v2x4" title="https://w3id.org/fog#asIfc_v2x4">as IFC v2x4</a>
+               <sup class="type-dp" title="data property">dp</sup>, <a href="#asIfc_v2x4add1" title="https://w3id.org/fog#asIfc_v2x4add1">as IFC v2x4 Add1</a>
+               <sup class="type-dp" title="data property">dp</sup>, <a href="#asIfc_v2x4add2" title="https://w3id.org/fog#asIfc_v2x4add2">as IFC v2x4 Add2</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="asIfc_v2x3">
+      <h3>as IFC v2x3<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fog#asIfc_v2x3</p>
+      <div class="comment">
+         <span class="markdown">The datatype relation pointing to a text-based geometry description following the open IFC format v2x3 as documented by buildingSMART and in its ISO 16739 standard</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#asIfc" title="https://w3id.org/fog#asIfc">as IFC format</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#asIfc_v2x3-ifc" title="https://w3id.org/fog#asIfc_v2x3-ifc">as IFC v2x3 file (.ifc)</a>
+               <sup class="type-dp" title="data property">dp</sup>, <a href="#asIfc_v2x3-ifcxml" title="https://w3id.org/fog#asIfc_v2x3-ifcxml">as IFC v2x3 file (.ifcxml)</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="asIfc_v2x3-ifc">
+      <h3>as IFC v2x3 file (.ifc)<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fog#asIfc_v2x3-ifc</p>
+      <div class="comment">
+         <span class="markdown">The datatype relation pointing to a text-based geometry description following the open IFC format v2x3 as documented by buildingSMART and in its ISO 16739 standard. The IFC file is serialised in the STEP Physical File Format (SPFF).</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#asIfc_v2x3" title="https://w3id.org/fog#asIfc_v2x3">as IFC v2x3</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="asIfc_v2x3-ifcxml">
+      <h3>as IFC v2x3 file (.ifcxml)<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fog#asIfc_v2x3-ifcxml</p>
+      <div class="comment">
+         <span class="markdown">The datatype relation pointing to a text-based geometry description following the open IFC format v2x3 as documented by buildingSMART and in its ISO 16739 standard. The IFC file is serialised in the XML format.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#asIfc_v2x3" title="https://w3id.org/fog#asIfc_v2x3">as IFC v2x3</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="asIfc_v2x3tc1">
+      <h3>as IFC v2x3 TC1<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fog#asIfc_v2x3tc1</p>
+      <div class="comment">
+         <span class="markdown">The datatype relation pointing to a text-based geometry description following the open IFC format v2x3 TC1 as documented by buildingSMART and in its ISO 16739 standard</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#asIfc" title="https://w3id.org/fog#asIfc">as IFC format</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#asIfc_v2x3tc1-ifc" title="https://w3id.org/fog#asIfc_v2x3tc1-ifc">as IFC v2x3 TC1 file (.ifc)</a>
+               <sup class="type-dp" title="data property">dp</sup>, <a href="#asIfc_v2x3tc1-ifcxml" title="https://w3id.org/fog#asIfc_v2x3tc1-ifcxml">as IFC v2x3 TC1 file (.ifcxml)</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="asIfc_v2x3tc1-ifc">
+      <h3>as IFC v2x3 TC1 file (.ifc)<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fog#asIfc_v2x3tc1-ifc</p>
+      <div class="comment">
+         <span class="markdown">The datatype relation pointing to a text-based geometry description following the open IFC format v2x3 TC1 as documented by buildingSMART and in its ISO 16739 standard. The IFC file is serialised in the STEP Physical File Format (SPFF).</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#asIfc_v2x3tc1" title="https://w3id.org/fog#asIfc_v2x3tc1">as IFC v2x3 TC1</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="asIfc_v2x3tc1-ifcxml">
+      <h3>as IFC v2x3 TC1 file (.ifcxml)<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fog#asIfc_v2x3tc1-ifcxml</p>
+      <div class="comment">
+         <span class="markdown">The datatype relation pointing to a text-based geometry description following the open IFC format v2x3 TC1 as documented by buildingSMART and in its ISO 16739 standard. The IFC file is serialised in the XML format.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#asIfc_v2x3tc1" title="https://w3id.org/fog#asIfc_v2x3tc1">as IFC v2x3 TC1</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="asIfc_v2x4">
+      <h3>as IFC v2x4<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fog#asIfc_v2x4</p>
+      <div class="comment">
+         <span class="markdown">The datatype relation pointing to a text-based geometry description following the open IFC format v2x4 as documented by buildingSMART and in its ISO 16739 standard</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#asIfc" title="https://w3id.org/fog#asIfc">as IFC format</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#asIfc_v2x4-ifc" title="https://w3id.org/fog#asIfc_v2x4-ifc">as IFC v2x4 file (.ifc)</a>
+               <sup class="type-dp" title="data property">dp</sup>, <a href="#asIfc_v2x4-ifcxml" title="https://w3id.org/fog#asIfc_v2x4-ifcxml">as IFC v2x4 file (.ifcxml)</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="asIfc_v2x4add2-ifcxml">
+      <h3>as IFC v2x4 Add 2 file (.ifcxml)<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fog#asIfc_v2x4add2-ifcxml</p>
+      <div class="comment">
+         <span class="markdown">The datatype relation pointing to a text-based geometry description following the open IFC format v2x4 Add2 as documented by buildingSMART and in its ISO 16739 standard. The IFC file is serialised in the XML format.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#asIfc_v2x4add2" title="https://w3id.org/fog#asIfc_v2x4add2">as IFC v2x4 Add2</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="asIfc_v2x4add1">
+      <h3>as IFC v2x4 Add1<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fog#asIfc_v2x4add1</p>
+      <div class="comment">
+         <span class="markdown">The datatype relation pointing to a text-based geometry description following the open IFC format v2x4 Add1 as documented by buildingSMART and in its ISO 16739 standard</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#asIfc" title="https://w3id.org/fog#asIfc">as IFC format</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#asIfc_v2x4add1-ifc" title="https://w3id.org/fog#asIfc_v2x4add1-ifc">as IFC v2x4 Add1 file (.ifc)</a>
+               <sup class="type-dp" title="data property">dp</sup>, <a href="#asIfc_v2x4add1-ifcxml" title="https://w3id.org/fog#asIfc_v2x4add1-ifcxml">as IFC v2x4 Add1 file (.ifcxml)</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="asIfc_v2x4add1-ifc">
+      <h3>as IFC v2x4 Add1 file (.ifc)<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fog#asIfc_v2x4add1-ifc</p>
+      <div class="comment">
+         <span class="markdown">The datatype relation pointing to a text-based geometry description following the open IFC format v2x4 Add1 as documented by buildingSMART and in its ISO 16739 standard. The IFC file is serialised in the STEP Physical File Format (SPFF).</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#asIfc_v2x4add1" title="https://w3id.org/fog#asIfc_v2x4add1">as IFC v2x4 Add1</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="asIfc_v2x4add1-ifcxml">
+      <h3>as IFC v2x4 Add1 file (.ifcxml)<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fog#asIfc_v2x4add1-ifcxml</p>
+      <div class="comment">
+         <span class="markdown">The datatype relation pointing to a text-based geometry description following the open IFC format v2x4 Add1 as documented by buildingSMART and in its ISO 16739 standard. The IFC file is serialised in the XML format.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#asIfc_v2x4add1" title="https://w3id.org/fog#asIfc_v2x4add1">as IFC v2x4 Add1</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="asIfc_v2x4add2">
+      <h3>as IFC v2x4 Add2<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fog#asIfc_v2x4add2</p>
+      <div class="comment">
+         <span class="markdown">The datatype relation pointing to a text-based geometry description following the open IFC format v2x4 Add2 as documented by buildingSMART and in its ISO 16739 standard</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#asIfc" title="https://w3id.org/fog#asIfc">as IFC format</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#asIfc_v2x4add2-ifcxml" title="https://w3id.org/fog#asIfc_v2x4add2-ifcxml">as IFC v2x4 Add 2 file (.ifcxml)</a>
+               <sup class="type-dp" title="data property">dp</sup>, <a href="#asIfc_v2x4add2-ifc" title="https://w3id.org/fog#asIfc_v2x4add2-ifc">as IFC v2x4 Add2 file (.ifc)</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="asIfc_v2x4add2-ifc">
+      <h3>as IFC v2x4 Add2 file (.ifc)<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fog#asIfc_v2x4add2-ifc</p>
+      <div class="comment">
+         <span class="markdown">The datatype relation pointing to a text-based geometry description following the open IFC format v2x4 Add2 as documented by buildingSMART and in its ISO 16739 standard. The IFC file is serialised in the STEP Physical File Format (SPFF).</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#asIfc_v2x4add2" title="https://w3id.org/fog#asIfc_v2x4add2">as IFC v2x4 Add2</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="asIfc_v2x4-ifc">
+      <h3>as IFC v2x4 file (.ifc)<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fog#asIfc_v2x4-ifc</p>
+      <div class="comment">
+         <span class="markdown">The datatype relation pointing to a text-based geometry description following the open IFC format v2x4 as documented by buildingSMART and in its ISO 16739 standard. The IFC file is serialised in the STEP Physical File Format (SPFF).</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#asIfc_v2x4" title="https://w3id.org/fog#asIfc_v2x4">as IFC v2x4</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="asIfc_v2x4-ifcxml">
+      <h3>as IFC v2x4 file (.ifcxml)<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fog#asIfc_v2x4-ifcxml</p>
+      <div class="comment">
+         <span class="markdown">The datatype relation pointing to a text-based geometry description following the open IFC format v2x4 as documented by buildingSMART and in its ISO 16739 standard. The IFC file is serialised in the XML format.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#asIfc_v2x4" title="https://w3id.org/fog#asIfc_v2x4">as IFC v2x4</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="asIges">
+      <h3>as IGES format<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fog#asIges</p>
+      <div class="comment">
+         <span class="markdown">The datatype relation pointing to a geometry description following the IGES format as documented in its ANSI standard. The format consists of a single .iges/.igs file (text-based). It is strongly adviced to use the more specific subproperties (e.g. fog:asIges_v5.3).</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/omg#hasSimpleGeometryDescription">has simple geometry description</span>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#asIges_v5.3" title="https://w3id.org/fog#asIges_v5.3">as IGES v5.3 (.igs)</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="asIges_v5.3">
+      <h3>as IGES v5.3 (.igs)<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fog#asIges_v5.3</p>
+      <div class="comment">
+         <span class="markdown">The datatype relation pointing to a geometry description following the IGES format v5.6 as documented in its ANSI standard.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#asIges" title="https://w3id.org/fog#asIges">as IGES format</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="asObj">
       <h3>as OBJ format<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -1001,7 +1768,7 @@ This section provides details for each class and property defined by FOG: File O
       <p>
          <strong>IRI:</strong> https://w3id.org/fog#asObj</p>
       <div class="comment">
-         <span class="markdown">The datatype relation pointing to a text encoded geometry description following the OBJ format developed by Wavefront Technologies. The format consists of a single .obj file (text encoded) and an optional material file (.mtl). It is strongly adviced to use the more specific subsubproperties (e.g. fog:asObj_v3.0-obj).</span>
+         <span class="markdown">The datatype relation pointing to a text-based geometry description following the OBJ format developed by Wavefront Technologies. The format consists of a single .obj file and an optional material file (.mtl). It is strongly adviced to use the more specific subsubproperties (e.g. fog:asObj_v3.0-obj).</span>
       </div>
       <div class="description">
          <dl>
@@ -1027,7 +1794,7 @@ This section provides details for each class and property defined by FOG: File O
       <p>
          <strong>IRI:</strong> https://w3id.org/fog#asObj_v3.0-texture</p>
       <div class="comment">
-         <span class="markdown">The datatype relation pointing to a binary encoded texture file that is referenced in the .mtl file of the OBJ format.</span>
+         <span class="markdown">The datatype relation pointing to a binary texture file that is referenced in the .mtl file of the OBJ format.</span>
       </div>
       <div class="description">
          <p>
@@ -1049,7 +1816,7 @@ This section provides details for each class and property defined by FOG: File O
       <p>
          <strong>IRI:</strong> https://w3id.org/fog#asObj_v3.0-obj</p>
       <div class="comment">
-         <span class="markdown">The datatype relation pointing to a text encoded OBJ file (.obj) following the OBJ format developed by Wavefront Technologies. This file can be used together with an optional material file (.mtl).</span>
+         <span class="markdown">The datatype relation pointing to a text-based OBJ file (.obj) following the OBJ format developed by Wavefront Technologies. This file can be used together with an optional material file (.mtl).</span>
       </div>
       <div class="description">
          <p>
@@ -1071,7 +1838,7 @@ This section provides details for each class and property defined by FOG: File O
       <p>
          <strong>IRI:</strong> https://w3id.org/fog#asObj_v3.0</p>
       <div class="comment">
-         <span class="markdown">The datatype relation pointing to a text encoded geometry description following the OBJ v3.0 format developed by Wavefront Technologies. The format consists of a single .obj file (text encoded) and an optional material file (.mtl). It is strongly adviced to use the more specific subproperties (e.g. fog:asObj_v3.0-obj).</span>
+         <span class="markdown">The datatype relation pointing to a text-based geometry description following the OBJ v3.0 format developed by Wavefront Technologies. The format consists of a single .obj file and an optional material file (.mtl). It is strongly adviced to use the more specific subproperties (e.g. fog:asObj_v3.0-obj).</span>
       </div>
       <div class="description">
          <dl>
@@ -1098,7 +1865,7 @@ This section provides details for each class and property defined by FOG: File O
       <p>
          <strong>IRI:</strong> https://w3id.org/fog#asObj_v3.0-mtl</p>
       <div class="comment">
-         <span class="markdown">The datatype relation pointing to a text encoded MTL file (.mtl) following the OBJ format developed by Wavefront Technologies. This file has to be used together with the main .obj file that references it.</span>
+         <span class="markdown">The datatype relation pointing to a text-based MTL file (.mtl) following the OBJ format developed by Wavefront Technologies. This file has to be used together with the main .obj file that references it.</span>
       </div>
       <div class="description">
          <p>
@@ -1120,7 +1887,7 @@ This section provides details for each class and property defined by FOG: File O
       <p>
          <strong>IRI:</strong> https://w3id.org/fog#asPcd</p>
       <div class="comment">
-         <span class="markdown">The datatype relation pointing to a binary encoded point cloud following the open PCD format which was developed as part of the open source project PCL (point cloud library). The format consists of a single .pcd file (binary or ASCII encoded). It is strongly adviced to use the more specific subproperties (e.g. fog:asPcd_v0.7).</span>
+         <span class="markdown">The datatype relation pointing to a binary encoded point cloud following the open PCD format which was developed as part of the open source project PCL (point cloud library). The format consists of a single .pcd file (binary or text-based). It is strongly adviced to use the more specific subproperties (e.g. fog:asPcd_v0.7).</span>
       </div>
       <div class="description">
          <p>
@@ -1148,7 +1915,7 @@ This section provides details for each class and property defined by FOG: File O
       <p>
          <strong>IRI:</strong> https://w3id.org/fog#asPcd_v0.7</p>
       <div class="comment">
-         <span class="markdown">The datatype relation pointing to a binary or ASCII encoded point cloud following the open PCD v0.7 (sometimes referred to as PCD_v7) format which was developed as part of the open source project PCL (point cloud library).</span>
+         <span class="markdown">The datatype relation pointing to a binary or text-based point cloud following the open PCD v0.7 (sometimes referred to as PCD_v7) format which was developed as part of the open source project PCL (point cloud library).</span>
       </div>
       <div class="description">
          <p>
@@ -1170,7 +1937,7 @@ This section provides details for each class and property defined by FOG: File O
       <p>
          <strong>IRI:</strong> https://w3id.org/fog#asPly_v1.0-ascii</p>
       <div class="comment">
-         <span class="markdown">The datatype relation pointing to a geometry file following the PLY v1.0 format which was developed by Greg Turk (Stanford University). The single .ply file is ASCII encoded.</span>
+         <span class="markdown">The datatype relation pointing to a geometry file following the PLY v1.0 format which was developed by Greg Turk (Stanford University). The single .ply file is text-based.</span>
       </div>
       <div class="description">
          <p>
@@ -1192,7 +1959,7 @@ This section provides details for each class and property defined by FOG: File O
       <p>
          <strong>IRI:</strong> https://w3id.org/fog#asPly_v1.0-binaryBE</p>
       <div class="comment">
-         <span class="markdown">The datatype relation pointing to a geometry file following the PLY v1.0 format which was developed by Greg Turk (Stanford University). The single .ply file is binary encoded with big endian. Note that there is also a sibling property for a binary PLY with little endian.</span>
+         <span class="markdown">The datatype relation pointing to a geometry file following the PLY v1.0 format which was developed by Greg Turk (Stanford University). The single .ply file is binary with big endian. Note that there is also a sibling property for a binary PLY with little endian.</span>
       </div>
       <div class="description">
          <p>
@@ -1214,7 +1981,7 @@ This section provides details for each class and property defined by FOG: File O
       <p>
          <strong>IRI:</strong> https://w3id.org/fog#asPly_v1.0-binaryLE</p>
       <div class="comment">
-         <span class="markdown">The datatype relation pointing to a geometry file following the PLY v1.0 format which was developed by Greg Turk (Stanford University). The single .ply file is binary encoded with little endian. Note that there is also a sibling property for a binary PLY with big endian.</span>
+         <span class="markdown">The datatype relation pointing to a geometry file following the PLY v1.0 format which was developed by Greg Turk (Stanford University). The single .ply file is binary with little endian. Note that there is also a sibling property for a binary PLY with big endian.</span>
       </div>
       <div class="description">
          <p>
@@ -1236,7 +2003,7 @@ This section provides details for each class and property defined by FOG: File O
       <p>
          <strong>IRI:</strong> https://w3id.org/fog#asPly</p>
       <div class="comment">
-         <span class="markdown">The datatype relation pointing to a geometry description following the PLY format which was developed by Greg Turk (Stanford University). The format consists of a single .ply file which is either text or binary encoded. It is strongly adviced to use the more specific subsubproperties (e.g. fog:asPly_v1.0-ascii).</span>
+         <span class="markdown">The datatype relation pointing to a geometry description following the PLY format which was developed by Greg Turk (Stanford University). The format consists of a single .ply file which is either text-based or binary. It is strongly adviced to use the more specific subsubproperties (e.g. fog:asPly_v1.0-ascii).</span>
       </div>
       <div class="description">
          <p>
@@ -1264,7 +2031,7 @@ This section provides details for each class and property defined by FOG: File O
       <p>
          <strong>IRI:</strong> https://w3id.org/fog#asPly_v1.0</p>
       <div class="comment">
-         <span class="markdown">The datatype relation pointing to a geometry description following the PLY v1.0 format which was developed by Greg Turk (Stanford University). The format consists of a single .ply file which is either text or binary encoded. It is strongly adviced to use the more specific subproperties (e.g. fog:asPly_v1.0-ascii).</span>
+         <span class="markdown">The datatype relation pointing to a geometry description following the PLY v1.0 format which was developed by Greg Turk (Stanford University). The format consists of a single .ply file which is either text-based or binary. It is strongly adviced to use the more specific subproperties (e.g. fog:asPly_v1.0-ascii).</span>
       </div>
       <div class="description">
          <p>
@@ -1285,6 +2052,198 @@ This section provides details for each class and property defined by FOG: File O
          </dl>
       </div>
    </div>
+   <div class="entity" id="asRevit">
+      <h3>as Revit format<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fog#asRevit</p>
+      <div class="comment">
+         <span class="markdown">The datatype relation pointing to a geometry description following the proprietary Revit format (Autodesk). The format consists of a single .rvt file (binary). It is strongly adviced to use the more specific subproperties (e.g. fog:asRevit_v2020)</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/omg#hasSimpleGeometryDescription">has simple geometry description</span>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#asRevit_v2017" title="https://w3id.org/fog#asRevit_v2017">as Revit format v2017 (.rvt)</a>
+               <sup class="type-dp" title="data property">dp</sup>, <a href="#asRevit_v2018" title="https://w3id.org/fog#asRevit_v2018">as Revit format v2018 (.rvt)</a>
+               <sup class="type-dp" title="data property">dp</sup>, <a href="#asRevit_v2019" title="https://w3id.org/fog#asRevit_v2019">as Revit format v2019 (.rvt)</a>
+               <sup class="type-dp" title="data property">dp</sup>, <a href="#asRevit_v2020" title="https://w3id.org/fog#asRevit_v2020">as Revit format v2020 (.rvt)</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="asRevit_v2017">
+      <h3>as Revit format v2017 (.rvt)<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fog#asRevit_v2017</p>
+      <div class="comment">
+         <span class="markdown">The datatype relation pointing to a geometry description following the proprietary Revit v2017 format (Autodesk). The format consists of a single .rvt file (binary).</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#asRevit" title="https://w3id.org/fog#asRevit">as Revit format</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="asRevit_v2018">
+      <h3>as Revit format v2018 (.rvt)<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fog#asRevit_v2018</p>
+      <div class="comment">
+         <span class="markdown">The datatype relation pointing to a geometry description following the proprietary Revit v2018 format (Autodesk). The format consists of a single .rvt file (binary).</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#asRevit" title="https://w3id.org/fog#asRevit">as Revit format</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="asRevit_v2019">
+      <h3>as Revit format v2019 (.rvt)<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fog#asRevit_v2019</p>
+      <div class="comment">
+         <span class="markdown">The datatype relation pointing to a geometry description following the proprietary Revit v2019 format (Autodesk). The format consists of a single .rvt file (binary).</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#asRevit" title="https://w3id.org/fog#asRevit">as Revit format</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="asRevit_v2020">
+      <h3>as Revit format v2020 (.rvt)<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fog#asRevit_v2020</p>
+      <div class="comment">
+         <span class="markdown">The datatype relation pointing to a geometry description following the proprietary Revit v2020 format (Autodesk). The format consists of a single .rvt file (binary).</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#asRevit" title="https://w3id.org/fog#asRevit">as Revit format</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="asRhino">
+      <h3>as Rhino format<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fog#asRhino</p>
+      <div class="comment">
+         <span class="markdown">The datatype relation pointing to a geometry description following the proprietary Rhinoceros format (McNeel). The format consists of a single .3dm file (binary). It is strongly adviced to use the more specific subproperties (e.g. fog:asRhino_v6)</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted"
+                     title="https://w3id.org/omg#hasSimpleGeometryDescription">has simple geometry description</span>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#asRhino_v5" title="https://w3id.org/fog#asRhino_v5">as Rhino format v5 (.3dm)</a>
+               <sup class="type-dp" title="data property">dp</sup>, <a href="#asRhino_v6" title="https://w3id.org/fog#asRhino_v6">as Rhino format v6 (.3dm)</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="asRhino_v5">
+      <h3>as Rhino format v5 (.3dm)<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fog#asRhino_v5</p>
+      <div class="comment">
+         <span class="markdown">The datatype relation pointing to a geometry description following the proprietary Rhinoceros format v5 (McNeel). The format consists of a single .3dm file (binary).</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#asRhino" title="https://w3id.org/fog#asRhino">as Rhino format</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="asRhino_v6">
+      <h3>as Rhino format v6 (.3dm)<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fog#asRhino_v6</p>
+      <div class="comment">
+         <span class="markdown">The datatype relation pointing to a geometry description following the proprietary Rhinoceros format v6 (McNeel). The format consists of a single .3dm file (binary).</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#asRhino" title="https://w3id.org/fog#asRhino">as Rhino format</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="asShapefile-dbf">
       <h3>as Shapefile dBASE table (.dbf)<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
@@ -1293,7 +2252,7 @@ This section provides details for each class and property defined by FOG: File O
       <p>
          <strong>IRI:</strong> https://w3id.org/fog#asShapefile-dbf</p>
       <div class="comment">
-         <span class="markdown">The datatype relation pointing to a dBASE table file (.dbf) following the open Shapefile format developed by ESRI. This file contains the attributes of each shape. The Shapefile format consists of multiple files, including as a minimum the geometry (.shp), the index of the feature geometry (.shx) and attribute information of features (.dbf). These three files are binary encoded, while others can be text encoded (e.g. the .prj file).</span>
+         <span class="markdown">The datatype relation pointing to a dBASE table file (.dbf) following the open Shapefile format developed by ESRI. This file contains the attributes of each shape. The Shapefile format consists of multiple files, including as a minimum the geometry (.shp), the index of the feature geometry (.shx) and attribute information of features (.dbf). These three files are binary, while others can be text-based (e.g. the .prj file).</span>
       </div>
       <div class="description">
          <p>
@@ -1315,7 +2274,7 @@ This section provides details for each class and property defined by FOG: File O
       <p>
          <strong>IRI:</strong> https://w3id.org/fog#asShapefile</p>
       <div class="comment">
-         <span class="markdown">The datatype relation pointing to a geometry description following the open Shapefile format developed by ESRI. The format consists of multiple files, including as a minimum the geometry (.shp), the index of the feature geometry (.shx) and attribute information of features (.dbf). These three files are binary encoded, while others can be text encoded (e.g. the .prj file). It is strongly adviced to use the more specific subsubproperties (e.g. fog:asShapefile-shp). Note that no file format version is provided by ESRI and that the format is expected to be stable.</span>
+         <span class="markdown">The datatype relation pointing to a geometry description following the open Shapefile format developed by ESRI. The format consists of multiple files, including as a minimum the geometry (.shp), the index of the feature geometry (.shx) and attribute information of features (.dbf). These three files are binary, while others can be text-based (e.g. the .prj file). It is strongly adviced to use the more specific subsubproperties (e.g. fog:asShapefile-shp). Note that no file format version is provided by ESRI and that the format is expected to be stable.</span>
       </div>
       <div class="description">
          <dl>
@@ -1344,7 +2303,7 @@ This section provides details for each class and property defined by FOG: File O
       <p>
          <strong>IRI:</strong> https://w3id.org/fog#asShapefile-shp</p>
       <div class="comment">
-         <span class="markdown">The datatype relation pointing to a geometry file (.shp) following the open Shapefile format developed by ESRI. This file contains the geometry of the shape. The Shapefile format consists of multiple files, including as a minimum the geometry (.shp), the index of the feature geometry (.shx) and attribute information of features (.dbf). These three files are binary encoded, while others can be text encoded (e.g. the .prj file).</span>
+         <span class="markdown">The datatype relation pointing to a geometry file (.shp) following the open Shapefile format developed by ESRI. This file contains the geometry of the shape. The Shapefile format consists of multiple files, including as a minimum the geometry (.shp), the index of the feature geometry (.shx) and attribute information of features (.dbf). These three files are binary, while others can be text-based (e.g. the .prj file).</span>
       </div>
       <div class="description">
          <p>
@@ -1366,7 +2325,7 @@ This section provides details for each class and property defined by FOG: File O
       <p>
          <strong>IRI:</strong> https://w3id.org/fog#asShapefile-shx</p>
       <div class="comment">
-         <span class="markdown">The datatype relation pointing to a shape index format file (.shx) following the open Shapefile format developed by ESRI. This file contains the positional index of the geometry. The Shapefile format consists of multiple files, including as a minimum the geometry (.shp), the index of the feature geometry (.shx) and attribute information of features (.dbf). These three files are binary encoded, while others can be text encoded (e.g. the .prj file).</span>
+         <span class="markdown">The datatype relation pointing to a shape index format file (.shx) following the open Shapefile format developed by ESRI. This file contains the positional index of the geometry. The Shapefile format consists of multiple files, including as a minimum the geometry (.shp), the index of the feature geometry (.shx) and attribute information of features (.dbf). These three files are binary, while others can be text-based (e.g. the .prj file).</span>
       </div>
       <div class="description">
          <p>
@@ -1388,7 +2347,7 @@ This section provides details for each class and property defined by FOG: File O
       <p>
          <strong>IRI:</strong> https://w3id.org/fog#asShapefile-prj</p>
       <div class="comment">
-         <span class="markdown">The datatype relation pointing to a projection format file (.prj) following the open Shapefile format developed by ESRI. This file contains the the coordinate system and projection information of the shapes. The Shapefile format consists of multiple files, including as a minimum the geometry (.shp), the index of the feature geometry (.shx) and attribute information of features (.dbf). These three files are binary encoded, while others can be text encoded (e.g. the .prj file).</span>
+         <span class="markdown">The datatype relation pointing to a projection format file (.prj) following the open Shapefile format developed by ESRI. This file contains the the coordinate system and projection information of the shapes. The Shapefile format consists of multiple files, including as a minimum the geometry (.shp), the index of the feature geometry (.shx) and attribute information of features (.dbf). These three files are binary, while others can be text-based (e.g. the .prj file).</span>
       </div>
       <div class="description">
          <p>
@@ -1410,7 +2369,7 @@ This section provides details for each class and property defined by FOG: File O
       <p>
          <strong>IRI:</strong> https://w3id.org/fog#asSfa</p>
       <div class="comment">
-         <span class="markdown">The datatype relation pointing to a geometry description following the open Simple Feature Access (SFA) standard developed by the OGC and ISO. The format consists of a single .wkt (text encoded) or .wkb (binary encoded) file. It is strongly adviced to use the more specific subsubproperties (e.g. fog:asSfa_v2-wkt).</span>
+         <span class="markdown">The datatype relation pointing to a geometry description following the open Simple Feature Access (SFA) standard developed by the OGC and ISO. The format consists of a single .wkt (text-based) or .wkb (binary) file. It is strongly adviced to use the more specific subsubproperties (e.g. fog:asSfa_v2-wkt).</span>
       </div>
       <div class="description">
          <p>
@@ -1439,7 +2398,7 @@ This section provides details for each class and property defined by FOG: File O
       <p>
          <strong>IRI:</strong> https://w3id.org/fog#asSfa_v1</p>
       <div class="comment">
-         <span class="markdown">The datatype relation pointing to a geometry description following the open Simple Feature Access (SFA) v1 standard developed by the OGC. The format is text encoded. It is strongly adviced to use the more specific subproperties (e.g. fog:asSfa_v1-wkt). Note that this standard is now considered depreciated in favor of SFA v2.</span>
+         <span class="markdown">The datatype relation pointing to a geometry description following the open Simple Feature Access (SFA) v1 standard developed by the OGC. The format is text-based. It is strongly adviced to use the more specific subproperties (e.g. fog:asSfa_v1-wkt). Note that this standard is now considered depreciated in favor of SFA v2.</span>
       </div>
       <div class="description">
          <p>
@@ -1466,7 +2425,7 @@ This section provides details for each class and property defined by FOG: File O
       <p>
          <strong>IRI:</strong> https://w3id.org/fog#asSfa_v2</p>
       <div class="comment">
-         <span class="markdown">The datatype relation pointing to a geometry description following the open Simple Feature Access (SFA) v2 standard developed by the OGC and ISO. The format is either text encoded (WKT) or binary encoded (WKB). It is strongly adviced to use the more specific subproperties (e.g. fog:asSfa_v2-wkt).</span>
+         <span class="markdown">The datatype relation pointing to a geometry description following the open Simple Feature Access (SFA) v2 standard developed by the OGC and ISO. The format is either text-based (WKT) or binary (WKB). It is strongly adviced to use the more specific subproperties (e.g. fog:asSfa_v2-wkt).</span>
       </div>
       <div class="description">
          <p>
@@ -1494,7 +2453,7 @@ This section provides details for each class and property defined by FOG: File O
       <p>
          <strong>IRI:</strong> https://w3id.org/fog#asStep</p>
       <div class="comment">
-         <span class="markdown">The datatype relation pointing to a geometry description following the STEP Physical File Format (SPFF) format which was developed by ISO. The format consists of a single .step file which is either text encoded.</span>
+         <span class="markdown">The datatype relation pointing to a geometry description following the STEP Physical File Format (SPFF) format which was developed by ISO. The format consists of a single .step file which is text-based. It is strongly adviced to use more specific subproperties.</span>
       </div>
       <div class="description">
          <p>
@@ -1504,6 +2463,56 @@ This section provides details for each class and property defined by FOG: File O
             <dd>
                <span class="dotted"
                      title="https://w3id.org/omg#hasSimpleGeometryDescription">has simple geometry description</span>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#asStep_ap214" title="https://w3id.org/fog#asStep_ap214">as STEP SPFF file (AP214)</a>
+               <sup class="type-dp" title="data property">dp</sup>, <a href="#asStep_ap242" title="https://w3id.org/fog#asStep_ap242">as STEP SPFF file (AP242)</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="asStep_ap214">
+      <h3>as STEP SPFF file (AP214)<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fog#asStep_ap214</p>
+      <div class="comment">
+         <span class="markdown">The datatype relation pointing to a geometry description following the STEP Physical File Format (SPFF) format which was developed by ISO. The format consists of a single .step file which is text-based. The STEP file is structured according to the Application Profile (AP) 214 - Core data for automative mechanical design processes.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#asStep" title="https://w3id.org/fog#asStep">as SPFF file (.step)</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="asStep_ap242">
+      <h3>as STEP SPFF file (AP242)<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fog#asStep_ap242</p>
+      <div class="comment">
+         <span class="markdown">The datatype relation pointing to a geometry description following the STEP Physical File Format (SPFF) format which was developed by ISO. The format consists of a single .step file which is text-based. The STEP file is structured according to the Application Profile (AP) 242 - Managed model-based 3D engineering.</span>
+      </div>
+      <div class="description">
+         <p>
+            <strong>has characteristics:</strong> functional</p>
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#asStep" title="https://w3id.org/fog#asStep">as SPFF file (.step)</a>
                <sup class="type-dp" title="data property">dp</sup>
             </dd>
          </dl>
@@ -1517,7 +2526,7 @@ This section provides details for each class and property defined by FOG: File O
       <p>
          <strong>IRI:</strong> https://w3id.org/fog#asStl</p>
       <div class="comment">
-         <span class="markdown">The datatype relation pointing to a geometry description following the STL format which was developed by 3D Systems. The format consists of a single .stl file which is either text or binary encoded. It is strongly adviced to use the more specific subsubproperties (e.g. fog:asStl_v1.0).</span>
+         <span class="markdown">The datatype relation pointing to a geometry description following the STL format which was developed by 3D Systems. The format consists of a single .stl file which is either text-based or binary. It is strongly adviced to use the more specific subsubproperties (e.g. fog:asStl_v1.0).</span>
       </div>
       <div class="description">
          <p>
@@ -1545,7 +2554,7 @@ This section provides details for each class and property defined by FOG: File O
       <p>
          <strong>IRI:</strong> https://w3id.org/fog#asStl_v1.0</p>
       <div class="comment">
-         <span class="markdown">The datatype relation pointing to a geometry description following the STL v1.0 format which was developed by 3D Systems. The format consists of a single .stl file which is either text or binary encoded.</span>
+         <span class="markdown">The datatype relation pointing to a geometry description following the STL v1.0 format which was developed by 3D Systems. The format consists of a single .stl file which is either text-based or binary.</span>
       </div>
       <div class="description">
          <p>
@@ -1567,7 +2576,7 @@ This section provides details for each class and property defined by FOG: File O
       <p>
          <strong>IRI:</strong> https://w3id.org/fog#asSvg</p>
       <div class="comment">
-         <span class="markdown">The datatype relation pointing to a geometry description following the open SVG format which was developed by the W3C. The format consists of a single .svg file which is text encoded. It is strongly adviced to use the more specific subsubproperties (e.g. fog:asSvg_v1.1).</span>
+         <span class="markdown">The datatype relation pointing to a geometry description following the open SVG format which was developed by the W3C. The format consists of a single .svg file which is text-based. It is strongly adviced to use the more specific subsubproperties (e.g. fog:asSvg_v1.1).</span>
       </div>
       <div class="description">
          <p>
@@ -1597,7 +2606,7 @@ This section provides details for each class and property defined by FOG: File O
       <p>
          <strong>IRI:</strong> https://w3id.org/fog#asSvg_v1.0</p>
       <div class="comment">
-         <span class="markdown">The datatype relation pointing to a geometry description following the open SVG v1.0 format which was developed by the W3C. The format consists of a single .svg file which is text encoded. Note that this version (v1.0) is considered depreciated in favor of v1.1.</span>
+         <span class="markdown">The datatype relation pointing to a geometry description following the open SVG v1.0 format which was developed by the W3C. The format consists of a single .svg file which is text-based. Note that this version (v1.0) is considered depreciated in favor of v1.1.</span>
       </div>
       <div class="description">
          <p>
@@ -1619,7 +2628,7 @@ This section provides details for each class and property defined by FOG: File O
       <p>
          <strong>IRI:</strong> https://w3id.org/fog#asSvg_v1.1</p>
       <div class="comment">
-         <span class="markdown">The datatype relation pointing to a geometry description following the open SVG v1.1 format which was developed by the W3C. The format consists of a single .svg file which is text encoded.</span>
+         <span class="markdown">The datatype relation pointing to a geometry description following the open SVG v1.1 format which was developed by the W3C. The format consists of a single .svg file which is text-based.</span>
       </div>
       <div class="description">
          <p>
@@ -1641,7 +2650,7 @@ This section provides details for each class and property defined by FOG: File O
       <p>
          <strong>IRI:</strong> https://w3id.org/fog#asSvg_v2.0</p>
       <div class="comment">
-         <span class="markdown">The datatype relation pointing to a geometry description following the open SVG v2.0 format which was developed by the W3C. The format consists of a single .svg file which is text encoded. Note that this version (v2.0) is not yet finalized and at the moment has the status of 'W3C Candidate Recommendation'.</span>
+         <span class="markdown">The datatype relation pointing to a geometry description following the open SVG v2.0 format which was developed by the W3C. The format consists of a single .svg file which is text-based. Note that this version (v2.0) is not yet finalized and at the moment has the status of 'W3C Candidate Recommendation'.</span>
       </div>
       <div class="description">
          <p>
@@ -1685,7 +2694,7 @@ This section provides details for each class and property defined by FOG: File O
       <p>
          <strong>IRI:</strong> https://w3id.org/fog#asSfa_v1-wkt</p>
       <div class="comment">
-         <span class="markdown">The datatype relation pointing to a Well Know Text (WKT) geometry following the open Simple Feature Access (SFA) v1 standard developed by the OGC. Note that the SFA v1 standard is now considered depreciated in favor of SFA v2. Note that this property is disjoint with geo:asWKT because of the more strict domain and range restrictions in Geosparql.</span>
+         <span class="markdown">The datatype relation pointing to a Well Know Text (WKT) geometry following the open Simple Feature Access (SFA) v1 standard developed by the OGC. The format is text-based. Note that the SFA v1 standard is now considered depreciated in favor of SFA v2. Note that this property is disjoint with geo:asWKT because of the more strict domain and range restrictions in GeoSPARQL.</span>
       </div>
       <div class="description">
          <p>
@@ -1707,7 +2716,7 @@ This section provides details for each class and property defined by FOG: File O
       <p>
          <strong>IRI:</strong> https://w3id.org/fog#asSfa_v2-wkt</p>
       <div class="comment">
-         <span class="markdown">The datatype relation pointing to a Well Know Text (WKT) geometry following the open Simple Feature Access (SFA) v2 standard developed by the OGC and ISO. Note that this property is disjoint with geo:asWKT because of the more strict domain and range restrictions in Geosparql.</span>
+         <span class="markdown">The datatype relation pointing to a Well Know Text (WKT) geometry following the open Simple Feature Access (SFA) v2 standard developed by the OGC and ISO. The format is text-based. Note that this property is disjoint with geo:asWKT because of the more strict domain and range restrictions in GeoSPARQL.</span>
       </div>
       <div class="description">
          <p>
@@ -1729,7 +2738,7 @@ This section provides details for each class and property defined by FOG: File O
       <p>
          <strong>IRI:</strong> https://w3id.org/fog#asX3d</p>
       <div class="comment">
-         <span class="markdown">The datatype relation pointing to a geometry description following the open X3D format which was developed by the Web3D. The format consists of a single file which is either binary or text encoded. It is strongly adviced to use the more specific subsubproperties (e.g. fog:asX3d_v3.3_xml).</span>
+         <span class="markdown">The datatype relation pointing to a geometry description following the open X3D format which was developed by the Web3D. The format consists of a single file which is either binary or text-based. It is strongly adviced to use the more specific subsubproperties (e.g. fog:asX3d_v3.3_xml).</span>
       </div>
       <div class="description">
          <p>
@@ -1757,7 +2766,7 @@ This section provides details for each class and property defined by FOG: File O
       <p>
          <strong>IRI:</strong> https://w3id.org/fog#asX3d_v3.3</p>
       <div class="comment">
-         <span class="markdown">The datatype relation pointing to a geometry description following the open X3D v3.3 format which was developed by the Web3D. The format consists of a single file which is either binary or text encoded. It is strongly adviced to use the more specific subproperties (e.g. fog:asX3d_v3.3_xml).</span>
+         <span class="markdown">The datatype relation pointing to a geometry description following the open X3D v3.3 format which was developed by the Web3D. The format consists of a single file which is either binary or text-based. It is strongly adviced to use the more specific subproperties (e.g. fog:asX3d_v3.3_xml).</span>
       </div>
       <div class="description">
          <p>
@@ -1808,7 +2817,7 @@ This section provides details for each class and property defined by FOG: File O
       <p>
          <strong>IRI:</strong> https://w3id.org/fog#asX3d_v3.3-vrml</p>
       <div class="comment">
-         <span class="markdown">The datatype relation pointing to a classic VRML X3D file (.x3dv) following the open X3D v3.3 format which was developed by the Web3D. The file is text encoded.</span>
+         <span class="markdown">The datatype relation pointing to a classic VRML X3D file (.x3dv) following the open X3D v3.3 format which was developed by the Web3D. The file is text-based.</span>
       </div>
       <div class="description">
          <p>
@@ -1830,7 +2839,7 @@ This section provides details for each class and property defined by FOG: File O
       <p>
          <strong>IRI:</strong> https://w3id.org/fog#asX3d_v3.3-xml</p>
       <div class="comment">
-         <span class="markdown">The datatype relation pointing to a regular X3D file (.x3d) following the open X3D v3.3 format which was developed by the Web3D. The file is text encoded.</span>
+         <span class="markdown">The datatype relation pointing to a regular X3D file (.x3d) following the open X3D v3.3 format which was developed by the Web3D. The file is text-based.</span>
       </div>
       <div class="description">
          <p>
