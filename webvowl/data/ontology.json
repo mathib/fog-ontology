@@ -1,0 +1,5116 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.4), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://purl.org/vocommons/voaf", "https://w3id.org/omg", "http://www.w3.org/2000/01/rdf-schema", "http://creativecommons.org/ns", "http://purl.org/dc/terms", "http://www.w3.org/2001/XMLSchema", "http://xmlns.com/foaf/0.1", "https://w3id.org/fog" ],
+    "title" : {
+      "en" : "FOG: File Ontology for Geometry formats"
+    },
+    "iri" : "https://w3id.org/fog",
+    "version" : "0.0.2",
+    "author" : [ "https://www.researchgate.net/profile/Mathias_Bonduel", "https://www.researchgate.net/profile/Anna_Wagner13", "https://www.researchgate.net/profile/Pieter_Pauwels" ],
+    "description" : {
+      "en" : "The File Ontology for Geometry formats (FOG) describes meaningful relations towards geometry snippets in RDF literals, geometry files on relative or absolute URLs and ontology-based geometry descriptions. The defined properties in this ontology are related towards each other and additional metadata is provided, such as file extension and related specifications/sources (incl. entries in dbpedia and Wikidata). \r\n\r\nThe initial version of the ontology (v0.0.1) was documented in:\r\n\r\nBonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, & Klein, Ralf (2019). Including Widespread Geometry Formats in Semantic Graphs Using RDF Literals. In Proceedings of the European Conference on Computing in Construction (EC3 2019). Chania, Greece."
+    },
+    "comments" : {
+      "en" : "- Version 0.0.2: \r\n* updated definitions of certain properties\r\n* adjusted typos\r\n* added datatype properties for: Rhino, Revit, IFC, STEP APs, IGES\r\n* added object properties for: 3DMO, ifcOWL, geojson-ld\r\n* completed ontology metadata\r\n- Version 0.0.1: initial version"
+    },
+    "other" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://www.researchgate.net/profile/Mathias_Bonduel",
+        "type" : "iri"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://www.researchgate.net/profile/Pieter_Pauwels",
+        "type" : "iri"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "https://www.researchgate.net/profile/Anna_Wagner13",
+        "type" : "iri"
+      } ],
+      "preferredNamespacePrefix" : [ {
+        "identifier" : "preferredNamespacePrefix",
+        "language" : "undefined",
+        "value" : "fog",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2019-05-27",
+        "type" : "label"
+      } ],
+      "preferredNamespaceUri" : [ {
+        "identifier" : "preferredNamespaceUri",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "0.0.2",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "FOG: File Ontology for Geometry formats",
+        "type" : "label"
+      } ],
+      "issued" : [ {
+        "identifier" : "issued",
+        "language" : "undefined",
+        "value" : "2018-12-03",
+        "type" : "label"
+      } ],
+      "example" : [ {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "https://raw.githubusercontent.com/mathib/fog-ontology/master/examples/sample_abox_full.ttl",
+        "type" : "label"
+      }, {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "https://raw.githubusercontent.com/mathib/fog-ontology/master/examples/sample_abox_dummy.ttl",
+        "type" : "label"
+      }, {
+        "identifier" : "example",
+        "language" : "undefined",
+        "value" : "https://madsholten.github.io/sparql-visualizer/?file=https://raw.githubusercontent.com/mathib/fog-ontology/master/examples/fog-demo.json",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "metrics" : {
+    "classCount" : 4,
+    "objectPropertyCount" : 15,
+    "datatypePropertyCount" : 98,
+    "individualCount" : 6
+  },
+  "class" : [ {
+    "id" : "16",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "17",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "19",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "20",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "60",
+    "type" : "owl:Class"
+  }, {
+    "id" : "109",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "30",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "116",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "24",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "22",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "28",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "26",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "123",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "124",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "125",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "126",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "134",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "132",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "136",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "15",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "13",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "130",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "128",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "120",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "140",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "122",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "142",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "143",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "144",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "149",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "150",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "151",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "152",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "44",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "153",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "46",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "158",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "40",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "161",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "36",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "34",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "160",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "165",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "163",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "32",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "167",
+    "type" : "owl:Class"
+  }, {
+    "id" : "148",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "157",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "155",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "168",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "69",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "71",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "170",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "173",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "182",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "67",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "185",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "59",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "186",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "62",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "189",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "190",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "191",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "192",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "53",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "188",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "55",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "48",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "181",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "51",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "184",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "101",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "99",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "105",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "103",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "93",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "97",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "95",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "2",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "4",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "111",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "113",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "115",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "6",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "9",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "118",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "1",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "91",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "211",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "212",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "213",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "85",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "83",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "89",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "87",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "81",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "207",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "79",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "205",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "73",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "77",
+    "type" : "rdfs:Literal"
+  }, {
+    "id" : "75",
+    "type" : "rdfs:Literal"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "16",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://purl.org/vocommons/voaf#Vocabulary",
+    "baseIri" : "http://purl.org/vocommons/voaf",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Vocabulary"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/fog",
+      "baseIri" : "https://w3id.org",
+      "labels" : {
+        "IRI-based" : "fog"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "17"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "18",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "19",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "20",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://purl.org/dc/terms/Agent",
+    "baseIri" : "http://purl.org/dc/terms",
+    "instances" : 1,
+    "label" : {
+      "IRI-based" : "Agent"
+    },
+    "attributes" : [ "external" ],
+    "id" : "60"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "109",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "30",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "116",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "24",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "22",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "28",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "26",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "123",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "124",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "125",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "126",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "134",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "132",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "136",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "15",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "13",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "130",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "128",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "120",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://xmlns.com/foaf/0.1/Person",
+    "baseIri" : "http://xmlns.com/foaf/0.1",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Person"
+    },
+    "individuals" : [ {
+      "iri" : "https://www.researchgate.net/profile/Pieter_Pauwels",
+      "baseIri" : "https://www.researchgate.net/profile",
+      "annotations" : {
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "Pieter Pauwels",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "Pieter_Pauwels"
+      }
+    }, {
+      "iri" : "https://www.researchgate.net/profile/Mathias_Bonduel",
+      "baseIri" : "https://www.researchgate.net/profile",
+      "annotations" : {
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "Mathias Bonduel",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "Mathias_Bonduel"
+      }
+    }, {
+      "iri" : "https://www.researchgate.net/profile/Anna_Wagner13",
+      "baseIri" : "https://www.researchgate.net/profile",
+      "annotations" : {
+        "name" : [ {
+          "identifier" : "name",
+          "language" : "undefined",
+          "value" : "Anna Wagner",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "Anna_Wagner13"
+      }
+    } ],
+    "attributes" : [ "external" ],
+    "id" : "140"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "11",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "122",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "142",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "143",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "144",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "149",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "150",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "151",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "152",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "44",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "153",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "46",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "158",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "40",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "161",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "36",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "34",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "160",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "165",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "163",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "32",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "https://w3id.org/fog#ReferencedContent",
+    "baseIri" : "https://w3id.org/fog",
+    "instances" : 0,
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "ReferencedContent",
+      "en" : "Referenced content"
+    },
+    "comment" : {
+      "en" : "Referenced content of the following geometry descriptions: glTF and OBJ. It contains exactly one link to a texture, separate binary glTF geometry or a OBJ material that is referenced by the main file (resp. .gltf and .obj). The name of the referenced file, as stored in the main file, is connected via a rdfs:label node"
+    },
+    "id" : "167"
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "148",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "157",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "155",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "168",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "69",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "71",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "170",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "173",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "182",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "67",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "185",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "59",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "186",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "62",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "189",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "190",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "191",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "192",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "53",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "188",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "55",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "48",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "181",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "51",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "184",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "101",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "99",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "105",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "103",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "93",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "97",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "95",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "2",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "4",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "111",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "113",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "115",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "6",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "9",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "118",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "1",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "91",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "211",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "212",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "213",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "85",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "83",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "89",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "87",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "81",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "207",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "79",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "205",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "73",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "77",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2000/01/rdf-schema#Literal",
+    "id" : "75",
+    "label" : {
+      "IRI-based" : "Literal",
+      "undefined" : "Literal"
+    }
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "3",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "5",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "7",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "8",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "10",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "12",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "14",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "21",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "23",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "25",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "27",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "29",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "31",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "33",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "35",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "37",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "39",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "41",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "43",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "45",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "47",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "49",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "50",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "52",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "54",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "56",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "58",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "61",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "42",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "66",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "68",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "70",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "72",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "74",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "76",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "78",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "80",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "82",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "84",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "86",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "88",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "90",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "92",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "94",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "96",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "98",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "100",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "102",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "104",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "106",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "107",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "108",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "110",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "112",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "114",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "117",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "119",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "121",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "127",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "129",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "131",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "133",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "135",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "137",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "138",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "139",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "141",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "63",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "145",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "146",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "64",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "147",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "154",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "156",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "159",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "162",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "164",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "166",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "169",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "171",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "172",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "174",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "175",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "176",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "177",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "178",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "179",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "180",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "183",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "187",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "193",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "194",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "195",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "196",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "197",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "198",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "199",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "200",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "201",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "202",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "203",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "204",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "206",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "208",
+    "type" : "rdf:Property"
+  }, {
+    "id" : "65",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "57",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "214",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "215",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "38",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "216",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "210",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "217",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "209",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "https://w3id.org/omg#hasSimpleGeometryDescription",
+    "baseIri" : "https://w3id.org/omg",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "hasSimpleGeometryDescription"
+    },
+    "domain" : "1",
+    "attributes" : [ "datatype", "external" ],
+    "id" : "0"
+  }, {
+    "iri" : "https://w3id.org/fog#asIfc_v2x4add1-ifcxml",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "4",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".ifcxml",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asIfc_v2x4add1-ifcxml",
+      "en" : "as IFC v2x4 Add1 file (.ifcxml)"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a text-based geometry description following the open IFC format v2x4 Add1 as documented by buildingSMART and in its ISO 16739 standard. The IFC file is serialised in the XML format."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "3"
+  }, {
+    "iri" : "https://w3id.org/fog#asStl_v1.0-binary",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "6",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".stl",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asStl_v1.0-binary",
+      "en" : "as STL format v1.0 (binary)"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a geometry description following the STL v1.0 format which was developed by 3D Systems. The format consists of a single .stl file which is binary."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "5"
+  }, {
+    "iri" : "http://creativecommons.org/ns#license",
+    "baseIri" : "http://creativecommons.org/ns",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "license"
+    },
+    "domain" : "1",
+    "attributes" : [ "object", "external" ],
+    "id" : "7"
+  }, {
+    "iri" : "https://w3id.org/fog#asGeojson_v2008",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "9",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".json",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://geojson.org/geojson-spec",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asGeojson_v2008",
+      "en" : "as GeoJSON format v2008 (.json)"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a geometry description following the open GeoJSON v2008 format. The format consists of a single .json file (text-based). Note that the version proposed by the IETF (fog:asGeojson_v2016) is derived from the now obsolete 2008 version (fog:asGeojson_v2008)."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "8"
+  }, {
+    "iri" : "https://w3id.org/fog#asIfc_v2x4",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "11",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://www.buildingsmart-tech.org/specifications/ifc-releases/ifc4-release",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asIfc_v2x4",
+      "en" : "as IFC v2x4"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a text-based geometry description following the open IFC format v2x4 as documented by buildingSMART and in its ISO 16739 standard"
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "10"
+  }, {
+    "iri" : "https://w3id.org/fog#asIfc_v2x3",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "13",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://www.buildingsmart-tech.org/specifications/ifc-releases/ifc2x3-release",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asIfc_v2x3",
+      "en" : "as IFC v2x3"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a text-based geometry description following the open IFC format v2x3 as documented by buildingSMART and in its ISO 16739 standard"
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "12"
+  }, {
+    "iri" : "https://w3id.org/fog#asStep_ap242",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "15",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".stp",
+        "type" : "label"
+      }, {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".step",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asStep_ap242",
+      "en" : "as STEP SPFF file (AP242)"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a geometry description following the STEP Physical File Format (SPFF) format which was developed by ISO. The format consists of a single .step file which is text-based. The STEP file is structured according to the Application Profile (AP) 242 - Managed model-based 3D engineering."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "14"
+  }, {
+    "iri" : "https://w3id.org/fog#asSfa_v1-wkt",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "22",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asSfa_v1-wkt",
+      "en" : "as Well Known Text SFA v1 geometry"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a Well Know Text (WKT) geometry following the open Simple Feature Access (SFA) v1 standard developed by the OGC. The format is text-based. Note that the SFA v1 standard is now considered depreciated in favor of SFA v2. Note that this property is disjoint with geo:asWKT because of the more strict domain and range restrictions in GeoSPARQL."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "21"
+  }, {
+    "iri" : "https://w3id.org/fog#asE57_v1.0",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "24",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".e57",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.astm.org/Standards/E2807.htm",
+        "type" : "iri"
+      }, {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.ri.cmu.edu/publications/the-astm-e57-file-format-for-3d-imaging-data-exchange/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asE57_v1.0",
+      "en" : "as E57 v1.0 format (.e57)"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a point cloud geometry description following the open E57 format developed by the ASTM Committee E57. The format consists of a single .e57 file (partially binary, partially text-based)."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "23"
+  }, {
+    "iri" : "https://w3id.org/fog#asGeojson",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "26",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.wikidata.org/entity/Q5533904",
+        "type" : "iri"
+      }, {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://dbpedia.org/resource/GeoJSON",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asGeojson",
+      "en" : "as GeoJSON format"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a geometry description following the open GeoJSON format. The format consists of a single .json file (text-based). It is strongly adviced to use the more specific subproperties (e.g. fog:asGeojson_v2016). Note that the version proposed by the IETF GeoJSON Working Group (fog:asGeojson_v2016) is derived from the now obsolete 2008 version (fog:asGeojson_v2008)."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "25"
+  }, {
+    "iri" : "https://w3id.org/fog#asSketchUp",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "28",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".skp",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.wikidata.org/entity/Q28975658",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asSketchUp",
+      "en" : "as SketchUp format"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a geometry description following the proprietary SketchUp format (Trimble). The format consists of a single .skp file (binary). It is strongly adviced to use the more specific subproperties (e.g. fog:asSketchUp_v2019)"
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "27"
+  }, {
+    "iri" : "https://w3id.org/fog#asShapefile-dbf",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "30",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".dbf",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.wikidata.org/entity/Q27487130",
+        "type" : "iri"
+      } ],
+      "requires" : [ {
+        "identifier" : "requires",
+        "language" : "undefined",
+        "value" : "fog:asShapefile-shp",
+        "type" : "label"
+      }, {
+        "identifier" : "requires",
+        "language" : "undefined",
+        "value" : "fog:asShapefile-shx",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asShapefile-dbf",
+      "en" : "as Shapefile dBASE table (.dbf)"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a dBASE table file (.dbf) following the open Shapefile format developed by ESRI. This file contains the attributes of each shape. The Shapefile format consists of multiple files, including as a minimum the geometry (.shp), the index of the feature geometry (.shx) and attribute information of features (.dbf). These three files are binary, while others can be text-based (e.g. the .prj file)."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "29"
+  }, {
+    "iri" : "https://w3id.org/fog#asIfc_v2x4add2-ifc",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "32",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".ifc",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asIfc_v2x4add2-ifc",
+      "en" : "as IFC v2x4 Add2 file (.ifc)"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a text-based geometry description following the open IFC format v2x4 Add2 as documented by buildingSMART and in its ISO 16739 standard. The IFC file is serialised in the STEP Physical File Format (SPFF)."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "31"
+  }, {
+    "iri" : "https://w3id.org/fog#asPly_v1.0-ascii",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "34",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".ply",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asPly_v1.0-ascii",
+      "en" : "as PLY ASCII format (.ply)"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a geometry file following the PLY v1.0 format which was developed by Greg Turk (Stanford University). The single .ply file is text-based."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "33"
+  }, {
+    "iri" : "https://w3id.org/fog#asSvg_v2.0",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "36",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".svg",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.w3.org/TR/SVG2/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asSvg_v2.0",
+      "en" : "as SVG format v2.0"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a geometry description following the open SVG v2.0 format which was developed by the W3C. The format consists of a single .svg file which is text-based. Note that this version (v2.0) is not yet finalized and at the moment has the status of 'W3C Candidate Recommendation'."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "35"
+  }, {
+    "iri" : "https://w3id.org/fog#as3dmo_v1.1",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://web.archive.org/web/20180831114523/http://3dontology.org/3d.ttl",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "as3dmo_v1.1",
+      "en" : "as 3DMO v1.1 ontology"
+    },
+    "superproperty" : [ "38" ],
+    "domain" : "1",
+    "comment" : {
+      "en" : "The object relation pointing to a RDF-based geometry description following the 3DMO ontology version 1.1. It should be connected to the topnode of the geometry description"
+    },
+    "attributes" : [ "functional", "object" ],
+    "id" : "37"
+  }, {
+    "iri" : "https://w3id.org/fog#asIfc_v2x4-ifcxml",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "40",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".ifcxml",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asIfc_v2x4-ifcxml",
+      "en" : "as IFC v2x4 file (.ifcxml)"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a text-based geometry description following the open IFC format v2x4 as documented by buildingSMART and in its ISO 16739 standard. The IFC file is serialised in the XML format."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "39"
+  }, {
+    "iri" : "https://w3id.org/fog#asIfcowl_v2x4add1",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD1/OWL",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asIfcowl_v2x4add1",
+      "en" : "as ifcOWL v2x4 Add1 ontology"
+    },
+    "superproperty" : [ "42" ],
+    "domain" : "1",
+    "comment" : {
+      "en" : "The object relation pointing to a RDF-based geometry description following the IfcOWL v2x4 Add1 ontology."
+    },
+    "attributes" : [ "functional", "object" ],
+    "id" : "41"
+  }, {
+    "iri" : "https://w3id.org/fog#asRevit",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "44",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".rvt",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.wikidata.org/entity/Q49620191",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asRevit",
+      "en" : "as Revit format"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a geometry description following the proprietary Revit format (Autodesk). The format consists of a single .rvt file (binary). It is strongly adviced to use the more specific subproperties (e.g. fog:asRevit_v2020)"
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "43"
+  }, {
+    "iri" : "https://w3id.org/fog#asStep_ap214",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "46",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".step",
+        "type" : "label"
+      }, {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".stp",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asStep_ap214",
+      "en" : "as STEP SPFF file (AP214)"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a geometry description following the STEP Physical File Format (SPFF) format which was developed by ISO. The format consists of a single .step file which is text-based. The STEP file is structured according to the Application Profile (AP) 214 - Core data for automative mechanical design processes."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "45"
+  }, {
+    "iri" : "https://w3id.org/fog#asGltf_v2.0-bin",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "48",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".bin",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.iana.org/assignments/media-types/application/gltf-buffer",
+        "type" : "iri"
+      } ],
+      "requires" : [ {
+        "identifier" : "requires",
+        "language" : "undefined",
+        "value" : "fog:asGltf_v2.0-gltf",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asGltf_v2.0-bin",
+      "en" : "as glTF v2.0 geometry file (.bin)"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a binary geometry file (.bin) following the open glTF v2.0 format from the Khronos Group. This file always has to be used together with the central .gltf JSON file (fog:asGltf_v2.0-gltf) referencing it."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "47"
+  }, {
+    "iri" : "https://w3id.org/fog#asIfcowl_v2x4add2",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2/OWL",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asIfcowl_v2x4add2",
+      "en" : "as ifcOWL v2x4 Add2 ontology"
+    },
+    "superproperty" : [ "42" ],
+    "domain" : "1",
+    "comment" : {
+      "en" : "The object relation pointing to a RDF-based geometry description following the IfcOWL v2x4 Add2 ontology."
+    },
+    "attributes" : [ "functional", "object" ],
+    "id" : "49"
+  }, {
+    "iri" : "https://w3id.org/fog#asX3d_v3.3-binary",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "51",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".x3db",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://www.web3d.org/documents/specifications/19776-3/V3.3/index.html",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asX3d_v3.3-binary",
+      "en" : "as X3D v3.3 binary file (.x3db)"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a binary X3D file (.x3db) following the open X3D v3.3 format which was developed by the Web3D."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "50"
+  }, {
+    "iri" : "https://w3id.org/fog#asE57",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "53",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.ri.cmu.edu/publications/the-astm-e57-file-format-for-3d-imaging-data-exchange/",
+        "type" : "iri"
+      }, {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.astm.org/Standards/E2807.htm",
+        "type" : "iri"
+      }, {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.wikidata.org/entity/Q33517407",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asE57",
+      "en" : "as E57 format"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a point cloud geometry description following the open E57 format developed by the ASTM Committee E57. The format consists of a single .e57 file (partially binary, partially text-based). It is strongly adviced to use the more specific subproperties (e.g. fog:asE57_v1.0)."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "52"
+  }, {
+    "iri" : "https://w3id.org/fog#asX3d_v3.3-xml",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "55",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".x3d",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.iana.org/assignments/media-types/model/x3d+xml",
+        "type" : "iri"
+      }, {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://www.web3d.org/documents/specifications/19776-1/V3.3/index.html",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asX3d_v3.3-xml",
+      "en" : "as X3D v3.3 XML file (.x3d)"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a regular X3D file (.x3d) following the open X3D v3.3 format which was developed by the Web3D. The file is text-based."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "54"
+  }, {
+    "iri" : "https://w3id.org/fog#asOntostepOntology",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.nist.gov/publications/ontostep-owl-dl-ontology-step?pub_id=901544",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asOntostepOntology",
+      "en" : "as OntoSTEP ontology"
+    },
+    "superproperty" : [ "57" ],
+    "domain" : "1",
+    "comment" : {
+      "en" : "The object relation pointing to a RDF-based geometry description following the OntoSTEP ontology. It should be connected to the topnode of the geometry description."
+    },
+    "attributes" : [ "functional", "object" ],
+    "id" : "56"
+  }, {
+    "iri" : "https://w3id.org/fog#asCollada_v1.5.0",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "59",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".dae",
+        "type" : "label"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.khronos.org/files/collada_spec_1_5.pdf",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asCollada_v1.5.0",
+      "en" : "as COLLADA v1.5.0 format (.dae)"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a geometry description following the open COLLADA v1.5.0 format from the Khronos Group. It consists of a single .dae file (text-based)."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "58"
+  }, {
+    "iri" : "https://w3id.org/fog#asGltf_v1.0-texture",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "62",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".png",
+        "type" : "label"
+      }, {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".gif",
+        "type" : "label"
+      }, {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".jpeg",
+        "type" : "label"
+      }, {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".bmp",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "requires" : [ {
+        "identifier" : "requires",
+        "language" : "undefined",
+        "value" : "fog:asGltf_v1.0-gltf",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asGltf_v1.0-texture",
+      "en" : "as glTF v1.0 texture file"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a binary texture file (.bmp/..gif/.jpeg/.png). This file always has to be used together with the central .gltf JSON file (fog:asGltf_v1.0-gltf) referencing it."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "61"
+  }, {
+    "iri" : "https://w3id.org/fog#asIfcowl",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://standards.buildingsmart.org/IFC/DEV/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asIfcowl",
+      "en" : "as ifcOWL ontology"
+    },
+    "superproperty" : [ "57" ],
+    "domain" : "1",
+    "subproperty" : [ "63", "64", "41", "65", "49" ],
+    "comment" : {
+      "en" : "The object relation pointing to a RDF-based geometry description following the IfcOWL ontology."
+    },
+    "attributes" : [ "functional", "object" ],
+    "id" : "42"
+  }, {
+    "iri" : "https://w3id.org/fog#asGltf_v2.0",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "67",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://github.com/KhronosGroup/glTF/tree/master/specification/2.0",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asGltf_v2.0",
+      "en" : "as glTF v2.0 format"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a geometry description following the open glTF v2.0 format from the Khronos Group. The format consists of one (.gltf with embedded binary geometry/textures/shaders, or .glb) or multiple files (combination of binary and/or text-based files). It is strongly adviced to use the more specific subproperties (e.g. fog:asGltf_v2.0-gltf)."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "66"
+  }, {
+    "iri" : "https://w3id.org/fog#asIfc_v2x3-ifc",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "69",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".ifc",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asIfc_v2x3-ifc",
+      "en" : "as IFC v2x3 file (.ifc)"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a text-based geometry description following the open IFC format v2x3 as documented by buildingSMART and in its ISO 16739 standard. The IFC file is serialised in the STEP Physical File Format (SPFF)."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "68"
+  }, {
+    "iri" : "https://w3id.org/fog#asIfc_v2x3tc1",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "71",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://www.buildingsmart-tech.org/specifications/ifc-releases/ifc2x3-tc1-release",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asIfc_v2x3tc1",
+      "en" : "as IFC v2x3 TC1"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a text-based geometry description following the open IFC format v2x3 TC1 as documented by buildingSMART and in its ISO 16739 standard"
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "70"
+  }, {
+    "iri" : "https://w3id.org/fog#asGltf_v2.0-gltf",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "73",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".gltf",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asGltf_v2.0-gltf",
+      "en" : "as glTF v2.0 JSON file (.gltf)"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a JSON file (.gltf) following the open glTF v2.0 format from the Khronos Group. This file can be used on its own if geometry and optional textures are embedded (text-based) inside the JSON. In most cases however, it references other files containing geometry (.bin) and optional textures (.jpeg/.png)."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "72"
+  }, {
+    "iri" : "https://w3id.org/fog#asStep",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "75",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".stp",
+        "type" : "label"
+      }, {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".step",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.wikidata.org/entity/Q3509055",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asStep",
+      "en" : "as SPFF file (.step)"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a geometry description following the STEP Physical File Format (SPFF) format which was developed by ISO. The format consists of a single .step file which is text-based. It is strongly adviced to use more specific subproperties."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "74"
+  }, {
+    "iri" : "https://w3id.org/fog#asIfc_v2x4add1-ifc",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "77",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".ifc",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asIfc_v2x4add1-ifc",
+      "en" : "as IFC v2x4 Add1 file (.ifc)"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a text-based geometry description following the open IFC format v2x4 Add1 as documented by buildingSMART and in its ISO 16739 standard. The IFC file is serialised in the STEP Physical File Format (SPFF)."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "76"
+  }, {
+    "iri" : "https://w3id.org/fog#asDwg",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "79",
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://dbpedia.org/resource/.dwg",
+        "type" : "iri"
+      }, {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.wikidata.org/entity/Q1053358",
+        "type" : "iri"
+      }, {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.iana.org/assignments/media-types/image/vnd.dwg",
+        "type" : "iri"
+      }, {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.opendesign.com/files/guestdownloads/OpenDesign_Specification_for_.dwg_files.pdf",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asDwg",
+      "en" : "as DWG format"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a geometry description following the proprietary DWG format from Autodesk. The Open Design Alliance created a 'specification for .dwg files' that is publicly available. The format consists of a single .dwg file (binary). It is strongly adviced to use the more specific subproperties (e.g. fog:asDwg_v2018)."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "78"
+  }, {
+    "iri" : "https://w3id.org/fog#asSfa_v2",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "81",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://portal.opengeospatial.org/files/?artifact_id=25355",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asSfa_v2",
+      "en" : "as Simple Feature Access v2 format"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a geometry description following the open Simple Feature Access (SFA) v2 standard developed by the OGC and ISO. The format is either text-based (WKT) or binary (WKB). It is strongly adviced to use the more specific subproperties (e.g. fog:asSfa_v2-wkt)."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "80"
+  }, {
+    "iri" : "https://w3id.org/fog#asSfa_v1",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "83",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://portal.opengeospatial.org/files/?artifact_id=999",
+        "type" : "iri"
+      }, {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://www.geoapi.org/3.0/javadoc/org/opengis/referencing/doc-files/WKT.html",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asSfa_v1",
+      "en" : "as Simple Feature Access v1 format"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a geometry description following the open Simple Feature Access (SFA) v1 standard developed by the OGC. The format is text-based. It is strongly adviced to use the more specific subproperties (e.g. fog:asSfa_v1-wkt). Note that this standard is now considered depreciated in favor of SFA v2."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "82"
+  }, {
+    "iri" : "https://w3id.org/fog#asSfa_v2-wkt",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "85",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://docs.opengeospatial.org/is/12-063r5/12-063r5.html",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asSfa_v2-wkt",
+      "en" : "as Well Known Text SFA v2 geometry"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a Well Know Text (WKT) geometry following the open Simple Feature Access (SFA) v2 standard developed by the OGC and ISO. The format is text-based. Note that this property is disjoint with geo:asWKT because of the more strict domain and range restrictions in GeoSPARQL."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "84"
+  }, {
+    "iri" : "https://w3id.org/fog#asIfc_v2x3tc1-ifc",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "87",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".ifc",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asIfc_v2x3tc1-ifc",
+      "en" : "as IFC v2x3 TC1 file (.ifc)"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a text-based geometry description following the open IFC format v2x3 TC1 as documented by buildingSMART and in its ISO 16739 standard. The IFC file is serialised in the STEP Physical File Format (SPFF)."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "86"
+  }, {
+    "iri" : "https://w3id.org/fog#asStl",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "89",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asStl",
+      "en" : "as STL format"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a geometry description following the STL format which was developed by 3D Systems. The format consists of a single .stl file which is either text-based or binary. It is strongly adviced to use the more specific subsubproperties (e.g. fog:asStl_v1.0-ascii)."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "88"
+  }, {
+    "iri" : "https://w3id.org/fog#asGml_v3.1.1",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "91",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".gml",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://schemas.opengis.net/gml/3.1.1/",
+        "type" : "iri"
+      }, {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://portal.opengeospatial.org/files/?artifact_id=4700",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asGml_v3.1.1",
+      "en" : "as GML v3.1.1 format (.gml)"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a text-based GML file (.gml) following the open GML v3.1.1 format developed by OGC and ISO. Note that this and older versions are considered depreciated. Note that this property is disjoint (via its superproperty fog:asGml) with geo:asGML because of the more strict domain and range restrictions in GeoSPARQL."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "90"
+  }, {
+    "iri" : "https://w3id.org/fog#asCollada_v1.4.1",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "93",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".dae",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.wikidata.org/entity/Q28975679",
+        "type" : "iri"
+      }, {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.khronos.org/files/collada_spec_1_4.pdf",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asCollada_v1.4.1",
+      "en" : "as COLLADA v1.4.1 format (.dae)"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a geometry description following the open COLLADA v1.4.1 format from the Khronos Group. It consists of a single .dae file (text-based)."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "92"
+  }, {
+    "iri" : "https://w3id.org/fog#asPly",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "95",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".ply",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://dbpedia.org/resource/PLY_(file_format)",
+        "type" : "iri"
+      }, {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://paulbourke.net/dataformats/ply/",
+        "type" : "iri"
+      }, {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.wikidata.org/entity/Q3077345",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asPly",
+      "undefined" : "as PLY format"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a geometry description following the PLY format which was developed by Greg Turk (Stanford University). The format consists of a single .ply file which is either text-based or binary. It is strongly adviced to use the more specific subsubproperties (e.g. fog:asPly_v1.0-ascii)."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "94"
+  }, {
+    "iri" : "https://w3id.org/fog#asSketchUp_v2017",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "97",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".skp",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asSketchUp_v2017",
+      "en" : "as SketchUp format v2017 (.skp)"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a geometry description following the proprietary SketchUp v2017 format (Trimble). The format consists of a single .skp file (binary)."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "96"
+  }, {
+    "iri" : "https://w3id.org/fog#asSketchUp_v2018",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "99",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".skp",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asSketchUp_v2018",
+      "en" : "as SketchUp format v2018 (.skp)"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a geometry description following the proprietary SketchUp v2018 format (Trimble). The format consists of a single .skp file (binary)."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "98"
+  }, {
+    "iri" : "https://w3id.org/fog#asSketchUp_v2019",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "101",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".skp",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asSketchUp_v2019",
+      "en" : "as SketchUp format v2019 (.skp)"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a geometry description following the proprietary SketchUp v2019 format (Trimble). The format consists of a single .skp file (binary)."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "100"
+  }, {
+    "iri" : "https://w3id.org/fog#asShapefile",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "103",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://dbpedia.org/resource/Shapefile",
+        "type" : "iri"
+      }, {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.esri.com/library/whitepapers/pdfs/shapefile.pdf",
+        "type" : "iri"
+      }, {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.wikidata.org/entity/Q278934",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asShapefile",
+      "en" : "as Shapefile format"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a geometry description following the open Shapefile format developed by ESRI. The format consists of multiple files, including as a minimum the geometry (.shp), the index of the feature geometry (.shx) and attribute information of features (.dbf). These three files are binary, while others can be text-based (e.g. the .prj file). It is strongly adviced to use the more specific subsubproperties (e.g. fog:asShapefile-shp). Note that no file format version is provided by ESRI and that the format is expected to be stable."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "102"
+  }, {
+    "iri" : "https://w3id.org/fog#asSfa_v2-wkb",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "105",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asSfa_v2-wkb",
+      "en" : "as Well Known Binary SFA v2 geometry"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a Well Know Binary (WKB) geometry following the open Simple Feature Access (SFA) v2 standard developed by the OGC and ISO."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "104"
+  }, {
+    "iri" : "https://w3id.org/fog#asGeojson_v2016",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "18",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".geojson",
+        "type" : "label"
+      }, {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".json",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://tools.ietf.org/html/rfc7946",
+        "type" : "iri"
+      }, {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.iana.org/assignments/media-types/application/geo+json",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asGeojson_v2016",
+      "en" : "as GeoJSON v2016 format (.json)"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a geometry description following the open GeoJSON v2016 format developed by the IETF GeoJSON Working Group. The format consists of a single .json file (text-based). Note that the version proposed by the IETF (fog:asGeojson_v2016) is derived from the now obsolete 2008 version (fog:asGeojson_v2008)."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "106"
+  }, {
+    "iri" : "https://w3id.org/fog#asStl_v1.0",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "19",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".stl",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.iana.org/assignments/media-types/model/stl",
+        "type" : "iri"
+      }, {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://paulbourke.net/dataformats/stl/",
+        "type" : "iri"
+      }, {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.wikidata.org/entity/Q1238229",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asStl_v1.0",
+      "en" : "as STL format v1.0"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a geometry description following the STL v1.0 format which was developed by 3D Systems. The format consists of a single .stl file which is either text-based or binary. It is strongly adviced to use the more specific subsubproperties (e.g. fog:asStl_v1.0-ascii)"
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "107"
+  }, {
+    "iri" : "https://w3id.org/fog#asGltf_v1.0",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "20",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.wikidata.org/entity/Q28135989",
+        "type" : "iri"
+      }, {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://github.com/KhronosGroup/glTF/tree/master/specification/1.0",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asGltf_v1.0",
+      "en" : "as glTF v1.0 format"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a geometry description following the open glTF v1.0 format from the Khronos Group. The format consists of one (.gltf with embedded binary geometry/textures/shaders) or multiple files (combination of binary and/or text-based files). It is strongly adviced to use the more specific subproperties (e.g. fog:asGltf_v1.0-gltf)."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "108"
+  }, {
+    "iri" : "https://w3id.org/fog#asObj_v3.0-texture",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "111",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asObj_v3.0-texture",
+      "en" : "as OBJ texture"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a binary texture file that is referenced in the .mtl file of the OBJ format."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "110"
+  }, {
+    "iri" : "https://w3id.org/fog#asSvg",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "113",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".svg",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://dbpedia.org/resource/Scalable_Vector_Graphics",
+        "type" : "iri"
+      }, {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.wikidata.org/entity/Q2078",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asSvg",
+      "en" : "as SVG format"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a geometry description following the open SVG format which was developed by the W3C. The format consists of a single .svg file which is text-based. It is strongly adviced to use the more specific subsubproperties (e.g. fog:asSvg_v1.1)."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "112"
+  }, {
+    "iri" : "https://w3id.org/fog#asIfc_v2x4add2-ifcxml",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "115",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".ifcxml",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asIfc_v2x4add2-ifcxml",
+      "en" : "as IFC v2x4 Add 2 file (.ifcxml)"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a text-based geometry description following the open IFC format v2x4 Add2 as documented by buildingSMART and in its ISO 16739 standard. The IFC file is serialised in the XML format."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "114"
+  }, {
+    "iri" : "https://w3id.org/fog#asRhino_v5",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "118",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".3dm",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.wikidata.org/entity/Q29945416",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asRhino_v5",
+      "en" : "as Rhino format v5 (.3dm)"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a geometry description following the proprietary Rhinoceros format v5 (McNeel). The format consists of a single .3dm file (binary)."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "117"
+  }, {
+    "iri" : "https://w3id.org/fog#asRhino_v6",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "120",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".3dm",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asRhino_v6",
+      "en" : "as Rhino format v6 (.3dm)"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a geometry description following the proprietary Rhinoceros format v6 (McNeel). The format consists of a single .3dm file (binary)."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "119"
+  }, {
+    "iri" : "https://w3id.org/fog#asSfa",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "122",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.wikidata.org/entity/Q4018860",
+        "type" : "iri"
+      }, {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.wikidata.org/entity/Q365034",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asSfa",
+      "en" : "as Simple Feature Access geometry format"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a geometry description following the open Simple Feature Access (SFA) standard developed by the OGC and ISO. The format consists of a single .wkt (text-based) or .wkb (binary) file. It is strongly adviced to use the more specific subsubproperties (e.g. fog:asSfa_v2-wkt)."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "121"
+  }, {
+    "iri" : "https://w3id.org/fog#asIfc_v2x4-ifc",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "128",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".ifc",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asIfc_v2x4-ifc",
+      "en" : "as IFC v2x4 file (.ifc)"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a text-based geometry description following the open IFC format v2x4 as documented by buildingSMART and in its ISO 16739 standard. The IFC file is serialised in the STEP Physical File Format (SPFF)."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "127"
+  }, {
+    "iri" : "https://w3id.org/fog#asGml",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "130",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.wikidata.org/entity/Q926165",
+        "type" : "iri"
+      }, {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.opengeospatial.org/standards/gml",
+        "type" : "iri"
+      }, {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://schemas.opengis.net/gml/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asGml",
+      "en" : "as GML format"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a text-based geometry description following one of the open GML formats developed by OGC and ISO. The format consists of a single .gml file (text-based). It is strongly adviced to use the more specific subproperties (e.g. fog:asGml_v3.3.0). Note that this property is disjoint with geo:asGML because of the more strict domain and range restrictions in GeoSPARQL."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "129"
+  }, {
+    "iri" : "https://w3id.org/fog#asGml_v3.2.1",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "132",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".gml",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://schemas.opengis.net/gml/3.2.1/",
+        "type" : "iri"
+      }, {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://portal.opengeospatial.org/files/?artifact_id=20509",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asGml_v3.2.1",
+      "en" : "as GML v3.2.1 format (.gml)"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a text-based GML file (.gml) following the open GML v3.2.1 format developed by OGC and ISO. Note that this property is disjoint (via its superproperty fog:asGml) with geo:asGML because of the more strict domain and range restrictions in GeoSPARQL."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "131"
+  }, {
+    "iri" : "https://w3id.org/fog#asGml_v3.2.2",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "134",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".gml",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://portal.opengeospatial.org/files/?artifact_id=74183&version=2",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asGml_v3.2.2",
+      "en" : "as GML v3.2.2 format (.gml)"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a text-based GML file (.gml) following the open GML v3.2.2 format developed by OGC and ISO. Note that this property is disjoint (via its superproperty fog:asGml) with geo:asGML because of the more strict domain and range restrictions in GeoSPARQL."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "133"
+  }, {
+    "iri" : "https://w3id.org/fog#asGltf_v1.0-bin",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "136",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".bin",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "requires" : [ {
+        "identifier" : "requires",
+        "language" : "undefined",
+        "value" : "fog:asGltf_v1.0-gltf",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asGltf_v1.0-bin",
+      "en" : "as glTF v1.0 geometry file (.bin)"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a binary geometry file (.bin) following the open glTF v1.0 format from the Khronos Group. This file always has to be used together with the central .gltf JSON file (fog:asGltf_v1.0-gltf) referencing it."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "135"
+  }, {
+    "iri" : "https://w3id.org/fog#asIges_v5.3",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "124",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".igs",
+        "type" : "label"
+      }, {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".iges",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asIges_v5.3",
+      "en" : "as IGES v5.3 (.igs)"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a geometry description following the IGES format v5.6 as documented in its ANSI standard."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "137"
+  }, {
+    "iri" : "https://w3id.org/fog#asShapefile-shx",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "123",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".shx",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.wikidata.org/entity/Q27487109",
+        "type" : "iri"
+      } ],
+      "requires" : [ {
+        "identifier" : "requires",
+        "language" : "undefined",
+        "value" : "fog:asShapefile-dbf",
+        "type" : "label"
+      }, {
+        "identifier" : "requires",
+        "language" : "undefined",
+        "value" : "fog:asShapefile-shp",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asShapefile-shx",
+      "undefined" : "as Shapefile geometry index (.shx)"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a shape index format file (.shx) following the open Shapefile format developed by ESRI. This file contains the positional index of the geometry. The Shapefile format consists of multiple files, including as a minimum the geometry (.shp), the index of the feature geometry (.shx) and attribute information of features (.dbf). These three files are binary, while others can be text-based (e.g. the .prj file)."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "138"
+  }, {
+    "iri" : "https://w3id.org/fog#asX3d_v3.3-vrml",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "126",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".x3dv",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.iana.org/assignments/media-types/model/x3d-vrml",
+        "type" : "iri"
+      }, {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://www.web3d.org/documents/specifications/19776-2/V3.3/index.html",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asX3d_v3.3-vrml",
+      "en" : "as X3D v3.3 classic VRML file (.x3dv)"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a classic VRML X3D file (.x3dv) following the open X3D v3.3 format which was developed by the Web3D. The file is text-based."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "139"
+  }, {
+    "iri" : "https://w3id.org/fog#asShapefile-shp",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "125",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".shp",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.wikidata.org/entity/Q27486884",
+        "type" : "iri"
+      } ],
+      "requires" : [ {
+        "identifier" : "requires",
+        "language" : "undefined",
+        "value" : "fog:asShapefile-dbf",
+        "type" : "label"
+      }, {
+        "identifier" : "requires",
+        "language" : "undefined",
+        "value" : "fog:asShapefile-shx",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asShapefile-shp",
+      "undefined" : "as Shapefile geometry (.shp)"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a geometry file (.shp) following the open Shapefile format developed by ESRI. This file contains the geometry of the shape. The Shapefile format consists of multiple files, including as a minimum the geometry (.shp), the index of the feature geometry (.shx) and attribute information of features (.dbf). These three files are binary, while others can be text-based (e.g. the .prj file)."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "141"
+  }, {
+    "iri" : "https://w3id.org/fog#asIfcowl_v2x3final",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://standards.buildingsmart.org/IFC/DEV/IFC2x3/FINAL/OWL",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asIfcowl_v2x3final",
+      "en" : "as ifcOWL v2x3 Final ontology"
+    },
+    "superproperty" : [ "42" ],
+    "domain" : "1",
+    "comment" : {
+      "en" : "The object relation pointing to a RDF-based geometry description following the IfcOWL v2x3 Final ontology."
+    },
+    "attributes" : [ "functional", "object" ],
+    "id" : "63"
+  }, {
+    "iri" : "https://w3id.org/fog#asShapefile-prj",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "116",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".prj",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "requires" : [ {
+        "identifier" : "requires",
+        "language" : "undefined",
+        "value" : "fog:asShapefile-shx",
+        "type" : "label"
+      }, {
+        "identifier" : "requires",
+        "language" : "undefined",
+        "value" : "fog:asShapefile-shp",
+        "type" : "label"
+      }, {
+        "identifier" : "requires",
+        "language" : "undefined",
+        "value" : "fog:asShapefile-dbf",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asShapefile-prj",
+      "undefined" : "as Shapefile projections file (.prj)"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a projection format file (.prj) following the open Shapefile format developed by ESRI. This file contains the the coordinate system and projection information of the shapes. The Shapefile format consists of multiple files, including as a minimum the geometry (.shp), the index of the feature geometry (.shx) and attribute information of features (.dbf). These three files are binary, while others can be text-based (e.g. the .prj file)."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "145"
+  }, {
+    "iri" : "https://w3id.org/fog#asPly_v1.0-binaryBE",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "109",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".ply",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asPly_v1.0-binaryBE",
+      "en" : "as PLY binary (big endian) format (.ply)"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a geometry file following the PLY v1.0 format which was developed by Greg Turk (Stanford University). The single .ply file is binary with big endian. Note that there is also a sibling property for a binary PLY with little endian."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "146"
+  }, {
+    "iri" : "https://w3id.org/fog#asIfcowl_v2x3tc1",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://standards.buildingsmart.org/IFC/DEV/IFC2x3/TC1/OWL",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asIfcowl_v2x3tc1",
+      "en" : "as ifcOWL v2x3 TC1 ontology"
+    },
+    "superproperty" : [ "42" ],
+    "domain" : "1",
+    "comment" : {
+      "en" : "The object relation pointing to a RDF-based geometry description following the IfcOWL v2x3 TC1 ontology."
+    },
+    "attributes" : [ "functional", "object" ],
+    "id" : "64"
+  }, {
+    "iri" : "https://w3id.org/fog#asIges",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "148",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".iges",
+        "type" : "label"
+      }, {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".igs",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.iana.org/assignments/media-types/model/iges",
+        "type" : "iri"
+      }, {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.wikidata.org/entity/Q616714",
+        "type" : "iri"
+      }, {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://dbpedia.org/resource/IGES",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asIges",
+      "en" : "as IGES format"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a geometry description following the IGES format as documented in its ANSI standard. The format consists of a single .iges/.igs file (text-based). It is strongly adviced to use the more specific subproperties (e.g. fog:asIges_v5.3)."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "147"
+  }, {
+    "iri" : "https://w3id.org/fog#asGltf",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "155",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asGltf",
+      "en" : "as glTF format"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a geometry description following the open glTF format from the Khronos Group. The format consists of one (.gltf with embedded binary geometry/textures/shaders, or .glb) or multiple files (combination of binary and/or text-based files). It is strongly adviced to use the more specific subsubproperties (e.g. fog:asGltf_v2.0-gltf)."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "154"
+  }, {
+    "iri" : "https://w3id.org/fog#asObj_v3.0-mtl",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "157",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".mtl",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.wikidata.org/entity/Q20965861",
+        "type" : "iri"
+      }, {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.wikidata.org/entity/Q38343645",
+        "type" : "iri"
+      } ],
+      "requires" : [ {
+        "identifier" : "requires",
+        "language" : "undefined",
+        "value" : "fog:asObj_v3.0-obj",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asObj_v3.0-mtl",
+      "en" : "as OBJ v3.0 material file (.mtl)"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a text-based MTL file (.mtl) following the OBJ format developed by Wavefront Technologies. This file has to be used together with the main .obj file that references it."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "156"
+  }, {
+    "iri" : "https://w3id.org/fog#asIfc_v2x4add2",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "160",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://www.buildingsmart-tech.org/specifications/ifc-releases/ifc4-add2",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asIfc_v2x4add2",
+      "en" : "as IFC v2x4 Add2"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a text-based geometry description following the open IFC format v2x4 Add2 as documented by buildingSMART and in its ISO 16739 standard"
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "159"
+  }, {
+    "iri" : "https://w3id.org/fog#asIfc_v2x4add1",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "163",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://www.buildingsmart-tech.org/specifications/ifc-releases/ifc4-add1-release",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asIfc_v2x4add1",
+      "en" : "as IFC v2x4 Add1"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a text-based geometry description following the open IFC format v2x4 Add1 as documented by buildingSMART and in its ISO 16739 standard"
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "162"
+  }, {
+    "iri" : "https://w3id.org/fog#asGml_v3.3.0",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "165",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".gml",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://schemas.opengis.net/gml/3.3/",
+        "type" : "iri"
+      }, {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://portal.opengeospatial.org/files/?artifact_id=46568",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asGml_v3.3.0",
+      "en" : "as GML v3.3.0 format (.gml)"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a text-based GML file (.gml) following the open GML v3.3.0 format developed by OGC and ISO. This format is an extension of the GML v3.2 format. Note that this property is disjoint (via its superproperty fog:asGml) with geo:asGML because of the more strict domain and range restrictions in GeoSPARQL."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "164"
+  }, {
+    "iri" : "https://w3id.org/fog#asCollada",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "161",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://dbpedia.org/resource/COLLADA",
+        "type" : "iri"
+      }, {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.wikidata.org/entity/Q603967",
+        "type" : "iri"
+      }, {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.iana.org/assignments/media-types/model/vnd.collada+xml",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asCollada",
+      "en" : "as COLLADA format"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a geometry description following the open COLLADA format from the Khronos Group. The format consists of a single .dae file (text-based). It is strongly adviced to use the more specific subproperties (e.g. fog:asCollada_v1.4.1)."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "166"
+  }, {
+    "iri" : "https://w3id.org/fog#asIfc",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "153",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.wikidata.org/entity/Q979630",
+        "type" : "iri"
+      }, {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.iso.org/standard/70303.html",
+        "type" : "iri"
+      }, {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://dbpedia.org/resource/Industry_Foundation_Classes",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asIfc",
+      "en" : "as IFC format"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a text-based geometry description following the open IFC format as documented by buildingSMART and in its ISO 16739 standard. The format consists of a single .ifc or .ifcxml file (text-based). It is strongly adviced to use the more specific subproperties (e.g. fog:asIfc_v2x4-icfxml)."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "169"
+  }, {
+    "iri" : "https://w3id.org/fog#asPly_v1.0-binaryLE",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "158",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".ply",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asPly_v1.0-binaryLE",
+      "en" : "as PLY binary (little endian) format (.ply)"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a geometry file following the PLY v1.0 format which was developed by Greg Turk (Stanford University). The single .ply file is binary with little endian. Note that there is also a sibling property for a binary PLY with big endian."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "171"
+  }, {
+    "iri" : "https://w3id.org/fog#asIfc_v2x3-ifcxml",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "150",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".ifcxml",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asIfc_v2x3-ifcxml",
+      "en" : "as IFC v2x3 file (.ifcxml)"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a text-based geometry description following the open IFC format v2x3 as documented by buildingSMART and in its ISO 16739 standard. The IFC file is serialised in the XML format."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "172"
+  }, {
+    "iri" : "https://w3id.org/fog#asGltf_v2.0-texture",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "149",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".png",
+        "type" : "label"
+      }, {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".jpeg",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "requires" : [ {
+        "identifier" : "requires",
+        "language" : "undefined",
+        "value" : "fog:asGltf_v2.0-gltf",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asGltf_v2.0-texture",
+      "en" : "as glTF v2.0 texture file"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a binary texture file (.jpeg/.png). This file always has to be used together with the central .gltf JSON file (fog:asGltf_v2.0-gltf) referencing it."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "174"
+  }, {
+    "iri" : "https://w3id.org/fog#asGltf_v2.0-glb",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "152",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".glb",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.iana.org/assignments/media-types/model/gltf-binary",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asGltf_v2.0-glb",
+      "en" : "as glTF v2.0 binary file (.glb)"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a binary file (.glb) following the open glTF v2.0 format from the Khronos Group. This one file contains geometry and textures, and as a result can be used without other files."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "175"
+  }, {
+    "iri" : "https://w3id.org/fog#asObj_v3.0-obj",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "151",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".obj",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asObj_v3.0-obj",
+      "en" : "as OBJ v3.0 file (.obj)"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a text-based OBJ file (.obj) following the OBJ format developed by Wavefront Technologies. This file can be used together with an optional material file (.mtl)."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "176"
+  }, {
+    "iri" : "https://w3id.org/fog#asRevit_v2019",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "142",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".rvt",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asRevit_v2019",
+      "en" : "as Revit format v2019 (.rvt)"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a geometry description following the proprietary Revit v2019 format (Autodesk). The format consists of a single .rvt file (binary)."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "177"
+  }, {
+    "iri" : "https://w3id.org/fog#asRevit_v2018",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "144",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".rvt",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asRevit_v2018",
+      "en" : "as Revit format v2018 (.rvt)"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a geometry description following the proprietary Revit v2018 format (Autodesk). The format consists of a single .rvt file (binary)."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "178"
+  }, {
+    "iri" : "https://w3id.org/fog#asObj",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "143",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://paulbourke.net/dataformats/obj/",
+        "type" : "iri"
+      }, {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.wikidata.org/entity/Q2119595",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asObj",
+      "en" : "as OBJ format"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a text-based geometry description following the OBJ format developed by Wavefront Technologies. The format consists of a single .obj file and an optional material file (.mtl). It is strongly adviced to use the more specific subsubproperties (e.g. fog:asObj_v3.0-obj)."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "179"
+  }, {
+    "iri" : "https://w3id.org/fog#asRevit_v2017",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "181",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".rvt",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asRevit_v2017",
+      "en" : "as Revit format v2017 (.rvt)"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a geometry description following the proprietary Revit v2017 format (Autodesk). The format consists of a single .rvt file (binary)."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "180"
+  }, {
+    "iri" : "https://w3id.org/fog#asIfc_v2x3tc1-ifcxml",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "184",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".ifcxml",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asIfc_v2x3tc1-ifcxml",
+      "en" : "as IFC v2x3 TC1 file (.ifcxml)"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a text-based geometry description following the open IFC format v2x3 TC1 as documented by buildingSMART and in its ISO 16739 standard. The IFC file is serialised in the XML format."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "183"
+  }, {
+    "iri" : "https://w3id.org/fog#asDwg_v2018",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "188",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".dwg",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asDwg_v2018",
+      "en" : "as DWG 2018 format (.dwg)"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a geometry description following the proprietary DWG v2018 format from Autodesk. It consists of a single .dwg file (binary)."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "187"
+  }, {
+    "iri" : "https://w3id.org/fog#asGeojson-ld",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://geojson.org/geojson-ld/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asGeojson-ld",
+      "en" : "as GeoJSON-LD"
+    },
+    "superproperty" : [ "57" ],
+    "domain" : "1",
+    "comment" : {
+      "en" : "The object relation pointing to a GeoJSON-LD geometry description: a GeoJSON geometry description complemented with the corresponding JSON-LD context to make it RDF. It should be connected to the topnode of the geometry description. Note that this geometry description can only be used to depict single points, as the current JSON-LD specification v1.0 does not implement the deserialisation of nested lists to RDF"
+    },
+    "attributes" : [ "functional", "object" ],
+    "id" : "193"
+  }, {
+    "iri" : "https://w3id.org/fog#asDwg_v2013",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "190",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".dwg",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asDwg_v2013",
+      "en" : "as DWG 2013 format (.dwg)"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a geometry description following the proprietary DWG v2013 format from Autodesk. It consists of a single .dwg file (binary)."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "194"
+  }, {
+    "iri" : "https://w3id.org/fog#asSvg_v1.0",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "189",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".svg",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.w3.org/TR/2001/REC-SVG-20010904/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asSvg_v1.0",
+      "en" : "as SVG format v1.0"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a geometry description following the open SVG v1.0 format which was developed by the W3C. The format consists of a single .svg file which is text-based. Note that this version (v1.0) is considered depreciated in favor of v1.1."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "195"
+  }, {
+    "iri" : "https://w3id.org/fog#asSvg_v1.1",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "192",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".svg",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.w3.org/TR/SVG11/",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asSvg_v1.1",
+      "en" : "as SVG format v1.1"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a geometry description following the open SVG v1.1 format which was developed by the W3C. The format consists of a single .svg file which is text-based."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "196"
+  }, {
+    "iri" : "https://w3id.org/fog#asPcd_v0.7",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "191",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".pcd",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asPcd_v0.7",
+      "undefined" : "as PCD v0.7 point cloud format (.pcd)"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a binary or text-based point cloud following the open PCD v0.7 (sometimes referred to as PCD_v7) format which was developed as part of the open source project PCL (point cloud library)."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "197"
+  }, {
+    "iri" : "https://w3id.org/fog#asX3d_v3.3",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "185",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asX3d_v3.3",
+      "en" : "as X3D format v3.3"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a geometry description following the open X3D v3.3 format which was developed by the Web3D. The format consists of a single file which is either binary or text-based. It is strongly adviced to use the more specific subproperties (e.g. fog:asX3d_v3.3_xml)."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "198"
+  }, {
+    "iri" : "https://w3id.org/fog#asPly_v1.0",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "186",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asPly_v1.0",
+      "en" : "as PLY v1.0 format"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a geometry description following the PLY v1.0 format which was developed by Greg Turk (Stanford University). The format consists of a single .ply file which is either text-based or binary. It is strongly adviced to use the more specific subproperties (e.g. fog:asPly_v1.0-ascii)."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "199"
+  }, {
+    "iri" : "https://w3id.org/fog#asDwg_v2010",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "182",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".dwg",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asDwg_v2010",
+      "en" : "as DWG 2010 format (.dwg)"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a geometry description following the proprietary DWG v2010 format from Autodesk. It consists of a single .dwg file (binary)."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "200"
+  }, {
+    "iri" : "https://w3id.org/fog#asPcd",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "173",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://pointclouds.org/documentation/tutorials/pcd_file_format.php",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asPcd",
+      "en" : "as PCD point cloud format"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a binary encoded point cloud following the open PCD format which was developed as part of the open source project PCL (point cloud library). The format consists of a single .pcd file (binary or text-based). It is strongly adviced to use the more specific subproperties (e.g. fog:asPcd_v0.7)."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "201"
+  }, {
+    "iri" : "https://w3id.org/fog#hasReferencedContent",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "167",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "hasReferencedContent",
+      "undefined" : "has referenced content"
+    },
+    "domain" : "168",
+    "attributes" : [ "functional", "object" ],
+    "id" : "202"
+  }, {
+    "iri" : "https://w3id.org/fog#asStl_v1.0-ascii",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "170",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".stl",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asStl_v1.0-ascii",
+      "en" : "as STL format v1.0 (ASCII)"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a geometry description following the STL v1.0 format which was developed by 3D Systems. The format consists of a single .stl file which is text-based."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "203"
+  }, {
+    "iri" : "https://w3id.org/fog#asGltf_v1.0-gltf",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "205",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".gltf",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.iana.org/assignments/media-types/model/gltf+json",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asGltf_v1.0-gltf",
+      "en" : "as glTF v1.0 JSON file (.gltf)"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a JSON file (.gltf) following the open glTF v1.0 format from the Khronos Group. This file can be used on its own if geometry, shaders and optional textures are embedded (text-based) inside the JSON. In most cases however, it references other files containing geometry (.bin), optional shaders (.glsl) and optional textures (.bmp/.gif/.jpeg/.png)."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "204"
+  }, {
+    "iri" : "https://w3id.org/fog#asObj_v3.0",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "207",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asObj_v3.0",
+      "en" : "as OBJ v3.0 format"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a text-based geometry description following the OBJ v3.0 format developed by Wavefront Technologies. The format consists of a single .obj file and an optional material file (.mtl). It is strongly adviced to use the more specific subproperties (e.g. fog:asObj_v3.0-obj)."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "206"
+  }, {
+    "domain" : "60",
+    "range" : "140",
+    "id" : "208",
+    "label" : {
+      "IRI-based" : "0",
+      "undefined" : "is a"
+    }
+  }, {
+    "iri" : "https://w3id.org/fog#asIfcowl_v2x4final",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://standards.buildingsmart.org/IFC/DEV/IFC4/FINAL/OWL",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asIfcowl_v2x4final",
+      "en" : "as ifcOWL v2x4 Final ontology"
+    },
+    "superproperty" : [ "42" ],
+    "domain" : "1",
+    "comment" : {
+      "en" : "The object relation pointing to a RDF-based geometry description following the IfcOWL v2x4 Final ontology."
+    },
+    "attributes" : [ "functional", "object" ],
+    "id" : "65"
+  }, {
+    "iri" : "https://w3id.org/omg#hasComplexGeometryDescription",
+    "baseIri" : "https://w3id.org/omg",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "hasComplexGeometryDescription"
+    },
+    "domain" : "1",
+    "subproperty" : [ "193", "42", "56", "38", "209", "210" ],
+    "attributes" : [ "object", "external" ],
+    "id" : "57"
+  }, {
+    "iri" : "https://w3id.org/fog#asX3d",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "211",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://www.web3d.org/specifications/",
+        "type" : "iri"
+      }, {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.wikidata.org/entity/Q930428",
+        "type" : "iri"
+      }, {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://dbpedia.org/resource/X3D",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asX3d",
+      "en" : "as X3D format"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a geometry description following the open X3D format which was developed by the Web3D. The format consists of a single file which is either binary or text-based. It is strongly adviced to use the more specific subsubproperties (e.g. fog:asX3d_v3.3_xml)."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "214"
+  }, {
+    "iri" : "https://w3id.org/fog#asGltf_v1.0-glsl",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "213",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".glsl",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "requires" : [ {
+        "identifier" : "requires",
+        "language" : "undefined",
+        "value" : "fog:asGltf_v1.0-gltf",
+        "type" : "label"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asGltf_v1.0-glsl",
+      "en" : "as glTF v1.0 shader file (.glsl)"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a text-based shader file (.glsl) following the open glTF v1.0 format from the Khronos Group. This file always has to be used together with the central .gltf JSON file (fog:asGltf_v1.0-gltf) referencing it."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "215"
+  }, {
+    "iri" : "https://w3id.org/fog#as3dmo",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://web.archive.org/web/20180831114523/http://3dontology.org/3d.ttl",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "as3dmo",
+      "en" : "as 3DMO ontology"
+    },
+    "superproperty" : [ "57" ],
+    "domain" : "1",
+    "subproperty" : [ "37" ],
+    "comment" : {
+      "en" : "The object relation pointing to a RDF-based geometry description following the 3DMO ontology. It is strongly adviced to use the more specific subproperty (fog:as3dmo_v1.1)"
+    },
+    "attributes" : [ "functional", "object" ],
+    "id" : "38"
+  }, {
+    "iri" : "https://w3id.org/fog#asRhino",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "212",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".3dm",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://www.wikidata.org/entity/Q28919152",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asRhino",
+      "en" : "as Rhino format"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a geometry description following the proprietary Rhinoceros format (McNeel). The format consists of a single .3dm file (binary). It is strongly adviced to use the more specific subproperties (e.g. fog:asRhino_v6)"
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "216"
+  }, {
+    "iri" : "https://w3id.org/fog#asOntobrepOntology",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "https://github.com/OntoBREP/ontobrep",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asOntobrepOntology",
+      "en" : "as OntoBREP ontology"
+    },
+    "superproperty" : [ "57" ],
+    "domain" : "1",
+    "comment" : {
+      "en" : "The object relation pointing to a RDF-based geometry description following the OntoBREP ontology. It should be connected to the topnode of the geometry description."
+    },
+    "attributes" : [ "functional", "object" ],
+    "id" : "210"
+  }, {
+    "iri" : "https://w3id.org/fog#asRevit_v2020",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "16",
+    "annotations" : {
+      "extension" : [ {
+        "identifier" : "extension",
+        "language" : "undefined",
+        "value" : ".rvt",
+        "type" : "label"
+      } ],
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asRevit_v2020",
+      "en" : "as Revit format v2020 (.rvt)"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The datatype relation pointing to a geometry description following the proprietary Revit v2020 format (Autodesk). The format consists of a single .rvt file (binary)."
+    },
+    "attributes" : [ "datatype", "functional" ],
+    "id" : "217"
+  }, {
+    "iri" : "https://w3id.org/fog#asGeomOntology",
+    "baseIri" : "https://w3id.org/fog",
+    "range" : "1",
+    "annotations" : {
+      "isDefinedBy" : [ {
+        "identifier" : "isDefinedBy",
+        "language" : "undefined",
+        "value" : "https://w3id.org/fog#",
+        "type" : "iri"
+      } ],
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://rdf.bg/geometry.ttl",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "asGeomOntology",
+      "en" : "as GEOM ontology"
+    },
+    "superproperty" : [ "57" ],
+    "domain" : "1",
+    "comment" : {
+      "en" : "The object relation pointing to a RDF-based geometry description following the GEOM ontology. It should be connected to the topnode of the geometry description."
+    },
+    "attributes" : [ "functional", "object" ],
+    "id" : "209"
+  } ]
+}

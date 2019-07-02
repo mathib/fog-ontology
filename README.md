@@ -30,3 +30,8 @@ An [online sparql-visualizer demo](https://madsholten.github.io/sparql-visualize
 [Anna Wagner](https://github.com/AnnaWagner) - TU Darmstadt
 
 [Pieter Pauwels](https://github.com/pipauwel) - UGent
+
+## References
+Please cite the following paper when using FOG:
+
+* Bonduel, M., Wagner, A., Pauwels, P., Vergauwen, M., & Klein, R. (2019). Including Widespread Geometry Formats in Semantic Graphs Using RDF Literals. In *Proceedings of the European Conference on Computing in Construction (EC3 2019)*. Chania, Greece.

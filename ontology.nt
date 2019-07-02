@@ -1,16 +1,19 @@
 <https://w3id.org/fog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://w3id.org/fog> <http://purl.org/dc/terms/creator> <_:genid-nodeid-node1dbsvtr4gx1> .
-<https://w3id.org/fog> <http://purl.org/dc/terms/creator> <_:genid-nodeid-node1dbsvtr4gx2> .
-<https://w3id.org/fog> <http://purl.org/dc/terms/creator> <_:genid-nodeid-node1dbsvtr4gx3> .
-<https://w3id.org/fog> <http://purl.org/dc/terms/description> "The File Ontology for Geometry formats (FOG) describes meaningful relations towards geometry snippets in RDF literals, geometry files on relative or absolute URLs and ontology-based geometry descriptions. The defined properties in this ontology are related towards each other and additional metadata is provided, such as file extension and related specifications/sources (incl. entries in dbpedia and Wikidata)." .
+<https://w3id.org/fog> <http://purl.org/dc/terms/creator> <https://www.researchgate.net/profile/Anna_Wagner13> .
+<https://w3id.org/fog> <http://purl.org/dc/terms/creator> <https://www.researchgate.net/profile/Mathias_Bonduel> .
+<https://w3id.org/fog> <http://purl.org/dc/terms/creator> <https://www.researchgate.net/profile/Pieter_Pauwels> .
+<https://w3id.org/fog> <http://purl.org/dc/terms/description> "The File Ontology for Geometry formats (FOG) describes meaningful relations towards geometry snippets in RDF literals, geometry files on relative or absolute URLs and ontology-based geometry descriptions. The defined properties in this ontology are related towards each other and additional metadata is provided, such as file extension and related specifications/sources (incl. entries in dbpedia and Wikidata). \r\n\r\nThe initial version of the ontology (v0.0.1) was documented in:\r\n\r\nBonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, & Klein, Ralf (2019). Including Widespread Geometry Formats in Semantic Graphs Using RDF Literals. In Proceedings of the European Conference on Computing in Construction (EC3 2019). Chania, Greece."@en .
 <https://w3id.org/fog> <http://purl.org/dc/terms/issued> "2018-12-03"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://w3id.org/fog> <http://purl.org/dc/terms/modified> "2019-05-27" .
-<https://w3id.org/fog> <http://purl.org/dc/terms/title> "FOG: File Ontology for Geometry formats" .
+<https://w3id.org/fog> <http://purl.org/dc/terms/modified> "2019-05-27"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/fog> <http://purl.org/dc/terms/title> "FOG: File Ontology for Geometry formats"@en .
+<https://w3id.org/fog> <http://purl.org/vocab/vann/example> "https://madsholten.github.io/sparql-visualizer/?file=https://raw.githubusercontent.com/mathib/fog-ontology/master/examples/fog-demo.json"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://w3id.org/fog> <http://purl.org/vocab/vann/example> "https://raw.githubusercontent.com/mathib/fog-ontology/master/examples/sample_abox_dummy.ttl"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://w3id.org/fog> <http://purl.org/vocab/vann/example> "https://raw.githubusercontent.com/mathib/fog-ontology/master/examples/sample_abox_full.ttl"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
 <https://w3id.org/fog> <http://purl.org/vocab/vann/preferredNamespacePrefix> "fog" .
-<https://w3id.org/fog> <http://purl.org/vocab/vann/preferredNamespaceUri> "<https://w3id.org/fog#>" .
+<https://w3id.org/fog> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/fog#" .
+<https://w3id.org/fog> <http://www.w3.org/2000/01/rdf-schema#comment> "- Version 0.0.2: \r\n* updated definitions of certain properties\r\n* adjusted typos\r\n* added datatype properties for: Rhino, Revit, IFC, STEP APs, IGES\r\n* added object properties for: 3DMO, ifcOWL, geojson-ld\r\n* completed ontology metadata\r\n- Version 0.0.1: initial version"@en .
 <https://w3id.org/fog> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.2" .
-#
-#
+# 
 # #################################################################
 # #
 # #    Object Properties
@@ -18,12 +21,15 @@
 # #################################################################
 # 
 # 
+# http://creativecommons.org/ns#license
+<http://creativecommons.org/ns#license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+# 
 # https://w3id.org/fog#as3dmo
 <https://w3id.org/fog#as3dmo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/fog#as3dmo> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/omg#hasComplexGeometryDescription> .
-<https://w3id.org/omg#hasComplexGeometryDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/fog#as3dmo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#as3dmo> <http://www.w3.org/2000/01/rdf-schema#comment> "The object relation pointing to a RDF-based geometry description following the 3DMO ontology. It is strongly adviced to use the more specific subproperty (fog:as3dmo_v1.1)"@en .
+<https://w3id.org/fog#as3dmo> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#as3dmo> <http://www.w3.org/2000/01/rdf-schema#label> "as 3DMO ontology"@en .
 <https://w3id.org/fog#as3dmo> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://web.archive.org/web/20180831114523/http://3dontology.org/3d.ttl> .
 # 
@@ -32,6 +38,7 @@
 <https://w3id.org/fog#as3dmo_v1.1> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fog#as3dmo> .
 <https://w3id.org/fog#as3dmo_v1.1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#as3dmo_v1.1> <http://www.w3.org/2000/01/rdf-schema#comment> "The object relation pointing to a RDF-based geometry description following the 3DMO ontology version 1.1. It should be connected to the topnode of the geometry description"@en .
+<https://w3id.org/fog#as3dmo_v1.1> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#as3dmo_v1.1> <http://www.w3.org/2000/01/rdf-schema#label> "as 3DMO v1.1 ontology"@en .
 <https://w3id.org/fog#as3dmo_v1.1> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://web.archive.org/web/20180831114523/http://3dontology.org/3d.ttl> .
 # 
@@ -40,6 +47,7 @@
 <https://w3id.org/fog#asGeojson-ld> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/omg#hasComplexGeometryDescription> .
 <https://w3id.org/fog#asGeojson-ld> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asGeojson-ld> <http://www.w3.org/2000/01/rdf-schema#comment> "The object relation pointing to a GeoJSON-LD geometry description: a GeoJSON geometry description complemented with the corresponding JSON-LD context to make it RDF. It should be connected to the topnode of the geometry description. Note that this geometry description can only be used to depict single points, as the current JSON-LD specification v1.0 does not implement the deserialisation of nested lists to RDF"@en .
+<https://w3id.org/fog#asGeojson-ld> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asGeojson-ld> <http://www.w3.org/2000/01/rdf-schema#label> "as GeoJSON-LD"@en .
 <https://w3id.org/fog#asGeojson-ld> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://geojson.org/geojson-ld/> .
 # 
@@ -48,6 +56,7 @@
 <https://w3id.org/fog#asGeomOntology> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/omg#hasComplexGeometryDescription> .
 <https://w3id.org/fog#asGeomOntology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asGeomOntology> <http://www.w3.org/2000/01/rdf-schema#comment> "The object relation pointing to a RDF-based geometry description following the GEOM ontology. It should be connected to the topnode of the geometry description."@en .
+<https://w3id.org/fog#asGeomOntology> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asGeomOntology> <http://www.w3.org/2000/01/rdf-schema#label> "as GEOM ontology"@en .
 <https://w3id.org/fog#asGeomOntology> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://rdf.bg/geometry.ttl> .
 # 
@@ -56,6 +65,7 @@
 <https://w3id.org/fog#asIfcowl> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/omg#hasComplexGeometryDescription> .
 <https://w3id.org/fog#asIfcowl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asIfcowl> <http://www.w3.org/2000/01/rdf-schema#comment> "The object relation pointing to a RDF-based geometry description following the IfcOWL ontology."@en .
+<https://w3id.org/fog#asIfcowl> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asIfcowl> <http://www.w3.org/2000/01/rdf-schema#label> "as ifcOWL ontology"@en .
 <https://w3id.org/fog#asIfcowl> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://standards.buildingsmart.org/IFC/DEV/> .
 # 
@@ -64,6 +74,7 @@
 <https://w3id.org/fog#asIfcowl_v2x3final> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fog#asIfcowl> .
 <https://w3id.org/fog#asIfcowl_v2x3final> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asIfcowl_v2x3final> <http://www.w3.org/2000/01/rdf-schema#comment> "The object relation pointing to a RDF-based geometry description following the IfcOWL v2x3 Final ontology."@en .
+<https://w3id.org/fog#asIfcowl_v2x3final> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asIfcowl_v2x3final> <http://www.w3.org/2000/01/rdf-schema#label> "as ifcOWL v2x3 Final ontology"@en .
 <https://w3id.org/fog#asIfcowl_v2x3final> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://standards.buildingsmart.org/IFC/DEV/IFC2x3/FINAL/OWL> .
 # 
@@ -72,6 +83,7 @@
 <https://w3id.org/fog#asIfcowl_v2x3tc1> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fog#asIfcowl> .
 <https://w3id.org/fog#asIfcowl_v2x3tc1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asIfcowl_v2x3tc1> <http://www.w3.org/2000/01/rdf-schema#comment> "The object relation pointing to a RDF-based geometry description following the IfcOWL v2x3 TC1 ontology."@en .
+<https://w3id.org/fog#asIfcowl_v2x3tc1> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asIfcowl_v2x3tc1> <http://www.w3.org/2000/01/rdf-schema#label> "as ifcOWL v2x3 TC1 ontology"@en .
 <https://w3id.org/fog#asIfcowl_v2x3tc1> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://standards.buildingsmart.org/IFC/DEV/IFC2x3/TC1/OWL> .
 # 
@@ -80,6 +92,7 @@
 <https://w3id.org/fog#asIfcowl_v2x4add1> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fog#asIfcowl> .
 <https://w3id.org/fog#asIfcowl_v2x4add1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asIfcowl_v2x4add1> <http://www.w3.org/2000/01/rdf-schema#comment> "The object relation pointing to a RDF-based geometry description following the IfcOWL v2x4 Add1 ontology."@en .
+<https://w3id.org/fog#asIfcowl_v2x4add1> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asIfcowl_v2x4add1> <http://www.w3.org/2000/01/rdf-schema#label> "as ifcOWL v2x4 Add1 ontology"@en .
 <https://w3id.org/fog#asIfcowl_v2x4add1> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD1/OWL> .
 # 
@@ -88,6 +101,7 @@
 <https://w3id.org/fog#asIfcowl_v2x4add2> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fog#asIfcowl> .
 <https://w3id.org/fog#asIfcowl_v2x4add2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asIfcowl_v2x4add2> <http://www.w3.org/2000/01/rdf-schema#comment> "The object relation pointing to a RDF-based geometry description following the IfcOWL v2x4 Add2 ontology."@en .
+<https://w3id.org/fog#asIfcowl_v2x4add2> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asIfcowl_v2x4add2> <http://www.w3.org/2000/01/rdf-schema#label> "as ifcOWL v2x4 Add2 ontology"@en .
 <https://w3id.org/fog#asIfcowl_v2x4add2> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://standards.buildingsmart.org/IFC/DEV/IFC4/ADD2/OWL> .
 # 
@@ -96,6 +110,7 @@
 <https://w3id.org/fog#asIfcowl_v2x4final> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fog#asIfcowl> .
 <https://w3id.org/fog#asIfcowl_v2x4final> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asIfcowl_v2x4final> <http://www.w3.org/2000/01/rdf-schema#comment> "The object relation pointing to a RDF-based geometry description following the IfcOWL v2x4 Final ontology."@en .
+<https://w3id.org/fog#asIfcowl_v2x4final> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asIfcowl_v2x4final> <http://www.w3.org/2000/01/rdf-schema#label> "as ifcOWL v2x4 Final ontology"@en .
 <https://w3id.org/fog#asIfcowl_v2x4final> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://standards.buildingsmart.org/IFC/DEV/IFC4/FINAL/OWL> .
 # 
@@ -104,6 +119,7 @@
 <https://w3id.org/fog#asOntobrepOntology> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/omg#hasComplexGeometryDescription> .
 <https://w3id.org/fog#asOntobrepOntology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asOntobrepOntology> <http://www.w3.org/2000/01/rdf-schema#comment> "The object relation pointing to a RDF-based geometry description following the OntoBREP ontology. It should be connected to the topnode of the geometry description."@en .
+<https://w3id.org/fog#asOntobrepOntology> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asOntobrepOntology> <http://www.w3.org/2000/01/rdf-schema#label> "as OntoBREP ontology"@en .
 <https://w3id.org/fog#asOntobrepOntology> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://github.com/OntoBREP/ontobrep> .
 # 
@@ -112,6 +128,7 @@
 <https://w3id.org/fog#asOntostepOntology> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/omg#hasComplexGeometryDescription> .
 <https://w3id.org/fog#asOntostepOntology> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asOntostepOntology> <http://www.w3.org/2000/01/rdf-schema#comment> "The object relation pointing to a RDF-based geometry description following the OntoSTEP ontology. It should be connected to the topnode of the geometry description."@en .
+<https://w3id.org/fog#asOntostepOntology> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asOntostepOntology> <http://www.w3.org/2000/01/rdf-schema#label> "as OntoSTEP ontology"@en .
 <https://w3id.org/fog#asOntostepOntology> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.nist.gov/publications/ontostep-owl-dl-ontology-step?pub_id=901544> .
 # 
@@ -119,9 +136,8 @@
 <https://w3id.org/fog#hasReferencedContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/fog#hasReferencedContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#hasReferencedContent> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/fog#ReferencedContent> .
+<https://w3id.org/fog#hasReferencedContent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#hasReferencedContent> <http://www.w3.org/2000/01/rdf-schema#label> "has referenced content" .
-# 
-# 
 # 
 # 
 # #################################################################
@@ -134,9 +150,9 @@
 # https://w3id.org/fog#asCollada
 <https://w3id.org/fog#asCollada> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/fog#asCollada> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/omg#hasSimpleGeometryDescription> .
-<https://w3id.org/omg#hasSimpleGeometryDescription> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/fog#asCollada> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asCollada> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a geometry description following the open COLLADA format from the Khronos Group. The format consists of a single .dae file (text-based). It is strongly adviced to use the more specific subproperties (e.g. fog:asCollada_v1.4.1)."@en .
+<https://w3id.org/fog#asCollada> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asCollada> <http://www.w3.org/2000/01/rdf-schema#label> "as COLLADA format"@en .
 <https://w3id.org/fog#asCollada> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://dbpedia.org/resource/COLLADA> .
 <https://w3id.org/fog#asCollada> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.iana.org/assignments/media-types/model/vnd.collada+xml> .
@@ -148,6 +164,7 @@
 <https://w3id.org/fog#asCollada_v1.4.1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asCollada_v1.4.1> <http://dbpedia.org/property/extension> ".dae" .
 <https://w3id.org/fog#asCollada_v1.4.1> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a geometry description following the open COLLADA v1.4.1 format from the Khronos Group. It consists of a single .dae file (text-based)."@en .
+<https://w3id.org/fog#asCollada_v1.4.1> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asCollada_v1.4.1> <http://www.w3.org/2000/01/rdf-schema#label> "as COLLADA v1.4.1 format (.dae)"@en .
 <https://w3id.org/fog#asCollada_v1.4.1> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.khronos.org/files/collada_spec_1_4.pdf> .
 <https://w3id.org/fog#asCollada_v1.4.1> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.wikidata.org/entity/Q28975679> .
@@ -178,6 +195,7 @@
 <https://w3id.org/fog#asDwg_v2010> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asDwg_v2010> <http://dbpedia.org/property/extension> ".dwg" .
 <https://w3id.org/fog#asDwg_v2010> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a geometry description following the proprietary DWG v2010 format from Autodesk. It consists of a single .dwg file (binary)."@en .
+<https://w3id.org/fog#asDwg_v2010> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asDwg_v2010> <http://www.w3.org/2000/01/rdf-schema#label> "as DWG 2010 format (.dwg)"@en .
 # 
 # https://w3id.org/fog#asDwg_v2013
@@ -186,6 +204,7 @@
 <https://w3id.org/fog#asDwg_v2013> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asDwg_v2013> <http://dbpedia.org/property/extension> ".dwg" .
 <https://w3id.org/fog#asDwg_v2013> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a geometry description following the proprietary DWG v2013 format from Autodesk. It consists of a single .dwg file (binary)."@en .
+<https://w3id.org/fog#asDwg_v2013> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asDwg_v2013> <http://www.w3.org/2000/01/rdf-schema#label> "as DWG 2013 format (.dwg)"@en .
 # 
 # https://w3id.org/fog#asDwg_v2018
@@ -194,6 +213,7 @@
 <https://w3id.org/fog#asDwg_v2018> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asDwg_v2018> <http://dbpedia.org/property/extension> ".dwg" .
 <https://w3id.org/fog#asDwg_v2018> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a geometry description following the proprietary DWG v2018 format from Autodesk. It consists of a single .dwg file (binary)."@en .
+<https://w3id.org/fog#asDwg_v2018> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asDwg_v2018> <http://www.w3.org/2000/01/rdf-schema#label> "as DWG 2018 format (.dwg)"@en .
 # 
 # https://w3id.org/fog#asE57
@@ -201,6 +221,7 @@
 <https://w3id.org/fog#asE57> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/omg#hasSimpleGeometryDescription> .
 <https://w3id.org/fog#asE57> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asE57> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a point cloud geometry description following the open E57 format developed by the ASTM Committee E57. The format consists of a single .e57 file (partially binary, partially text-based). It is strongly adviced to use the more specific subproperties (e.g. fog:asE57_v1.0)."@en .
+<https://w3id.org/fog#asE57> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asE57> <http://www.w3.org/2000/01/rdf-schema#label> "as E57 format"@en .
 <https://w3id.org/fog#asE57> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.astm.org/Standards/E2807.htm> .
 <https://w3id.org/fog#asE57> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.ri.cmu.edu/publications/the-astm-e57-file-format-for-3d-imaging-data-exchange/> .
@@ -212,6 +233,7 @@
 <https://w3id.org/fog#asE57_v1.0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asE57_v1.0> <http://dbpedia.org/property/extension> ".e57" .
 <https://w3id.org/fog#asE57_v1.0> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a point cloud geometry description following the open E57 format developed by the ASTM Committee E57. The format consists of a single .e57 file (partially binary, partially text-based)."@en .
+<https://w3id.org/fog#asE57_v1.0> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asE57_v1.0> <http://www.w3.org/2000/01/rdf-schema#label> "as E57 v1.0 format (.e57)"@en .
 <https://w3id.org/fog#asE57_v1.0> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.astm.org/Standards/E2807.htm> .
 <https://w3id.org/fog#asE57_v1.0> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.ri.cmu.edu/publications/the-astm-e57-file-format-for-3d-imaging-data-exchange/> .
@@ -221,6 +243,7 @@
 <https://w3id.org/fog#asGeojson> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/omg#hasSimpleGeometryDescription> .
 <https://w3id.org/fog#asGeojson> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asGeojson> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a geometry description following the open GeoJSON format. The format consists of a single .json file (text-based). It is strongly adviced to use the more specific subproperties (e.g. fog:asGeojson_v2016). Note that the version proposed by the IETF GeoJSON Working Group (fog:asGeojson_v2016) is derived from the now obsolete 2008 version (fog:asGeojson_v2008)."@en .
+<https://w3id.org/fog#asGeojson> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asGeojson> <http://www.w3.org/2000/01/rdf-schema#label> "as GeoJSON format"@en .
 <https://w3id.org/fog#asGeojson> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://dbpedia.org/resource/GeoJSON> .
 <https://w3id.org/fog#asGeojson> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.wikidata.org/entity/Q5533904> .
@@ -231,6 +254,7 @@
 <https://w3id.org/fog#asGeojson_v2008> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asGeojson_v2008> <http://dbpedia.org/property/extension> ".json" .
 <https://w3id.org/fog#asGeojson_v2008> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a geometry description following the open GeoJSON v2008 format. The format consists of a single .json file (text-based). Note that the version proposed by the IETF (fog:asGeojson_v2016) is derived from the now obsolete 2008 version (fog:asGeojson_v2008)."@en .
+<https://w3id.org/fog#asGeojson_v2008> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asGeojson_v2008> <http://www.w3.org/2000/01/rdf-schema#label> "as GeoJSON format v2008 (.json)"@en .
 <https://w3id.org/fog#asGeojson_v2008> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://geojson.org/geojson-spec> .
 # 
@@ -241,6 +265,7 @@
 <https://w3id.org/fog#asGeojson_v2016> <http://dbpedia.org/property/extension> ".geojson" .
 <https://w3id.org/fog#asGeojson_v2016> <http://dbpedia.org/property/extension> ".json" .
 <https://w3id.org/fog#asGeojson_v2016> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a geometry description following the open GeoJSON v2016 format developed by the IETF GeoJSON Working Group. The format consists of a single .json file (text-based). Note that the version proposed by the IETF (fog:asGeojson_v2016) is derived from the now obsolete 2008 version (fog:asGeojson_v2008)."@en .
+<https://w3id.org/fog#asGeojson_v2016> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asGeojson_v2016> <http://www.w3.org/2000/01/rdf-schema#label> "as GeoJSON v2016 format (.json)"@en .
 <https://w3id.org/fog#asGeojson_v2016> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://tools.ietf.org/html/rfc7946> .
 <https://w3id.org/fog#asGeojson_v2016> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.iana.org/assignments/media-types/application/geo+json> .
@@ -249,12 +274,14 @@
 <https://w3id.org/fog#asGltf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/fog#asGltf> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/omg#hasSimpleGeometryDescription> .
 <https://w3id.org/fog#asGltf> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a geometry description following the open glTF format from the Khronos Group. The format consists of one (.gltf with embedded binary geometry/textures/shaders, or .glb) or multiple files (combination of binary and/or text-based files). It is strongly adviced to use the more specific subsubproperties (e.g. fog:asGltf_v2.0-gltf)."@en .
+<https://w3id.org/fog#asGltf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asGltf> <http://www.w3.org/2000/01/rdf-schema#label> "as glTF format"@en .
 # 
 # https://w3id.org/fog#asGltf_v1.0
 <https://w3id.org/fog#asGltf_v1.0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/fog#asGltf_v1.0> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fog#asGltf> .
 <https://w3id.org/fog#asGltf_v1.0> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a geometry description following the open glTF v1.0 format from the Khronos Group. The format consists of one (.gltf with embedded binary geometry/textures/shaders) or multiple files (combination of binary and/or text-based files). It is strongly adviced to use the more specific subproperties (e.g. fog:asGltf_v1.0-gltf)."@en .
+<https://w3id.org/fog#asGltf_v1.0> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asGltf_v1.0> <http://www.w3.org/2000/01/rdf-schema#label> "as glTF v1.0 format"@en .
 <https://w3id.org/fog#asGltf_v1.0> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://github.com/KhronosGroup/glTF/tree/master/specification/1.0> .
 <https://w3id.org/fog#asGltf_v1.0> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.wikidata.org/entity/Q28135989> .
@@ -266,6 +293,7 @@
 <https://w3id.org/fog#asGltf_v1.0-bin> <http://dbpedia.org/property/extension> ".bin" .
 <https://w3id.org/fog#asGltf_v1.0-bin> <http://purl.org/dc/terms/requires> "fog:asGltf_v1.0-gltf" .
 <https://w3id.org/fog#asGltf_v1.0-bin> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a binary geometry file (.bin) following the open glTF v1.0 format from the Khronos Group. This file always has to be used together with the central .gltf JSON file (fog:asGltf_v1.0-gltf) referencing it."@en .
+<https://w3id.org/fog#asGltf_v1.0-bin> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asGltf_v1.0-bin> <http://www.w3.org/2000/01/rdf-schema#label> "as glTF v1.0 geometry file (.bin)"@en .
 # 
 # https://w3id.org/fog#asGltf_v1.0-glsl
@@ -275,6 +303,7 @@
 <https://w3id.org/fog#asGltf_v1.0-glsl> <http://dbpedia.org/property/extension> ".glsl" .
 <https://w3id.org/fog#asGltf_v1.0-glsl> <http://purl.org/dc/terms/requires> "fog:asGltf_v1.0-gltf" .
 <https://w3id.org/fog#asGltf_v1.0-glsl> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a text-based shader file (.glsl) following the open glTF v1.0 format from the Khronos Group. This file always has to be used together with the central .gltf JSON file (fog:asGltf_v1.0-gltf) referencing it."@en .
+<https://w3id.org/fog#asGltf_v1.0-glsl> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asGltf_v1.0-glsl> <http://www.w3.org/2000/01/rdf-schema#label> "as glTF v1.0 shader file (.glsl)"@en .
 # 
 # https://w3id.org/fog#asGltf_v1.0-gltf
@@ -283,6 +312,7 @@
 <https://w3id.org/fog#asGltf_v1.0-gltf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asGltf_v1.0-gltf> <http://dbpedia.org/property/extension> ".gltf" .
 <https://w3id.org/fog#asGltf_v1.0-gltf> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a JSON file (.gltf) following the open glTF v1.0 format from the Khronos Group. This file can be used on its own if geometry, shaders and optional textures are embedded (text-based) inside the JSON. In most cases however, it references other files containing geometry (.bin), optional shaders (.glsl) and optional textures (.bmp/.gif/.jpeg/.png)."@en .
+<https://w3id.org/fog#asGltf_v1.0-gltf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asGltf_v1.0-gltf> <http://www.w3.org/2000/01/rdf-schema#label> "as glTF v1.0 JSON file (.gltf)"@en .
 <https://w3id.org/fog#asGltf_v1.0-gltf> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.iana.org/assignments/media-types/model/gltf+json> .
 # 
@@ -296,12 +326,14 @@
 <https://w3id.org/fog#asGltf_v1.0-texture> <http://dbpedia.org/property/extension> ".png" .
 <https://w3id.org/fog#asGltf_v1.0-texture> <http://purl.org/dc/terms/requires> "fog:asGltf_v1.0-gltf" .
 <https://w3id.org/fog#asGltf_v1.0-texture> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a binary texture file (.bmp/..gif/.jpeg/.png). This file always has to be used together with the central .gltf JSON file (fog:asGltf_v1.0-gltf) referencing it."@en .
+<https://w3id.org/fog#asGltf_v1.0-texture> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asGltf_v1.0-texture> <http://www.w3.org/2000/01/rdf-schema#label> "as glTF v1.0 texture file"@en .
 # 
 # https://w3id.org/fog#asGltf_v2.0
 <https://w3id.org/fog#asGltf_v2.0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/fog#asGltf_v2.0> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fog#asGltf> .
 <https://w3id.org/fog#asGltf_v2.0> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a geometry description following the open glTF v2.0 format from the Khronos Group. The format consists of one (.gltf with embedded binary geometry/textures/shaders, or .glb) or multiple files (combination of binary and/or text-based files). It is strongly adviced to use the more specific subproperties (e.g. fog:asGltf_v2.0-gltf)."@en .
+<https://w3id.org/fog#asGltf_v2.0> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asGltf_v2.0> <http://www.w3.org/2000/01/rdf-schema#label> "as glTF v2.0 format"@en .
 <https://w3id.org/fog#asGltf_v2.0> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://github.com/KhronosGroup/glTF/tree/master/specification/2.0> .
 # 
@@ -312,6 +344,7 @@
 <https://w3id.org/fog#asGltf_v2.0-bin> <http://dbpedia.org/property/extension> ".bin" .
 <https://w3id.org/fog#asGltf_v2.0-bin> <http://purl.org/dc/terms/requires> "fog:asGltf_v2.0-gltf" .
 <https://w3id.org/fog#asGltf_v2.0-bin> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a binary geometry file (.bin) following the open glTF v2.0 format from the Khronos Group. This file always has to be used together with the central .gltf JSON file (fog:asGltf_v2.0-gltf) referencing it."@en .
+<https://w3id.org/fog#asGltf_v2.0-bin> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asGltf_v2.0-bin> <http://www.w3.org/2000/01/rdf-schema#label> "as glTF v2.0 geometry file (.bin)"@en .
 <https://w3id.org/fog#asGltf_v2.0-bin> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.iana.org/assignments/media-types/application/gltf-buffer> .
 # 
@@ -321,6 +354,7 @@
 <https://w3id.org/fog#asGltf_v2.0-glb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asGltf_v2.0-glb> <http://dbpedia.org/property/extension> ".glb" .
 <https://w3id.org/fog#asGltf_v2.0-glb> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a binary file (.glb) following the open glTF v2.0 format from the Khronos Group. This one file contains geometry and textures, and as a result can be used without other files."@en .
+<https://w3id.org/fog#asGltf_v2.0-glb> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asGltf_v2.0-glb> <http://www.w3.org/2000/01/rdf-schema#label> "as glTF v2.0 binary file (.glb)"@en .
 <https://w3id.org/fog#asGltf_v2.0-glb> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.iana.org/assignments/media-types/model/gltf-binary> .
 # 
@@ -330,6 +364,7 @@
 <https://w3id.org/fog#asGltf_v2.0-gltf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asGltf_v2.0-gltf> <http://dbpedia.org/property/extension> ".gltf" .
 <https://w3id.org/fog#asGltf_v2.0-gltf> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a JSON file (.gltf) following the open glTF v2.0 format from the Khronos Group. This file can be used on its own if geometry and optional textures are embedded (text-based) inside the JSON. In most cases however, it references other files containing geometry (.bin) and optional textures (.jpeg/.png)."@en .
+<https://w3id.org/fog#asGltf_v2.0-gltf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asGltf_v2.0-gltf> <http://www.w3.org/2000/01/rdf-schema#label> "as glTF v2.0 JSON file (.gltf)"@en .
 # 
 # https://w3id.org/fog#asGltf_v2.0-texture
@@ -340,6 +375,7 @@
 <https://w3id.org/fog#asGltf_v2.0-texture> <http://dbpedia.org/property/extension> ".png" .
 <https://w3id.org/fog#asGltf_v2.0-texture> <http://purl.org/dc/terms/requires> "fog:asGltf_v2.0-gltf" .
 <https://w3id.org/fog#asGltf_v2.0-texture> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a binary texture file (.jpeg/.png). This file always has to be used together with the central .gltf JSON file (fog:asGltf_v2.0-gltf) referencing it."@en .
+<https://w3id.org/fog#asGltf_v2.0-texture> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asGltf_v2.0-texture> <http://www.w3.org/2000/01/rdf-schema#label> "as glTF v2.0 texture file"@en .
 # 
 # https://w3id.org/fog#asGml
@@ -347,6 +383,7 @@
 <https://w3id.org/fog#asGml> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/omg#hasSimpleGeometryDescription> .
 <https://w3id.org/fog#asGml> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asGml> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a text-based geometry description following one of the open GML formats developed by OGC and ISO. The format consists of a single .gml file (text-based). It is strongly adviced to use the more specific subproperties (e.g. fog:asGml_v3.3.0). Note that this property is disjoint with geo:asGML because of the more strict domain and range restrictions in GeoSPARQL."@en .
+<https://w3id.org/fog#asGml> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asGml> <http://www.w3.org/2000/01/rdf-schema#label> "as GML format"@en .
 <https://w3id.org/fog#asGml> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://schemas.opengis.net/gml/> .
 <https://w3id.org/fog#asGml> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.opengeospatial.org/standards/gml> .
@@ -358,6 +395,7 @@
 <https://w3id.org/fog#asGml_v3.1.1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asGml_v3.1.1> <http://dbpedia.org/property/extension> ".gml" .
 <https://w3id.org/fog#asGml_v3.1.1> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a text-based GML file (.gml) following the open GML v3.1.1 format developed by OGC and ISO. Note that this and older versions are considered depreciated. Note that this property is disjoint (via its superproperty fog:asGml) with geo:asGML because of the more strict domain and range restrictions in GeoSPARQL."@en .
+<https://w3id.org/fog#asGml_v3.1.1> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asGml_v3.1.1> <http://www.w3.org/2000/01/rdf-schema#label> "as GML v3.1.1 format (.gml)"@en .
 <https://w3id.org/fog#asGml_v3.1.1> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://portal.opengeospatial.org/files/?artifact_id=4700> .
 <https://w3id.org/fog#asGml_v3.1.1> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://schemas.opengis.net/gml/3.1.1/> .
@@ -368,6 +406,7 @@
 <https://w3id.org/fog#asGml_v3.2.1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asGml_v3.2.1> <http://dbpedia.org/property/extension> ".gml" .
 <https://w3id.org/fog#asGml_v3.2.1> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a text-based GML file (.gml) following the open GML v3.2.1 format developed by OGC and ISO. Note that this property is disjoint (via its superproperty fog:asGml) with geo:asGML because of the more strict domain and range restrictions in GeoSPARQL."@en .
+<https://w3id.org/fog#asGml_v3.2.1> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asGml_v3.2.1> <http://www.w3.org/2000/01/rdf-schema#label> "as GML v3.2.1 format (.gml)"@en .
 <https://w3id.org/fog#asGml_v3.2.1> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://portal.opengeospatial.org/files/?artifact_id=20509> .
 <https://w3id.org/fog#asGml_v3.2.1> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://schemas.opengis.net/gml/3.2.1/> .
@@ -378,6 +417,7 @@
 <https://w3id.org/fog#asGml_v3.2.2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asGml_v3.2.2> <http://dbpedia.org/property/extension> ".gml" .
 <https://w3id.org/fog#asGml_v3.2.2> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a text-based GML file (.gml) following the open GML v3.2.2 format developed by OGC and ISO. Note that this property is disjoint (via its superproperty fog:asGml) with geo:asGML because of the more strict domain and range restrictions in GeoSPARQL."@en .
+<https://w3id.org/fog#asGml_v3.2.2> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asGml_v3.2.2> <http://www.w3.org/2000/01/rdf-schema#label> "as GML v3.2.2 format (.gml)"@en .
 <https://w3id.org/fog#asGml_v3.2.2> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://portal.opengeospatial.org/files/?artifact_id=74183&version=2> .
 # 
@@ -387,6 +427,7 @@
 <https://w3id.org/fog#asGml_v3.3.0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asGml_v3.3.0> <http://dbpedia.org/property/extension> ".gml" .
 <https://w3id.org/fog#asGml_v3.3.0> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a text-based GML file (.gml) following the open GML v3.3.0 format developed by OGC and ISO. This format is an extension of the GML v3.2 format. Note that this property is disjoint (via its superproperty fog:asGml) with geo:asGML because of the more strict domain and range restrictions in GeoSPARQL."@en .
+<https://w3id.org/fog#asGml_v3.3.0> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asGml_v3.3.0> <http://www.w3.org/2000/01/rdf-schema#label> "as GML v3.3.0 format (.gml)"@en .
 <https://w3id.org/fog#asGml_v3.3.0> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://schemas.opengis.net/gml/3.3/> .
 <https://w3id.org/fog#asGml_v3.3.0> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://portal.opengeospatial.org/files/?artifact_id=46568> .
@@ -396,6 +437,7 @@
 <https://w3id.org/fog#asIfc> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/omg#hasSimpleGeometryDescription> .
 <https://w3id.org/fog#asIfc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asIfc> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a text-based geometry description following the open IFC format as documented by buildingSMART and in its ISO 16739 standard. The format consists of a single .ifc or .ifcxml file (text-based). It is strongly adviced to use the more specific subproperties (e.g. fog:asIfc_v2x4-icfxml)."@en .
+<https://w3id.org/fog#asIfc> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asIfc> <http://www.w3.org/2000/01/rdf-schema#label> "as IFC format"@en .
 <https://w3id.org/fog#asIfc> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://dbpedia.org/resource/Industry_Foundation_Classes> .
 <https://w3id.org/fog#asIfc> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.iso.org/standard/70303.html> .
@@ -406,6 +448,7 @@
 <https://w3id.org/fog#asIfc_v2x3> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fog#asIfc> .
 <https://w3id.org/fog#asIfc_v2x3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asIfc_v2x3> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a text-based geometry description following the open IFC format v2x3 as documented by buildingSMART and in its ISO 16739 standard"@en .
+<https://w3id.org/fog#asIfc_v2x3> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asIfc_v2x3> <http://www.w3.org/2000/01/rdf-schema#label> "as IFC v2x3"@en .
 <https://w3id.org/fog#asIfc_v2x3> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.buildingsmart-tech.org/specifications/ifc-releases/ifc2x3-release> .
 # 
@@ -415,6 +458,7 @@
 <https://w3id.org/fog#asIfc_v2x3-ifc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asIfc_v2x3-ifc> <http://dbpedia.org/property/extension> ".ifc" .
 <https://w3id.org/fog#asIfc_v2x3-ifc> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a text-based geometry description following the open IFC format v2x3 as documented by buildingSMART and in its ISO 16739 standard. The IFC file is serialised in the STEP Physical File Format (SPFF)."@en .
+<https://w3id.org/fog#asIfc_v2x3-ifc> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asIfc_v2x3-ifc> <http://www.w3.org/2000/01/rdf-schema#label> "as IFC v2x3 file (.ifc)"@en .
 # 
 # https://w3id.org/fog#asIfc_v2x3-ifcxml
@@ -423,6 +467,7 @@
 <https://w3id.org/fog#asIfc_v2x3-ifcxml> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asIfc_v2x3-ifcxml> <http://dbpedia.org/property/extension> ".ifcxml" .
 <https://w3id.org/fog#asIfc_v2x3-ifcxml> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a text-based geometry description following the open IFC format v2x3 as documented by buildingSMART and in its ISO 16739 standard. The IFC file is serialised in the XML format."@en .
+<https://w3id.org/fog#asIfc_v2x3-ifcxml> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asIfc_v2x3-ifcxml> <http://www.w3.org/2000/01/rdf-schema#label> "as IFC v2x3 file (.ifcxml)"@en .
 # 
 # https://w3id.org/fog#asIfc_v2x3tc1
@@ -430,6 +475,7 @@
 <https://w3id.org/fog#asIfc_v2x3tc1> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fog#asIfc> .
 <https://w3id.org/fog#asIfc_v2x3tc1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asIfc_v2x3tc1> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a text-based geometry description following the open IFC format v2x3 TC1 as documented by buildingSMART and in its ISO 16739 standard"@en .
+<https://w3id.org/fog#asIfc_v2x3tc1> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asIfc_v2x3tc1> <http://www.w3.org/2000/01/rdf-schema#label> "as IFC v2x3 TC1"@en .
 <https://w3id.org/fog#asIfc_v2x3tc1> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.buildingsmart-tech.org/specifications/ifc-releases/ifc2x3-tc1-release> .
 # 
@@ -439,6 +485,7 @@
 <https://w3id.org/fog#asIfc_v2x3tc1-ifc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asIfc_v2x3tc1-ifc> <http://dbpedia.org/property/extension> ".ifc" .
 <https://w3id.org/fog#asIfc_v2x3tc1-ifc> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a text-based geometry description following the open IFC format v2x3 TC1 as documented by buildingSMART and in its ISO 16739 standard. The IFC file is serialised in the STEP Physical File Format (SPFF)."@en .
+<https://w3id.org/fog#asIfc_v2x3tc1-ifc> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asIfc_v2x3tc1-ifc> <http://www.w3.org/2000/01/rdf-schema#label> "as IFC v2x3 TC1 file (.ifc)"@en .
 # 
 # https://w3id.org/fog#asIfc_v2x3tc1-ifcxml
@@ -447,6 +494,7 @@
 <https://w3id.org/fog#asIfc_v2x3tc1-ifcxml> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asIfc_v2x3tc1-ifcxml> <http://dbpedia.org/property/extension> ".ifcxml" .
 <https://w3id.org/fog#asIfc_v2x3tc1-ifcxml> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a text-based geometry description following the open IFC format v2x3 TC1 as documented by buildingSMART and in its ISO 16739 standard. The IFC file is serialised in the XML format."@en .
+<https://w3id.org/fog#asIfc_v2x3tc1-ifcxml> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asIfc_v2x3tc1-ifcxml> <http://www.w3.org/2000/01/rdf-schema#label> "as IFC v2x3 TC1 file (.ifcxml)"@en .
 # 
 # https://w3id.org/fog#asIfc_v2x4
@@ -454,6 +502,7 @@
 <https://w3id.org/fog#asIfc_v2x4> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fog#asIfc> .
 <https://w3id.org/fog#asIfc_v2x4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asIfc_v2x4> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a text-based geometry description following the open IFC format v2x4 as documented by buildingSMART and in its ISO 16739 standard"@en .
+<https://w3id.org/fog#asIfc_v2x4> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asIfc_v2x4> <http://www.w3.org/2000/01/rdf-schema#label> "as IFC v2x4"@en .
 <https://w3id.org/fog#asIfc_v2x4> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.buildingsmart-tech.org/specifications/ifc-releases/ifc4-release> .
 # 
@@ -463,6 +512,7 @@
 <https://w3id.org/fog#asIfc_v2x4-ifc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asIfc_v2x4-ifc> <http://dbpedia.org/property/extension> ".ifc" .
 <https://w3id.org/fog#asIfc_v2x4-ifc> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a text-based geometry description following the open IFC format v2x4 as documented by buildingSMART and in its ISO 16739 standard. The IFC file is serialised in the STEP Physical File Format (SPFF)."@en .
+<https://w3id.org/fog#asIfc_v2x4-ifc> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asIfc_v2x4-ifc> <http://www.w3.org/2000/01/rdf-schema#label> "as IFC v2x4 file (.ifc)"@en .
 # 
 # https://w3id.org/fog#asIfc_v2x4-ifcxml
@@ -471,6 +521,7 @@
 <https://w3id.org/fog#asIfc_v2x4-ifcxml> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asIfc_v2x4-ifcxml> <http://dbpedia.org/property/extension> ".ifcxml" .
 <https://w3id.org/fog#asIfc_v2x4-ifcxml> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a text-based geometry description following the open IFC format v2x4 as documented by buildingSMART and in its ISO 16739 standard. The IFC file is serialised in the XML format."@en .
+<https://w3id.org/fog#asIfc_v2x4-ifcxml> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asIfc_v2x4-ifcxml> <http://www.w3.org/2000/01/rdf-schema#label> "as IFC v2x4 file (.ifcxml)"@en .
 # 
 # https://w3id.org/fog#asIfc_v2x4add1
@@ -478,6 +529,7 @@
 <https://w3id.org/fog#asIfc_v2x4add1> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fog#asIfc> .
 <https://w3id.org/fog#asIfc_v2x4add1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asIfc_v2x4add1> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a text-based geometry description following the open IFC format v2x4 Add1 as documented by buildingSMART and in its ISO 16739 standard"@en .
+<https://w3id.org/fog#asIfc_v2x4add1> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asIfc_v2x4add1> <http://www.w3.org/2000/01/rdf-schema#label> "as IFC v2x4 Add1"@en .
 <https://w3id.org/fog#asIfc_v2x4add1> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.buildingsmart-tech.org/specifications/ifc-releases/ifc4-add1-release> .
 # 
@@ -487,6 +539,7 @@
 <https://w3id.org/fog#asIfc_v2x4add1-ifc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asIfc_v2x4add1-ifc> <http://dbpedia.org/property/extension> ".ifc" .
 <https://w3id.org/fog#asIfc_v2x4add1-ifc> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a text-based geometry description following the open IFC format v2x4 Add1 as documented by buildingSMART and in its ISO 16739 standard. The IFC file is serialised in the STEP Physical File Format (SPFF)."@en .
+<https://w3id.org/fog#asIfc_v2x4add1-ifc> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asIfc_v2x4add1-ifc> <http://www.w3.org/2000/01/rdf-schema#label> "as IFC v2x4 Add1 file (.ifc)"@en .
 # 
 # https://w3id.org/fog#asIfc_v2x4add1-ifcxml
@@ -495,6 +548,7 @@
 <https://w3id.org/fog#asIfc_v2x4add1-ifcxml> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asIfc_v2x4add1-ifcxml> <http://dbpedia.org/property/extension> ".ifcxml" .
 <https://w3id.org/fog#asIfc_v2x4add1-ifcxml> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a text-based geometry description following the open IFC format v2x4 Add1 as documented by buildingSMART and in its ISO 16739 standard. The IFC file is serialised in the XML format."@en .
+<https://w3id.org/fog#asIfc_v2x4add1-ifcxml> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asIfc_v2x4add1-ifcxml> <http://www.w3.org/2000/01/rdf-schema#label> "as IFC v2x4 Add1 file (.ifcxml)"@en .
 # 
 # https://w3id.org/fog#asIfc_v2x4add2
@@ -502,6 +556,7 @@
 <https://w3id.org/fog#asIfc_v2x4add2> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fog#asIfc> .
 <https://w3id.org/fog#asIfc_v2x4add2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asIfc_v2x4add2> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a text-based geometry description following the open IFC format v2x4 Add2 as documented by buildingSMART and in its ISO 16739 standard"@en .
+<https://w3id.org/fog#asIfc_v2x4add2> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asIfc_v2x4add2> <http://www.w3.org/2000/01/rdf-schema#label> "as IFC v2x4 Add2"@en .
 <https://w3id.org/fog#asIfc_v2x4add2> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.buildingsmart-tech.org/specifications/ifc-releases/ifc4-add2> .
 # 
@@ -511,6 +566,7 @@
 <https://w3id.org/fog#asIfc_v2x4add2-ifc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asIfc_v2x4add2-ifc> <http://dbpedia.org/property/extension> ".ifc" .
 <https://w3id.org/fog#asIfc_v2x4add2-ifc> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a text-based geometry description following the open IFC format v2x4 Add2 as documented by buildingSMART and in its ISO 16739 standard. The IFC file is serialised in the STEP Physical File Format (SPFF)."@en .
+<https://w3id.org/fog#asIfc_v2x4add2-ifc> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asIfc_v2x4add2-ifc> <http://www.w3.org/2000/01/rdf-schema#label> "as IFC v2x4 Add2 file (.ifc)"@en .
 # 
 # https://w3id.org/fog#asIfc_v2x4add2-ifcxml
@@ -519,6 +575,7 @@
 <https://w3id.org/fog#asIfc_v2x4add2-ifcxml> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asIfc_v2x4add2-ifcxml> <http://dbpedia.org/property/extension> ".ifcxml" .
 <https://w3id.org/fog#asIfc_v2x4add2-ifcxml> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a text-based geometry description following the open IFC format v2x4 Add2 as documented by buildingSMART and in its ISO 16739 standard. The IFC file is serialised in the XML format."@en .
+<https://w3id.org/fog#asIfc_v2x4add2-ifcxml> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asIfc_v2x4add2-ifcxml> <http://www.w3.org/2000/01/rdf-schema#label> "as IFC v2x4 Add 2 file (.ifcxml)"@en .
 # 
 # https://w3id.org/fog#asIges
@@ -528,6 +585,7 @@
 <https://w3id.org/fog#asIges> <http://dbpedia.org/property/extension> ".iges" .
 <https://w3id.org/fog#asIges> <http://dbpedia.org/property/extension> ".igs" .
 <https://w3id.org/fog#asIges> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a geometry description following the IGES format as documented in its ANSI standard. The format consists of a single .iges/.igs file (text-based). It is strongly adviced to use the more specific subproperties (e.g. fog:asIges_v5.3)."@en .
+<https://w3id.org/fog#asIges> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asIges> <http://www.w3.org/2000/01/rdf-schema#label> "as IGES format"@en .
 <https://w3id.org/fog#asIges> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://dbpedia.org/resource/IGES> .
 <https://w3id.org/fog#asIges> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.iana.org/assignments/media-types/model/iges> .
@@ -540,12 +598,14 @@
 <https://w3id.org/fog#asIges_v5.3> <http://dbpedia.org/property/extension> ".iges" .
 <https://w3id.org/fog#asIges_v5.3> <http://dbpedia.org/property/extension> ".igs" .
 <https://w3id.org/fog#asIges_v5.3> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a geometry description following the IGES format v5.6 as documented in its ANSI standard."@en .
+<https://w3id.org/fog#asIges_v5.3> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asIges_v5.3> <http://www.w3.org/2000/01/rdf-schema#label> "as IGES v5.3 (.igs)"@en .
 # 
 # https://w3id.org/fog#asObj
 <https://w3id.org/fog#asObj> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/fog#asObj> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/omg#hasSimpleGeometryDescription> .
 <https://w3id.org/fog#asObj> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a text-based geometry description following the OBJ format developed by Wavefront Technologies. The format consists of a single .obj file and an optional material file (.mtl). It is strongly adviced to use the more specific subsubproperties (e.g. fog:asObj_v3.0-obj)."@en .
+<https://w3id.org/fog#asObj> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asObj> <http://www.w3.org/2000/01/rdf-schema#label> "as OBJ format"@en .
 <https://w3id.org/fog#asObj> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://paulbourke.net/dataformats/obj/> .
 <https://w3id.org/fog#asObj> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.wikidata.org/entity/Q2119595> .
@@ -554,6 +614,7 @@
 <https://w3id.org/fog#asObj_v3.0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/fog#asObj_v3.0> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fog#asObj> .
 <https://w3id.org/fog#asObj_v3.0> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a text-based geometry description following the OBJ v3.0 format developed by Wavefront Technologies. The format consists of a single .obj file and an optional material file (.mtl). It is strongly adviced to use the more specific subproperties (e.g. fog:asObj_v3.0-obj)."@en .
+<https://w3id.org/fog#asObj_v3.0> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asObj_v3.0> <http://www.w3.org/2000/01/rdf-schema#label> "as OBJ v3.0 format"@en .
 # 
 # https://w3id.org/fog#asObj_v3.0-mtl
@@ -563,6 +624,7 @@
 <https://w3id.org/fog#asObj_v3.0-mtl> <http://dbpedia.org/property/extension> ".mtl" .
 <https://w3id.org/fog#asObj_v3.0-mtl> <http://purl.org/dc/terms/requires> "fog:asObj_v3.0-obj" .
 <https://w3id.org/fog#asObj_v3.0-mtl> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a text-based MTL file (.mtl) following the OBJ format developed by Wavefront Technologies. This file has to be used together with the main .obj file that references it."@en .
+<https://w3id.org/fog#asObj_v3.0-mtl> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asObj_v3.0-mtl> <http://www.w3.org/2000/01/rdf-schema#label> "as OBJ v3.0 material file (.mtl)"@en .
 <https://w3id.org/fog#asObj_v3.0-mtl> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.wikidata.org/entity/Q20965861> .
 <https://w3id.org/fog#asObj_v3.0-mtl> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.wikidata.org/entity/Q38343645> .
@@ -573,6 +635,7 @@
 <https://w3id.org/fog#asObj_v3.0-obj> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asObj_v3.0-obj> <http://dbpedia.org/property/extension> ".obj" .
 <https://w3id.org/fog#asObj_v3.0-obj> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a text-based OBJ file (.obj) following the OBJ format developed by Wavefront Technologies. This file can be used together with an optional material file (.mtl)."@en .
+<https://w3id.org/fog#asObj_v3.0-obj> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asObj_v3.0-obj> <http://www.w3.org/2000/01/rdf-schema#label> "as OBJ v3.0 file (.obj)"@en .
 # 
 # https://w3id.org/fog#asObj_v3.0-texture
@@ -580,6 +643,7 @@
 <https://w3id.org/fog#asObj_v3.0-texture> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fog#asObj_v3.0> .
 <https://w3id.org/fog#asObj_v3.0-texture> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asObj_v3.0-texture> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a binary texture file that is referenced in the .mtl file of the OBJ format."@en .
+<https://w3id.org/fog#asObj_v3.0-texture> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asObj_v3.0-texture> <http://www.w3.org/2000/01/rdf-schema#label> "as OBJ texture"@en .
 # 
 # https://w3id.org/fog#asPcd
@@ -587,6 +651,7 @@
 <https://w3id.org/fog#asPcd> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/omg#hasSimpleGeometryDescription> .
 <https://w3id.org/fog#asPcd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asPcd> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a binary encoded point cloud following the open PCD format which was developed as part of the open source project PCL (point cloud library). The format consists of a single .pcd file (binary or text-based). It is strongly adviced to use the more specific subproperties (e.g. fog:asPcd_v0.7)."@en .
+<https://w3id.org/fog#asPcd> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asPcd> <http://www.w3.org/2000/01/rdf-schema#label> "as PCD point cloud format"@en .
 <https://w3id.org/fog#asPcd> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://pointclouds.org/documentation/tutorials/pcd_file_format.php> .
 # 
@@ -596,6 +661,7 @@
 <https://w3id.org/fog#asPcd_v0.7> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asPcd_v0.7> <http://dbpedia.org/property/extension> ".pcd" .
 <https://w3id.org/fog#asPcd_v0.7> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a binary or text-based point cloud following the open PCD v0.7 (sometimes referred to as PCD_v7) format which was developed as part of the open source project PCL (point cloud library)."@en .
+<https://w3id.org/fog#asPcd_v0.7> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asPcd_v0.7> <http://www.w3.org/2000/01/rdf-schema#label> "as PCD v0.7 point cloud format (.pcd)" .
 # 
 # https://w3id.org/fog#asPly
@@ -604,6 +670,7 @@
 <https://w3id.org/fog#asPly> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asPly> <http://dbpedia.org/property/extension> ".ply" .
 <https://w3id.org/fog#asPly> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a geometry description following the PLY format which was developed by Greg Turk (Stanford University). The format consists of a single .ply file which is either text-based or binary. It is strongly adviced to use the more specific subsubproperties (e.g. fog:asPly_v1.0-ascii)."@en .
+<https://w3id.org/fog#asPly> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asPly> <http://www.w3.org/2000/01/rdf-schema#label> "as PLY format" .
 <https://w3id.org/fog#asPly> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://dbpedia.org/resource/PLY_(file_format)> .
 <https://w3id.org/fog#asPly> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://paulbourke.net/dataformats/ply/> .
@@ -614,6 +681,7 @@
 <https://w3id.org/fog#asPly_v1.0> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fog#asPly> .
 <https://w3id.org/fog#asPly_v1.0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asPly_v1.0> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a geometry description following the PLY v1.0 format which was developed by Greg Turk (Stanford University). The format consists of a single .ply file which is either text-based or binary. It is strongly adviced to use the more specific subproperties (e.g. fog:asPly_v1.0-ascii)."@en .
+<https://w3id.org/fog#asPly_v1.0> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asPly_v1.0> <http://www.w3.org/2000/01/rdf-schema#label> "as PLY v1.0 format"@en .
 # 
 # https://w3id.org/fog#asPly_v1.0-ascii
@@ -622,6 +690,7 @@
 <https://w3id.org/fog#asPly_v1.0-ascii> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asPly_v1.0-ascii> <http://dbpedia.org/property/extension> ".ply" .
 <https://w3id.org/fog#asPly_v1.0-ascii> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a geometry file following the PLY v1.0 format which was developed by Greg Turk (Stanford University). The single .ply file is text-based."@en .
+<https://w3id.org/fog#asPly_v1.0-ascii> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asPly_v1.0-ascii> <http://www.w3.org/2000/01/rdf-schema#label> "as PLY ASCII format (.ply)"@en .
 # 
 # https://w3id.org/fog#asPly_v1.0-binaryBE
@@ -630,6 +699,7 @@
 <https://w3id.org/fog#asPly_v1.0-binaryBE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asPly_v1.0-binaryBE> <http://dbpedia.org/property/extension> ".ply" .
 <https://w3id.org/fog#asPly_v1.0-binaryBE> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a geometry file following the PLY v1.0 format which was developed by Greg Turk (Stanford University). The single .ply file is binary with big endian. Note that there is also a sibling property for a binary PLY with little endian."@en .
+<https://w3id.org/fog#asPly_v1.0-binaryBE> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asPly_v1.0-binaryBE> <http://www.w3.org/2000/01/rdf-schema#label> "as PLY binary (big endian) format (.ply)"@en .
 # 
 # https://w3id.org/fog#asPly_v1.0-binaryLE
@@ -638,6 +708,7 @@
 <https://w3id.org/fog#asPly_v1.0-binaryLE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asPly_v1.0-binaryLE> <http://dbpedia.org/property/extension> ".ply" .
 <https://w3id.org/fog#asPly_v1.0-binaryLE> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a geometry file following the PLY v1.0 format which was developed by Greg Turk (Stanford University). The single .ply file is binary with little endian. Note that there is also a sibling property for a binary PLY with big endian."@en .
+<https://w3id.org/fog#asPly_v1.0-binaryLE> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asPly_v1.0-binaryLE> <http://www.w3.org/2000/01/rdf-schema#label> "as PLY binary (little endian) format (.ply)"@en .
 # 
 # https://w3id.org/fog#asRevit
@@ -646,6 +717,7 @@
 <https://w3id.org/fog#asRevit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asRevit> <http://dbpedia.org/property/extension> ".rvt" .
 <https://w3id.org/fog#asRevit> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a geometry description following the proprietary Revit format (Autodesk). The format consists of a single .rvt file (binary). It is strongly adviced to use the more specific subproperties (e.g. fog:asRevit_v2020)"@en .
+<https://w3id.org/fog#asRevit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asRevit> <http://www.w3.org/2000/01/rdf-schema#label> "as Revit format"@en .
 <https://w3id.org/fog#asRevit> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.wikidata.org/entity/Q49620191> .
 # 
@@ -655,6 +727,7 @@
 <https://w3id.org/fog#asRevit_v2017> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asRevit_v2017> <http://dbpedia.org/property/extension> ".rvt" .
 <https://w3id.org/fog#asRevit_v2017> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a geometry description following the proprietary Revit v2017 format (Autodesk). The format consists of a single .rvt file (binary)."@en .
+<https://w3id.org/fog#asRevit_v2017> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asRevit_v2017> <http://www.w3.org/2000/01/rdf-schema#label> "as Revit format v2017 (.rvt)"@en .
 # 
 # https://w3id.org/fog#asRevit_v2018
@@ -663,6 +736,7 @@
 <https://w3id.org/fog#asRevit_v2018> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asRevit_v2018> <http://dbpedia.org/property/extension> ".rvt" .
 <https://w3id.org/fog#asRevit_v2018> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a geometry description following the proprietary Revit v2018 format (Autodesk). The format consists of a single .rvt file (binary)."@en .
+<https://w3id.org/fog#asRevit_v2018> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asRevit_v2018> <http://www.w3.org/2000/01/rdf-schema#label> "as Revit format v2018 (.rvt)"@en .
 # 
 # https://w3id.org/fog#asRevit_v2019
@@ -671,6 +745,7 @@
 <https://w3id.org/fog#asRevit_v2019> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asRevit_v2019> <http://dbpedia.org/property/extension> ".rvt" .
 <https://w3id.org/fog#asRevit_v2019> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a geometry description following the proprietary Revit v2019 format (Autodesk). The format consists of a single .rvt file (binary)."@en .
+<https://w3id.org/fog#asRevit_v2019> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asRevit_v2019> <http://www.w3.org/2000/01/rdf-schema#label> "as Revit format v2019 (.rvt)"@en .
 # 
 # https://w3id.org/fog#asRevit_v2020
@@ -679,6 +754,7 @@
 <https://w3id.org/fog#asRevit_v2020> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asRevit_v2020> <http://dbpedia.org/property/extension> ".rvt" .
 <https://w3id.org/fog#asRevit_v2020> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a geometry description following the proprietary Revit v2020 format (Autodesk). The format consists of a single .rvt file (binary)."@en .
+<https://w3id.org/fog#asRevit_v2020> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asRevit_v2020> <http://www.w3.org/2000/01/rdf-schema#label> "as Revit format v2020 (.rvt)"@en .
 # 
 # https://w3id.org/fog#asRhino
@@ -687,6 +763,7 @@
 <https://w3id.org/fog#asRhino> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asRhino> <http://dbpedia.org/property/extension> ".3dm" .
 <https://w3id.org/fog#asRhino> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a geometry description following the proprietary Rhinoceros format (McNeel). The format consists of a single .3dm file (binary). It is strongly adviced to use the more specific subproperties (e.g. fog:asRhino_v6)"@en .
+<https://w3id.org/fog#asRhino> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asRhino> <http://www.w3.org/2000/01/rdf-schema#label> "as Rhino format"@en .
 <https://w3id.org/fog#asRhino> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.wikidata.org/entity/Q28919152> .
 # 
@@ -696,6 +773,7 @@
 <https://w3id.org/fog#asRhino_v5> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asRhino_v5> <http://dbpedia.org/property/extension> ".3dm" .
 <https://w3id.org/fog#asRhino_v5> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a geometry description following the proprietary Rhinoceros format v5 (McNeel). The format consists of a single .3dm file (binary)."@en .
+<https://w3id.org/fog#asRhino_v5> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asRhino_v5> <http://www.w3.org/2000/01/rdf-schema#label> "as Rhino format v5 (.3dm)"@en .
 <https://w3id.org/fog#asRhino_v5> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.wikidata.org/entity/Q29945416> .
 # 
@@ -705,6 +783,7 @@
 <https://w3id.org/fog#asRhino_v6> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asRhino_v6> <http://dbpedia.org/property/extension> ".3dm" .
 <https://w3id.org/fog#asRhino_v6> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a geometry description following the proprietary Rhinoceros format v6 (McNeel). The format consists of a single .3dm file (binary)."@en .
+<https://w3id.org/fog#asRhino_v6> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asRhino_v6> <http://www.w3.org/2000/01/rdf-schema#label> "as Rhino format v6 (.3dm)"@en .
 # 
 # https://w3id.org/fog#asSfa
@@ -712,6 +791,7 @@
 <https://w3id.org/fog#asSfa> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/omg#hasSimpleGeometryDescription> .
 <https://w3id.org/fog#asSfa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asSfa> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a geometry description following the open Simple Feature Access (SFA) standard developed by the OGC and ISO. The format consists of a single .wkt (text-based) or .wkb (binary) file. It is strongly adviced to use the more specific subsubproperties (e.g. fog:asSfa_v2-wkt)."@en .
+<https://w3id.org/fog#asSfa> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asSfa> <http://www.w3.org/2000/01/rdf-schema#label> "as Simple Feature Access geometry format"@en .
 <https://w3id.org/fog#asSfa> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.wikidata.org/entity/Q365034> .
 <https://w3id.org/fog#asSfa> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.wikidata.org/entity/Q4018860> .
@@ -721,6 +801,7 @@
 <https://w3id.org/fog#asSfa_v1> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fog#asSfa> .
 <https://w3id.org/fog#asSfa_v1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asSfa_v1> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a geometry description following the open Simple Feature Access (SFA) v1 standard developed by the OGC. The format is text-based. It is strongly adviced to use the more specific subproperties (e.g. fog:asSfa_v1-wkt). Note that this standard is now considered depreciated in favor of SFA v2."@en .
+<https://w3id.org/fog#asSfa_v1> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asSfa_v1> <http://www.w3.org/2000/01/rdf-schema#label> "as Simple Feature Access v1 format"@en .
 <https://w3id.org/fog#asSfa_v1> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://portal.opengeospatial.org/files/?artifact_id=999> .
 <https://w3id.org/fog#asSfa_v1> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.geoapi.org/3.0/javadoc/org/opengis/referencing/doc-files/WKT.html> .
@@ -730,6 +811,7 @@
 <https://w3id.org/fog#asSfa_v1-wkt> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fog#asSfa_v1> .
 <https://w3id.org/fog#asSfa_v1-wkt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asSfa_v1-wkt> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a Well Know Text (WKT) geometry following the open Simple Feature Access (SFA) v1 standard developed by the OGC. The format is text-based. Note that the SFA v1 standard is now considered depreciated in favor of SFA v2. Note that this property is disjoint with geo:asWKT because of the more strict domain and range restrictions in GeoSPARQL."@en .
+<https://w3id.org/fog#asSfa_v1-wkt> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asSfa_v1-wkt> <http://www.w3.org/2000/01/rdf-schema#label> "as Well Known Text SFA v1 geometry"@en .
 # 
 # https://w3id.org/fog#asSfa_v2
@@ -737,6 +819,7 @@
 <https://w3id.org/fog#asSfa_v2> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fog#asSfa> .
 <https://w3id.org/fog#asSfa_v2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asSfa_v2> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a geometry description following the open Simple Feature Access (SFA) v2 standard developed by the OGC and ISO. The format is either text-based (WKT) or binary (WKB). It is strongly adviced to use the more specific subproperties (e.g. fog:asSfa_v2-wkt)."@en .
+<https://w3id.org/fog#asSfa_v2> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asSfa_v2> <http://www.w3.org/2000/01/rdf-schema#label> "as Simple Feature Access v2 format"@en .
 <https://w3id.org/fog#asSfa_v2> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://portal.opengeospatial.org/files/?artifact_id=25355> .
 # 
@@ -745,6 +828,7 @@
 <https://w3id.org/fog#asSfa_v2-wkb> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fog#asSfa_v2> .
 <https://w3id.org/fog#asSfa_v2-wkb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asSfa_v2-wkb> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a Well Know Binary (WKB) geometry following the open Simple Feature Access (SFA) v2 standard developed by the OGC and ISO."@en .
+<https://w3id.org/fog#asSfa_v2-wkb> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asSfa_v2-wkb> <http://www.w3.org/2000/01/rdf-schema#label> "as Well Known Binary SFA v2 geometry"@en .
 # 
 # https://w3id.org/fog#asSfa_v2-wkt
@@ -752,6 +836,7 @@
 <https://w3id.org/fog#asSfa_v2-wkt> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fog#asSfa_v2> .
 <https://w3id.org/fog#asSfa_v2-wkt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asSfa_v2-wkt> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a Well Know Text (WKT) geometry following the open Simple Feature Access (SFA) v2 standard developed by the OGC and ISO. The format is text-based. Note that this property is disjoint with geo:asWKT because of the more strict domain and range restrictions in GeoSPARQL."@en .
+<https://w3id.org/fog#asSfa_v2-wkt> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asSfa_v2-wkt> <http://www.w3.org/2000/01/rdf-schema#label> "as Well Known Text SFA v2 geometry"@en .
 <https://w3id.org/fog#asSfa_v2-wkt> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://docs.opengeospatial.org/is/12-063r5/12-063r5.html> .
 # 
@@ -759,6 +844,7 @@
 <https://w3id.org/fog#asShapefile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/fog#asShapefile> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/omg#hasSimpleGeometryDescription> .
 <https://w3id.org/fog#asShapefile> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a geometry description following the open Shapefile format developed by ESRI. The format consists of multiple files, including as a minimum the geometry (.shp), the index of the feature geometry (.shx) and attribute information of features (.dbf). These three files are binary, while others can be text-based (e.g. the .prj file). It is strongly adviced to use the more specific subsubproperties (e.g. fog:asShapefile-shp). Note that no file format version is provided by ESRI and that the format is expected to be stable."@en .
+<https://w3id.org/fog#asShapefile> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asShapefile> <http://www.w3.org/2000/01/rdf-schema#label> "as Shapefile format"@en .
 <https://w3id.org/fog#asShapefile> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://dbpedia.org/resource/Shapefile> .
 <https://w3id.org/fog#asShapefile> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.esri.com/library/whitepapers/pdfs/shapefile.pdf> .
@@ -772,6 +858,7 @@
 <https://w3id.org/fog#asShapefile-dbf> <http://purl.org/dc/terms/requires> "fog:asShapefile-shp" .
 <https://w3id.org/fog#asShapefile-dbf> <http://purl.org/dc/terms/requires> "fog:asShapefile-shx" .
 <https://w3id.org/fog#asShapefile-dbf> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a dBASE table file (.dbf) following the open Shapefile format developed by ESRI. This file contains the attributes of each shape. The Shapefile format consists of multiple files, including as a minimum the geometry (.shp), the index of the feature geometry (.shx) and attribute information of features (.dbf). These three files are binary, while others can be text-based (e.g. the .prj file)."@en .
+<https://w3id.org/fog#asShapefile-dbf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asShapefile-dbf> <http://www.w3.org/2000/01/rdf-schema#label> "as Shapefile dBASE table (.dbf)"@en .
 <https://w3id.org/fog#asShapefile-dbf> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.wikidata.org/entity/Q27487130> .
 # 
@@ -784,6 +871,7 @@
 <https://w3id.org/fog#asShapefile-prj> <http://purl.org/dc/terms/requires> "fog:asShapefile-shp" .
 <https://w3id.org/fog#asShapefile-prj> <http://purl.org/dc/terms/requires> "fog:asShapefile-shx" .
 <https://w3id.org/fog#asShapefile-prj> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a projection format file (.prj) following the open Shapefile format developed by ESRI. This file contains the the coordinate system and projection information of the shapes. The Shapefile format consists of multiple files, including as a minimum the geometry (.shp), the index of the feature geometry (.shx) and attribute information of features (.dbf). These three files are binary, while others can be text-based (e.g. the .prj file)."@en .
+<https://w3id.org/fog#asShapefile-prj> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asShapefile-prj> <http://www.w3.org/2000/01/rdf-schema#label> "as Shapefile projections file (.prj)" .
 # 
 # https://w3id.org/fog#asShapefile-shp
@@ -794,6 +882,7 @@
 <https://w3id.org/fog#asShapefile-shp> <http://purl.org/dc/terms/requires> "fog:asShapefile-dbf" .
 <https://w3id.org/fog#asShapefile-shp> <http://purl.org/dc/terms/requires> "fog:asShapefile-shx" .
 <https://w3id.org/fog#asShapefile-shp> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a geometry file (.shp) following the open Shapefile format developed by ESRI. This file contains the geometry of the shape. The Shapefile format consists of multiple files, including as a minimum the geometry (.shp), the index of the feature geometry (.shx) and attribute information of features (.dbf). These three files are binary, while others can be text-based (e.g. the .prj file)."@en .
+<https://w3id.org/fog#asShapefile-shp> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asShapefile-shp> <http://www.w3.org/2000/01/rdf-schema#label> "as Shapefile geometry (.shp)" .
 <https://w3id.org/fog#asShapefile-shp> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.wikidata.org/entity/Q27486884> .
 # 
@@ -805,8 +894,46 @@
 <https://w3id.org/fog#asShapefile-shx> <http://purl.org/dc/terms/requires> "fog:asShapefile-dbf" .
 <https://w3id.org/fog#asShapefile-shx> <http://purl.org/dc/terms/requires> "fog:asShapefile-shp" .
 <https://w3id.org/fog#asShapefile-shx> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a shape index format file (.shx) following the open Shapefile format developed by ESRI. This file contains the positional index of the geometry. The Shapefile format consists of multiple files, including as a minimum the geometry (.shp), the index of the feature geometry (.shx) and attribute information of features (.dbf). These three files are binary, while others can be text-based (e.g. the .prj file)."@en .
+<https://w3id.org/fog#asShapefile-shx> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asShapefile-shx> <http://www.w3.org/2000/01/rdf-schema#label> "as Shapefile geometry index (.shx)" .
 <https://w3id.org/fog#asShapefile-shx> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.wikidata.org/entity/Q27487109> .
+# 
+# https://w3id.org/fog#asSketchUp
+<https://w3id.org/fog#asSketchUp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/fog#asSketchUp> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/omg#hasSimpleGeometryDescription> .
+<https://w3id.org/fog#asSketchUp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/fog#asSketchUp> <http://dbpedia.org/property/extension> ".skp" .
+<https://w3id.org/fog#asSketchUp> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a geometry description following the proprietary SketchUp format (Trimble). The format consists of a single .skp file (binary). It is strongly adviced to use the more specific subproperties (e.g. fog:asSketchUp_v2019)"@en .
+<https://w3id.org/fog#asSketchUp> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
+<https://w3id.org/fog#asSketchUp> <http://www.w3.org/2000/01/rdf-schema#label> "as SketchUp format"@en .
+<https://w3id.org/fog#asSketchUp> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.wikidata.org/entity/Q28975658> .
+# 
+# https://w3id.org/fog#asSketchUp_v2017
+<https://w3id.org/fog#asSketchUp_v2017> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/fog#asSketchUp_v2017> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fog#asSketchUp> .
+<https://w3id.org/fog#asSketchUp_v2017> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/fog#asSketchUp_v2017> <http://dbpedia.org/property/extension> ".skp" .
+<https://w3id.org/fog#asSketchUp_v2017> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a geometry description following the proprietary SketchUp v2017 format (Trimble). The format consists of a single .skp file (binary)."@en .
+<https://w3id.org/fog#asSketchUp_v2017> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
+<https://w3id.org/fog#asSketchUp_v2017> <http://www.w3.org/2000/01/rdf-schema#label> "as SketchUp format v2017 (.skp)"@en .
+# 
+# https://w3id.org/fog#asSketchUp_v2018
+<https://w3id.org/fog#asSketchUp_v2018> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/fog#asSketchUp_v2018> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fog#asSketchUp> .
+<https://w3id.org/fog#asSketchUp_v2018> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/fog#asSketchUp_v2018> <http://dbpedia.org/property/extension> ".skp" .
+<https://w3id.org/fog#asSketchUp_v2018> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a geometry description following the proprietary SketchUp v2018 format (Trimble). The format consists of a single .skp file (binary)."@en .
+<https://w3id.org/fog#asSketchUp_v2018> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
+<https://w3id.org/fog#asSketchUp_v2018> <http://www.w3.org/2000/01/rdf-schema#label> "as SketchUp format v2018 (.skp)"@en .
+# 
+# https://w3id.org/fog#asSketchUp_v2019
+<https://w3id.org/fog#asSketchUp_v2019> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/fog#asSketchUp_v2019> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fog#asSketchUp> .
+<https://w3id.org/fog#asSketchUp_v2019> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/fog#asSketchUp_v2019> <http://dbpedia.org/property/extension> ".skp" .
+<https://w3id.org/fog#asSketchUp_v2019> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a geometry description following the proprietary SketchUp v2019 format (Trimble). The format consists of a single .skp file (binary)."@en .
+<https://w3id.org/fog#asSketchUp_v2019> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
+<https://w3id.org/fog#asSketchUp_v2019> <http://www.w3.org/2000/01/rdf-schema#label> "as SketchUp format v2019 (.skp)"@en .
 # 
 # https://w3id.org/fog#asStep
 <https://w3id.org/fog#asStep> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -815,6 +942,7 @@
 <https://w3id.org/fog#asStep> <http://dbpedia.org/property/extension> ".step" .
 <https://w3id.org/fog#asStep> <http://dbpedia.org/property/extension> ".stp" .
 <https://w3id.org/fog#asStep> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a geometry description following the STEP Physical File Format (SPFF) format which was developed by ISO. The format consists of a single .step file which is text-based. It is strongly adviced to use more specific subproperties."@en .
+<https://w3id.org/fog#asStep> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asStep> <http://www.w3.org/2000/01/rdf-schema#label> "as SPFF file (.step)"@en .
 <https://w3id.org/fog#asStep> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.wikidata.org/entity/Q3509055> .
 # 
@@ -825,6 +953,7 @@
 <https://w3id.org/fog#asStep_ap214> <http://dbpedia.org/property/extension> ".step" .
 <https://w3id.org/fog#asStep_ap214> <http://dbpedia.org/property/extension> ".stp" .
 <https://w3id.org/fog#asStep_ap214> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a geometry description following the STEP Physical File Format (SPFF) format which was developed by ISO. The format consists of a single .step file which is text-based. The STEP file is structured according to the Application Profile (AP) 214 - Core data for automative mechanical design processes."@en .
+<https://w3id.org/fog#asStep_ap214> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asStep_ap214> <http://www.w3.org/2000/01/rdf-schema#label> "as STEP SPFF file (AP214)"@en .
 # 
 # https://w3id.org/fog#asStep_ap242
@@ -834,13 +963,15 @@
 <https://w3id.org/fog#asStep_ap242> <http://dbpedia.org/property/extension> ".step" .
 <https://w3id.org/fog#asStep_ap242> <http://dbpedia.org/property/extension> ".stp" .
 <https://w3id.org/fog#asStep_ap242> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a geometry description following the STEP Physical File Format (SPFF) format which was developed by ISO. The format consists of a single .step file which is text-based. The STEP file is structured according to the Application Profile (AP) 242 - Managed model-based 3D engineering."@en .
+<https://w3id.org/fog#asStep_ap242> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asStep_ap242> <http://www.w3.org/2000/01/rdf-schema#label> "as STEP SPFF file (AP242)"@en .
 # 
 # https://w3id.org/fog#asStl
 <https://w3id.org/fog#asStl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/fog#asStl> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/omg#hasSimpleGeometryDescription> .
 <https://w3id.org/fog#asStl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
-<https://w3id.org/fog#asStl> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a geometry description following the STL format which was developed by 3D Systems. The format consists of a single .stl file which is either text-based or binary. It is strongly adviced to use the more specific subsubproperties (e.g. fog:asStl_v1.0)."@en .
+<https://w3id.org/fog#asStl> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a geometry description following the STL format which was developed by 3D Systems. The format consists of a single .stl file which is either text-based or binary. It is strongly adviced to use the more specific subsubproperties (e.g. fog:asStl_v1.0-ascii)."@en .
+<https://w3id.org/fog#asStl> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asStl> <http://www.w3.org/2000/01/rdf-schema#label> "as STL format"@en .
 # 
 # https://w3id.org/fog#asStl_v1.0
@@ -848,11 +979,30 @@
 <https://w3id.org/fog#asStl_v1.0> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fog#asStl> .
 <https://w3id.org/fog#asStl_v1.0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asStl_v1.0> <http://dbpedia.org/property/extension> ".stl" .
-<https://w3id.org/fog#asStl_v1.0> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a geometry description following the STL v1.0 format which was developed by 3D Systems. The format consists of a single .stl file which is either text-based or binary."@en .
+<https://w3id.org/fog#asStl_v1.0> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a geometry description following the STL v1.0 format which was developed by 3D Systems. The format consists of a single .stl file which is either text-based or binary. It is strongly adviced to use the more specific subsubproperties (e.g. fog:asStl_v1.0-ascii)"@en .
+<https://w3id.org/fog#asStl_v1.0> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asStl_v1.0> <http://www.w3.org/2000/01/rdf-schema#label> "as STL format v1.0"@en .
 <https://w3id.org/fog#asStl_v1.0> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://paulbourke.net/dataformats/stl/> .
 <https://w3id.org/fog#asStl_v1.0> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.iana.org/assignments/media-types/model/stl> .
 <https://w3id.org/fog#asStl_v1.0> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.wikidata.org/entity/Q1238229> .
+# 
+# https://w3id.org/fog#asStl_v1.0-ascii
+<https://w3id.org/fog#asStl_v1.0-ascii> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/fog#asStl_v1.0-ascii> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fog#asStl_v1.0> .
+<https://w3id.org/fog#asStl_v1.0-ascii> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/fog#asStl_v1.0-ascii> <http://dbpedia.org/property/extension> ".stl" .
+<https://w3id.org/fog#asStl_v1.0-ascii> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a geometry description following the STL v1.0 format which was developed by 3D Systems. The format consists of a single .stl file which is text-based."@en .
+<https://w3id.org/fog#asStl_v1.0-ascii> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
+<https://w3id.org/fog#asStl_v1.0-ascii> <http://www.w3.org/2000/01/rdf-schema#label> "as STL format v1.0 (ASCII)"@en .
+# 
+# https://w3id.org/fog#asStl_v1.0-binary
+<https://w3id.org/fog#asStl_v1.0-binary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/fog#asStl_v1.0-binary> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fog#asStl_v1.0> .
+<https://w3id.org/fog#asStl_v1.0-binary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/fog#asStl_v1.0-binary> <http://dbpedia.org/property/extension> ".stl" .
+<https://w3id.org/fog#asStl_v1.0-binary> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a geometry description following the STL v1.0 format which was developed by 3D Systems. The format consists of a single .stl file which is binary."@en .
+<https://w3id.org/fog#asStl_v1.0-binary> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
+<https://w3id.org/fog#asStl_v1.0-binary> <http://www.w3.org/2000/01/rdf-schema#label> "as STL format v1.0 (binary)"@en .
 # 
 # https://w3id.org/fog#asSvg
 <https://w3id.org/fog#asSvg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -860,6 +1010,7 @@
 <https://w3id.org/fog#asSvg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asSvg> <http://dbpedia.org/property/extension> ".svg" .
 <https://w3id.org/fog#asSvg> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a geometry description following the open SVG format which was developed by the W3C. The format consists of a single .svg file which is text-based. It is strongly adviced to use the more specific subsubproperties (e.g. fog:asSvg_v1.1)."@en .
+<https://w3id.org/fog#asSvg> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asSvg> <http://www.w3.org/2000/01/rdf-schema#label> "as SVG format"@en .
 <https://w3id.org/fog#asSvg> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://dbpedia.org/resource/Scalable_Vector_Graphics> .
 <https://w3id.org/fog#asSvg> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.wikidata.org/entity/Q2078> .
@@ -870,6 +1021,7 @@
 <https://w3id.org/fog#asSvg_v1.0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asSvg_v1.0> <http://dbpedia.org/property/extension> ".svg" .
 <https://w3id.org/fog#asSvg_v1.0> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a geometry description following the open SVG v1.0 format which was developed by the W3C. The format consists of a single .svg file which is text-based. Note that this version (v1.0) is considered depreciated in favor of v1.1."@en .
+<https://w3id.org/fog#asSvg_v1.0> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asSvg_v1.0> <http://www.w3.org/2000/01/rdf-schema#label> "as SVG format v1.0"@en .
 <https://w3id.org/fog#asSvg_v1.0> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.w3.org/TR/2001/REC-SVG-20010904/> .
 # 
@@ -879,6 +1031,7 @@
 <https://w3id.org/fog#asSvg_v1.1> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asSvg_v1.1> <http://dbpedia.org/property/extension> ".svg" .
 <https://w3id.org/fog#asSvg_v1.1> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a geometry description following the open SVG v1.1 format which was developed by the W3C. The format consists of a single .svg file which is text-based."@en .
+<https://w3id.org/fog#asSvg_v1.1> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asSvg_v1.1> <http://www.w3.org/2000/01/rdf-schema#label> "as SVG format v1.1"@en .
 <https://w3id.org/fog#asSvg_v1.1> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.w3.org/TR/SVG11/> .
 # 
@@ -888,6 +1041,7 @@
 <https://w3id.org/fog#asSvg_v2.0> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asSvg_v2.0> <http://dbpedia.org/property/extension> ".svg" .
 <https://w3id.org/fog#asSvg_v2.0> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a geometry description following the open SVG v2.0 format which was developed by the W3C. The format consists of a single .svg file which is text-based. Note that this version (v2.0) is not yet finalized and at the moment has the status of 'W3C Candidate Recommendation'."@en .
+<https://w3id.org/fog#asSvg_v2.0> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asSvg_v2.0> <http://www.w3.org/2000/01/rdf-schema#label> "as SVG format v2.0"@en .
 <https://w3id.org/fog#asSvg_v2.0> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.w3.org/TR/SVG2/> .
 # 
@@ -896,6 +1050,7 @@
 <https://w3id.org/fog#asX3d> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/omg#hasSimpleGeometryDescription> .
 <https://w3id.org/fog#asX3d> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asX3d> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a geometry description following the open X3D format which was developed by the Web3D. The format consists of a single file which is either binary or text-based. It is strongly adviced to use the more specific subsubproperties (e.g. fog:asX3d_v3.3_xml)."@en .
+<https://w3id.org/fog#asX3d> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asX3d> <http://www.w3.org/2000/01/rdf-schema#label> "as X3D format"@en .
 <https://w3id.org/fog#asX3d> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://dbpedia.org/resource/X3D> .
 <https://w3id.org/fog#asX3d> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.web3d.org/specifications/> .
@@ -906,6 +1061,7 @@
 <https://w3id.org/fog#asX3d_v3.3> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fog#asX3d> .
 <https://w3id.org/fog#asX3d_v3.3> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asX3d_v3.3> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a geometry description following the open X3D v3.3 format which was developed by the Web3D. The format consists of a single file which is either binary or text-based. It is strongly adviced to use the more specific subproperties (e.g. fog:asX3d_v3.3_xml)."@en .
+<https://w3id.org/fog#asX3d_v3.3> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asX3d_v3.3> <http://www.w3.org/2000/01/rdf-schema#label> "as X3D format v3.3"@en .
 # 
 # https://w3id.org/fog#asX3d_v3.3-binary
@@ -914,6 +1070,7 @@
 <https://w3id.org/fog#asX3d_v3.3-binary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asX3d_v3.3-binary> <http://dbpedia.org/property/extension> ".x3db" .
 <https://w3id.org/fog#asX3d_v3.3-binary> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a binary X3D file (.x3db) following the open X3D v3.3 format which was developed by the Web3D."@en .
+<https://w3id.org/fog#asX3d_v3.3-binary> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asX3d_v3.3-binary> <http://www.w3.org/2000/01/rdf-schema#label> "as X3D v3.3 binary file (.x3db)"@en .
 <https://w3id.org/fog#asX3d_v3.3-binary> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.web3d.org/documents/specifications/19776-3/V3.3/index.html> .
 # 
@@ -923,6 +1080,7 @@
 <https://w3id.org/fog#asX3d_v3.3-vrml> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asX3d_v3.3-vrml> <http://dbpedia.org/property/extension> ".x3dv" .
 <https://w3id.org/fog#asX3d_v3.3-vrml> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a classic VRML X3D file (.x3dv) following the open X3D v3.3 format which was developed by the Web3D. The file is text-based."@en .
+<https://w3id.org/fog#asX3d_v3.3-vrml> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asX3d_v3.3-vrml> <http://www.w3.org/2000/01/rdf-schema#label> "as X3D v3.3 classic VRML file (.x3dv)"@en .
 <https://w3id.org/fog#asX3d_v3.3-vrml> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.web3d.org/documents/specifications/19776-2/V3.3/index.html> .
 <https://w3id.org/fog#asX3d_v3.3-vrml> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.iana.org/assignments/media-types/model/x3d-vrml> .
@@ -933,9 +1091,11 @@
 <https://w3id.org/fog#asX3d_v3.3-xml> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
 <https://w3id.org/fog#asX3d_v3.3-xml> <http://dbpedia.org/property/extension> ".x3d" .
 <https://w3id.org/fog#asX3d_v3.3-xml> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a regular X3D file (.x3d) following the open X3D v3.3 format which was developed by the Web3D. The file is text-based."@en .
+<https://w3id.org/fog#asX3d_v3.3-xml> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asX3d_v3.3-xml> <http://www.w3.org/2000/01/rdf-schema#label> "as X3D v3.3 XML file (.x3d)"@en .
 <https://w3id.org/fog#asX3d_v3.3-xml> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.web3d.org/documents/specifications/19776-1/V3.3/index.html> .
 <https://w3id.org/fog#asX3d_v3.3-xml> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.iana.org/assignments/media-types/model/x3d+xml> .
+# 
 # 
 # 
 # #################################################################
@@ -944,15 +1104,41 @@
 # #
 # #################################################################
 # 
+# 
 # https://w3id.org/fog#ReferencedContent
 <https://w3id.org/fog#ReferencedContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/fog#ReferencedContent> <http://www.w3.org/2000/01/rdf-schema#comment> "Referenced content of the following geometry descriptions: glTF and OBJ. It contains exactly one link to a texture, separate binary glTF geometry or a OBJ material that is referenced by the main file (resp. .gltf and .obj). The name of the referenced file, as stored in the main file, is connected via a rdfs:label node"@en .
+<https://w3id.org/fog#ReferencedContent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#ReferencedContent> <http://www.w3.org/2000/01/rdf-schema#label> "Referenced content"@en .
 # 
-_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-_:genid1 <http://xmlns.com/foaf/0.1/name> "Mathias Bonduel" .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-_:genid2 <http://xmlns.com/foaf/0.1/name> "Anna Wagner" .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
-_:genid3 <http://xmlns.com/foaf/0.1/name> "Pieter Pauwels" .
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# 
+# https://w3id.org/fog
+<https://w3id.org/fog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/fog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> .
+<https://w3id.org/fog> <http://creativecommons.org/ns#license> <https://creativecommons.org/licenses/by/4.0/> .
+# 
+# https://www.researchgate.net/profile/Anna_Wagner13
+<https://www.researchgate.net/profile/Anna_Wagner13> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.researchgate.net/profile/Anna_Wagner13> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://www.researchgate.net/profile/Anna_Wagner13> <http://xmlns.com/foaf/0.1/name> "Anna Wagner" .
+# 
+# https://www.researchgate.net/profile/Mathias_Bonduel
+<https://www.researchgate.net/profile/Mathias_Bonduel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.researchgate.net/profile/Mathias_Bonduel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://www.researchgate.net/profile/Mathias_Bonduel> <http://xmlns.com/foaf/0.1/name> "Mathias Bonduel" .
+# 
+# https://www.researchgate.net/profile/Pieter_Pauwels
+<https://www.researchgate.net/profile/Pieter_Pauwels> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://www.researchgate.net/profile/Pieter_Pauwels> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
+<https://www.researchgate.net/profile/Pieter_Pauwels> <http://xmlns.com/foaf/0.1/name> "Pieter Pauwels" .
+# 
 # Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/
