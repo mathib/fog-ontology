@@ -21,7 +21,7 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2019-05-27"
+    "@value" : "2019-10-03"
   } ],
   "http://purl.org/dc/terms/title" : [ {
     "@language" : "en",
@@ -45,10 +45,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "- Version 0.0.2: \r\n* updated definitions of certain properties\r\n* adjusted typos\r\n* added datatype properties for: Rhino, Revit, IFC, STEP APs, IGES\r\n* added object properties for: 3DMO, ifcOWL, geojson-ld\r\n* completed ontology metadata\r\n- Version 0.0.1: initial version"
+    "@value" : "- Version 0.0.3: \r\n* added datatype properties: Nexus, LAS\r\n* added subproperties for fog:asPcd: ascii and binary\r\n- Version 0.0.2: \r\n* updated definitions of certain properties\r\n* adjusted typos\r\n* added datatype properties for: Rhino, Revit, IFC, STEP APs, IGES\r\n* added object properties for: 3DMO, ifcOWL, geojson-ld\r\n* completed ontology metadata\r\n- Version 0.0.1: initial version"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "0.0.2"
+    "@value" : "0.0.3"
   } ]
 }, {
   "@id" : "https://w3id.org/fog#ReferencedContent",
@@ -1286,6 +1286,174 @@
     "@id" : "https://w3id.org/fog#asIges"
   } ]
 }, {
+  "@id" : "https://w3id.org/fog#asLas",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The datatype relation pointing to a binary encoded point cloud following the open LAS format which was developed by the ASPRS. The format consists of a single .las or .laz file (binary). It is strongly adviced to use the more specific subproperties (e.g. fog:asLas_v1.4-las)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/fog#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "as LAS point cloud format"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "https://github.com/ASPRSorg/LAS"
+  }, {
+    "@id" : "https://www.wikidata.org/entity/Q27441566"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/omg#hasSimpleGeometryDescription"
+  } ]
+}, {
+  "@id" : "https://w3id.org/fog#asLas_v1.4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The datatype relation pointing to a binary encoded point cloud following the v1.4 of the open LAS format which was developed by the ASPRS. The format consists of a single .las or .laz file (binary). It is strongly adviced to use the more specific subproperties (e.g. fog:asLas_v1.4-las)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/fog#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "as LAS v1.4 point cloud format"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://www.asprs.org/wp-content/uploads/2019/03/LAS_1_4_r14.pdf"
+  }, {
+    "@id" : "https://www.wikidata.org/entity/Q33515758"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/fog#asLas"
+  } ]
+}, {
+  "@id" : "https://w3id.org/fog#asLas_v1.4-las",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://dbpedia.org/property/extension" : [ {
+    "@value" : ".las"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The datatype relation pointing to an uncompressed binary encoded point cloud (.las) following the v1.4 of the open LAS format which was developed by the ASPRS."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/fog#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "as uncompressed LAS v1.4 point cloud format (.las)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/fog#asLas_v1.4"
+  } ]
+}, {
+  "@id" : "https://w3id.org/fog#asLas_v1.4-laz",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://dbpedia.org/property/extension" : [ {
+    "@value" : ".laz"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The datatype relation pointing to a compressed binary encoded point cloud (.laz) following the v1.4 of the open LAS format which was developed by the ASPRS."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/fog#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "as compressed LAS v1.4 point cloud format (.laz)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/fog#asLas_v1.4"
+  } ]
+}, {
+  "@id" : "https://w3id.org/fog#asNexus",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The datatype relation pointing to a geometry description following the Nexus format for multiresoltion meshes and point clouds (ISTI - Italian National Research Council - Visual Computing Lab). The format consists of a single .nxs or .nxz file (binary). It is strongly adviced to use the more specific subproperties (e.g. fog:asNexus_v4.2-nxs)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/fog#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "as Nexus format"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://vcg.isti.cnr.it/nexus/"
+  }, {
+    "@id" : "https://github.com/cnr-isti-vclab/nexus"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/omg#hasSimpleGeometryDescription"
+  } ]
+}, {
+  "@id" : "https://w3id.org/fog#asNexus_v4.2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The datatype relation pointing to a geometry description following the Nexus v4.2 format for multiresoltion meshes and point clouds (ISTI - Italian National Research Council - Visual Computing Lab). The format consists of a single .nxs or .nxz file (binary). It is strongly adviced to use the more specific subproperties (e.g. fog:asNexus_v4.2-nxs)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/fog#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "as Nexus v4.2 format"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#seeAlso" : [ {
+    "@id" : "http://vcg.isti.cnr.it/nexus/"
+  }, {
+    "@id" : "https://github.com/cnr-isti-vclab/nexus"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/fog#asNexus"
+  } ]
+}, {
+  "@id" : "https://w3id.org/fog#asNexus_v4.2-nxs",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://dbpedia.org/property/extension" : [ {
+    "@value" : ".nxs"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The datatype relation pointing to a geometry description following the uncompressed Nexus v4.2 format (.nxs) for multiresoltion meshes and point clouds (ISTI - Italian National Research Council - Visual Computing Lab)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/fog#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "as uncompressed Nexus v4.2 format (.nxs)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/fog#asNexus_v4.2"
+  } ]
+}, {
+  "@id" : "https://w3id.org/fog#asNexus_v4.2-nxz",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://dbpedia.org/property/extension" : [ {
+    "@value" : ".nxz"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The datatype relation pointing to a geometry description following the compressed Nexus v4.2 format (.nxz) for multiresoltion meshes and point clouds (ISTI - Italian National Research Council - Visual Computing Lab)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/fog#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "as compressed Nexus v4.2 format (.nxz)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/fog#asNexus_v4.2"
+  } ]
+}, {
   "@id" : "https://w3id.org/fog#asObj",
   "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -1463,10 +1631,51 @@
     "@id" : "https://w3id.org/fog#"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
     "@value" : "as PCD v0.7 point cloud format (.pcd)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://w3id.org/fog#asPcd"
+  } ]
+}, {
+  "@id" : "https://w3id.org/fog#asPcd_v0.7-ascii",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://dbpedia.org/property/extension" : [ {
+    "@value" : ".pcd"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The datatype relation pointing to a text-based point cloud following the open PCD v0.7 (sometimes referred to as PCD_v7) format which was developed as part of the open source project PCL (point cloud library)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/fog#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "as PCD v0.7 ASCII point cloud format (.pcd)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/fog#asPcd_v0.7"
+  } ]
+}, {
+  "@id" : "https://w3id.org/fog#asPcd_v0.7-binary",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
+  "http://dbpedia.org/property/extension" : [ {
+    "@value" : ".pcd"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The datatype relation pointing to a binary point cloud following the open PCD v0.7 (sometimes referred to as PCD_v7) format which was developed as part of the open source project PCL (point cloud library)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/fog#"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "as PCD v0.7 binary point cloud format (.pcd)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/fog#asPcd_v0.7"
   } ]
 }, {
   "@id" : "https://w3id.org/fog#asPly",
@@ -1526,7 +1735,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "as PLY ASCII format (.ply)"
+    "@value" : "as PLY v1.0 ASCII format (.ply)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://w3id.org/fog#asPly_v1.0"
@@ -1546,7 +1755,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "as PLY binary (big endian) format (.ply)"
+    "@value" : "as PLY v1.0 binary (big endian) format (.ply)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://w3id.org/fog#asPly_v1.0"
@@ -1566,7 +1775,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "as PLY binary (little endian) format (.ply)"
+    "@value" : "as PLY v1.0 binary (little endian) format (.ply)"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
     "@id" : "https://w3id.org/fog#asPly_v1.0"

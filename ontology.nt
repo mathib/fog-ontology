@@ -1,18 +1,20 @@
 <https://w3id.org/fog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/fog> <http://creativecommons.org/ns#license> <https://creativecommons.org/licenses/by/4.0/> .
 <https://w3id.org/fog> <http://purl.org/dc/terms/creator> <https://www.researchgate.net/profile/Anna_Wagner13> .
 <https://w3id.org/fog> <http://purl.org/dc/terms/creator> <https://www.researchgate.net/profile/Mathias_Bonduel> .
 <https://w3id.org/fog> <http://purl.org/dc/terms/creator> <https://www.researchgate.net/profile/Pieter_Pauwels> .
 <https://w3id.org/fog> <http://purl.org/dc/terms/description> "The File Ontology for Geometry formats (FOG) describes meaningful relations towards geometry snippets in RDF literals, geometry files on relative or absolute URLs and ontology-based geometry descriptions. The defined properties in this ontology are related towards each other and additional metadata is provided, such as file extension and related specifications/sources (incl. entries in dbpedia and Wikidata). \r\n\r\nThe initial version of the ontology (v0.0.1) was documented in:\r\n\r\nBonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, & Klein, Ralf (2019). Including Widespread Geometry Formats in Semantic Graphs Using RDF Literals. In Proceedings of the European Conference on Computing in Construction (EC3 2019). Chania, Greece."@en .
 <https://w3id.org/fog> <http://purl.org/dc/terms/issued> "2018-12-03"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://w3id.org/fog> <http://purl.org/dc/terms/modified> "2019-05-27"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/fog> <http://purl.org/dc/terms/modified> "2019-10-03"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/fog> <http://purl.org/dc/terms/title> "FOG: File Ontology for Geometry formats"@en .
 <https://w3id.org/fog> <http://purl.org/vocab/vann/example> "https://madsholten.github.io/sparql-visualizer/?file=https://raw.githubusercontent.com/mathib/fog-ontology/master/examples/fog-demo.json"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
 <https://w3id.org/fog> <http://purl.org/vocab/vann/example> "https://raw.githubusercontent.com/mathib/fog-ontology/master/examples/sample_abox_dummy.ttl"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
 <https://w3id.org/fog> <http://purl.org/vocab/vann/example> "https://raw.githubusercontent.com/mathib/fog-ontology/master/examples/sample_abox_full.ttl"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
 <https://w3id.org/fog> <http://purl.org/vocab/vann/preferredNamespacePrefix> "fog" .
 <https://w3id.org/fog> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/fog#" .
-<https://w3id.org/fog> <http://www.w3.org/2000/01/rdf-schema#comment> "- Version 0.0.2: \r\n* updated definitions of certain properties\r\n* adjusted typos\r\n* added datatype properties for: Rhino, Revit, IFC, STEP APs, IGES\r\n* added object properties for: 3DMO, ifcOWL, geojson-ld\r\n* completed ontology metadata\r\n- Version 0.0.1: initial version"@en .
-<https://w3id.org/fog> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.2" .
+<https://w3id.org/fog> <http://www.w3.org/2000/01/rdf-schema#comment> "- Version 0.0.3: \r\n* added datatype properties: Nexus, LAS\r\n* added subproperties for fog:asPcd: ascii and binary\r\n- Version 0.0.2: \r\n* updated definitions of certain properties\r\n* adjusted typos\r\n* added datatype properties for: Rhino, Revit, IFC, STEP APs, IGES\r\n* added object properties for: 3DMO, ifcOWL, geojson-ld\r\n* completed ontology metadata\r\n- Version 0.0.1: initial version"@en .
+<https://w3id.org/fog> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.3" .
+# 
 # 
 # #################################################################
 # #
@@ -20,9 +22,6 @@
 # #
 # #################################################################
 # 
-# 
-# http://creativecommons.org/ns#license
-<http://creativecommons.org/ns#license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 # 
 # https://w3id.org/fog#as3dmo
 <https://w3id.org/fog#as3dmo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -138,6 +137,8 @@
 <https://w3id.org/fog#hasReferencedContent> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/fog#ReferencedContent> .
 <https://w3id.org/fog#hasReferencedContent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#hasReferencedContent> <http://www.w3.org/2000/01/rdf-schema#label> "has referenced content" .
+# 
+# 
 # 
 # 
 # #################################################################
@@ -601,6 +602,82 @@
 <https://w3id.org/fog#asIges_v5.3> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#asIges_v5.3> <http://www.w3.org/2000/01/rdf-schema#label> "as IGES v5.3 (.igs)"@en .
 # 
+# https://w3id.org/fog#asLas
+<https://w3id.org/fog#asLas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/fog#asLas> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/omg#hasSimpleGeometryDescription> .
+<https://w3id.org/fog#asLas> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/fog#asLas> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a binary encoded point cloud following the open LAS format which was developed by the ASPRS. The format consists of a single .las or .laz file (binary). It is strongly adviced to use the more specific subproperties (e.g. fog:asLas_v1.4-las)."@en .
+<https://w3id.org/fog#asLas> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
+<https://w3id.org/fog#asLas> <http://www.w3.org/2000/01/rdf-schema#label> "as LAS point cloud format"@en .
+<https://w3id.org/fog#asLas> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://github.com/ASPRSorg/LAS> .
+<https://w3id.org/fog#asLas> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.wikidata.org/entity/Q27441566> .
+# 
+# https://w3id.org/fog#asLas_v1.4
+<https://w3id.org/fog#asLas_v1.4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/fog#asLas_v1.4> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fog#asLas> .
+<https://w3id.org/fog#asLas_v1.4> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/fog#asLas_v1.4> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a binary encoded point cloud following the v1.4 of the open LAS format which was developed by the ASPRS. The format consists of a single .las or .laz file (binary). It is strongly adviced to use the more specific subproperties (e.g. fog:asLas_v1.4-las)."@en .
+<https://w3id.org/fog#asLas_v1.4> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
+<https://w3id.org/fog#asLas_v1.4> <http://www.w3.org/2000/01/rdf-schema#label> "as LAS v1.4 point cloud format"@en .
+<https://w3id.org/fog#asLas_v1.4> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.asprs.org/wp-content/uploads/2019/03/LAS_1_4_r14.pdf> .
+<https://w3id.org/fog#asLas_v1.4> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.wikidata.org/entity/Q33515758> .
+# 
+# https://w3id.org/fog#asLas_v1.4-las
+<https://w3id.org/fog#asLas_v1.4-las> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/fog#asLas_v1.4-las> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fog#asLas_v1.4> .
+<https://w3id.org/fog#asLas_v1.4-las> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/fog#asLas_v1.4-las> <http://dbpedia.org/property/extension> ".las" .
+<https://w3id.org/fog#asLas_v1.4-las> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to an uncompressed binary encoded point cloud (.las) following the v1.4 of the open LAS format which was developed by the ASPRS."@en .
+<https://w3id.org/fog#asLas_v1.4-las> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
+<https://w3id.org/fog#asLas_v1.4-las> <http://www.w3.org/2000/01/rdf-schema#label> "as uncompressed LAS v1.4 point cloud format (.las)"@en .
+# 
+# https://w3id.org/fog#asLas_v1.4-laz
+<https://w3id.org/fog#asLas_v1.4-laz> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/fog#asLas_v1.4-laz> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fog#asLas_v1.4> .
+<https://w3id.org/fog#asLas_v1.4-laz> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/fog#asLas_v1.4-laz> <http://dbpedia.org/property/extension> ".laz" .
+<https://w3id.org/fog#asLas_v1.4-laz> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a compressed binary encoded point cloud (.laz) following the v1.4 of the open LAS format which was developed by the ASPRS."@en .
+<https://w3id.org/fog#asLas_v1.4-laz> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
+<https://w3id.org/fog#asLas_v1.4-laz> <http://www.w3.org/2000/01/rdf-schema#label> "as compressed LAS v1.4 point cloud format (.laz)"@en .
+# 
+# https://w3id.org/fog#asNexus
+<https://w3id.org/fog#asNexus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/fog#asNexus> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/omg#hasSimpleGeometryDescription> .
+<https://w3id.org/fog#asNexus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/fog#asNexus> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a geometry description following the Nexus format for multiresoltion meshes and point clouds (ISTI - Italian National Research Council - Visual Computing Lab). The format consists of a single .nxs or .nxz file (binary). It is strongly adviced to use the more specific subproperties (e.g. fog:asNexus_v4.2-nxs)"@en .
+<https://w3id.org/fog#asNexus> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
+<https://w3id.org/fog#asNexus> <http://www.w3.org/2000/01/rdf-schema#label> "as Nexus format"@en .
+<https://w3id.org/fog#asNexus> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://vcg.isti.cnr.it/nexus/> .
+<https://w3id.org/fog#asNexus> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://github.com/cnr-isti-vclab/nexus> .
+# 
+# https://w3id.org/fog#asNexus_v4.2
+<https://w3id.org/fog#asNexus_v4.2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/fog#asNexus_v4.2> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fog#asNexus> .
+<https://w3id.org/fog#asNexus_v4.2> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/fog#asNexus_v4.2> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a geometry description following the Nexus v4.2 format for multiresoltion meshes and point clouds (ISTI - Italian National Research Council - Visual Computing Lab). The format consists of a single .nxs or .nxz file (binary). It is strongly adviced to use the more specific subproperties (e.g. fog:asNexus_v4.2-nxs)"@en .
+<https://w3id.org/fog#asNexus_v4.2> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
+<https://w3id.org/fog#asNexus_v4.2> <http://www.w3.org/2000/01/rdf-schema#label> "as Nexus v4.2 format"@en .
+<https://w3id.org/fog#asNexus_v4.2> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://vcg.isti.cnr.it/nexus/> .
+<https://w3id.org/fog#asNexus_v4.2> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://github.com/cnr-isti-vclab/nexus> .
+# 
+# https://w3id.org/fog#asNexus_v4.2-nxs
+<https://w3id.org/fog#asNexus_v4.2-nxs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/fog#asNexus_v4.2-nxs> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fog#asNexus_v4.2> .
+<https://w3id.org/fog#asNexus_v4.2-nxs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/fog#asNexus_v4.2-nxs> <http://dbpedia.org/property/extension> ".nxs" .
+<https://w3id.org/fog#asNexus_v4.2-nxs> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a geometry description following the uncompressed Nexus v4.2 format (.nxs) for multiresoltion meshes and point clouds (ISTI - Italian National Research Council - Visual Computing Lab)."@en .
+<https://w3id.org/fog#asNexus_v4.2-nxs> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
+<https://w3id.org/fog#asNexus_v4.2-nxs> <http://www.w3.org/2000/01/rdf-schema#label> "as uncompressed Nexus v4.2 format (.nxs)"@en .
+# 
+# https://w3id.org/fog#asNexus_v4.2-nxz
+<https://w3id.org/fog#asNexus_v4.2-nxz> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/fog#asNexus_v4.2-nxz> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fog#asNexus_v4.2> .
+<https://w3id.org/fog#asNexus_v4.2-nxz> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/fog#asNexus_v4.2-nxz> <http://dbpedia.org/property/extension> ".nxz" .
+<https://w3id.org/fog#asNexus_v4.2-nxz> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a geometry description following the compressed Nexus v4.2 format (.nxz) for multiresoltion meshes and point clouds (ISTI - Italian National Research Council - Visual Computing Lab)."@en .
+<https://w3id.org/fog#asNexus_v4.2-nxz> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
+<https://w3id.org/fog#asNexus_v4.2-nxz> <http://www.w3.org/2000/01/rdf-schema#label> "as compressed Nexus v4.2 format (.nxz)"@en .
+# 
 # https://w3id.org/fog#asObj
 <https://w3id.org/fog#asObj> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <https://w3id.org/fog#asObj> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/omg#hasSimpleGeometryDescription> .
@@ -662,7 +739,25 @@
 <https://w3id.org/fog#asPcd_v0.7> <http://dbpedia.org/property/extension> ".pcd" .
 <https://w3id.org/fog#asPcd_v0.7> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a binary or text-based point cloud following the open PCD v0.7 (sometimes referred to as PCD_v7) format which was developed as part of the open source project PCL (point cloud library)."@en .
 <https://w3id.org/fog#asPcd_v0.7> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
-<https://w3id.org/fog#asPcd_v0.7> <http://www.w3.org/2000/01/rdf-schema#label> "as PCD v0.7 point cloud format (.pcd)" .
+<https://w3id.org/fog#asPcd_v0.7> <http://www.w3.org/2000/01/rdf-schema#label> "as PCD v0.7 point cloud format (.pcd)"@en .
+# 
+# https://w3id.org/fog#asPcd_v0.7-ascii
+<https://w3id.org/fog#asPcd_v0.7-ascii> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/fog#asPcd_v0.7-ascii> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fog#asPcd_v0.7> .
+<https://w3id.org/fog#asPcd_v0.7-ascii> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/fog#asPcd_v0.7-ascii> <http://dbpedia.org/property/extension> ".pcd" .
+<https://w3id.org/fog#asPcd_v0.7-ascii> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a text-based point cloud following the open PCD v0.7 (sometimes referred to as PCD_v7) format which was developed as part of the open source project PCL (point cloud library)."@en .
+<https://w3id.org/fog#asPcd_v0.7-ascii> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
+<https://w3id.org/fog#asPcd_v0.7-ascii> <http://www.w3.org/2000/01/rdf-schema#label> "as PCD v0.7 ASCII point cloud format (.pcd)"@en .
+# 
+# https://w3id.org/fog#asPcd_v0.7-binary
+<https://w3id.org/fog#asPcd_v0.7-binary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/fog#asPcd_v0.7-binary> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fog#asPcd_v0.7> .
+<https://w3id.org/fog#asPcd_v0.7-binary> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/fog#asPcd_v0.7-binary> <http://dbpedia.org/property/extension> ".pcd" .
+<https://w3id.org/fog#asPcd_v0.7-binary> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a binary point cloud following the open PCD v0.7 (sometimes referred to as PCD_v7) format which was developed as part of the open source project PCL (point cloud library)."@en .
+<https://w3id.org/fog#asPcd_v0.7-binary> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
+<https://w3id.org/fog#asPcd_v0.7-binary> <http://www.w3.org/2000/01/rdf-schema#label> "as PCD v0.7 binary point cloud format (.pcd)"@en .
 # 
 # https://w3id.org/fog#asPly
 <https://w3id.org/fog#asPly> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -691,7 +786,7 @@
 <https://w3id.org/fog#asPly_v1.0-ascii> <http://dbpedia.org/property/extension> ".ply" .
 <https://w3id.org/fog#asPly_v1.0-ascii> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a geometry file following the PLY v1.0 format which was developed by Greg Turk (Stanford University). The single .ply file is text-based."@en .
 <https://w3id.org/fog#asPly_v1.0-ascii> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
-<https://w3id.org/fog#asPly_v1.0-ascii> <http://www.w3.org/2000/01/rdf-schema#label> "as PLY ASCII format (.ply)"@en .
+<https://w3id.org/fog#asPly_v1.0-ascii> <http://www.w3.org/2000/01/rdf-schema#label> "as PLY v1.0 ASCII format (.ply)"@en .
 # 
 # https://w3id.org/fog#asPly_v1.0-binaryBE
 <https://w3id.org/fog#asPly_v1.0-binaryBE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -700,7 +795,7 @@
 <https://w3id.org/fog#asPly_v1.0-binaryBE> <http://dbpedia.org/property/extension> ".ply" .
 <https://w3id.org/fog#asPly_v1.0-binaryBE> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a geometry file following the PLY v1.0 format which was developed by Greg Turk (Stanford University). The single .ply file is binary with big endian. Note that there is also a sibling property for a binary PLY with little endian."@en .
 <https://w3id.org/fog#asPly_v1.0-binaryBE> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
-<https://w3id.org/fog#asPly_v1.0-binaryBE> <http://www.w3.org/2000/01/rdf-schema#label> "as PLY binary (big endian) format (.ply)"@en .
+<https://w3id.org/fog#asPly_v1.0-binaryBE> <http://www.w3.org/2000/01/rdf-schema#label> "as PLY v1.0 binary (big endian) format (.ply)"@en .
 # 
 # https://w3id.org/fog#asPly_v1.0-binaryLE
 <https://w3id.org/fog#asPly_v1.0-binaryLE> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -709,7 +804,7 @@
 <https://w3id.org/fog#asPly_v1.0-binaryLE> <http://dbpedia.org/property/extension> ".ply" .
 <https://w3id.org/fog#asPly_v1.0-binaryLE> <http://www.w3.org/2000/01/rdf-schema#comment> "The datatype relation pointing to a geometry file following the PLY v1.0 format which was developed by Greg Turk (Stanford University). The single .ply file is binary with little endian. Note that there is also a sibling property for a binary PLY with big endian."@en .
 <https://w3id.org/fog#asPly_v1.0-binaryLE> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
-<https://w3id.org/fog#asPly_v1.0-binaryLE> <http://www.w3.org/2000/01/rdf-schema#label> "as PLY binary (little endian) format (.ply)"@en .
+<https://w3id.org/fog#asPly_v1.0-binaryLE> <http://www.w3.org/2000/01/rdf-schema#label> "as PLY v1.0 binary (little endian) format (.ply)"@en .
 # 
 # https://w3id.org/fog#asRevit
 <https://w3id.org/fog#asRevit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
@@ -1096,6 +1191,8 @@
 <https://w3id.org/fog#asX3d_v3.3-xml> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.web3d.org/documents/specifications/19776-1/V3.3/index.html> .
 <https://w3id.org/fog#asX3d_v3.3-xml> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.iana.org/assignments/media-types/model/x3d+xml> .
 # 
+# https://w3id.org/omg#hasSimpleGeometryDescription
+# 
 # 
 # 
 # #################################################################
@@ -1103,7 +1200,6 @@
 # #    Classes
 # #
 # #################################################################
-# 
 # 
 # https://w3id.org/fog#ReferencedContent
 <https://w3id.org/fog#ReferencedContent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -1120,11 +1216,9 @@
 # #################################################################
 # 
 # 
-# 
 # https://w3id.org/fog
 <https://w3id.org/fog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/fog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> .
-<https://w3id.org/fog> <http://creativecommons.org/ns#license> <https://creativecommons.org/licenses/by/4.0/> .
 # 
 # https://www.researchgate.net/profile/Anna_Wagner13
 <https://www.researchgate.net/profile/Anna_Wagner13> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1141,4 +1235,3 @@
 <https://www.researchgate.net/profile/Pieter_Pauwels> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
 <https://www.researchgate.net/profile/Pieter_Pauwels> <http://xmlns.com/foaf/0.1/name> "Pieter Pauwels" .
 # 
-# Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/

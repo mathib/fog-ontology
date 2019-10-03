@@ -31,21 +31,24 @@ The initial version of the ontology (v0.0.1) was documented in:
 
 Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, & Klein, Ralf (2019). Including Widespread Geometry Formats in Semantic Graphs Using RDF Literals. In Proceedings of the European Conference on Computing in Construction (EC3 2019). Chania, Greece."""@en ;
   dcterms:issued "2018-12-03"^^xsd:date ;
-  dcterms:modified "2019-05-27"^^xsd:date ;
+  dcterms:modified "2019-10-03"^^xsd:date ;
   dcterms:title "FOG: File Ontology for Geometry formats"@en ;
   vann:example "https://madsholten.github.io/sparql-visualizer/?file=https://raw.githubusercontent.com/mathib/fog-ontology/master/examples/fog-demo.json"^^xsd:anyURI ;
   vann:example "https://raw.githubusercontent.com/mathib/fog-ontology/master/examples/sample_abox_dummy.ttl"^^xsd:anyURI ;
   vann:example "https://raw.githubusercontent.com/mathib/fog-ontology/master/examples/sample_abox_full.ttl"^^xsd:anyURI ;
   vann:preferredNamespacePrefix "fog" ;
   vann:preferredNamespaceUri "https://w3id.org/fog#" ;
-  rdfs:comment """- Version 0.0.2: 
+  rdfs:comment """- Version 0.0.3: 
+* added datatype properties: Nexus, LAS
+* added subproperties for fog:asPcd: ascii and binary
+- Version 0.0.2: 
 * updated definitions of certain properties
 * adjusted typos
 * added datatype properties for: Rhino, Revit, IFC, STEP APs, IGES
 * added object properties for: 3DMO, ifcOWL, geojson-ld
 * completed ontology metadata
 - Version 0.0.1: initial version"""@en ;
-  owl:versionInfo "0.0.2" ;
+  owl:versionInfo "0.0.3" ;
 .
 fog:ReferencedContent
   rdf:type owl:Class ;
@@ -598,6 +601,82 @@ fog:asIges
   rdfs:label "as IGES v5.3 (.igs)"@en ;
   rdfs:subPropertyOf fog:asIges ;
 .
+fog:asLas
+  rdf:type owl:DatatypeProperty ;
+  rdf:type owl:FunctionalProperty ;
+  rdfs:comment "The datatype relation pointing to a binary encoded point cloud following the open LAS format which was developed by the ASPRS. The format consists of a single .las or .laz file (binary). It is strongly adviced to use the more specific subproperties (e.g. fog:asLas_v1.4-las)."@en ;
+  rdfs:isDefinedBy fog: ;
+  rdfs:label "as LAS point cloud format"@en ;
+  rdfs:seeAlso <https://github.com/ASPRSorg/LAS> ;
+  rdfs:seeAlso wd:Q27441566 ;
+  rdfs:subPropertyOf omg:hasSimpleGeometryDescription ;
+.
+<https://w3id.org/fog#asLas_v1.4>
+  rdf:type owl:DatatypeProperty ;
+  rdf:type owl:FunctionalProperty ;
+  rdfs:comment "The datatype relation pointing to a binary encoded point cloud following the v1.4 of the open LAS format which was developed by the ASPRS. The format consists of a single .las or .laz file (binary). It is strongly adviced to use the more specific subproperties (e.g. fog:asLas_v1.4-las)."@en ;
+  rdfs:isDefinedBy fog: ;
+  rdfs:label "as LAS v1.4 point cloud format"@en ;
+  rdfs:seeAlso <http://www.asprs.org/wp-content/uploads/2019/03/LAS_1_4_r14.pdf> ;
+  rdfs:seeAlso wd:Q33515758 ;
+  rdfs:subPropertyOf fog:asLas ;
+.
+<https://w3id.org/fog#asLas_v1.4-las>
+  rdf:type owl:DatatypeProperty ;
+  rdf:type owl:FunctionalProperty ;
+  dbp:extension ".las" ;
+  rdfs:comment "The datatype relation pointing to an uncompressed binary encoded point cloud (.las) following the v1.4 of the open LAS format which was developed by the ASPRS."@en ;
+  rdfs:isDefinedBy fog: ;
+  rdfs:label "as uncompressed LAS v1.4 point cloud format (.las)"@en ;
+  rdfs:subPropertyOf <https://w3id.org/fog#asLas_v1.4> ;
+.
+<https://w3id.org/fog#asLas_v1.4-laz>
+  rdf:type owl:DatatypeProperty ;
+  rdf:type owl:FunctionalProperty ;
+  dbp:extension ".laz" ;
+  rdfs:comment "The datatype relation pointing to a compressed binary encoded point cloud (.laz) following the v1.4 of the open LAS format which was developed by the ASPRS."@en ;
+  rdfs:isDefinedBy fog: ;
+  rdfs:label "as compressed LAS v1.4 point cloud format (.laz)"@en ;
+  rdfs:subPropertyOf <https://w3id.org/fog#asLas_v1.4> ;
+.
+fog:asNexus
+  rdf:type owl:DatatypeProperty ;
+  rdf:type owl:FunctionalProperty ;
+  rdfs:comment "The datatype relation pointing to a geometry description following the Nexus format for multiresoltion meshes and point clouds (ISTI - Italian National Research Council - Visual Computing Lab). The format consists of a single .nxs or .nxz file (binary). It is strongly adviced to use the more specific subproperties (e.g. fog:asNexus_v4.2-nxs)"@en ;
+  rdfs:isDefinedBy fog: ;
+  rdfs:label "as Nexus format"@en ;
+  rdfs:seeAlso <http://vcg.isti.cnr.it/nexus/> ;
+  rdfs:seeAlso <https://github.com/cnr-isti-vclab/nexus> ;
+  rdfs:subPropertyOf omg:hasSimpleGeometryDescription ;
+.
+<https://w3id.org/fog#asNexus_v4.2>
+  rdf:type owl:DatatypeProperty ;
+  rdf:type owl:FunctionalProperty ;
+  rdfs:comment "The datatype relation pointing to a geometry description following the Nexus v4.2 format for multiresoltion meshes and point clouds (ISTI - Italian National Research Council - Visual Computing Lab). The format consists of a single .nxs or .nxz file (binary). It is strongly adviced to use the more specific subproperties (e.g. fog:asNexus_v4.2-nxs)"@en ;
+  rdfs:isDefinedBy fog: ;
+  rdfs:label "as Nexus v4.2 format"@en ;
+  rdfs:seeAlso <http://vcg.isti.cnr.it/nexus/> ;
+  rdfs:seeAlso <https://github.com/cnr-isti-vclab/nexus> ;
+  rdfs:subPropertyOf fog:asNexus ;
+.
+<https://w3id.org/fog#asNexus_v4.2-nxs>
+  rdf:type owl:DatatypeProperty ;
+  rdf:type owl:FunctionalProperty ;
+  dbp:extension ".nxs" ;
+  rdfs:comment "The datatype relation pointing to a geometry description following the uncompressed Nexus v4.2 format (.nxs) for multiresoltion meshes and point clouds (ISTI - Italian National Research Council - Visual Computing Lab)."@en ;
+  rdfs:isDefinedBy fog: ;
+  rdfs:label "as uncompressed Nexus v4.2 format (.nxs)"@en ;
+  rdfs:subPropertyOf <https://w3id.org/fog#asNexus_v4.2> ;
+.
+<https://w3id.org/fog#asNexus_v4.2-nxz>
+  rdf:type owl:DatatypeProperty ;
+  rdf:type owl:FunctionalProperty ;
+  dbp:extension ".nxz" ;
+  rdfs:comment "The datatype relation pointing to a geometry description following the compressed Nexus v4.2 format (.nxz) for multiresoltion meshes and point clouds (ISTI - Italian National Research Council - Visual Computing Lab)."@en ;
+  rdfs:isDefinedBy fog: ;
+  rdfs:label "as compressed Nexus v4.2 format (.nxz)"@en ;
+  rdfs:subPropertyOf <https://w3id.org/fog#asNexus_v4.2> ;
+.
 fog:asObj
   rdf:type owl:DatatypeProperty ;
   rdfs:comment "The datatype relation pointing to a text-based geometry description following the OBJ format developed by Wavefront Technologies. The format consists of a single .obj file and an optional material file (.mtl). It is strongly adviced to use the more specific subsubproperties (e.g. fog:asObj_v3.0-obj)."@en ;
@@ -676,8 +755,26 @@ fog:asPcd
   dbp:extension ".pcd" ;
   rdfs:comment "The datatype relation pointing to a binary or text-based point cloud following the open PCD v0.7 (sometimes referred to as PCD_v7) format which was developed as part of the open source project PCL (point cloud library)."@en ;
   rdfs:isDefinedBy fog: ;
-  rdfs:label "as PCD v0.7 point cloud format (.pcd)" ;
+  rdfs:label "as PCD v0.7 point cloud format (.pcd)"@en ;
   rdfs:subPropertyOf fog:asPcd ;
+.
+<https://w3id.org/fog#asPcd_v0.7-ascii>
+  rdf:type owl:DatatypeProperty ;
+  rdf:type owl:FunctionalProperty ;
+  dbp:extension ".pcd" ;
+  rdfs:comment "The datatype relation pointing to a text-based point cloud following the open PCD v0.7 (sometimes referred to as PCD_v7) format which was developed as part of the open source project PCL (point cloud library)."@en ;
+  rdfs:isDefinedBy fog: ;
+  rdfs:label "as PCD v0.7 ASCII point cloud format (.pcd)"@en ;
+  rdfs:subPropertyOf <https://w3id.org/fog#asPcd_v0.7> ;
+.
+<https://w3id.org/fog#asPcd_v0.7-binary>
+  rdf:type owl:DatatypeProperty ;
+  rdf:type owl:FunctionalProperty ;
+  dbp:extension ".pcd" ;
+  rdfs:comment "The datatype relation pointing to a binary point cloud following the open PCD v0.7 (sometimes referred to as PCD_v7) format which was developed as part of the open source project PCL (point cloud library)."@en ;
+  rdfs:isDefinedBy fog: ;
+  rdfs:label "as PCD v0.7 binary point cloud format (.pcd)"@en ;
+  rdfs:subPropertyOf <https://w3id.org/fog#asPcd_v0.7> ;
 .
 fog:asPly
   rdf:type owl:DatatypeProperty ;
@@ -705,7 +802,7 @@ fog:asPly
   dbp:extension ".ply" ;
   rdfs:comment "The datatype relation pointing to a geometry file following the PLY v1.0 format which was developed by Greg Turk (Stanford University). The single .ply file is text-based."@en ;
   rdfs:isDefinedBy fog: ;
-  rdfs:label "as PLY ASCII format (.ply)"@en ;
+  rdfs:label "as PLY v1.0 ASCII format (.ply)"@en ;
   rdfs:subPropertyOf <https://w3id.org/fog#asPly_v1.0> ;
 .
 <https://w3id.org/fog#asPly_v1.0-binaryBE>
@@ -714,7 +811,7 @@ fog:asPly
   dbp:extension ".ply" ;
   rdfs:comment "The datatype relation pointing to a geometry file following the PLY v1.0 format which was developed by Greg Turk (Stanford University). The single .ply file is binary with big endian. Note that there is also a sibling property for a binary PLY with little endian."@en ;
   rdfs:isDefinedBy fog: ;
-  rdfs:label "as PLY binary (big endian) format (.ply)"@en ;
+  rdfs:label "as PLY v1.0 binary (big endian) format (.ply)"@en ;
   rdfs:subPropertyOf <https://w3id.org/fog#asPly_v1.0> ;
 .
 <https://w3id.org/fog#asPly_v1.0-binaryLE>
@@ -723,7 +820,7 @@ fog:asPly
   dbp:extension ".ply" ;
   rdfs:comment "The datatype relation pointing to a geometry file following the PLY v1.0 format which was developed by Greg Turk (Stanford University). The single .ply file is binary with little endian. Note that there is also a sibling property for a binary PLY with big endian."@en ;
   rdfs:isDefinedBy fog: ;
-  rdfs:label "as PLY binary (little endian) format (.ply)"@en ;
+  rdfs:label "as PLY v1.0 binary (little endian) format (.ply)"@en ;
   rdfs:subPropertyOf <https://w3id.org/fog#asPly_v1.0> ;
 .
 fog:asRevit

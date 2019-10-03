@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <rdf:RDF xmlns="https://w3id.org/fog#"
      xml:base="https://w3id.org/fog"
-     xmlns:cc="http://creativecommons.org/ns#"
+     xmlns:ns="http://creativecommons.org/ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
@@ -9,38 +9,42 @@
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:dcterms="http://purl.org/dc/terms/"
-     xmlns:dbp="http://dbpedia.org/property/">
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:property="http://dbpedia.org/property/">
     <owl:Ontology rdf:about="https://w3id.org/fog">
-        <dcterms:creator rdf:resource="https://www.researchgate.net/profile/Anna_Wagner13"/>
-        <dcterms:creator rdf:resource="https://www.researchgate.net/profile/Mathias_Bonduel"/>
-        <dcterms:creator rdf:resource="https://www.researchgate.net/profile/Pieter_Pauwels"/>
-        <dcterms:description xml:lang="en">The File Ontology for Geometry formats (FOG) describes meaningful relations towards geometry snippets in RDF literals, geometry files on relative or absolute URLs and ontology-based geometry descriptions. The defined properties in this ontology are related towards each other and additional metadata is provided, such as file extension and related specifications/sources (incl. entries in dbpedia and Wikidata). 
+        <ns:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <terms:creator rdf:resource="https://www.researchgate.net/profile/Anna_Wagner13"/>
+        <terms:creator rdf:resource="https://www.researchgate.net/profile/Mathias_Bonduel"/>
+        <terms:creator rdf:resource="https://www.researchgate.net/profile/Pieter_Pauwels"/>
+        <terms:description xml:lang="en">The File Ontology for Geometry formats (FOG) describes meaningful relations towards geometry snippets in RDF literals, geometry files on relative or absolute URLs and ontology-based geometry descriptions. The defined properties in this ontology are related towards each other and additional metadata is provided, such as file extension and related specifications/sources (incl. entries in dbpedia and Wikidata). 
 
 The initial version of the ontology (v0.0.1) was documented in:
 
-Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein, Ralf (2019). Including Widespread Geometry Formats in Semantic Graphs Using RDF Literals. In Proceedings of the European Conference on Computing in Construction (EC3 2019). Chania, Greece.</dcterms:description>
-        <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-12-03</dcterms:issued>
-        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-05-27</dcterms:modified>
-        <dcterms:title xml:lang="en">FOG: File Ontology for Geometry formats</dcterms:title>
+Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein, Ralf (2019). Including Widespread Geometry Formats in Semantic Graphs Using RDF Literals. In Proceedings of the European Conference on Computing in Construction (EC3 2019). Chania, Greece.</terms:description>
+        <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-12-03</terms:issued>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-10-03</terms:modified>
+        <terms:title xml:lang="en">FOG: File Ontology for Geometry formats</terms:title>
         <vann:example rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://madsholten.github.io/sparql-visualizer/?file=https://raw.githubusercontent.com/mathib/fog-ontology/master/examples/fog-demo.json</vann:example>
         <vann:example rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://raw.githubusercontent.com/mathib/fog-ontology/master/examples/sample_abox_dummy.ttl</vann:example>
         <vann:example rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://raw.githubusercontent.com/mathib/fog-ontology/master/examples/sample_abox_full.ttl</vann:example>
         <vann:preferredNamespacePrefix>fog</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>https://w3id.org/fog#</vann:preferredNamespaceUri>
-        <rdfs:comment xml:lang="en">- Version 0.0.2: 
+        <rdfs:comment xml:lang="en">- Version 0.0.3: 
+* added datatype properties: Nexus, LAS
+* added subproperties for fog:asPcd: ascii and binary
+- Version 0.0.2: 
 * updated definitions of certain properties
 * adjusted typos
 * added datatype properties for: Rhino, Revit, IFC, STEP APs, IGES
 * added object properties for: 3DMO, ifcOWL, geojson-ld
 * completed ontology metadata
 - Version 0.0.1: initial version</rdfs:comment>
-        <owl:versionInfo>0.0.2</owl:versionInfo>
+        <owl:versionInfo>0.0.3</owl:versionInfo>
     </owl:Ontology>
     
 
 
-    <!-- 
+     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Object Properties
@@ -49,6 +53,7 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
      -->
 
 
+    
 
 
     <!-- https://w3id.org/fog#as3dmo -->
@@ -228,7 +233,8 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label>has referenced content</rdfs:label>
     </owl:ObjectProperty>
-    
+     
+
 
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -264,7 +270,7 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asCollada_v1.4.1">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asCollada"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.dae</dbp:extension>
+        <property:extension>.dae</property:extension>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the open COLLADA v1.4.1 format from the Khronos Group. It consists of a single .dae file (text-based).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label xml:lang="en">as COLLADA v1.4.1 format (.dae)</rdfs:label>
@@ -280,7 +286,7 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asCollada_v1.5.0">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asCollada"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.dae</dbp:extension>
+        <property:extension>.dae</property:extension>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the open COLLADA v1.5.0 format from the Khronos Group. It consists of a single .dae file (text-based).</rdfs:comment>
         <rdfs:label xml:lang="en">as COLLADA v1.5.0 format (.dae)</rdfs:label>
         <rdfs:seeAlso rdf:resource="https://www.khronos.org/files/collada_spec_1_5.pdf"/>
@@ -310,7 +316,7 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asDwg_v2010">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asDwg"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.dwg</dbp:extension>
+        <property:extension>.dwg</property:extension>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the proprietary DWG v2010 format from Autodesk. It consists of a single .dwg file (binary).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label xml:lang="en">as DWG 2010 format (.dwg)</rdfs:label>
@@ -324,7 +330,7 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asDwg_v2013">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asDwg"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.dwg</dbp:extension>
+        <property:extension>.dwg</property:extension>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the proprietary DWG v2013 format from Autodesk. It consists of a single .dwg file (binary).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label xml:lang="en">as DWG 2013 format (.dwg)</rdfs:label>
@@ -338,7 +344,7 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asDwg_v2018">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asDwg"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.dwg</dbp:extension>
+        <property:extension>.dwg</property:extension>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the proprietary DWG v2018 format from Autodesk. It consists of a single .dwg file (binary).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label xml:lang="en">as DWG 2018 format (.dwg)</rdfs:label>
@@ -368,7 +374,7 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asE57_v1.0">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asE57"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.e57</dbp:extension>
+        <property:extension>.e57</property:extension>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a point cloud geometry description following the open E57 format developed by the ASTM Committee E57. The format consists of a single .e57 file (partially binary, partially text-based).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label xml:lang="en">as E57 v1.0 format (.e57)</rdfs:label>
@@ -399,7 +405,7 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asGeojson_v2008">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asGeojson"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.json</dbp:extension>
+        <property:extension>.json</property:extension>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the open GeoJSON v2008 format. The format consists of a single .json file (text-based). Note that the version proposed by the IETF (fog:asGeojson_v2016) is derived from the now obsolete 2008 version (fog:asGeojson_v2008).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label xml:lang="en">as GeoJSON format v2008 (.json)</rdfs:label>
@@ -414,8 +420,8 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asGeojson_v2016">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asGeojson"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.geojson</dbp:extension>
-        <dbp:extension>.json</dbp:extension>
+        <property:extension>.geojson</property:extension>
+        <property:extension>.json</property:extension>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the open GeoJSON v2016 format developed by the IETF GeoJSON Working Group. The format consists of a single .json file (text-based). Note that the version proposed by the IETF (fog:asGeojson_v2016) is derived from the now obsolete 2008 version (fog:asGeojson_v2008).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label xml:lang="en">as GeoJSON v2016 format (.json)</rdfs:label>
@@ -457,8 +463,8 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asGltf_v1.0-bin">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asGltf_v1.0"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.bin</dbp:extension>
-        <dcterms:requires>fog:asGltf_v1.0-gltf</dcterms:requires>
+        <property:extension>.bin</property:extension>
+        <terms:requires>fog:asGltf_v1.0-gltf</terms:requires>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a binary geometry file (.bin) following the open glTF v1.0 format from the Khronos Group. This file always has to be used together with the central .gltf JSON file (fog:asGltf_v1.0-gltf) referencing it.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label xml:lang="en">as glTF v1.0 geometry file (.bin)</rdfs:label>
@@ -472,8 +478,8 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asGltf_v1.0-glsl">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asGltf_v1.0"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.glsl</dbp:extension>
-        <dcterms:requires>fog:asGltf_v1.0-gltf</dcterms:requires>
+        <property:extension>.glsl</property:extension>
+        <terms:requires>fog:asGltf_v1.0-gltf</terms:requires>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a text-based shader file (.glsl) following the open glTF v1.0 format from the Khronos Group. This file always has to be used together with the central .gltf JSON file (fog:asGltf_v1.0-gltf) referencing it.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label xml:lang="en">as glTF v1.0 shader file (.glsl)</rdfs:label>
@@ -487,7 +493,7 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asGltf_v1.0-gltf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asGltf_v1.0"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.gltf</dbp:extension>
+        <property:extension>.gltf</property:extension>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a JSON file (.gltf) following the open glTF v1.0 format from the Khronos Group. This file can be used on its own if geometry, shaders and optional textures are embedded (text-based) inside the JSON. In most cases however, it references other files containing geometry (.bin), optional shaders (.glsl) and optional textures (.bmp/.gif/.jpeg/.png).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label xml:lang="en">as glTF v1.0 JSON file (.gltf)</rdfs:label>
@@ -502,11 +508,11 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asGltf_v1.0-texture">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asGltf_v1.0"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.bmp</dbp:extension>
-        <dbp:extension>.gif</dbp:extension>
-        <dbp:extension>.jpeg</dbp:extension>
-        <dbp:extension>.png</dbp:extension>
-        <dcterms:requires>fog:asGltf_v1.0-gltf</dcterms:requires>
+        <property:extension>.bmp</property:extension>
+        <property:extension>.gif</property:extension>
+        <property:extension>.jpeg</property:extension>
+        <property:extension>.png</property:extension>
+        <terms:requires>fog:asGltf_v1.0-gltf</terms:requires>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a binary texture file (.bmp/..gif/.jpeg/.png). This file always has to be used together with the central .gltf JSON file (fog:asGltf_v1.0-gltf) referencing it.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label xml:lang="en">as glTF v1.0 texture file</rdfs:label>
@@ -533,8 +539,8 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asGltf_v2.0-bin">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asGltf_v2.0"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.bin</dbp:extension>
-        <dcterms:requires>fog:asGltf_v2.0-gltf</dcterms:requires>
+        <property:extension>.bin</property:extension>
+        <terms:requires>fog:asGltf_v2.0-gltf</terms:requires>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a binary geometry file (.bin) following the open glTF v2.0 format from the Khronos Group. This file always has to be used together with the central .gltf JSON file (fog:asGltf_v2.0-gltf) referencing it.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label xml:lang="en">as glTF v2.0 geometry file (.bin)</rdfs:label>
@@ -549,7 +555,7 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asGltf_v2.0-glb">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asGltf_v2.0"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.glb</dbp:extension>
+        <property:extension>.glb</property:extension>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a binary file (.glb) following the open glTF v2.0 format from the Khronos Group. This one file contains geometry and textures, and as a result can be used without other files.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label xml:lang="en">as glTF v2.0 binary file (.glb)</rdfs:label>
@@ -564,7 +570,7 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asGltf_v2.0-gltf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asGltf_v2.0"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.gltf</dbp:extension>
+        <property:extension>.gltf</property:extension>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a JSON file (.gltf) following the open glTF v2.0 format from the Khronos Group. This file can be used on its own if geometry and optional textures are embedded (text-based) inside the JSON. In most cases however, it references other files containing geometry (.bin) and optional textures (.jpeg/.png).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label xml:lang="en">as glTF v2.0 JSON file (.gltf)</rdfs:label>
@@ -578,9 +584,9 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asGltf_v2.0-texture">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asGltf_v2.0"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.jpeg</dbp:extension>
-        <dbp:extension>.png</dbp:extension>
-        <dcterms:requires>fog:asGltf_v2.0-gltf</dcterms:requires>
+        <property:extension>.jpeg</property:extension>
+        <property:extension>.png</property:extension>
+        <terms:requires>fog:asGltf_v2.0-gltf</terms:requires>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a binary texture file (.jpeg/.png). This file always has to be used together with the central .gltf JSON file (fog:asGltf_v2.0-gltf) referencing it.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label xml:lang="en">as glTF v2.0 texture file</rdfs:label>
@@ -610,7 +616,7 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asGml_v3.1.1">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asGml"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.gml</dbp:extension>
+        <property:extension>.gml</property:extension>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a text-based GML file (.gml) following the open GML v3.1.1 format developed by OGC and ISO. Note that this and older versions are considered depreciated. Note that this property is disjoint (via its superproperty fog:asGml) with geo:asGML because of the more strict domain and range restrictions in GeoSPARQL.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label xml:lang="en">as GML v3.1.1 format (.gml)</rdfs:label>
@@ -626,7 +632,7 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asGml_v3.2.1">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asGml"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.gml</dbp:extension>
+        <property:extension>.gml</property:extension>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a text-based GML file (.gml) following the open GML v3.2.1 format developed by OGC and ISO. Note that this property is disjoint (via its superproperty fog:asGml) with geo:asGML because of the more strict domain and range restrictions in GeoSPARQL.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label xml:lang="en">as GML v3.2.1 format (.gml)</rdfs:label>
@@ -642,7 +648,7 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asGml_v3.2.2">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asGml"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.gml</dbp:extension>
+        <property:extension>.gml</property:extension>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a text-based GML file (.gml) following the open GML v3.2.2 format developed by OGC and ISO. Note that this property is disjoint (via its superproperty fog:asGml) with geo:asGML because of the more strict domain and range restrictions in GeoSPARQL.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label xml:lang="en">as GML v3.2.2 format (.gml)</rdfs:label>
@@ -657,7 +663,7 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asGml_v3.3.0">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asGml"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.gml</dbp:extension>
+        <property:extension>.gml</property:extension>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a text-based GML file (.gml) following the open GML v3.3.0 format developed by OGC and ISO. This format is an extension of the GML v3.2 format. Note that this property is disjoint (via its superproperty fog:asGml) with geo:asGML because of the more strict domain and range restrictions in GeoSPARQL.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label xml:lang="en">as GML v3.3.0 format (.gml)</rdfs:label>
@@ -703,7 +709,7 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asIfc_v2x3-ifc">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asIfc_v2x3"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.ifc</dbp:extension>
+        <property:extension>.ifc</property:extension>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a text-based geometry description following the open IFC format v2x3 as documented by buildingSMART and in its ISO 16739 standard. The IFC file is serialised in the STEP Physical File Format (SPFF).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label xml:lang="en">as IFC v2x3 file (.ifc)</rdfs:label>
@@ -717,7 +723,7 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asIfc_v2x3-ifcxml">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asIfc_v2x3"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.ifcxml</dbp:extension>
+        <property:extension>.ifcxml</property:extension>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a text-based geometry description following the open IFC format v2x3 as documented by buildingSMART and in its ISO 16739 standard. The IFC file is serialised in the XML format.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label xml:lang="en">as IFC v2x3 file (.ifcxml)</rdfs:label>
@@ -745,7 +751,7 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asIfc_v2x3tc1-ifc">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asIfc_v2x3tc1"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.ifc</dbp:extension>
+        <property:extension>.ifc</property:extension>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a text-based geometry description following the open IFC format v2x3 TC1 as documented by buildingSMART and in its ISO 16739 standard. The IFC file is serialised in the STEP Physical File Format (SPFF).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label xml:lang="en">as IFC v2x3 TC1 file (.ifc)</rdfs:label>
@@ -759,7 +765,7 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asIfc_v2x3tc1-ifcxml">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asIfc_v2x3tc1"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.ifcxml</dbp:extension>
+        <property:extension>.ifcxml</property:extension>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a text-based geometry description following the open IFC format v2x3 TC1 as documented by buildingSMART and in its ISO 16739 standard. The IFC file is serialised in the XML format.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label xml:lang="en">as IFC v2x3 TC1 file (.ifcxml)</rdfs:label>
@@ -787,7 +793,7 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asIfc_v2x4-ifc">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asIfc_v2x4"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.ifc</dbp:extension>
+        <property:extension>.ifc</property:extension>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a text-based geometry description following the open IFC format v2x4 as documented by buildingSMART and in its ISO 16739 standard. The IFC file is serialised in the STEP Physical File Format (SPFF).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label xml:lang="en">as IFC v2x4 file (.ifc)</rdfs:label>
@@ -801,7 +807,7 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asIfc_v2x4-ifcxml">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asIfc_v2x4"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.ifcxml</dbp:extension>
+        <property:extension>.ifcxml</property:extension>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a text-based geometry description following the open IFC format v2x4 as documented by buildingSMART and in its ISO 16739 standard. The IFC file is serialised in the XML format.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label xml:lang="en">as IFC v2x4 file (.ifcxml)</rdfs:label>
@@ -829,7 +835,7 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asIfc_v2x4add1-ifc">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asIfc_v2x4add1"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.ifc</dbp:extension>
+        <property:extension>.ifc</property:extension>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a text-based geometry description following the open IFC format v2x4 Add1 as documented by buildingSMART and in its ISO 16739 standard. The IFC file is serialised in the STEP Physical File Format (SPFF).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label xml:lang="en">as IFC v2x4 Add1 file (.ifc)</rdfs:label>
@@ -843,7 +849,7 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asIfc_v2x4add1-ifcxml">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asIfc_v2x4add1"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.ifcxml</dbp:extension>
+        <property:extension>.ifcxml</property:extension>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a text-based geometry description following the open IFC format v2x4 Add1 as documented by buildingSMART and in its ISO 16739 standard. The IFC file is serialised in the XML format.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label xml:lang="en">as IFC v2x4 Add1 file (.ifcxml)</rdfs:label>
@@ -871,7 +877,7 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asIfc_v2x4add2-ifc">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asIfc_v2x4add2"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.ifc</dbp:extension>
+        <property:extension>.ifc</property:extension>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a text-based geometry description following the open IFC format v2x4 Add2 as documented by buildingSMART and in its ISO 16739 standard. The IFC file is serialised in the STEP Physical File Format (SPFF).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label xml:lang="en">as IFC v2x4 Add2 file (.ifc)</rdfs:label>
@@ -885,7 +891,7 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asIfc_v2x4add2-ifcxml">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asIfc_v2x4add2"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.ifcxml</dbp:extension>
+        <property:extension>.ifcxml</property:extension>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a text-based geometry description following the open IFC format v2x4 Add2 as documented by buildingSMART and in its ISO 16739 standard. The IFC file is serialised in the XML format.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label xml:lang="en">as IFC v2x4 Add 2 file (.ifcxml)</rdfs:label>
@@ -899,8 +905,8 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asIges">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/omg#hasSimpleGeometryDescription"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.iges</dbp:extension>
-        <dbp:extension>.igs</dbp:extension>
+        <property:extension>.iges</property:extension>
+        <property:extension>.igs</property:extension>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the IGES format as documented in its ANSI standard. The format consists of a single .iges/.igs file (text-based). It is strongly adviced to use the more specific subproperties (e.g. fog:asIges_v5.3).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label xml:lang="en">as IGES format</rdfs:label>
@@ -917,11 +923,127 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asIges_v5.3">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asIges"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.iges</dbp:extension>
-        <dbp:extension>.igs</dbp:extension>
+        <property:extension>.iges</property:extension>
+        <property:extension>.igs</property:extension>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the IGES format v5.6 as documented in its ANSI standard.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label xml:lang="en">as IGES v5.3 (.igs)</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/fog#asLas -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asLas">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/omg#hasSimpleGeometryDescription"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:comment xml:lang="en">The datatype relation pointing to a binary encoded point cloud following the open LAS format which was developed by the ASPRS. The format consists of a single .las or .laz file (binary). It is strongly adviced to use the more specific subproperties (e.g. fog:asLas_v1.4-las).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
+        <rdfs:label xml:lang="en">as LAS point cloud format</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://github.com/ASPRSorg/LAS"/>
+        <rdfs:seeAlso rdf:resource="https://www.wikidata.org/entity/Q27441566"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/fog#asLas_v1.4 -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asLas_v1.4">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asLas"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:comment xml:lang="en">The datatype relation pointing to a binary encoded point cloud following the v1.4 of the open LAS format which was developed by the ASPRS. The format consists of a single .las or .laz file (binary). It is strongly adviced to use the more specific subproperties (e.g. fog:asLas_v1.4-las).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
+        <rdfs:label xml:lang="en">as LAS v1.4 point cloud format</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://www.asprs.org/wp-content/uploads/2019/03/LAS_1_4_r14.pdf"/>
+        <rdfs:seeAlso rdf:resource="https://www.wikidata.org/entity/Q33515758"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/fog#asLas_v1.4-las -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asLas_v1.4-las">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asLas_v1.4"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <property:extension>.las</property:extension>
+        <rdfs:comment xml:lang="en">The datatype relation pointing to an uncompressed binary encoded point cloud (.las) following the v1.4 of the open LAS format which was developed by the ASPRS.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
+        <rdfs:label xml:lang="en">as uncompressed LAS v1.4 point cloud format (.las)</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/fog#asLas_v1.4-laz -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asLas_v1.4-laz">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asLas_v1.4"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <property:extension>.laz</property:extension>
+        <rdfs:comment xml:lang="en">The datatype relation pointing to a compressed binary encoded point cloud (.laz) following the v1.4 of the open LAS format which was developed by the ASPRS.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
+        <rdfs:label xml:lang="en">as compressed LAS v1.4 point cloud format (.laz)</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/fog#asNexus -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asNexus">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/omg#hasSimpleGeometryDescription"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the Nexus format for multiresoltion meshes and point clouds (ISTI - Italian National Research Council - Visual Computing Lab). The format consists of a single .nxs or .nxz file (binary). It is strongly adviced to use the more specific subproperties (e.g. fog:asNexus_v4.2-nxs)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
+        <rdfs:label xml:lang="en">as Nexus format</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://vcg.isti.cnr.it/nexus/"/>
+        <rdfs:seeAlso rdf:resource="https://github.com/cnr-isti-vclab/nexus"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/fog#asNexus_v4.2 -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asNexus_v4.2">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asNexus"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the Nexus v4.2 format for multiresoltion meshes and point clouds (ISTI - Italian National Research Council - Visual Computing Lab). The format consists of a single .nxs or .nxz file (binary). It is strongly adviced to use the more specific subproperties (e.g. fog:asNexus_v4.2-nxs)</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
+        <rdfs:label xml:lang="en">as Nexus v4.2 format</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://vcg.isti.cnr.it/nexus/"/>
+        <rdfs:seeAlso rdf:resource="https://github.com/cnr-isti-vclab/nexus"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/fog#asNexus_v4.2-nxs -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asNexus_v4.2-nxs">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asNexus_v4.2"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <property:extension>.nxs</property:extension>
+        <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the uncompressed Nexus v4.2 format (.nxs) for multiresoltion meshes and point clouds (ISTI - Italian National Research Council - Visual Computing Lab).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
+        <rdfs:label xml:lang="en">as uncompressed Nexus v4.2 format (.nxs)</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/fog#asNexus_v4.2-nxz -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asNexus_v4.2-nxz">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asNexus_v4.2"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <property:extension>.nxz</property:extension>
+        <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the compressed Nexus v4.2 format (.nxz) for multiresoltion meshes and point clouds (ISTI - Italian National Research Council - Visual Computing Lab).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
+        <rdfs:label xml:lang="en">as compressed Nexus v4.2 format (.nxz)</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -958,8 +1080,8 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asObj_v3.0-mtl">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asObj_v3.0"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.mtl</dbp:extension>
-        <dcterms:requires>fog:asObj_v3.0-obj</dcterms:requires>
+        <property:extension>.mtl</property:extension>
+        <terms:requires>fog:asObj_v3.0-obj</terms:requires>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a text-based MTL file (.mtl) following the OBJ format developed by Wavefront Technologies. This file has to be used together with the main .obj file that references it.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label xml:lang="en">as OBJ v3.0 material file (.mtl)</rdfs:label>
@@ -975,7 +1097,7 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asObj_v3.0-obj">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asObj_v3.0"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.obj</dbp:extension>
+        <property:extension>.obj</property:extension>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a text-based OBJ file (.obj) following the OBJ format developed by Wavefront Technologies. This file can be used together with an optional material file (.mtl).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label xml:lang="en">as OBJ v3.0 file (.obj)</rdfs:label>
@@ -1016,10 +1138,38 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asPcd_v0.7">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asPcd"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.pcd</dbp:extension>
+        <property:extension>.pcd</property:extension>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a binary or text-based point cloud following the open PCD v0.7 (sometimes referred to as PCD_v7) format which was developed as part of the open source project PCL (point cloud library).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
-        <rdfs:label>as PCD v0.7 point cloud format (.pcd)</rdfs:label>
+        <rdfs:label xml:lang="en">as PCD v0.7 point cloud format (.pcd)</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/fog#asPcd_v0.7-ascii -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asPcd_v0.7-ascii">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asPcd_v0.7"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <property:extension>.pcd</property:extension>
+        <rdfs:comment xml:lang="en">The datatype relation pointing to a text-based point cloud following the open PCD v0.7 (sometimes referred to as PCD_v7) format which was developed as part of the open source project PCL (point cloud library).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
+        <rdfs:label xml:lang="en">as PCD v0.7 ASCII point cloud format (.pcd)</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/fog#asPcd_v0.7-binary -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asPcd_v0.7-binary">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asPcd_v0.7"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <property:extension>.pcd</property:extension>
+        <rdfs:comment xml:lang="en">The datatype relation pointing to a binary point cloud following the open PCD v0.7 (sometimes referred to as PCD_v7) format which was developed as part of the open source project PCL (point cloud library).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
+        <rdfs:label xml:lang="en">as PCD v0.7 binary point cloud format (.pcd)</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1030,7 +1180,7 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asPly">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/omg#hasSimpleGeometryDescription"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.ply</dbp:extension>
+        <property:extension>.ply</property:extension>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the PLY format which was developed by Greg Turk (Stanford University). The format consists of a single .ply file which is either text-based or binary. It is strongly adviced to use the more specific subsubproperties (e.g. fog:asPly_v1.0-ascii).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label>as PLY format</rdfs:label>
@@ -1060,10 +1210,10 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asPly_v1.0-ascii">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asPly_v1.0"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.ply</dbp:extension>
+        <property:extension>.ply</property:extension>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry file following the PLY v1.0 format which was developed by Greg Turk (Stanford University). The single .ply file is text-based.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
-        <rdfs:label xml:lang="en">as PLY ASCII format (.ply)</rdfs:label>
+        <rdfs:label xml:lang="en">as PLY v1.0 ASCII format (.ply)</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1074,10 +1224,10 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asPly_v1.0-binaryBE">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asPly_v1.0"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.ply</dbp:extension>
+        <property:extension>.ply</property:extension>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry file following the PLY v1.0 format which was developed by Greg Turk (Stanford University). The single .ply file is binary with big endian. Note that there is also a sibling property for a binary PLY with little endian.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
-        <rdfs:label xml:lang="en">as PLY binary (big endian) format (.ply)</rdfs:label>
+        <rdfs:label xml:lang="en">as PLY v1.0 binary (big endian) format (.ply)</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1088,10 +1238,10 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asPly_v1.0-binaryLE">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asPly_v1.0"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.ply</dbp:extension>
+        <property:extension>.ply</property:extension>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry file following the PLY v1.0 format which was developed by Greg Turk (Stanford University). The single .ply file is binary with little endian. Note that there is also a sibling property for a binary PLY with big endian.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
-        <rdfs:label xml:lang="en">as PLY binary (little endian) format (.ply)</rdfs:label>
+        <rdfs:label xml:lang="en">as PLY v1.0 binary (little endian) format (.ply)</rdfs:label>
     </owl:DatatypeProperty>
     
 
@@ -1102,7 +1252,7 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asRevit">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/omg#hasSimpleGeometryDescription"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.rvt</dbp:extension>
+        <property:extension>.rvt</property:extension>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the proprietary Revit format (Autodesk). The format consists of a single .rvt file (binary). It is strongly adviced to use the more specific subproperties (e.g. fog:asRevit_v2020)</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label xml:lang="en">as Revit format</rdfs:label>
@@ -1117,7 +1267,7 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asRevit_v2017">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asRevit"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.rvt</dbp:extension>
+        <property:extension>.rvt</property:extension>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the proprietary Revit v2017 format (Autodesk). The format consists of a single .rvt file (binary).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label xml:lang="en">as Revit format v2017 (.rvt)</rdfs:label>
@@ -1131,7 +1281,7 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asRevit_v2018">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asRevit"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.rvt</dbp:extension>
+        <property:extension>.rvt</property:extension>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the proprietary Revit v2018 format (Autodesk). The format consists of a single .rvt file (binary).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label xml:lang="en">as Revit format v2018 (.rvt)</rdfs:label>
@@ -1145,7 +1295,7 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asRevit_v2019">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asRevit"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.rvt</dbp:extension>
+        <property:extension>.rvt</property:extension>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the proprietary Revit v2019 format (Autodesk). The format consists of a single .rvt file (binary).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label xml:lang="en">as Revit format v2019 (.rvt)</rdfs:label>
@@ -1159,7 +1309,7 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asRevit_v2020">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asRevit"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.rvt</dbp:extension>
+        <property:extension>.rvt</property:extension>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the proprietary Revit v2020 format (Autodesk). The format consists of a single .rvt file (binary).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label xml:lang="en">as Revit format v2020 (.rvt)</rdfs:label>
@@ -1173,7 +1323,7 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asRhino">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/omg#hasSimpleGeometryDescription"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.3dm</dbp:extension>
+        <property:extension>.3dm</property:extension>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the proprietary Rhinoceros format (McNeel). The format consists of a single .3dm file (binary). It is strongly adviced to use the more specific subproperties (e.g. fog:asRhino_v6)</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label xml:lang="en">as Rhino format</rdfs:label>
@@ -1188,7 +1338,7 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asRhino_v5">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asRhino"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.3dm</dbp:extension>
+        <property:extension>.3dm</property:extension>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the proprietary Rhinoceros format v5 (McNeel). The format consists of a single .3dm file (binary).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label xml:lang="en">as Rhino format v5 (.3dm)</rdfs:label>
@@ -1203,7 +1353,7 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asRhino_v6">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asRhino"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.3dm</dbp:extension>
+        <property:extension>.3dm</property:extension>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the proprietary Rhinoceros format v6 (McNeel). The format consists of a single .3dm file (binary).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label xml:lang="en">as Rhino format v6 (.3dm)</rdfs:label>
@@ -1316,9 +1466,9 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asShapefile-dbf">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asShapefile"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.dbf</dbp:extension>
-        <dcterms:requires>fog:asShapefile-shp</dcterms:requires>
-        <dcterms:requires>fog:asShapefile-shx</dcterms:requires>
+        <property:extension>.dbf</property:extension>
+        <terms:requires>fog:asShapefile-shp</terms:requires>
+        <terms:requires>fog:asShapefile-shx</terms:requires>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a dBASE table file (.dbf) following the open Shapefile format developed by ESRI. This file contains the attributes of each shape. The Shapefile format consists of multiple files, including as a minimum the geometry (.shp), the index of the feature geometry (.shx) and attribute information of features (.dbf). These three files are binary, while others can be text-based (e.g. the .prj file).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label xml:lang="en">as Shapefile dBASE table (.dbf)</rdfs:label>
@@ -1333,10 +1483,10 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asShapefile-prj">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asShapefile"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.prj</dbp:extension>
-        <dcterms:requires>fog:asShapefile-dbf</dcterms:requires>
-        <dcterms:requires>fog:asShapefile-shp</dcterms:requires>
-        <dcterms:requires>fog:asShapefile-shx</dcterms:requires>
+        <property:extension>.prj</property:extension>
+        <terms:requires>fog:asShapefile-dbf</terms:requires>
+        <terms:requires>fog:asShapefile-shp</terms:requires>
+        <terms:requires>fog:asShapefile-shx</terms:requires>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a projection format file (.prj) following the open Shapefile format developed by ESRI. This file contains the the coordinate system and projection information of the shapes. The Shapefile format consists of multiple files, including as a minimum the geometry (.shp), the index of the feature geometry (.shx) and attribute information of features (.dbf). These three files are binary, while others can be text-based (e.g. the .prj file).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label>as Shapefile projections file (.prj)</rdfs:label>
@@ -1350,9 +1500,9 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asShapefile-shp">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asShapefile"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.shp</dbp:extension>
-        <dcterms:requires>fog:asShapefile-dbf</dcterms:requires>
-        <dcterms:requires>fog:asShapefile-shx</dcterms:requires>
+        <property:extension>.shp</property:extension>
+        <terms:requires>fog:asShapefile-dbf</terms:requires>
+        <terms:requires>fog:asShapefile-shx</terms:requires>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry file (.shp) following the open Shapefile format developed by ESRI. This file contains the geometry of the shape. The Shapefile format consists of multiple files, including as a minimum the geometry (.shp), the index of the feature geometry (.shx) and attribute information of features (.dbf). These three files are binary, while others can be text-based (e.g. the .prj file).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label>as Shapefile geometry (.shp)</rdfs:label>
@@ -1367,9 +1517,9 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asShapefile-shx">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asShapefile"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.shx</dbp:extension>
-        <dcterms:requires>fog:asShapefile-dbf</dcterms:requires>
-        <dcterms:requires>fog:asShapefile-shp</dcterms:requires>
+        <property:extension>.shx</property:extension>
+        <terms:requires>fog:asShapefile-dbf</terms:requires>
+        <terms:requires>fog:asShapefile-shp</terms:requires>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a shape index format file (.shx) following the open Shapefile format developed by ESRI. This file contains the positional index of the geometry. The Shapefile format consists of multiple files, including as a minimum the geometry (.shp), the index of the feature geometry (.shx) and attribute information of features (.dbf). These three files are binary, while others can be text-based (e.g. the .prj file).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label>as Shapefile geometry index (.shx)</rdfs:label>
@@ -1384,7 +1534,7 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asSketchUp">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/omg#hasSimpleGeometryDescription"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.skp</dbp:extension>
+        <property:extension>.skp</property:extension>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the proprietary SketchUp format (Trimble). The format consists of a single .skp file (binary). It is strongly adviced to use the more specific subproperties (e.g. fog:asSketchUp_v2019)</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label xml:lang="en">as SketchUp format</rdfs:label>
@@ -1399,7 +1549,7 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asSketchUp_v2017">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asSketchUp"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.skp</dbp:extension>
+        <property:extension>.skp</property:extension>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the proprietary SketchUp v2017 format (Trimble). The format consists of a single .skp file (binary).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label xml:lang="en">as SketchUp format v2017 (.skp)</rdfs:label>
@@ -1413,7 +1563,7 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asSketchUp_v2018">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asSketchUp"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.skp</dbp:extension>
+        <property:extension>.skp</property:extension>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the proprietary SketchUp v2018 format (Trimble). The format consists of a single .skp file (binary).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label xml:lang="en">as SketchUp format v2018 (.skp)</rdfs:label>
@@ -1427,7 +1577,7 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asSketchUp_v2019">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asSketchUp"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.skp</dbp:extension>
+        <property:extension>.skp</property:extension>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the proprietary SketchUp v2019 format (Trimble). The format consists of a single .skp file (binary).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label xml:lang="en">as SketchUp format v2019 (.skp)</rdfs:label>
@@ -1441,8 +1591,8 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asStep">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/omg#hasSimpleGeometryDescription"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.step</dbp:extension>
-        <dbp:extension>.stp</dbp:extension>
+        <property:extension>.step</property:extension>
+        <property:extension>.stp</property:extension>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the STEP Physical File Format (SPFF) format which was developed by ISO. The format consists of a single .step file which is text-based. It is strongly adviced to use more specific subproperties.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label xml:lang="en">as SPFF file (.step)</rdfs:label>
@@ -1457,8 +1607,8 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asStep_ap214">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asStep"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.step</dbp:extension>
-        <dbp:extension>.stp</dbp:extension>
+        <property:extension>.step</property:extension>
+        <property:extension>.stp</property:extension>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the STEP Physical File Format (SPFF) format which was developed by ISO. The format consists of a single .step file which is text-based. The STEP file is structured according to the Application Profile (AP) 214 - Core data for automative mechanical design processes.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label xml:lang="en">as STEP SPFF file (AP214)</rdfs:label>
@@ -1472,8 +1622,8 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asStep_ap242">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asStep"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.step</dbp:extension>
-        <dbp:extension>.stp</dbp:extension>
+        <property:extension>.step</property:extension>
+        <property:extension>.stp</property:extension>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the STEP Physical File Format (SPFF) format which was developed by ISO. The format consists of a single .step file which is text-based. The STEP file is structured according to the Application Profile (AP) 242 - Managed model-based 3D engineering.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label xml:lang="en">as STEP SPFF file (AP242)</rdfs:label>
@@ -1500,7 +1650,7 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asStl_v1.0">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asStl"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.stl</dbp:extension>
+        <property:extension>.stl</property:extension>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the STL v1.0 format which was developed by 3D Systems. The format consists of a single .stl file which is either text-based or binary. It is strongly adviced to use the more specific subsubproperties (e.g. fog:asStl_v1.0-ascii)</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label xml:lang="en">as STL format v1.0</rdfs:label>
@@ -1517,7 +1667,7 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asStl_v1.0-ascii">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asStl_v1.0"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.stl</dbp:extension>
+        <property:extension>.stl</property:extension>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the STL v1.0 format which was developed by 3D Systems. The format consists of a single .stl file which is text-based.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label xml:lang="en">as STL format v1.0 (ASCII)</rdfs:label>
@@ -1531,7 +1681,7 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asStl_v1.0-binary">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asStl_v1.0"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.stl</dbp:extension>
+        <property:extension>.stl</property:extension>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the STL v1.0 format which was developed by 3D Systems. The format consists of a single .stl file which is binary.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label xml:lang="en">as STL format v1.0 (binary)</rdfs:label>
@@ -1545,7 +1695,7 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asSvg">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/omg#hasSimpleGeometryDescription"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.svg</dbp:extension>
+        <property:extension>.svg</property:extension>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the open SVG format which was developed by the W3C. The format consists of a single .svg file which is text-based. It is strongly adviced to use the more specific subsubproperties (e.g. fog:asSvg_v1.1).</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label xml:lang="en">as SVG format</rdfs:label>
@@ -1561,7 +1711,7 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asSvg_v1.0">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asSvg"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.svg</dbp:extension>
+        <property:extension>.svg</property:extension>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the open SVG v1.0 format which was developed by the W3C. The format consists of a single .svg file which is text-based. Note that this version (v1.0) is considered depreciated in favor of v1.1.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label xml:lang="en">as SVG format v1.0</rdfs:label>
@@ -1576,7 +1726,7 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asSvg_v1.1">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asSvg"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.svg</dbp:extension>
+        <property:extension>.svg</property:extension>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the open SVG v1.1 format which was developed by the W3C. The format consists of a single .svg file which is text-based.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label xml:lang="en">as SVG format v1.1</rdfs:label>
@@ -1591,7 +1741,7 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asSvg_v2.0">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asSvg"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.svg</dbp:extension>
+        <property:extension>.svg</property:extension>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a geometry description following the open SVG v2.0 format which was developed by the W3C. The format consists of a single .svg file which is text-based. Note that this version (v2.0) is not yet finalized and at the moment has the status of &apos;W3C Candidate Recommendation&apos;.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label xml:lang="en">as SVG format v2.0</rdfs:label>
@@ -1635,7 +1785,7 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asX3d_v3.3-binary">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asX3d_v3.3"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.x3db</dbp:extension>
+        <property:extension>.x3db</property:extension>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a binary X3D file (.x3db) following the open X3D v3.3 format which was developed by the Web3D.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label xml:lang="en">as X3D v3.3 binary file (.x3db)</rdfs:label>
@@ -1650,7 +1800,7 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asX3d_v3.3-vrml">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asX3d_v3.3"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.x3dv</dbp:extension>
+        <property:extension>.x3dv</property:extension>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a classic VRML X3D file (.x3dv) following the open X3D v3.3 format which was developed by the Web3D. The file is text-based.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label xml:lang="en">as X3D v3.3 classic VRML file (.x3dv)</rdfs:label>
@@ -1666,13 +1816,14 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     <owl:DatatypeProperty rdf:about="https://w3id.org/fog#asX3d_v3.3-xml">
         <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#asX3d_v3.3"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <dbp:extension>.x3d</dbp:extension>
+        <property:extension>.x3d</property:extension>
         <rdfs:comment xml:lang="en">The datatype relation pointing to a regular X3D file (.x3d) following the open X3D v3.3 format which was developed by the Web3D. The file is text-based.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label xml:lang="en">as X3D v3.3 XML file (.x3d)</rdfs:label>
         <rdfs:seeAlso rdf:resource="http://www.web3d.org/documents/specifications/19776-1/V3.3/index.html"/>
         <rdfs:seeAlso rdf:resource="https://www.iana.org/assignments/media-types/model/x3d+xml"/>
     </owl:DatatypeProperty>
+    
     
 
 
@@ -1683,7 +1834,6 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     //
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
- 
 
 
     <!-- https://w3id.org/fog#ReferencedContent -->
@@ -1703,7 +1853,10 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
     // Individuals
     //
     ///////////////////////////////////////////////////////////////////////////////////////
-     -->  
+     -->
+
+
+    
 
 
     <!-- https://w3id.org/fog -->
@@ -1711,7 +1864,6 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
 
     <owl:NamedIndividual rdf:about="https://w3id.org/fog">
         <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
-        <cc:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
     </owl:NamedIndividual>
     
 
@@ -1744,9 +1896,5 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
         <foaf:name>Pieter Pauwels</foaf:name>
     </owl:NamedIndividual>
 </rdf:RDF>
-
-
-
-<!-- Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/ -->
 
 
