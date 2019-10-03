@@ -35,3 +35,7 @@ An [online sparql-visualizer demo](https://madsholten.github.io/sparql-visualize
 Please cite the following paper when using FOG:
 
 * Bonduel, M., Wagner, A., Pauwels, P., Vergauwen, M., & Klein, R. (2019). Including Widespread Geometry Formats in Semantic Graphs Using RDF Literals. In *Proceedings of the European Conference on Computing in Construction (EC3 2019)*. Chania, Greece.
+
+The FOG ontology module extends OMG (Ontology for Managing Geometry), documented in the following paper:
+
+* Wagner, A., Bonduel, M., Pauwels, P. & Rüppel, U. (2019). Relating Geometry Descriptions to its Derivatives on the Web. In *Proceedings of the European Conference on Computing in Construction (EC3 2019)*. Chania, Greece.
