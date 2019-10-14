@@ -54,7 +54,7 @@ inst:geometry-i2 a gom:PointCloudGeometry ;
 	gom:hasCoordinateSystem epsg:6190 ;
 	gom:hasFileSize 3811517 ;
 	omg:derivedFromGeometry inst:geometry-i1a , inst:geometry-i1b , inst:geometry-i1c ;
-	fog:asPcd_v0.7-ascii "https://www.dropbox.com/s/7liibaj1zn4aush/lidar_cloud.pcd?dl=0"^^xsd:anyURI .
+	fog:asPcd_v0.7-ascii "https://github.com/mathib/fog-ontology/blob/master/sample_data/lidar_cloud.pcd"^^xsd:anyURI .
 	
 epsg:6190 a gom:CartesianCoordinateSystem .
 
@@ -62,12 +62,12 @@ epsg:6190 a gom:CartesianCoordinateSystem .
 inst:geometry-i3 a gom:PlanGeometry ;
 	gom:hasCoordinateSystem inst:cs1 ;
 	gom:hasFileSize 7541091 ;
- 	fog:asDwg_v2018 "https://www.dropbox.com/s/w9uho8fikwzdxfc/plan.dwg?dl=0"^^xsd:anyURI .
+ 	fog:asDwg_v2018 "https://github.com/mathib/fog-ontology/blob/master/sample_data/plan.dwg"^^xsd:anyURI .
 inst:geometry-i4 a gom:PlanGeometry ;
 	gom:hasCoordinateSystem inst:cs2 ;
 	gom:hasFileSize 906639 ;
 	omg:derivedFromGeometry inst:geometry-i3 ;
- 	fog:asSvg_v1.1 "https://www.dropbox.com/s/idvba5hw402ggjv/plan.svg?dl=0"^^xsd:anyURI .
+ 	fog:asSvg_v1.1 "https://github.com/mathib/fog-ontology/blob/master/sample_data/plan.svg"^^xsd:anyURI .
 	
 inst:cs1 a gom:CartesianCoordinateSystem .
 inst:transformation1 a gom:AffineCoordinateSystemTransformation ;
