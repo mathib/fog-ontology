@@ -10,7 +10,7 @@ This folder contains ABox RDF triples in Turtle (.ttl) format and [SPARQL-visual
 - files:
     - [`sample_abox_columns_dummy.ttl`](https://github.com/mathib/fog-ontology/blob/master/examples/sample_abox_columns_dummy.ttl): the RDF literals contain **dummy** geometry descriptions
 	- [`sample_abox_columns.ttl`](https://github.com/mathib/fog-ontology/blob/master/examples/sample_abox_columns.ttl): the RDF literals embed or reference actual geometry descriptions
-	- [`fog-demo.json`](https://github.com/mathib/fog-ontology/blob/master/examples/fog-demo.json): the content for [this](https://madsholten.github.io/sparql-visualizer/?file=https://raw.githubusercontent.com/mathib/fog-ontology/master/examples/fog-demo.json) SPARQL-visualizer demo. It uses the content of the above ´sample_abox_columns_dummy.ttl´ file
+	- [`fog-demo.json`](https://github.com/mathib/fog-ontology/blob/master/examples/fog-demo.json): the content for [this SPARQL-visualizer demo](https://madsholten.github.io/sparql-visualizer/?file=https://raw.githubusercontent.com/mathib/fog-ontology/master/examples/fog-demo.json). It uses the content of the above `sample_abox_columns_dummy.ttl` file
 	
 ## 2) Elaborated dataset related to the Saint Nicolas church
 - Applied geometry schemas: PLY (binary, incl. textures), LAZ, PCD (ascii), DWG, SVG, OBJ, NXZ (Nexus), glTF (JSON)
