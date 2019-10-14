@@ -22,26 +22,26 @@ inst:wallA-area1 a bot:Element , beo:BuildingElementPart ;
 inst:geometry-c1 a gom:MeshGeometry ;
 	gom:hasCoordinateSystem inst:cs1 ;
 	gom:hasFileSize 237432094 ;
-	fog:asPly_v1.0-binaryLE "https://www.dropbox.com/s/68cxh1mbnr1ttcp/wallA_survey.ply?dl=0"^^xsd:anyURI ;
-	fog:asPly_v1.0-texture "https://www.dropbox.com/s/et85u44l6max1pz/Wall_u1_v1.png?dl=0"^^xsd:anyURI ;
-	fog:asPly_v1.0-texture "https://www.dropbox.com/s/9hninuszihnrrew/Wall_u1_v2.png?dl=0"^^xsd:anyURI ;
-	fog:asPly_v1.0-texture "https://www.dropbox.com/s/84eed8e2r0i9glv/Wall_u1_v3.png?dl=0"^^xsd:anyURI ;
-	fog:asPly_v1.0-texture "https://www.dropbox.com/s/wdjw9cjvafba7jz/Wall_u1_v4.png?dl=0"^^xsd:anyURI ;
-	fog:asPly_v1.0-texture "https://www.dropbox.com/s/ysaw3x05wmd2fg8/Wall_u2_v1.png?dl=0"^^xsd:anyURI ;
-	fog:asPly_v1.0-texture "https://www.dropbox.com/s/78nd81ef6x0gs4u/Wall_u2_v2.png?dl=0"^^xsd:anyURI ;
-	fog:asPly_v1.0-texture "https://www.dropbox.com/s/wpreweoq4lfhyfj/Wall_u2_v3.png?dl=0"^^xsd:anyURI ;
-	fog:asPly_v1.0-texture "https://www.dropbox.com/s/7nthg8q12126lfi/Wall_u2_v4.png?dl=0"^^xsd:anyURI ;
-	fog:asPly_v1.0-texture "https://www.dropbox.com/s/ik7x9e07kut5t4y/Wall_u3_v1.png?dl=0"^^xsd:anyURI ;
-	fog:asPly_v1.0-texture "https://www.dropbox.com/s/3ryv9gm85qvcmnc/Wall_u3_v2.png?dl=0"^^xsd:anyURI ;
-	fog:asPly_v1.0-texture "https://www.dropbox.com/s/1oeah7kaf7nsrnn/Wall_u3_v3.png?dl=0"^^xsd:anyURI ;
-	fog:asPly_v1.0-texture "https://www.dropbox.com/s/fue9diqsh090bfg/Wall_u4_v1.png?dl=0"^^xsd:anyURI ;
-	fog:asPly_v1.0-texture "https://www.dropbox.com/s/536gcwwuaxgmxxp/Wall_u4_v2.png?dl=0"^^xsd:anyURI ;
-	fog:asPly_v1.0-texture "https://www.dropbox.com/s/l4hlou36i6u41fg/Wall_u4_v3.png?dl=0"^^xsd:anyURI .
+	fog:asPly_v1.0-binaryLE "https://github.com/mathib/fog-ontology/blob/master/sample_data/wallA_survey.ply"^^xsd:anyURI ;
+	fog:asPly_v1.0-texture "https://github.com/mathib/fog-ontology/blob/master/sample_data/Wall_u1_v1.png"^^xsd:anyURI ;
+	fog:asPly_v1.0-texture "https://github.com/mathib/fog-ontology/blob/master/sample_data/Wall_u1_v2.png"^^xsd:anyURI ;
+	fog:asPly_v1.0-texture "https://github.com/mathib/fog-ontology/blob/master/sample_data/Wall_u1_v3.png"^^xsd:anyURI ;
+	fog:asPly_v1.0-texture "https://github.com/mathib/fog-ontology/blob/master/sample_data/Wall_u1_v4.png"^^xsd:anyURI ;
+	fog:asPly_v1.0-texture "https://github.com/mathib/fog-ontology/blob/master/sample_data/Wall_u2_v1.png"^^xsd:anyURI ;
+	fog:asPly_v1.0-texture "https://github.com/mathib/fog-ontology/blob/master/sample_data/Wall_u2_v2.png"^^xsd:anyURI ;
+	fog:asPly_v1.0-texture "https://github.com/mathib/fog-ontology/blob/master/sample_data/Wall_u2_v3.png"^^xsd:anyURI ;
+	fog:asPly_v1.0-texture "https://github.com/mathib/fog-ontology/blob/master/sample_data/Wall_u2_v4.png"^^xsd:anyURI ;
+	fog:asPly_v1.0-texture "https://github.com/mathib/fog-ontology/blob/master/sample_data/Wall_u3_v1.png"^^xsd:anyURI ;
+	fog:asPly_v1.0-texture "https://github.com/mathib/fog-ontology/blob/master/sample_data/Wall_u3_v2.png"^^xsd:anyURI ;
+	fog:asPly_v1.0-texture "https://github.com/mathib/fog-ontology/blob/master/sample_data/Wall_u3_v3.png"^^xsd:anyURI ;
+	fog:asPly_v1.0-texture "https://github.com/mathib/fog-ontology/blob/master/sample_data/Wall_u4_v1.png"^^xsd:anyURI ;
+	fog:asPly_v1.0-texture "https://github.com/mathib/fog-ontology/blob/master/sample_data/Wall_u4_v2.png"^^xsd:anyURI ;
+	fog:asPly_v1.0-texture "https://github.com/mathib/fog-ontology/blob/master/sample_data/Wall_u4_v3.png"^^xsd:anyURI .
 inst:geometry-c2 a omg:Geometry ;
 	gom:hasCoordinateSystem inst:cs1 ;
 	gom:hasFileSize 81888256 ;
 	omg:hasGeometryContext inst:context2 ;
-	fog:asNexus_v4.2-nxz "https://www.dropbox.com/s/jibahcxeioc52li/wallA_survey.nxz?dl=0"^^xsd:anyURI .
+	fog:asNexus_v4.2-nxz "https://github.com/mathib/fog-ontology/blob/master/sample_data/wallA_survey.nxz"^^xsd:anyURI .
 inst:context2 a omg:GeometryContext .
 
 #-- part 6
