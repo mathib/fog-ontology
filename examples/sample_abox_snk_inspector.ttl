@@ -1,0 +1,102 @@
+@prefix	rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix bot: <https://w3id.org/bot#> .
+@prefix beo: <http://pi.pauwel.be/voc/buildingelement#> .
+@prefix dot: <https://w3id.org/dot#> .
+@prefix epsg: <http://www.opengis.net/def/crs/EPSG/0/> .
+@prefix omg: <https://w3id.org/omg#> .
+@prefix fog: <https://w3id.org/fog#> . 
+@prefix gom: <https://w3id.org/gom#> .
+@prefix inst: <https://example.org/snk/20190918/data#> .
+
+### building topology
+inst:site a bot:Site ;
+	bot:hasBuilding inst:church .
+	
+inst:church a bot:Building ;
+	omg:hasGeometry inst:geometry-i1a , inst:geometry-i1b , inst:geometry-i1c , inst:geometry-i2 ;
+	bot:hasStorey inst:groundfloor .
+	
+inst:groundfloor a bot:Storey ;
+	omg:hasGeometry inst:geometry-i3 , inst:geometry-i4 ;
+	bot:hasSpace inst:nave .
+	
+inst:nave a bot:Space ;
+	bot:adjacentElement inst:roof1 , inst:wallA .
+	
+inst:roof1 a bot:Element , beo:Roof ;
+	omg:hasGeometry inst:geometry-i5 ;
+	dot:hasDamageElement inst:roof1-damage1 , inst:roof1-damage2 .
+
+inst:wallA a bot:Element , beo:Wall ;
+	omg:hasGeometry inst:geometry-i6 .
+	
+inst:roof1-damage1 a dot:DamageElement ;
+	omg:hasGeometry inst:geometry-i7 .
+
+### geometry descriptions
+#-- part1
+inst:geometry-i1a a gom:PointCloudGeometry ;
+	gom:hasCoordinateSystem epsg:6190 ;
+	gom:hasFileSize 11353506 ;
+	fog:asLas_v1.4-laz "https://remotesensing.vlaanderen.be/download/openlidar/LiDAR_DHMV_2/P3/ATL12322/LiDAR_DHMV_2_P3_ATL12322_FU_20130407_22020_7/Tiles/LiDAR_DHMV_2_P3_ATL12322_FU_20130407_22020_7_104500_193500.laz"^^xsd:anyURI .
+inst:geometry-i1b a gom:PointCloudGeometry ;
+	gom:hasCoordinateSystem epsg:6190 ;
+	gom:hasFileSize 6303875 ;
+	fog:asLas_v1.4-laz "https://remotesensing.vlaanderen.be/download/openlidar/LiDAR_DHMV_2/P3/ATL12322/LiDAR_DHMV_2_P3_ATL12322_FU_20130407_22019_2/Tiles/LiDAR_DHMV_2_P3_ATL12322_FU_20130407_22019_2_104500_193500.laz"^^xsd:anyURI .
+inst:geometry-i1c a gom:PointCloudGeometry ;
+	gom:hasCoordinateSystem epsg:6190 ;
+	gom:hasFileSize 870716 ;
+	fog:asLas_v1.4-laz "https://remotesensing.vlaanderen.be/download/openlidar/LiDAR_DHMV_2/P3/ATL12322/LiDAR_DHMV_2_P3_ATL12322_FU_20130407_22018_7/Tiles/LiDAR_DHMV_2_P3_ATL12322_FU_20130407_22018_7_104500_193500.laz"^^xsd:anyURI .
+inst:geometry-i2 a gom:PointCloudGeometry ;
+	gom:hasCoordinateSystem epsg:6190 ;
+	gom:hasFileSize 3811517 ;
+	omg:derivedFromGeometry inst:geometry-i1a , inst:geometry-i1b , inst:geometry-i1c ;
+	fog:asPcd_v0.7-ascii "https://www.dropbox.com/s/7liibaj1zn4aush/lidar_cloud.pcd?dl=0"^^xsd:anyURI .
+	
+epsg:6190 a gom:CartesianCoordinateSystem .
+
+#-- part2
+inst:geometry-i3 a gom:PlanGeometry ;
+	gom:hasCoordinateSystem inst:cs1 ;
+	gom:hasFileSize 7541091 ;
+ 	fog:asDwg_v2018 "https://www.dropbox.com/s/w9uho8fikwzdxfc/plan.dwg?dl=0"^^xsd:anyURI .
+inst:geometry-i4 a gom:PlanGeometry ;
+	gom:hasCoordinateSystem inst:cs2 ;
+	gom:hasFileSize 906639 ;
+	omg:derivedFromGeometry inst:geometry-i3 ;
+ 	fog:asSvg_v1.1 "https://www.dropbox.com/s/idvba5hw402ggjv/plan.svg?dl=0"^^xsd:anyURI .
+	
+inst:cs1 a gom:CartesianCoordinateSystem .
+inst:transformation1 a gom:AffineCoordinateSystemTransformation ;
+	gom:fromCartesianCoordinateSystem epsg:6190 ;
+	gom:toCartesianCoordinateSystem inst:cs1 ;
+	gom:hasMatrix "[0.245985224843,-0.969273567200,0,0,0.969273567200,0.245985224843,0,0,0,0,1,0,-213778.578125000000,53863.355468750000,-8.199999809265,1]"^^gom:columnMajorArray .
+inst:cs2 a gom:CartesianCoordinateSystem .
+inst:transformation2 a gom:AffineCoordinateSystemTransformation ;
+	gom:fromCartesianCoordinateSystem inst:cs2 ;
+	gom:toCartesianCoordinateSystem inst:cs1 ;
+	gom:hasMatrix "[100,0,0,0,0,-100,1.2246467991473532e-14,0,0,-1.2246467991473532e-14,-100,0,-84.1,118.9,0,1]"^^gom:columnMajorArray .
+
+#-- part 3
+inst:geometry-i5 a gom:MeshGeometry ;
+	gom:hasCoordinateSystem inst:cs1 ;
+	gom:hasFileSize 982 ;
+	omg:hasGeometryContext inst:context1 ;
+	omg:derivedFromGeometry inst:geometry-i3 ;
+	fog:asPly_v1.0-binaryLE "cGx5CmZvcm1hdCBiaW5hcnlfbGl0dGxlX2VuZGlhbiAxLjAKY29tbWVudCBWQ0dMSUIgZ2VuZXJhdGVkCmVsZW1lbnQgdmVydGV4IDI0CnByb3BlcnR5IGZsb2F0IHgKcHJvcGVydHkgZmxvYXQgeQpwcm9wZXJ0eSBmbG9hdCB6CnByb3BlcnR5IGZsb2F0IG54CnByb3BlcnR5IGZsb2F0IG55CnByb3BlcnR5IGZsb2F0IG56CmVsZW1lbnQgZmFjZSAxMgpwcm9wZXJ0eSBsaXN0IHVjaGFyIGludCB2ZXJ0ZXhfaW5kaWNlcwplbmRfaGVhZGVyCgc5/sEN7uZCAl66QQAAAAAGwCo/AAAAAE4+1MEN7uZCchPwQQAAAAAGwCo/AAAAAE4+1MEN7uZC4q7vQQAAAAA8YB5AAAAAAAc5/sEN7uZCksK6QQAAAAA8YB5AAAAAAAc5/sEskp9CAl66QbT4nT8AAAAAo8N4v04+1MEskp9C4q7vQbD4nT8AAAAAnsN4vwc5/sEN7uZCAl66QbD4nT8AAAAAnsN4v04+1MEN7uZC4q7vQbT4nT8AAAAAo8N4v04+1MEskp9CchPwQdsPyT8AAAAAAAAAAE4+1MEskp9C4q7vQQMQyT8AAAAAAAAAAE4+1MEN7uZCchPwQQMQyT8AAAAAAAAAAE4+1MEN7uZC4q7vQdsPyT8AAAAAAAAAAAc5/sEskp9CAl66QQAAAAAGwCq/AAAAAE4+1MEskp9CchPwQQAAAAAGwCq/AAAAAE4+1MEskp9C4q7vQQAAAAA8YB7AAAAAAAc5/sEskp9CksK6QQAAAAA8YB7AAAAAAAc5/sEskp9CAl66QdsPyb8AAAAAAAAAAAc5/sEN7uZCAl66QQMQyb8AAAAAAAAAAAc5/sEskp9CksK6QQMQyb8AAAAAAAAAAAc5/sEN7uZCksK6QdsPyb8AAAAAAAAAAAc5/sEskp9CksK6QbT4nb8AAAAAo8N4P04+1MEskp9CchPwQbD4nb8AAAAAnsN4Pwc5/sEN7uZCksK6QbD4nb8AAAAAnsN4P04+1MEN7uZCchPwQbT4nb8AAAAAo8N4PwMCAAAAAAAAAAMAAAADAwAAAAEAAAACAAAAAwUAAAAEAAAABgAAAAMJAAAACwAAAAoAAAADDgAAAA8AAAAMAAAAAw8AAAAOAAAADQAAAAMRAAAAEAAAABIAAAADFQAAABcAAAAWAAAAAwUAAAAGAAAABwAAAAMJAAAACgAAAAgAAAADEQAAABIAAAATAAAAAxUAAAAWAAAAFAAAAA=="^^xsd:base64Binary .
+inst:geometry-i6 a omg:Geometry ;
+ 	gom:hasCoordinateSystem inst:cs1 ;
+	gom:hasFileSize 597 ;
+	omg:derivedFromGeometry inst:geometry-i3 ;
+	fog:asPly_v1.0-binaryLE "cGx5CmZvcm1hdCBiaW5hcnlfbGl0dGxlX2VuZGlhbiAxLjAKY29tbWVudCBWQ0dMSUIgZ2VuZXJhdGVkCmVsZW1lbnQgdmVydGV4IDgKcHJvcGVydHkgZmxvYXQgeApwcm9wZXJ0eSBmbG9hdCB5CnByb3BlcnR5IGZsb2F0IHoKcHJvcGVydHkgZmxvYXQgbngKcHJvcGVydHkgZmxvYXQgbnkKcHJvcGVydHkgZmxvYXQgbnoKZWxlbWVudCBmYWNlIDEyCnByb3BlcnR5IGxpc3QgdWNoYXIgaW50IHZlcnRleF9pbmRpY2VzCmVuZF9oZWFkZXIKN8Afwp7DyUIAAAAAAAAAwAAAgD8AAIC/N8Afwp7DyUI0RhVBAACAvwAAAEAAAIA/N8Afwgmcx0IAAAAAAACAvwAAAMAAAADAN8Afwgmcx0I0RhVBAAAAwAAAgL8AAABAGCcWwgmcx0IAAAAAAAAAQAAAgL8AAIC/GCcWwgmcx0I0RhVBAACAPwAAAMAAAIA/GCcWwp7DyUIAAAAAAACAPwAAAEAAAADAGCcWwp7DyUI0RhVBAAAAQAAAgD8AAABAAwIAAAAAAAAABgAAAAMCAAAABgAAAAQAAAADBwAAAAEAAAADAAAAAwcAAAADAAAABQAAAAMAAAAAAgAAAAMAAAADAAAAAAMAAAABAAAAAwIAAAAEAAAABQAAAAMCAAAABQAAAAMAAAADBAAAAAYAAAAHAAAAAwQAAAAHAAAABQAAAAMGAAAAAAAAAAEAAAADBgAAAAEAAAAHAAAA"^^xsd:base64Binary .
+inst:context1 a omg:GeometryContext .
+	
+#-- part 4
+inst:geometry-i7 a gom:MeshGeometry ;
+	gom:hasCoordinateSystem inst:cs1 ;
+	gom:hasFileSize 2040 ;
+	omg:hasGeometryContext inst:context1 ;
+	fog:asObj_v3.0-obj "####\n#\n# OBJ File Generated by Meshlab\n#\n####\n# Object damage1.obj\n#\n# Vertices: 24\n# Faces: 12\n#\n####\nvn 0.000000 -1.570825 0.000000\nv -29.418737 82.828133 26.341190\nvn 0.000000 -1.570773 0.000000\nv -29.426594 82.828133 26.347376\nvn 0.000000 -1.570650 0.000000\nv -29.259098 82.828133 26.543940\nvn 0.000000 -1.570936 0.000000\nv -29.266956 82.828133 26.550125\nvn 0.971556 0.000000 1.234293\nv -29.259098 82.828133 26.543940\nvn 0.971556 0.000000 1.234293\nv -29.266956 82.828133 26.550125\nvn 0.971556 0.000000 1.234293\nv -29.259098 82.993271 26.543940\nvn 0.971556 0.000000 1.234293\nv -29.266956 82.993271 26.550125\nvn 0.000000 1.570650 0.000000\nv -29.259098 82.993271 26.543940\nvn 0.000000 1.570936 0.000000\nv -29.266956 82.993271 26.550125\nvn 0.000000 1.570825 0.000000\nv -29.418737 82.993271 26.341190\nvn 0.000000 1.570773 0.000000\nv -29.426594 82.993271 26.347376\nvn -0.971702 0.000000 -1.234178\nv -29.418737 82.993271 26.341190\nvn -0.971702 0.000000 -1.234178\nv -29.426594 82.993271 26.347376\nvn -0.971702 0.000000 -1.234178\nv -29.418737 82.828133 26.341190\nvn -0.971702 0.000000 -1.234178\nv -29.426594 82.828133 26.347376\nvn 1.234151 0.000000 -0.971737\nv -29.418737 82.828133 26.341190\nvn 1.234151 0.000000 -0.971737\nv -29.259098 82.828133 26.543940\nvn 1.234151 0.000000 -0.971737\nv -29.259098 82.993271 26.543940\nvn 1.234151 0.000000 -0.971737\nv -29.418737 82.993271 26.341190\nvn -1.234156 0.000000 0.971730\nv -29.426594 82.828133 26.347376\nvn -1.234156 0.000000 0.971730\nv -29.266956 82.828133 26.550125\nvn -1.234156 0.000000 0.971730\nv -29.266956 82.993271 26.550125\nvn -1.234156 0.000000 0.971730\nv -29.426594 82.993271 26.347376\n# 24 vertices, 0 vertices normals\n\nf 1//1 3//3 4//4\nf 5//5 7//7 8//8\nf 9//9 11//11 10//10\nf 13//13 15//15 16//16\nf 18//18 17//17 20//20\nf 20//20 19//19 18//18\nf 22//22 24//24 21//21\nf 24//24 22//22 23//23\nf 1//1 4//4 2//2\nf 5//5 8//8 6//6\nf 11//11 12//12 10//10\nf 13//13 16//16 14//14\n# 12 faces, 0 coords texture\n\n# End of File\n"^^xsd:string .

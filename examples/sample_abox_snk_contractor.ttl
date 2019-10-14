@@ -1,0 +1,52 @@
+@prefix	rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix bot: <https://w3id.org/bot#> .
+@prefix beo: <http://pi.pauwel.be/voc/buildingelement#> .
+@prefix dot: <https://w3id.org/dot#> .
+@prefix omg: <https://w3id.org/omg#> .
+@prefix fog: <https://w3id.org/fog#> . 
+@prefix gom: <https://w3id.org/gom#> .
+@prefix inst: <https://example.org/snk/20190918/data#> .
+
+### building topology
+inst:wallA omg:hasGeometry inst:geometry-c1 , inst:geometry-c2 ;
+	bot:hasSubElement inst:wallA-area1 .
+
+inst:wallA-area1 a bot:Element , beo:BuildingElementPart ;
+	omg:hasGeometry inst:geometry-c3 .
+	
+### geometry descriptions
+#-- part 5
+inst:geometry-c1 a gom:MeshGeometry ;
+	gom:hasCoordinateSystem inst:cs1 ;
+	gom:hasFileSize 237432094 ;
+	fog:asPly_v1.0-binaryLE "https://www.dropbox.com/s/68cxh1mbnr1ttcp/wallA_survey.ply?dl=0"^^xsd:anyURI ;
+	fog:asPly_v1.0-texture "https://www.dropbox.com/s/et85u44l6max1pz/Wall_u1_v1.png?dl=0"^^xsd:anyURI ;
+	fog:asPly_v1.0-texture "https://www.dropbox.com/s/9hninuszihnrrew/Wall_u1_v2.png?dl=0"^^xsd:anyURI ;
+	fog:asPly_v1.0-texture "https://www.dropbox.com/s/84eed8e2r0i9glv/Wall_u1_v3.png?dl=0"^^xsd:anyURI ;
+	fog:asPly_v1.0-texture "https://www.dropbox.com/s/wdjw9cjvafba7jz/Wall_u1_v4.png?dl=0"^^xsd:anyURI ;
+	fog:asPly_v1.0-texture "https://www.dropbox.com/s/ysaw3x05wmd2fg8/Wall_u2_v1.png?dl=0"^^xsd:anyURI ;
+	fog:asPly_v1.0-texture "https://www.dropbox.com/s/78nd81ef6x0gs4u/Wall_u2_v2.png?dl=0"^^xsd:anyURI ;
+	fog:asPly_v1.0-texture "https://www.dropbox.com/s/wpreweoq4lfhyfj/Wall_u2_v3.png?dl=0"^^xsd:anyURI ;
+	fog:asPly_v1.0-texture "https://www.dropbox.com/s/7nthg8q12126lfi/Wall_u2_v4.png?dl=0"^^xsd:anyURI ;
+	fog:asPly_v1.0-texture "https://www.dropbox.com/s/ik7x9e07kut5t4y/Wall_u3_v1.png?dl=0"^^xsd:anyURI ;
+	fog:asPly_v1.0-texture "https://www.dropbox.com/s/3ryv9gm85qvcmnc/Wall_u3_v2.png?dl=0"^^xsd:anyURI ;
+	fog:asPly_v1.0-texture "https://www.dropbox.com/s/1oeah7kaf7nsrnn/Wall_u3_v3.png?dl=0"^^xsd:anyURI ;
+	fog:asPly_v1.0-texture "https://www.dropbox.com/s/fue9diqsh090bfg/Wall_u4_v1.png?dl=0"^^xsd:anyURI ;
+	fog:asPly_v1.0-texture "https://www.dropbox.com/s/536gcwwuaxgmxxp/Wall_u4_v2.png?dl=0"^^xsd:anyURI ;
+	fog:asPly_v1.0-texture "https://www.dropbox.com/s/l4hlou36i6u41fg/Wall_u4_v3.png?dl=0"^^xsd:anyURI .
+inst:geometry-c2 a omg:Geometry ;
+	gom:hasCoordinateSystem inst:cs1 ;
+	gom:hasFileSize 81888256 ;
+	omg:hasGeometryContext inst:context2 ;
+	fog:asNexus_v4.2-nxz "https://www.dropbox.com/s/jibahcxeioc52li/wallA_survey.nxz?dl=0"^^xsd:anyURI .
+inst:context2 a omg:GeometryContext .
+
+#-- part 6
+inst:geometry-c3 a gom:BoundingVolume ;
+	omg:hasContext inst:context2 ;
+	gom:hasCoordinateSystem inst:cs1 ;
+	gom:hasFileSize 10559 ;
+	fog:asGltf_v2.0-gltf "{\n  \"asset\": {\n    \"version\": \"2.0\",\n    \"generator\": \"THREE.GLTFExporter\"\n  },\n  \"scenes\": [\n    {\n      \"nodes\": [\n        5\n      ],\n      \"name\": \"AuxScene\"\n    }\n  ],\n  \"scene\": 0,\n  \"nodes\": [\n    {\n      \"matrix\": [\n        1,\n        0,\n        0,\n        0,\n        0,\n        1,\n        0,\n        0,\n        0,\n        0,\n        1,\n        0,\n        -30.437527,\n        56.371271,\n        742.02175,\n        1\n      ],\n      \"name\": \"Camera-Top\",\n      \"camera\": 0\n    },\n    {\n      \"matrix\": [\n        -0.8737720484198567,\n        0.48633501545963237,\n        -2.561892127742238e-7,\n        0,\n        -0.25843798454036265,\n        -0.46432123741811665,\n        0.8471219205494651,\n        0,\n        0.4119852561894042,\n        0.7401920794505692,\n        0.5313987141618884,\n        0,\n        -36.491032,\n        104.278576,\n        3.855219,\n        1\n      ],\n      \"name\": \"Camera-Perspective\",\n      \"camera\": 1\n    },\n    {\n      \"matrix\": [\n        1,\n        0,\n        0,\n        0,\n        0,\n        2.220446049250313e-16,\n        1,\n        0,\n        0,\n        -1,\n        2.220446049250313e-16,\n        0,\n        -37.740279,\n        18.054592,\n        13.177777,\n        1\n      ],\n      \"name\": \"Camera-Front\",\n      \"camera\": 2\n    },\n    {\n      \"matrix\": [\n        0,\n        1,\n        0,\n        0,\n        0,\n        0,\n        1,\n        0,\n        1,\n        0,\n        0,\n        0,\n        282.277826,\n        101.394336,\n        0.87681,\n        1\n      ],\n      \"name\": \"Camera-Right\",\n      \"camera\": 3\n    },\n    {\n      \"name\": \"Extrusion\",\n      \"mesh\": 0\n    },\n    {\n      \"name\": \"null\",\n      \"children\": [\n        0,\n        1,\n        2,\n        3,\n        4\n      ]\n    }\n  ],\n  \"cameras\": [\n    {\n      \"type\": \"orthographic\",\n      \"orthographic\": {\n        \"xmag\": 1,\n        \"ymag\": 0.5384614970414233,\n        \"zfar\": 744.5173,\n        \"znear\": 703.045526\n      },\n      \"name\": \"OrthographicCamera\"\n    },\n    {\n      \"type\": \"perspective\",\n      \"perspective\": {\n        \"aspectRatio\": 1.844193,\n        \"yfov\": 0.47319593231140383,\n        \"zfar\": 12.172393,\n        \"znear\": 0.006025\n      },\n      \"name\": \"PerspectiveCamera\"\n    },\n    {\n      \"type\": \"orthographic\",\n      \"orthographic\": {\n        \"xmag\": 1,\n        \"ymag\": 0.5353846417420132,\n        \"zfar\": 110.656708,\n        \"znear\": 0.005\n      },\n      \"name\": \"OrthographicCamera\"\n    },\n    {\n      \"type\": \"orthographic\",\n      \"orthographic\": {\n        \"xmag\": 1,\n        \"ymag\": 0.5403725868986666,\n        \"zfar\": 326.00925,\n        \"znear\": 303.651972\n      },\n      \"name\": \"OrthographicCamera\"\n    }\n  ],\n  \"bufferViews\": [\n    {\n      \"buffer\": 0,\n      \"byteOffset\": 0,\n      \"byteLength\": 432,\n      \"target\": 34962,\n      \"byteStride\": 12\n    },\n    {\n      \"buffer\": 0,\n      \"byteOffset\": 432,\n      \"byteLength\": 432,\n      \"target\": 34962,\n      \"byteStride\": 12\n    },\n    {\n      \"buffer\": 0,\n      \"byteOffset\": 864,\n      \"byteLength\": 288,\n      \"target\": 34962,\n      \"byteStride\": 8\n    }\n  ],\n  \"buffers\": [\n    {\n      \"byteLength\": 1152,\n      \"uri\": \"data:application/octet-stream;base64,AfUdwo4GykINPyw/AfUdwoxtyUINPyw/AfUdwoxtyUKM+dI/AfUdwoxtyUINPyw/cVEZwoxtyUINPyw/cVEZwoxtyUKM+dI/cVEZwoxtyUINPyw/cVEZwo4GykINPyw/cVEZwo4GykKM+dI/cVEZwo4GykINPyw/AfUdwo4GykINPyw/AfUdwo4GykKM+dI/AfUdwoxtyUINPyw/AfUdwo4GykINPyw/cVEZwo4GykINPyw/cVEZwo4GykINPyw/cVEZwoxtyUINPyw/AfUdwoxtyUINPyw/AfUdwoxtyUKM+dI/cVEZwo4GykKM+dI/AfUdwo4GykKM+dI/cVEZwo4GykKM+dI/AfUdwoxtyUKM+dI/cVEZwoxtyUKM+dI/AfUdwo4GykINPyw/AfUdwoxtyUKM+dI/AfUdwo4GykKM+dI/AfUdwoxtyUINPyw/cVEZwoxtyUKM+dI/AfUdwoxtyUKM+dI/cVEZwoxtyUINPyw/cVEZwo4GykKM+dI/cVEZwoxtyUKM+dI/cVEZwo4GykINPyw/AfUdwo4GykKM+dI/cVEZwo4GykKM+dI/AACAvwAAAAAAAAAAAACAvwAAAAAAAAAAAACAvwAAAAAAAAAAAAAAAAAAgL8AAAAAAAAAAAAAgL8AAAAAAAAAAAAAgL8AAAAAAACAPwAAAAAAAAAAAACAPwAAAAAAAAAAAACAPwAAAAAAAAAAAAAAAAAAgD8AAAAAAAAAAAAAgD8AAAAAAAAAAAAAgD8AAAAAAAAAAAAAAAAAAIC/AAAAAAAAAAAAAIC/AAAAAAAAAAAAAIC/AAAAAAAAAAAAAIC/AAAAAAAAAAAAAIC/AAAAAAAAAAAAAIC/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AAAAAAAAAAAAAIA/AACAvwAAAAAAAAAAAACAvwAAAAAAAAAAAACAvwAAAAAAAAAAAAAAAAAAgL8AAAAAAAAAAAAAgL8AAAAAAAAAAAAAgL8AAAAAAACAPwAAAAAAAAAAAACAPwAAAAAAAAAAAACAPwAAAAAAAAAAAAAAAAAAgD8AAAAAAAAAAAAAgD8AAAAAAAAAAAAAgD8AAAAAAAAAAAAAAABIhxc+AAAAAEiHFz6aIws/SIcXPgAAAAAAAAA/AAAAAAAAAD+aIws/AAAAPwAAAADS4SU/AAAAANLhJT+aIws/0uElPwAAAAAAAIA/AAAAAAAAgD+aIws/XDy0PpojCz9cPLQ+AACAPwAAAAAAAIA/AAAAAAAAgD8AAAAAmiMLP1w8tD6aIws/AACAPwAAgD/S4SU/miMLPwAAgD+aIws/0uElP5ojCz8AAIA/AACAP9LhJT8AAIA/AAAAAAAAAABIhxc+miMLPwAAAACaIws/SIcXPgAAAAAAAAA/miMLP0iHFz6aIws/AAAAPwAAAADS4SU/miMLPwAAAD+aIws/0uElPwAAAAAAAIA/miMLP9LhJT+aIws/\"\n    }\n  ],\n  \"accessors\": [\n    {\n      \"bufferView\": 0,\n      \"componentType\": 5126,\n      \"count\": 36,\n      \"max\": [\n        -38.329532623291016,\n        101.01280212402344,\n        1.648240566253662\n      ],\n      \"min\": [\n        -39.489261627197266,\n        100.71395874023438,\n        0.6728370785713196\n      ],\n      \"type\": \"VEC3\"\n    },\n    {\n      \"bufferView\": 1,\n      \"componentType\": 5126,\n      \"count\": 36,\n      \"max\": [\n        1,\n        1,\n        1\n      ],\n      \"min\": [\n        -1,\n        -1,\n        -1\n      ],\n      \"type\": \"VEC3\"\n    },\n    {\n      \"bufferView\": 2,\n      \"componentType\": 5126,\n      \"count\": 36,\n      \"max\": [\n        1,\n        1\n      ],\n      \"min\": [\n        0,\n        0\n      ],\n      \"type\": \"VEC2\"\n    }\n  ],\n  \"materials\": [\n    {\n      \"pbrMetallicRoughness\": {\n        \"baseColorFactor\": [\n          0.3333333333333333,\n          0.10196078431372549,\n          0.5450980392156862,\n          1\n        ],\n        \"metallicFactor\": 0.5,\n        \"roughnessFactor\": 0.5\n      }\n    }\n  ],\n  \"meshes\": [\n    {\n      \"primitives\": [\n        {\n          \"mode\": 4,\n          \"attributes\": {\n            \"POSITION\": 0,\n            \"NORMAL\": 1,\n            \"TEXCOORD_0\": 2\n          },\n          \"material\": 0\n        }\n      ]\n    }\n  ]\n}"^^xsd:string .

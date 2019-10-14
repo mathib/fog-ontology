@@ -21,7 +21,7 @@ The FOG ontology is incomplete by nature, as it's impossible to contain all exis
 
 ## sparql-visualizer demo
 
-An [online sparql-visualizer demo](https://madsholten.github.io/sparql-visualizer/?file=https://raw.githubusercontent.com/mathib/fog-ontology/master/examples/fog-demo.json) is available, containing sample Abox triples and example queries. The RDF literals in the Abox triples are dummies to make it more easily to visualize them as a graph. The same Abox triples with the full RDF literals are also available in this repository in [`examples/sample_abox_full.ttl`](https://github.com/mathib/fog-ontology/blob/master/examples/sample_abox_full.ttl).
+An [online sparql-visualizer demo](https://madsholten.github.io/sparql-visualizer/?file=https://raw.githubusercontent.com/mathib/fog-ontology/master/examples/fog-demo.json) is available, containing sample Abox triples and example queries. The RDF literals in the Abox triples are dummies to make it more easily to visualize them as a graph. The same Abox triples with the full RDF literals are also available in this repository in [`examples/sample_abox_columns.ttl`](https://github.com/mathib/fog-ontology/blob/master/examples/sample_abox_columns.ttl).
 
 ## Contributors
 
