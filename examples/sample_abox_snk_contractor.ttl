@@ -18,6 +18,8 @@ inst:wallA-area1 a bot:Element , beo:BuildingElementPart ;
 	omg:hasGeometry inst:geometry-c3 .
 	
 ### geometry descriptions
+inst:cs1 a gom:CartesianCoordinateSystem .
+
 #-- part 5
 inst:geometry-c1 a gom:MeshGeometry ;
 	gom:hasCoordinateSystem inst:cs1 ;
