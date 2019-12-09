@@ -2,16 +2,16 @@
 <h2>Abstract</h2>
     <span class="markdown">The File Ontology for Geometry formats (FOG) provides geometry schema specific relations between things (e.g. building objects) and their geometry descriptions. These geometry descriptions can be (1) RDF-based (e.g. using specific ontologies such as GEOM, OntoBREP, etc.), (2) RDF literals containing embedded geometry of existing geometry formats and (3) RDF literals containing a reference to an external geometry file. The FOG ontology extends the [Ontology for Managing Geometry (OMG)](https://w3id.org/omg#) and consists of two taxonomies of (sub)properties, one for RDF-based geometry schemas with as root object property the [omg:hasComplexGeometryDescription](https://w3id.org/omg#hasComplexGeometryDescription) and one for existing geometry schemas that can be represented using RDF literals with as root datatype property [omg:hasSimpleGeometryDescription](https://w3id.org/omg#hasSimpleGeometryDescription). This first series of properties (e.g. [fog:asGltf](https://w3id.org/fog#asGltf)) is then splitted per version of the geometry schema (e.g. [fog:asGltf_v2.0](https://mathib.github.io/fog-ontology/#asGltf_v2.0)), which are again splitted further if the geometry format consists of different kind of files (e.g. [fog:asGltf_v2.0-glb](https://mathib.github.io/fog-ontology/#asGltf_v2.0-glb)).</span>
     <p style="text-align: center;">
-        The namespace for FOG terms is <span class="repeated" style="font-family: courier;">https://www.w3id.org/fog#</span>
+        The namespace for FOG terms is <span class="repeated" style="font-family: courier;">https://w3id.org/fog#</span>
     </p>
     <p style="text-align: center;">
         The suggested prefix for the FOG namespace is <span class="repeated" style="font-family: courier;">fog</span>
     </p>
     <p style="text-align: center;">
-        The Turtle version of the FOG ontology is available at <a href="https://www.w3id.org/fog/fog.ttl">https://www.w3id.org/fog/fog.ttl</a><br>
-        The RDF/XML version of the FOG ontology is available at <a href="https://www.w3id.org/fog/fog.rdf">https://www.w3id.org/fog/fog.rdf</a><br>
-        The JSON-LD version of the FOG ontology is available at <a href="https://www.w3id.org/fog/fog.jsonld">https://www.w3id.org/fog/fog.jsonld</a><br> 
-        The N-Triples version of the FOG ontology is available at <a href="https://www.w3id.org/fog/fog.nt">https://www.w3id.org/fog/fog.nt</a><br>
+        The Turtle version of the FOG ontology is available at <a href="https://w3id.org/fog/fog.ttl">https://www.w3id.org/fog/fog.ttl</a><br>
+        The RDF/XML version of the FOG ontology is available at <a href="https://w3id.org/fog/fog.rdf">https://www.w3id.org/fog/fog.rdf</a><br>
+        The JSON-LD version of the FOG ontology is available at <a href="https://w3id.org/fog/fog.jsonld">https://www.w3id.org/fog/fog.jsonld</a><br> 
+        The N-Triples version of the FOG ontology is available at <a href="https://w3id.org/fog/fog.nt">https://www.w3id.org/fog/fog.nt</a><br>
     </p>
     <span class="markdown">The FOG ontology is incomplete by nature, as it is impossible to contain all existing geometry schemas. If you notice that some geometry schemas are missing and you need them for your project, you can either create an issue in the [Github repository](https://github.com/mathib/fog-ontology), or you can fork it and submit a pull request.</span>
     <span class="markdown">An [online sparql-visualizer demo](https://madsholten.github.io/sparql-visualizer/?file=https://raw.githubusercontent.com/mathib/fog-ontology/master/examples/fog-demo.json) is available, containing sample Abox triples and example queries. The RDF literals in the Abox triples are dummies to make it more easily to visualize them as a graph. The same Abox triples with the full RDF literals are also available in this Github repository under [`examples/sample_abox_full.ttl`](https://github.com/mathib/fog-ontology/blob/master/examples/sample_abox_full.ttl).</span>
