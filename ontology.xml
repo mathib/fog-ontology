@@ -12,7 +12,6 @@
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:property="http://dbpedia.org/property/">
     <owl:Ontology rdf:about="https://w3id.org/fog">
-        <ns:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
         <terms:creator rdf:resource="https://www.researchgate.net/profile/Anna_Wagner13"/>
         <terms:creator rdf:resource="https://www.researchgate.net/profile/Mathias_Bonduel"/>
         <terms:creator rdf:resource="https://www.researchgate.net/profile/Pieter_Pauwels"/>
@@ -20,16 +19,20 @@
 
 The initial version of the ontology (v0.0.1) was documented in:
 
-Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein, Ralf (2019). Including Widespread Geometry Formats in Semantic Graphs Using RDF Literals. In Proceedings of the European Conference on Computing in Construction (EC3 2019). Chania, Greece.</terms:description>
+Bonduel, M., Wagner, A., Pauwels, P., Vergauwen, M., &amp; Klein, R. (2019). Including Widespread Geometry Formats in Semantic Graphs Using RDF Literals. In Proceedings of the European Conference on Computing in Construction (EC3 2019). Chania, Greece.</terms:description>
         <terms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2018-12-03</terms:issued>
-        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-10-03</terms:modified>
+        <terms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2020-01-14</terms:modified>
         <terms:title xml:lang="en">FOG: File Ontology for Geometry formats</terms:title>
         <vann:example rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://madsholten.github.io/sparql-visualizer/?file=https://raw.githubusercontent.com/mathib/fog-ontology/master/examples/fog-demo.json</vann:example>
-        <vann:example rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://raw.githubusercontent.com/mathib/fog-ontology/master/examples/sample_abox_dummy.ttl</vann:example>
-        <vann:example rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://raw.githubusercontent.com/mathib/fog-ontology/master/examples/sample_abox_full.ttl</vann:example>
+        <vann:example rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://raw.githubusercontent.com/mathib/fog-ontology/master/examples/sample_abox_columns.ttl</vann:example>
+        <vann:example rdf:datatype="http://www.w3.org/2001/XMLSchema#anyURI">https://raw.githubusercontent.com/mathib/fog-ontology/master/examples/sample_abox_columns_dummy.ttl</vann:example>
+        <vann:example>https://raw.githubusercontent.com/mathib/fog-ontology/master/examples/sample_abox_snk_contractor.ttl</vann:example>
+        <vann:example>https://raw.githubusercontent.com/mathib/fog-ontology/master/examples/sample_abox_snk_inspector.ttl</vann:example>
         <vann:preferredNamespacePrefix>fog</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri>https://w3id.org/fog#</vann:preferredNamespaceUri>
-        <rdfs:comment xml:lang="en">- Version 0.0.3: 
+        <rdfs:comment xml:lang="en">- Version 0.0.4:
+* added subproperties of omg:hasReferencedGeometryId: OBJ, Revit, Rhino, IFC
+- Version 0.0.3: 
 * added datatype properties: Nexus, LAS
 * added subproperties for fog:asPcd: ascii and binary
 - Version 0.0.2: 
@@ -39,12 +42,12 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
 * added object properties for: 3DMO, ifcOWL, geojson-ld
 * completed ontology metadata
 - Version 0.0.1: initial version</rdfs:comment>
-        <owl:versionInfo>0.0.3</owl:versionInfo>
+        <owl:versionInfo>0.0.4</owl:versionInfo>
     </owl:Ontology>
     
 
 
-     <!-- 
+    <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Object Properties
@@ -53,7 +56,6 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
      -->
 
 
-    
 
 
     <!-- https://w3id.org/fog#as3dmo -->
@@ -233,8 +235,7 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
         <rdfs:isDefinedBy rdf:resource="https://w3id.org/fog#"/>
         <rdfs:label>has referenced content</rdfs:label>
     </owl:ObjectProperty>
-     
-
+    
 
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -1824,8 +1825,116 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
         <rdfs:seeAlso rdf:resource="https://www.iana.org/assignments/media-types/model/x3d+xml"/>
     </owl:DatatypeProperty>
     
+
+
+    <!-- https://w3id.org/fog#hasIfcId -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/fog#hasIfcId">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/omg#hasReferencedGeometryId"/>
+        <rdfs:comment xml:lang="en">The property links to a string containing an IFC (Industry Foundation Classes) identifier. Use any of the subproperties to be more specific regarding the type of ID.</rdfs:comment>
+        <rdfs:label xml:lang="en">an IFC id</rdfs:label>
+    </owl:DatatypeProperty>
     
 
+
+    <!-- https://w3id.org/fog#hasIfcId-guid -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/fog#hasIfcId-guid">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#hasIfcId"/>
+        <rdfs:comment xml:lang="en">The property links to a string containing an IFC GUID as identifier.</rdfs:comment>
+        <rdfs:label xml:lang="en">an IFC GUID</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/fog#hasObjId -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/fog#hasObjId">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/omg#hasReferencedGeometryId"/>
+        <rdfs:comment xml:lang="en">The property links to a string containing a OBJ identifier. Use any of the subproperties to be more specific regarding the type of ID.</rdfs:comment>
+        <rdfs:label xml:lang="en">an OBJ identifier</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/fog#hasObjId-group -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/fog#hasObjId-group">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#hasObjId"/>
+        <rdfs:comment xml:lang="en">The property links to a string containing an OBJ group identifier.</rdfs:comment>
+        <rdfs:label xml:lang="en">an OBJ group identifier</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/fog#hasObjId-object -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/fog#hasObjId-object">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#hasObjId"/>
+        <rdfs:comment xml:lang="en">The property links to a string containing an OBJ object identifier.</rdfs:comment>
+        <rdfs:label xml:lang="en">an OBJ object identifier</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/fog#hasRevitId -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/fog#hasRevitId">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/omg#hasReferencedGeometryId"/>
+        <rdfs:comment xml:lang="en">The property links to a string containing a Revit identifier. Use any of the subproperties to be more specific regarding the type of ID.</rdfs:comment>
+        <rdfs:label xml:lang="en">a Revit identifier</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/fog#hasRevitId-element -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/fog#hasRevitId-element">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#hasRevitId"/>
+        <rdfs:comment xml:lang="en">The property links to a string containing a Revit element identifier. This is a short ID accessible directly from the Revit interface. Beware that this ID cannot be assumed unique outside the Revit project.</rdfs:comment>
+        <rdfs:label xml:lang="en">a Revit element identifier</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/fog#hasRevitId-uniqueId -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/fog#hasRevitId-uniqueId">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#hasRevitId"/>
+        <rdfs:comment xml:lang="en">The property links to a string containing a Revit unique identifier (UUID). According to the Autodesk specifications, it is in fact a GUID concatenated with 8 additional hexadecimal characters  corresponding to the Revit element ID.</rdfs:comment>
+        <rdfs:label xml:lang="en">a Revit unique identifier (UUID)</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/fog#hasRhinoId -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/fog#hasRhinoId">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/omg#hasReferencedGeometryId"/>
+        <rdfs:comment xml:lang="en">The property links to a string containing a Rhinoceros identifier. Use any of the subproperties to be more specific regarding the type of ID.</rdfs:comment>
+        <rdfs:label xml:lang="en">a Rhinoceros identifier</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/fog#hasRhinoId-object -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/fog#hasRhinoId-object">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/fog#hasRhinoId"/>
+        <rdfs:comment xml:lang="en">The property links to a string containing a Rhinoceros object identifier, i.e. a GUID.</rdfs:comment>
+        <rdfs:label xml:lang="en">a Rhinoceros object identifier</rdfs:label>
+    </owl:DatatypeProperty>
+    
 
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -1857,13 +1966,12 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
 
 
     
-
-
     <!-- https://w3id.org/fog -->
 
 
     <owl:NamedIndividual rdf:about="https://w3id.org/fog">
         <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
+        <ns:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
     </owl:NamedIndividual>
     
 
@@ -1896,5 +2004,9 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, &amp; Klein
         <foaf:name>Pieter Pauwels</foaf:name>
     </owl:NamedIndividual>
 </rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/ -->
 
 

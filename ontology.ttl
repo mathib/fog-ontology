@@ -29,16 +29,20 @@
 
 The initial version of the ontology (v0.0.1) was documented in:
 
-Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, & Klein, Ralf (2019). Including Widespread Geometry Formats in Semantic Graphs Using RDF Literals. In Proceedings of the European Conference on Computing in Construction (EC3 2019). Chania, Greece."""@en ;
+Bonduel, M., Wagner, A., Pauwels, P., Vergauwen, M., & Klein, R. (2019). Including Widespread Geometry Formats in Semantic Graphs Using RDF Literals. In Proceedings of the European Conference on Computing in Construction (EC3 2019). Chania, Greece."""@en ;
   dcterms:issued "2018-12-03"^^xsd:date ;
-  dcterms:modified "2019-10-03"^^xsd:date ;
+  dcterms:modified "2020-01-14"^^xsd:date ;
   dcterms:title "FOG: File Ontology for Geometry formats"@en ;
   vann:example "https://madsholten.github.io/sparql-visualizer/?file=https://raw.githubusercontent.com/mathib/fog-ontology/master/examples/fog-demo.json"^^xsd:anyURI ;
-  vann:example "https://raw.githubusercontent.com/mathib/fog-ontology/master/examples/sample_abox_dummy.ttl"^^xsd:anyURI ;
-  vann:example "https://raw.githubusercontent.com/mathib/fog-ontology/master/examples/sample_abox_full.ttl"^^xsd:anyURI ;
+  vann:example "https://raw.githubusercontent.com/mathib/fog-ontology/master/examples/sample_abox_columns.ttl"^^xsd:anyURI ;
+  vann:example "https://raw.githubusercontent.com/mathib/fog-ontology/master/examples/sample_abox_columns_dummy.ttl"^^xsd:anyURI ;
+  vann:example "https://raw.githubusercontent.com/mathib/fog-ontology/master/examples/sample_abox_snk_contractor.ttl" ;
+  vann:example "https://raw.githubusercontent.com/mathib/fog-ontology/master/examples/sample_abox_snk_inspector.ttl" ;
   vann:preferredNamespacePrefix "fog" ;
   vann:preferredNamespaceUri "https://w3id.org/fog#" ;
-  rdfs:comment """- Version 0.0.3: 
+  rdfs:comment """- Version 0.0.4:
+* added subproperties of omg:hasReferencedGeometryId: OBJ, Revit, Rhino, IFC
+- Version 0.0.3: 
 * added datatype properties: Nexus, LAS
 * added subproperties for fog:asPcd: ascii and binary
 - Version 0.0.2: 
@@ -48,7 +52,10 @@ Bonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, & Klein, Ra
 * added object properties for: 3DMO, ifcOWL, geojson-ld
 * completed ontology metadata
 - Version 0.0.1: initial version"""@en ;
-  owl:versionInfo "0.0.3" ;
+  owl:versionInfo "0.0.4" ;
+.
+fog:
+  rdf:type owl:Ontology ;
 .
 fog:ReferencedContent
   rdf:type owl:Class ;
@@ -1210,12 +1217,72 @@ fog:asX3d
   rdfs:seeAlso <https://www.iana.org/assignments/media-types/model/x3d+xml> ;
   rdfs:subPropertyOf <https://w3id.org/fog#asX3d_v3.3> ;
 .
+fog:hasIfcId
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "The property links to a string containing an IFC (Industry Foundation Classes) identifier. Use any of the subproperties to be more specific regarding the type of ID."@en ;
+  rdfs:label "an IFC id"@en ;
+  rdfs:subPropertyOf omg:hasReferencedGeometryId ;
+.
+fog:hasIfcId-guid
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "The property links to a string containing an IFC GUID as identifier."@en ;
+  rdfs:label "an IFC GUID"@en ;
+  rdfs:subPropertyOf fog:hasIfcId ;
+.
+fog:hasObjId
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "The property links to a string containing a OBJ identifier. Use any of the subproperties to be more specific regarding the type of ID."@en ;
+  rdfs:label "an OBJ identifier"@en ;
+  rdfs:subPropertyOf omg:hasReferencedGeometryId ;
+.
+fog:hasObjId-group
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "The property links to a string containing an OBJ group identifier."@en ;
+  rdfs:label "an OBJ group identifier"@en ;
+  rdfs:subPropertyOf fog:hasObjId ;
+.
+fog:hasObjId-object
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "The property links to a string containing an OBJ object identifier."@en ;
+  rdfs:label "an OBJ object identifier"@en ;
+  rdfs:subPropertyOf fog:hasObjId ;
+.
 fog:hasReferencedContent
   rdf:type owl:FunctionalProperty ;
   rdf:type owl:ObjectProperty ;
   rdfs:isDefinedBy fog: ;
   rdfs:label "has referenced content" ;
   rdfs:range fog:ReferencedContent ;
+.
+fog:hasRevitId
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "The property links to a string containing a Revit identifier. Use any of the subproperties to be more specific regarding the type of ID."@en ;
+  rdfs:label "a Revit identifier"@en ;
+  rdfs:subPropertyOf omg:hasReferencedGeometryId ;
+.
+fog:hasRevitId-element
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "The property links to a string containing a Revit element identifier. This is a short ID accessible directly from the Revit interface. Beware that this ID cannot be assumed unique outside the Revit project."@en ;
+  rdfs:label "a Revit element identifier"@en ;
+  rdfs:subPropertyOf fog:hasRevitId ;
+.
+fog:hasRevitId-uniqueId
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "The property links to a string containing a Revit unique identifier (UUID). According to the Autodesk specifications, it is in fact a GUID concatenated with 8 additional hexadecimal characters  corresponding to the Revit element ID."@en ;
+  rdfs:label "a Revit unique identifier (UUID)"@en ;
+  rdfs:subPropertyOf fog:hasRevitId ;
+.
+fog:hasRhinoId
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "The property links to a string containing a Rhinoceros identifier. Use any of the subproperties to be more specific regarding the type of ID."@en ;
+  rdfs:label "a Rhinoceros identifier"@en ;
+  rdfs:subPropertyOf omg:hasReferencedGeometryId ;
+.
+fog:hasRhinoId-object
+  rdf:type owl:DatatypeProperty ;
+  rdfs:comment "The property links to a string containing a Rhinoceros object identifier, i.e. a GUID."@en ;
+  rdfs:label "a Rhinoceros object identifier"@en ;
+  rdfs:subPropertyOf fog:hasRhinoId ;
 .
 <https://www.researchgate.net/profile/Anna_Wagner13>
   rdf:type foaf:Person ;

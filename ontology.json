@@ -13,7 +13,7 @@
   } ],
   "http://purl.org/dc/terms/description" : [ {
     "@language" : "en",
-    "@value" : "The File Ontology for Geometry formats (FOG) describes meaningful relations towards geometry snippets in RDF literals, geometry files on relative or absolute URLs and ontology-based geometry descriptions. The defined properties in this ontology are related towards each other and additional metadata is provided, such as file extension and related specifications/sources (incl. entries in dbpedia and Wikidata). \r\n\r\nThe initial version of the ontology (v0.0.1) was documented in:\r\n\r\nBonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, & Klein, Ralf (2019). Including Widespread Geometry Formats in Semantic Graphs Using RDF Literals. In Proceedings of the European Conference on Computing in Construction (EC3 2019). Chania, Greece."
+    "@value" : "The File Ontology for Geometry formats (FOG) describes meaningful relations towards geometry snippets in RDF literals, geometry files on relative or absolute URLs and ontology-based geometry descriptions. The defined properties in this ontology are related towards each other and additional metadata is provided, such as file extension and related specifications/sources (incl. entries in dbpedia and Wikidata). \r\n\r\nThe initial version of the ontology (v0.0.1) was documented in:\r\n\r\nBonduel, M., Wagner, A., Pauwels, P., Vergauwen, M., & Klein, R. (2019). Including Widespread Geometry Formats in Semantic Graphs Using RDF Literals. In Proceedings of the European Conference on Computing in Construction (EC3 2019). Chania, Greece."
   } ],
   "http://purl.org/dc/terms/issued" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
@@ -21,7 +21,7 @@
   } ],
   "http://purl.org/dc/terms/modified" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#date",
-    "@value" : "2019-10-03"
+    "@value" : "2020-01-14"
   } ],
   "http://purl.org/dc/terms/title" : [ {
     "@language" : "en",
@@ -32,10 +32,14 @@
     "@value" : "https://madsholten.github.io/sparql-visualizer/?file=https://raw.githubusercontent.com/mathib/fog-ontology/master/examples/fog-demo.json"
   }, {
     "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
-    "@value" : "https://raw.githubusercontent.com/mathib/fog-ontology/master/examples/sample_abox_dummy.ttl"
+    "@value" : "https://raw.githubusercontent.com/mathib/fog-ontology/master/examples/sample_abox_columns.ttl"
   }, {
     "@type" : "http://www.w3.org/2001/XMLSchema#anyURI",
-    "@value" : "https://raw.githubusercontent.com/mathib/fog-ontology/master/examples/sample_abox_full.ttl"
+    "@value" : "https://raw.githubusercontent.com/mathib/fog-ontology/master/examples/sample_abox_columns_dummy.ttl"
+  }, {
+    "@value" : "https://raw.githubusercontent.com/mathib/fog-ontology/master/examples/sample_abox_snk_contractor.ttl"
+  }, {
+    "@value" : "https://raw.githubusercontent.com/mathib/fog-ontology/master/examples/sample_abox_snk_inspector.ttl"
   } ],
   "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
     "@value" : "fog"
@@ -45,10 +49,10 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "- Version 0.0.3: \r\n* added datatype properties: Nexus, LAS\r\n* added subproperties for fog:asPcd: ascii and binary\r\n- Version 0.0.2: \r\n* updated definitions of certain properties\r\n* adjusted typos\r\n* added datatype properties for: Rhino, Revit, IFC, STEP APs, IGES\r\n* added object properties for: 3DMO, ifcOWL, geojson-ld\r\n* completed ontology metadata\r\n- Version 0.0.1: initial version"
+    "@value" : "- Version 0.0.4:\r\n* added subproperties of omg:hasReferencedGeometryId: OBJ, Revit, Rhino, IFC\r\n- Version 0.0.3: \r\n* added datatype properties: Nexus, LAS\r\n* added subproperties for fog:asPcd: ascii and binary\r\n- Version 0.0.2: \r\n* updated definitions of certain properties\r\n* adjusted typos\r\n* added datatype properties for: Rhino, Revit, IFC, STEP APs, IGES\r\n* added object properties for: 3DMO, ifcOWL, geojson-ld\r\n* completed ontology metadata\r\n- Version 0.0.1: initial version"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "0.0.3"
+    "@value" : "0.0.4"
   } ]
 }, {
   "@id" : "https://w3id.org/fog#ReferencedContent",
@@ -2644,6 +2648,76 @@
     "@id" : "https://w3id.org/fog#asX3d_v3.3"
   } ]
 }, {
+  "@id" : "https://w3id.org/fog#hasIfcId",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The property links to a string containing an IFC (Industry Foundation Classes) identifier. Use any of the subproperties to be more specific regarding the type of ID."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "an IFC id"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/omg#hasReferencedGeometryId"
+  } ]
+}, {
+  "@id" : "https://w3id.org/fog#hasIfcId-guid",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The property links to a string containing an IFC GUID as identifier."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "an IFC GUID"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/fog#hasIfcId"
+  } ]
+}, {
+  "@id" : "https://w3id.org/fog#hasObjId",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The property links to a string containing a OBJ identifier. Use any of the subproperties to be more specific regarding the type of ID."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "an OBJ identifier"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/omg#hasReferencedGeometryId"
+  } ]
+}, {
+  "@id" : "https://w3id.org/fog#hasObjId-group",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The property links to a string containing an OBJ group identifier."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "an OBJ group identifier"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/fog#hasObjId"
+  } ]
+}, {
+  "@id" : "https://w3id.org/fog#hasObjId-object",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The property links to a string containing an OBJ object identifier."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "an OBJ object identifier"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/fog#hasObjId"
+  } ]
+}, {
   "@id" : "https://w3id.org/fog#hasReferencedContent",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
@@ -2654,6 +2728,76 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/fog#ReferencedContent"
+  } ]
+}, {
+  "@id" : "https://w3id.org/fog#hasRevitId",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The property links to a string containing a Revit identifier. Use any of the subproperties to be more specific regarding the type of ID."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "a Revit identifier"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/omg#hasReferencedGeometryId"
+  } ]
+}, {
+  "@id" : "https://w3id.org/fog#hasRevitId-element",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The property links to a string containing a Revit element identifier. This is a short ID accessible directly from the Revit interface. Beware that this ID cannot be assumed unique outside the Revit project."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "a Revit element identifier"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/fog#hasRevitId"
+  } ]
+}, {
+  "@id" : "https://w3id.org/fog#hasRevitId-uniqueId",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The property links to a string containing a Revit unique identifier (UUID). According to the Autodesk specifications, it is in fact a GUID concatenated with 8 additional hexadecimal characters  corresponding to the Revit element ID."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "a Revit unique identifier (UUID)"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/fog#hasRevitId"
+  } ]
+}, {
+  "@id" : "https://w3id.org/fog#hasRhinoId",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The property links to a string containing a Rhinoceros identifier. Use any of the subproperties to be more specific regarding the type of ID."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "a Rhinoceros identifier"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/omg#hasReferencedGeometryId"
+  } ]
+}, {
+  "@id" : "https://w3id.org/fog#hasRhinoId-object",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The property links to a string containing a Rhinoceros object identifier, i.e. a GUID."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "a Rhinoceros object identifier"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/fog#hasRhinoId"
   } ]
 }, {
   "@id" : "https://www.researchgate.net/profile/Anna_Wagner13",

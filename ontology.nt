@@ -1,19 +1,21 @@
 <https://w3id.org/fog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://w3id.org/fog> <http://creativecommons.org/ns#license> <https://creativecommons.org/licenses/by/4.0/> .
 <https://w3id.org/fog> <http://purl.org/dc/terms/creator> <https://www.researchgate.net/profile/Anna_Wagner13> .
 <https://w3id.org/fog> <http://purl.org/dc/terms/creator> <https://www.researchgate.net/profile/Mathias_Bonduel> .
 <https://w3id.org/fog> <http://purl.org/dc/terms/creator> <https://www.researchgate.net/profile/Pieter_Pauwels> .
-<https://w3id.org/fog> <http://purl.org/dc/terms/description> "The File Ontology for Geometry formats (FOG) describes meaningful relations towards geometry snippets in RDF literals, geometry files on relative or absolute URLs and ontology-based geometry descriptions. The defined properties in this ontology are related towards each other and additional metadata is provided, such as file extension and related specifications/sources (incl. entries in dbpedia and Wikidata). \r\n\r\nThe initial version of the ontology (v0.0.1) was documented in:\r\n\r\nBonduel, Mathias, Wagner, Anna, Pauwels, Pieter, Vergauwen, Maarten, & Klein, Ralf (2019). Including Widespread Geometry Formats in Semantic Graphs Using RDF Literals. In Proceedings of the European Conference on Computing in Construction (EC3 2019). Chania, Greece."@en .
+<https://w3id.org/fog> <http://purl.org/dc/terms/description> "The File Ontology for Geometry formats (FOG) describes meaningful relations towards geometry snippets in RDF literals, geometry files on relative or absolute URLs and ontology-based geometry descriptions. The defined properties in this ontology are related towards each other and additional metadata is provided, such as file extension and related specifications/sources (incl. entries in dbpedia and Wikidata). \r\n\r\nThe initial version of the ontology (v0.0.1) was documented in:\r\n\r\nBonduel, M., Wagner, A., Pauwels, P., Vergauwen, M., & Klein, R. (2019). Including Widespread Geometry Formats in Semantic Graphs Using RDF Literals. In Proceedings of the European Conference on Computing in Construction (EC3 2019). Chania, Greece."@en .
 <https://w3id.org/fog> <http://purl.org/dc/terms/issued> "2018-12-03"^^<http://www.w3.org/2001/XMLSchema#date> .
-<https://w3id.org/fog> <http://purl.org/dc/terms/modified> "2019-10-03"^^<http://www.w3.org/2001/XMLSchema#date> .
+<https://w3id.org/fog> <http://purl.org/dc/terms/modified> "2020-01-14"^^<http://www.w3.org/2001/XMLSchema#date> .
 <https://w3id.org/fog> <http://purl.org/dc/terms/title> "FOG: File Ontology for Geometry formats"@en .
 <https://w3id.org/fog> <http://purl.org/vocab/vann/example> "https://madsholten.github.io/sparql-visualizer/?file=https://raw.githubusercontent.com/mathib/fog-ontology/master/examples/fog-demo.json"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<https://w3id.org/fog> <http://purl.org/vocab/vann/example> "https://raw.githubusercontent.com/mathib/fog-ontology/master/examples/sample_abox_dummy.ttl"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
-<https://w3id.org/fog> <http://purl.org/vocab/vann/example> "https://raw.githubusercontent.com/mathib/fog-ontology/master/examples/sample_abox_full.ttl"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://w3id.org/fog> <http://purl.org/vocab/vann/example> "https://raw.githubusercontent.com/mathib/fog-ontology/master/examples/sample_abox_columns.ttl"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://w3id.org/fog> <http://purl.org/vocab/vann/example> "https://raw.githubusercontent.com/mathib/fog-ontology/master/examples/sample_abox_columns_dummy.ttl"^^<http://www.w3.org/2001/XMLSchema#anyURI> .
+<https://w3id.org/fog> <http://purl.org/vocab/vann/example> "https://raw.githubusercontent.com/mathib/fog-ontology/master/examples/sample_abox_snk_contractor.ttl" .
+<https://w3id.org/fog> <http://purl.org/vocab/vann/example> "https://raw.githubusercontent.com/mathib/fog-ontology/master/examples/sample_abox_snk_inspector.ttl" .
 <https://w3id.org/fog> <http://purl.org/vocab/vann/preferredNamespacePrefix> "fog" .
 <https://w3id.org/fog> <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/fog#" .
-<https://w3id.org/fog> <http://www.w3.org/2000/01/rdf-schema#comment> "- Version 0.0.3: \r\n* added datatype properties: Nexus, LAS\r\n* added subproperties for fog:asPcd: ascii and binary\r\n- Version 0.0.2: \r\n* updated definitions of certain properties\r\n* adjusted typos\r\n* added datatype properties for: Rhino, Revit, IFC, STEP APs, IGES\r\n* added object properties for: 3DMO, ifcOWL, geojson-ld\r\n* completed ontology metadata\r\n- Version 0.0.1: initial version"@en .
-<https://w3id.org/fog> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.3" .
+<https://w3id.org/fog> <http://www.w3.org/2000/01/rdf-schema#comment> "- Version 0.0.4:\r\n* added subproperties of omg:hasReferencedGeometryId: OBJ, Revit, Rhino, IFC\r\n- Version 0.0.3: \r\n* added datatype properties: Nexus, LAS\r\n* added subproperties for fog:asPcd: ascii and binary\r\n- Version 0.0.2: \r\n* updated definitions of certain properties\r\n* adjusted typos\r\n* added datatype properties for: Rhino, Revit, IFC, STEP APs, IGES\r\n* added object properties for: 3DMO, ifcOWL, geojson-ld\r\n* completed ontology metadata\r\n- Version 0.0.1: initial version"@en .
+<https://w3id.org/fog> <http://www.w3.org/2002/07/owl#versionInfo> "0.0.4" .
+# 
 # 
 # 
 # #################################################################
@@ -137,7 +139,6 @@
 <https://w3id.org/fog#hasReferencedContent> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/fog#ReferencedContent> .
 <https://w3id.org/fog#hasReferencedContent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <https://w3id.org/fog#> .
 <https://w3id.org/fog#hasReferencedContent> <http://www.w3.org/2000/01/rdf-schema#label> "has referenced content" .
-# 
 # 
 # 
 # 
@@ -1191,8 +1192,65 @@
 <https://w3id.org/fog#asX3d_v3.3-xml> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://www.web3d.org/documents/specifications/19776-1/V3.3/index.html> .
 <https://w3id.org/fog#asX3d_v3.3-xml> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <https://www.iana.org/assignments/media-types/model/x3d+xml> .
 # 
-# https://w3id.org/omg#hasSimpleGeometryDescription
+# https://w3id.org/fog#hasIfcId
+<https://w3id.org/fog#hasIfcId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/fog#hasIfcId> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/omg#hasReferencedGeometryId> .
+<https://w3id.org/fog#hasIfcId> <http://www.w3.org/2000/01/rdf-schema#comment> "The property links to a string containing an IFC (Industry Foundation Classes) identifier. Use any of the subproperties to be more specific regarding the type of ID."@en .
+<https://w3id.org/fog#hasIfcId> <http://www.w3.org/2000/01/rdf-schema#label> "an IFC id"@en .
 # 
+# https://w3id.org/fog#hasIfcId-guid
+<https://w3id.org/fog#hasIfcId-guid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/fog#hasIfcId-guid> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fog#hasIfcId> .
+<https://w3id.org/fog#hasIfcId-guid> <http://www.w3.org/2000/01/rdf-schema#comment> "The property links to a string containing an IFC GUID as identifier."@en .
+<https://w3id.org/fog#hasIfcId-guid> <http://www.w3.org/2000/01/rdf-schema#label> "an IFC GUID"@en .
+# 
+# https://w3id.org/fog#hasObjId
+<https://w3id.org/fog#hasObjId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/fog#hasObjId> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/omg#hasReferencedGeometryId> .
+<https://w3id.org/fog#hasObjId> <http://www.w3.org/2000/01/rdf-schema#comment> "The property links to a string containing a OBJ identifier. Use any of the subproperties to be more specific regarding the type of ID."@en .
+<https://w3id.org/fog#hasObjId> <http://www.w3.org/2000/01/rdf-schema#label> "an OBJ identifier"@en .
+# 
+# https://w3id.org/fog#hasObjId-group
+<https://w3id.org/fog#hasObjId-group> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/fog#hasObjId-group> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fog#hasObjId> .
+<https://w3id.org/fog#hasObjId-group> <http://www.w3.org/2000/01/rdf-schema#comment> "The property links to a string containing an OBJ group identifier."@en .
+<https://w3id.org/fog#hasObjId-group> <http://www.w3.org/2000/01/rdf-schema#label> "an OBJ group identifier"@en .
+# 
+# https://w3id.org/fog#hasObjId-object
+<https://w3id.org/fog#hasObjId-object> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/fog#hasObjId-object> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fog#hasObjId> .
+<https://w3id.org/fog#hasObjId-object> <http://www.w3.org/2000/01/rdf-schema#comment> "The property links to a string containing an OBJ object identifier."@en .
+<https://w3id.org/fog#hasObjId-object> <http://www.w3.org/2000/01/rdf-schema#label> "an OBJ object identifier"@en .
+# 
+# https://w3id.org/fog#hasRevitId
+<https://w3id.org/fog#hasRevitId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/fog#hasRevitId> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/omg#hasReferencedGeometryId> .
+<https://w3id.org/fog#hasRevitId> <http://www.w3.org/2000/01/rdf-schema#comment> "The property links to a string containing a Revit identifier. Use any of the subproperties to be more specific regarding the type of ID."@en .
+<https://w3id.org/fog#hasRevitId> <http://www.w3.org/2000/01/rdf-schema#label> "a Revit identifier"@en .
+# 
+# https://w3id.org/fog#hasRevitId-element
+<https://w3id.org/fog#hasRevitId-element> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/fog#hasRevitId-element> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fog#hasRevitId> .
+<https://w3id.org/fog#hasRevitId-element> <http://www.w3.org/2000/01/rdf-schema#comment> "The property links to a string containing a Revit element identifier. This is a short ID accessible directly from the Revit interface. Beware that this ID cannot be assumed unique outside the Revit project."@en .
+<https://w3id.org/fog#hasRevitId-element> <http://www.w3.org/2000/01/rdf-schema#label> "a Revit element identifier"@en .
+# 
+# https://w3id.org/fog#hasRevitId-uniqueId
+<https://w3id.org/fog#hasRevitId-uniqueId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/fog#hasRevitId-uniqueId> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fog#hasRevitId> .
+<https://w3id.org/fog#hasRevitId-uniqueId> <http://www.w3.org/2000/01/rdf-schema#comment> "The property links to a string containing a Revit unique identifier (UUID). According to the Autodesk specifications, it is in fact a GUID concatenated with 8 additional hexadecimal characters  corresponding to the Revit element ID."@en .
+<https://w3id.org/fog#hasRevitId-uniqueId> <http://www.w3.org/2000/01/rdf-schema#label> "a Revit unique identifier (UUID)"@en .
+# 
+# https://w3id.org/fog#hasRhinoId
+<https://w3id.org/fog#hasRhinoId> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/fog#hasRhinoId> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/omg#hasReferencedGeometryId> .
+<https://w3id.org/fog#hasRhinoId> <http://www.w3.org/2000/01/rdf-schema#comment> "The property links to a string containing a Rhinoceros identifier. Use any of the subproperties to be more specific regarding the type of ID."@en .
+<https://w3id.org/fog#hasRhinoId> <http://www.w3.org/2000/01/rdf-schema#label> "a Rhinoceros identifier"@en .
+# 
+# https://w3id.org/fog#hasRhinoId-object
+<https://w3id.org/fog#hasRhinoId-object> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/fog#hasRhinoId-object> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <https://w3id.org/fog#hasRhinoId> .
+<https://w3id.org/fog#hasRhinoId-object> <http://www.w3.org/2000/01/rdf-schema#comment> "The property links to a string containing a Rhinoceros object identifier, i.e. a GUID."@en .
+<https://w3id.org/fog#hasRhinoId-object> <http://www.w3.org/2000/01/rdf-schema#label> "a Rhinoceros object identifier"@en .
 # 
 # 
 # #################################################################
@@ -1219,6 +1277,7 @@
 # https://w3id.org/fog
 <https://w3id.org/fog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/fog> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> .
+<https://w3id.org/fog> <http://creativecommons.org/ns#license> <https://creativecommons.org/licenses/by/4.0/> .
 # 
 # https://www.researchgate.net/profile/Anna_Wagner13
 <https://www.researchgate.net/profile/Anna_Wagner13> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
@@ -1235,3 +1294,4 @@
 <https://www.researchgate.net/profile/Pieter_Pauwels> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> .
 <https://www.researchgate.net/profile/Pieter_Pauwels> <http://xmlns.com/foaf/0.1/name> "Pieter Pauwels" .
 # 
+# Generated by the OWL API (version 5.1.9) https://github.com/owlcs/owlapi/

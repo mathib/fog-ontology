@@ -459,6 +459,36 @@ This section provides details for each class and property defined by FOG: File O
    <h3 id="dataproperties-headline" class="list">Data Properties</h3>
    <ul class="hlist">
       <li>
+         <a href="#hasRevitId-element" title="https://w3id.org/fog#hasRevitId-element">a Revit element identifier</a>
+      </li>
+      <li>
+         <a href="#hasRevitId" title="https://w3id.org/fog#hasRevitId">a Revit identifier</a>
+      </li>
+      <li>
+         <a href="#hasRevitId-uniqueId" title="https://w3id.org/fog#hasRevitId-uniqueId">a Revit unique identifier (UUID)</a>
+      </li>
+      <li>
+         <a href="#hasRhinoId" title="https://w3id.org/fog#hasRhinoId">a Rhinoceros identifier</a>
+      </li>
+      <li>
+         <a href="#hasRhinoId-object" title="https://w3id.org/fog#hasRhinoId-object">a Rhinoceros object identifier</a>
+      </li>
+      <li>
+         <a href="#hasIfcId-guid" title="https://w3id.org/fog#hasIfcId-guid">an IFC GUID</a>
+      </li>
+      <li>
+         <a href="#hasIfcId" title="https://w3id.org/fog#hasIfcId">an IFC id</a>
+      </li>
+      <li>
+         <a href="#hasObjId-group" title="https://w3id.org/fog#hasObjId-group">an OBJ group identifier</a>
+      </li>
+      <li>
+         <a href="#hasObjId" title="https://w3id.org/fog#hasObjId">an OBJ identifier</a>
+      </li>
+      <li>
+         <a href="#hasObjId-object" title="https://w3id.org/fog#hasObjId-object">an OBJ object identifier</a>
+      </li>
+      <li>
          <a href="#asCollada" title="https://w3id.org/fog#asCollada">as COLLADA format</a>
       </li>
       <li>
@@ -780,6 +810,228 @@ This section provides details for each class and property defined by FOG: File O
          <a href="#asX3d_v3.3-xml" title="https://w3id.org/fog#asX3d_v3.3-xml">as X3D v3.3 XML file (.x3d)</a>
       </li>
    </ul>
+   <div class="entity" id="hasRevitId-element">
+      <h3>a Revit element identifier<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fog#hasRevitId-element</p>
+      <div class="comment">
+         <span class="markdown">The property links to a string containing a Revit element identifier. This is a short ID accessible directly from the Revit interface. Beware that this ID cannot be assumed unique outside the Revit project.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#hasRevitId" title="https://w3id.org/fog#hasRevitId">a Revit identifier</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasRevitId">
+      <h3>a Revit identifier<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fog#hasRevitId</p>
+      <div class="comment">
+         <span class="markdown">The property links to a string containing a Revit identifier. Use any of the subproperties to be more specific regarding the type of ID.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="https://w3id.org/omg#hasReferencedGeometryId">has referenced geometry id</span>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#hasRevitId-element" title="https://w3id.org/fog#hasRevitId-element">a Revit element identifier</a>
+               <sup class="type-dp" title="data property">dp</sup>, <a href="#hasRevitId-uniqueId" title="https://w3id.org/fog#hasRevitId-uniqueId">a Revit unique identifier (UUID)</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasRevitId-uniqueId">
+      <h3>a Revit unique identifier (UUID)<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fog#hasRevitId-uniqueId</p>
+      <div class="comment">
+         <span class="markdown">The property links to a string containing a Revit unique identifier (UUID). According to the Autodesk specifications, it is in fact a GUID concatenated with 8 additional hexadecimal characters  corresponding to the Revit element ID.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#hasRevitId" title="https://w3id.org/fog#hasRevitId">a Revit identifier</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasRhinoId">
+      <h3>a Rhinoceros identifier<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fog#hasRhinoId</p>
+      <div class="comment">
+         <span class="markdown">The property links to a string containing a Rhinoceros identifier. Use any of the subproperties to be more specific regarding the type of ID.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="https://w3id.org/omg#hasReferencedGeometryId">has referenced geometry id</span>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#hasRhinoId-object" title="https://w3id.org/fog#hasRhinoId-object">a Rhinoceros object identifier</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasRhinoId-object">
+      <h3>a Rhinoceros object identifier<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fog#hasRhinoId-object</p>
+      <div class="comment">
+         <span class="markdown">The property links to a string containing a Rhinoceros object identifier, i.e. a GUID.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#hasRhinoId" title="https://w3id.org/fog#hasRhinoId">a Rhinoceros identifier</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasIfcId-guid">
+      <h3>an IFC GUID<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fog#hasIfcId-guid</p>
+      <div class="comment">
+         <span class="markdown">The property links to a string containing an IFC GUID as identifier.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#hasIfcId" title="https://w3id.org/fog#hasIfcId">an IFC id</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasIfcId">
+      <h3>an IFC id<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fog#hasIfcId</p>
+      <div class="comment">
+         <span class="markdown">The property links to a string containing an IFC (Industry Foundation Classes) identifier. Use any of the subproperties to be more specific regarding the type of ID.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="https://w3id.org/omg#hasReferencedGeometryId">has referenced geometry id</span>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#hasIfcId-guid" title="https://w3id.org/fog#hasIfcId-guid">an IFC GUID</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasObjId-group">
+      <h3>an OBJ group identifier<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fog#hasObjId-group</p>
+      <div class="comment">
+         <span class="markdown">The property links to a string containing an OBJ group identifier.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#hasObjId" title="https://w3id.org/fog#hasObjId">an OBJ identifier</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasObjId">
+      <h3>an OBJ identifier<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fog#hasObjId</p>
+      <div class="comment">
+         <span class="markdown">The property links to a string containing a OBJ identifier. Use any of the subproperties to be more specific regarding the type of ID.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <span class="dotted" title="https://w3id.org/omg#hasReferencedGeometryId">has referenced geometry id</span>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+            <dt>has sub-properties</dt>
+            <dd>
+               <a href="#hasObjId-group" title="https://w3id.org/fog#hasObjId-group">an OBJ group identifier</a>
+               <sup class="type-dp" title="data property">dp</sup>, <a href="#hasObjId-object" title="https://w3id.org/fog#hasObjId-object">an OBJ object identifier</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
+   <div class="entity" id="hasObjId-object">
+      <h3>an OBJ object identifier<sup class="type-dp" title="data property">dp</sup>
+         <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
+         </span>
+      </h3>
+      <p>
+         <strong>IRI:</strong> https://w3id.org/fog#hasObjId-object</p>
+      <div class="comment">
+         <span class="markdown">The property links to a string containing an OBJ object identifier.</span>
+      </div>
+      <div class="description">
+         <dl>
+            <dt>has super-properties</dt>
+            <dd>
+               <a href="#hasObjId" title="https://w3id.org/fog#hasObjId">an OBJ identifier</a>
+               <sup class="type-dp" title="data property">dp</sup>
+            </dd>
+         </dl>
+      </div>
+   </div>
    <div class="entity" id="asCollada">
       <h3>as COLLADA format<sup class="type-dp" title="data property">dp</sup>
          <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a>
