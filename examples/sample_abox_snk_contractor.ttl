@@ -43,7 +43,7 @@ inst:geometry-c2 a omg:Geometry ;
 	gom:hasCoordinateSystem inst:cs1 ;
 	gom:hasFileSize 81888256 ;
 	omg:hasGeometryContext inst:context2 ;
-	fog:asNexus_v4.2-nxz "https://github.com/mathib/fog-ontology/blob/master/sample_data/wallA_survey.nxz"^^xsd:anyURI .
+	fog:asNexus_v4.2-nxz "https://www.dropbox.com/s/jibahcxeioc52li/wallA_survey.nxz?dl=0"^^xsd:anyURI .
 inst:context2 a omg:GeometryContext .
 
 #-- part 6
