@@ -14,7 +14,7 @@ inst:column1 a bot:Element , beo:Column-COLUMN ;
 	bot:hasSubElement inst:column1-capital , inst:column1-shaft , inst:column1-base ;
 	omg:hasGeometry inst:geometry4 .
 inst:geometry4 a omg:Geometry ;
-	fog:asStep_ap214 "a .step literal"^^xsd:string .
+	fog:asStep_ap214 "a .step AP 214 literal"^^xsd:string .
 
 inst:column1-capital a bot:Element ;
 	omg:hasGeometry inst:geometry1 .

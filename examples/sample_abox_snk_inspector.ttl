@@ -73,12 +73,12 @@ inst:cs1 a gom:CartesianCoordinateSystem .
 inst:transformation1 a gom:AffineCoordinateSystemTransformation ;
 	gom:fromCartesianCoordinateSystem epsg:6190 ;
 	gom:toCartesianCoordinateSystem inst:cs1 ;
-	gom:hasMatrix "[0.245985224843,-0.969273567200,0,0,0.969273567200,0.245985224843,0,0,0,0,1,0,-213778.578125000000,53863.355468750000,-8.199999809265,1]"^^gom:columnMajorArray .
+	gom:hasTransformationMatrix "[0.245985224843,-0.969273567200,0,0,0.969273567200,0.245985224843,0,0,0,0,1,0,-213778.578125000000,53863.355468750000,-8.199999809265,1]"^^gom:columnMajorArray .
 inst:cs2 a gom:CartesianCoordinateSystem .
 inst:transformation2 a gom:AffineCoordinateSystemTransformation ;
 	gom:fromCartesianCoordinateSystem inst:cs2 ;
 	gom:toCartesianCoordinateSystem inst:cs1 ;
-	gom:hasMatrix "[100,0,0,0,0,-100,1.2246467991473532e-14,0,0,-1.2246467991473532e-14,-100,0,-84.1,118.9,0,1]"^^gom:columnMajorArray .
+	gom:hasTransformationMatrix "[100,0,0,0,0,-100,1.2246467991473532e-14,0,0,-1.2246467991473532e-14,-100,0,-84.1,118.9,0,1]"^^gom:columnMajorArray .
 
 #-- part 3
 inst:geometry-i5 a gom:MeshGeometry ;
